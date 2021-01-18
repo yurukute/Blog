@@ -9,7 +9,7 @@ tags: ["Codewars"]
 [Link trên codewars](https://www.codewars.com/kata/54d496788776e49e6b00052f)
 ### Đọc hiểu:
 Input: một mảng các số $I = {i_1, i_2 ,..., i_n}$\
-Output: một chuỗi theo format "$(p_1 sum_1)(p_2 sum_2)...(p_x sum_m)$"\
+Output: một chuỗi theo format "($p_1$ $sum_1$)($p_2$ $sum_2$) ... ($p_x$ $sum_m$)"\
 Trong đó:
 - p: số nguyên tố
 - sum: tổng các số trong mảng I chia hết cho p
