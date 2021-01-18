@@ -1,4 +1,4 @@
-baseURL: "https://yurukute.github.io/MyBlog/"
+baseURL: "https://yurukute.github.io/Blog/"
 title: Blog của Dung
 theme: PaperMod
 publishDir: "docs"
