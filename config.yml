@@ -1,0 +1,41 @@
+baseURL: "https://yurukute.github.io/MyBlog/"
+title: Blog của Dung
+theme: PaperMod
+publishDir: "docs"
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        menu:
+            main:
+                - name: Lưu trữ
+                  url: /archive
+                  weight: 1
+                - name: Tìm kiếm
+                  url: /search
+                  weight: 3
+                - name: Tags
+                  url: /tags
+                  weight: 4
+                - name: Danh mục
+                  url: /categories
+                  weight: 2
+
+params:
+    homeInfoParams:
+        Title: "Chao xìn OwO)/"
+        Content: >
+            Đây là blog đầu tay của Dung về cách giải mấy bài toán tin mà Dung gặp.
+
+            - Dung viết cho vui.
+            
+            - Đừng bash Dung.
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/yurukute"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON 

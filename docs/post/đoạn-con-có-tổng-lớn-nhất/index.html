@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Đoạn Con Có Tổng Lớn Nhất | Blog của Dung</title>
+
+<meta name="keywords" content="Quy hoạch động, Codewars" />
+<meta name="description" content="Bài toán: Nguồn: codewars.com
+Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+Dữ liệu vào: 1 mảng các số tự nhiên a
+Kết quả: Tổng lớn nhất tìm được
+Ví dụ:
+Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/MyBlog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/" />
+<link href="/MyBlog/assets/css/stylesheet.min.d6b9f5b9a35628f539baeea5ef9a5a2774bbbe4a533799274b9dc35ea1691b4f.css" integrity="sha256-1rn1uaNWKPU5uu6l75paJ3S7vkpTN5knS53DXqFpG08=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://yurukute.github.io/MyBlog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/MyBlog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/MyBlog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/MyBlog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/MyBlog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+<meta property="og:title" content="Đoạn Con Có Tổng Lớn Nhất" />
+<meta property="og:description" content="Bài toán: Nguồn: codewars.com
+Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+Dữ liệu vào: 1 mảng các số tự nhiên a
+Kết quả: Tổng lớn nhất tìm được
+Ví dụ:
+Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/MyBlog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/" />
+<meta property="article:published_time" content="2021-01-17T20:45:26+07:00" />
+<meta property="article:modified_time" content="2021-01-17T20:45:26+07:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Đoạn Con Có Tổng Lớn Nhất"/>
+<meta name="twitter:description" content="Bài toán: Nguồn: codewars.com
+Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+Dữ liệu vào: 1 mảng các số tự nhiên a
+Kết quả: Tổng lớn nhất tìm được
+Ví dụ:
+Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Đoạn Con Có Tổng Lớn Nhất",
+  "name": "Đoạn Con Có Tổng Lớn Nhất",
+  "description": "Bài toán: Nguồn: codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,\u0026amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nDữ liệu vào: 1 mảng …",
+  "keywords": [
+    "Quy hoạch động", "Codewars"
+  ],
+  "articleBody": "Bài toán: Nguồn: codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,…, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nDữ liệu vào: 1 mảng các số tự nhiên a\nKết quả: Tổng lớn nhất tìm được\nVí dụ:\nInput: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:\n Tìm tổng từng đoạn con {-2}, {1}, {-2, 1} … So sánh các tổng để tìm ra kết quả lớn nhất.  Tuy nhiên, với độ phức tạp là $O(n^3)$ cách này sẽ không giải quyết được vấn đề khi nó mang 3 nhược điểm rất lớn:\n Làm chậm quá trình xử lí do phải tính quá nhiều. Sẽ tồn tại những phép tính không cần thiết. Các hành động lặp đi lặp lại.  Chính vì vậy, ta cần một giải pháp nhanh và tốt hơn!\nCách 2:  Ta gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:  $f[0] = 0$ $f[i] = f[i-1] + a[i]$   Như vậy, tổng các phần tử từ $i$ đến $j$ là: $f[j] – f[i-1]$  Với cách này, ta sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì ta đã tính trước ở $f[i-1]$ = Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/\nCách 3: Với ý tưởng của cách 2, ta thêm một biến sum để lưu tổng đang tính. Khi duyệt mảng, ta sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn hay hắt đầu một đoạn con mới. Như vậy ta cần so sánh xem tổng hiện tại (sum) cộng thêm phần tử arr[i] đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác ta lấy max(sum + a[i], a[i]) - Đây cũng chính là kết quả cần tìm.\n#include  using namespace std; int maxSequence(const vectorint\u0026 arr){ int max=0, sum=0, size=arr.size(); for(int i=0; isize; i++){ sum+=arr[i]; if(arr[i]sum) sum=arr[i]; if(summax) max=sum; } return max; } ",
+  "wordCount" : "386",
+  "inLanguage": "en",
+  "datePublished": "2021-01-17T20:45:26+07:00",
+  "dateModified": "2021-01-17T20:45:26+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/MyBlog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Dung",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/MyBlog/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/MyBlog/" accesskey="h" title="Blog của Dung (Alt + H)">Blog của Dung</a>
+            <span class="logo-switches">
+                <span class="theme-toggle" title="(Alt + T)">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://yurukute.github.io/MyBlog/archive" title="Lưu trữ">
+                    <span>Lưu trữ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/MyBlog/categories" title="Danh mục">
+                    <span>Danh mục</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/MyBlog/search" title="Tìm kiếm">
+                    <span>Tìm kiếm</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/MyBlog/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li></ul>
+    </nav>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Đoạn Con Có Tổng Lớn Nhất
+    </h1>
+    <div class="post-description">
+      
+    </div>
+    <div class="post-meta">January 17, 2021
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h2 id="bài-toán">Bài toán:<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
+<p><strong><a href="https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c">Nguồn: codewars.com</a></strong><br>
+Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con <em>(dãy gồm các phần tử liên tiếp nhau)</em> có tổng lớn nhất.<br>
+<strong>Dữ liệu vào:</strong> 1 mảng các số tự nhiên a<br>
+<strong>Kết quả:</strong> Tổng lớn nhất tìm được<br>
+Ví dụ:</p>
+<pre><code>Input:  {-2, 1, -3, 4, -1, 2, 1, -5, 4}
+Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
+</code></pre><h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
+<h3 id="cách-1-vét-cạn">Cách 1: Vét cạn<a hidden class="anchor" aria-hidden="true" href="#cách-1-vét-cạn">#</a></h3>
+<p>Đây là cách dễ tiếp cận nhất với 2 bước:</p>
+<ol>
+<li>Tìm tổng <strong>từng</strong> đoạn con {-2}, {1}, {-2, 1} &hellip;</li>
+<li>So sánh các tổng để tìm ra kết quả lớn nhất.</li>
+</ol>
+<p>Tuy nhiên, với độ phức tạp là $O(n^3)$ cách này sẽ không giải quyết được vấn đề khi nó mang <strong>3 nhược điểm</strong> rất lớn:</p>
+<ol>
+<li>Làm chậm quá trình xử lí do phải tính quá nhiều.</li>
+<li>Sẽ tồn tại những phép tính không cần thiết.</li>
+<li>Các hành động lặp đi lặp lại.</li>
+</ol>
+<p>Chính vì vậy, ta cần một giải pháp nhanh và tốt hơn!</p>
+<h3 id="cách-2">Cách 2:<a hidden class="anchor" aria-hidden="true" href="#cách-2">#</a></h3>
+<ul>
+<li>Ta gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:
+<ul>
+<li>$f[0] = 0$</li>
+<li>$f[i] = f[i-1] + a[i]$</li>
+</ul>
+</li>
+<li>Như vậy, tổng các phần tử từ $i$ đến $j$ là: $f[j] – f[i-1]$</li>
+</ul>
+<p>Với cách này, ta sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì ta đã tính trước ở $f[i-1]$ =&gt; Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/</p>
+<h3 id="cách-3">Cách 3:<a hidden class="anchor" aria-hidden="true" href="#cách-3">#</a></h3>
+<p>Với ý tưởng của cách 2, ta thêm một biến <code>sum</code> để lưu tổng đang tính. Khi duyệt mảng, ta sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn <em><strong>hay</strong></em> hắt đầu một đoạn con mới. Như vậy ta cần so sánh xem tổng hiện tại (<code>sum</code>) cộng thêm phần tử <code>arr[i]</code> đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác ta lấy <code>max(sum + a[i], a[i])</code> -&gt; Đây cũng chính là kết quả cần tìm.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxSequence</span>(<span style="color:#66d9ef">const</span> vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> arr){
+    <span style="color:#66d9ef">int</span> max<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, sum<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, size<span style="color:#f92672">=</span>arr.size();
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>size; i<span style="color:#f92672">++</span>){
+        sum<span style="color:#f92672">+=</span>arr[i];
+        <span style="color:#66d9ef">if</span>(arr[i]<span style="color:#f92672">&gt;</span>sum)
+            sum<span style="color:#f92672">=</span>arr[i];
+        <span style="color:#66d9ef">if</span>(sum<span style="color:#f92672">&gt;</span>max) max<span style="color:#f92672">=</span>sum;
+    }
+    <span style="color:#66d9ef">return</span> max;
+}
+</code></pre></div>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/MyBlog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/">Quy hoạch động</a></li>
+      <li><a href="https://yurukute.github.io/MyBlog/tags/codewars/">Codewars</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://yurukute.github.io/MyBlog/">Blog của Dung</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/MyBlog/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.replaceState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

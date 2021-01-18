@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/</loc>
+    <lastmod>2021-01-18T16:50:30+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/tags/codewars/</loc>
+    <lastmod>2021-01-18T16:50:30+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/post/</loc>
+    <lastmod>2021-01-18T16:50:30+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/post/sum-by-factor/</loc>
+    <lastmod>2021-01-18T16:50:30+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/tags/</loc>
+    <lastmod>2021-01-18T16:50:30+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</loc>
+    <lastmod>2021-01-17T20:45:26+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/</loc>
+    <lastmod>2021-01-17T20:45:26+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/archive/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/MyBlog/search/</loc>
+  </url>
+  
+</urlset>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Blog của Dung</title>
+    <link>https://yurukute.github.io/MyBlog/tags/</link>
+    <description>Recent content in Tags on Blog của Dung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Jan 2021 16:50:30 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/MyBlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codewars</title>
+      <link>https://yurukute.github.io/MyBlog/tags/codewars/</link>
+      <pubDate>Mon, 18 Jan 2021 16:50:30 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/MyBlog/tags/codewars/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quy hoạch động</title>
+      <link>https://yurukute.github.io/MyBlog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</link>
+      <pubDate>Sun, 17 Jan 2021 20:45:26 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/MyBlog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
