@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quy hoạch động on Blog của Dung</title>
-    <link>https://yurukute.github.io/MyBlog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</link>
+    <link>https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</link>
     <description>Recent content in Quy hoạch động on Blog của Dung</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jan 2021 20:45:26 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/MyBlog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 20:45:26 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Đoạn Con Có Tổng Lớn Nhất</title>
-      <link>https://yurukute.github.io/MyBlog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/</link>
+      <link>https://yurukute.github.io/Blog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/</link>
       <pubDate>Sun, 17 Jan 2021 20:45:26 +0700</pubDate>
       
-      <guid>https://yurukute.github.io/MyBlog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/</guid>
+      <guid>https://yurukute.github.io/Blog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/</guid>
       <description>Bài toán: Nguồn: codewars.com
 Cho một dãy gồm n số nguyên $a_1, a_2,&amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Dữ liệu vào: 1 mảng các số tự nhiên a
