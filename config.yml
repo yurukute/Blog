@@ -31,8 +31,8 @@ params:
             
             - Đừng bash Dung.
     socialIcons:
-        - name: twitter
-          url: "https://twitter.com/yurukute"
+        - name: hackerrank
+          url: "https://www.hackerrank.com/yurukute"
 
 outputs:
     home:
