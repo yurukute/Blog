@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Sum by Factors | Dung&#39;s Blog</title>
+
+<meta name="keywords" content="Codewars" />
+<meta name="description" content="The problem: Source: codewars
+Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] &hellip;]
+P will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C&#43;&#43; and as an array of arrays in other languages.">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/sumbyfactors/" />
+<link href="/Blog/assets/css/stylesheet.min.d6b9f5b9a35628f539baeea5ef9a5a2774bbbe4a533799274b9dc35ea1691b4f.css" integrity="sha256-1rn1uaNWKPU5uu6l75paJ3S7vkpTN5knS53DXqFpG08=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/sumbyfactors/" />
+
+
+<meta property="og:title" content="Sum by Factors" />
+<meta property="og:description" content="The problem: Source: codewars
+Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] &hellip;]
+P will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C&#43;&#43; and as an array of arrays in other languages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/sumbyfactors/" />
+<meta property="article:published_time" content="2021-01-18T16:50:30+07:00" />
+<meta property="article:modified_time" content="2021-01-18T16:50:30+07:00" /><meta property="og:site_name" content="Dung&#39;s Blog" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sum by Factors"/>
+<meta name="twitter:description" content="The problem: Source: codewars
+Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] &hellip;]
+P will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C&#43;&#43; and as an array of arrays in other languages."/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Sum by Factors",
+  "name": "Sum by Factors",
+  "description": "The problem: Source: codewars\nGiven an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of …",
+  "keywords": [
+    "Codewars"
+  ],
+  "articleBody": "The problem: Source: codewars\nGiven an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] …]\nP will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C++ and as an array of arrays in other languages.\nExample:\nI = {12, 15}; // result = \"(2 12)(3 27)(5 15)\" To solve this problem, we need to find prime numbers, from smallest to largest, for each found prime number, we’ve got:\n If $i_j$ divisible by $p$  $sum$ += $i_j$    Enumerate prime numbers The fastest way to list them out is using SoE. We use this to find all prime numbers that are smaller than the largest absolute value of members in $I$ (i’ll call it max). So, after input the array, we first find max and then sieve. After sieving, we’ll save them into a vector to use them in process.\nstd::vectorint sieve(int n){ std::vectorbool isprime(n+1, 1); isprime[0] = isprime[1] = 0; for(int i = 2; i*i  n; i++) if(isprime[i]==1) for(int j = i*i; j  n; j += i) isprime[j]=0; std::vectorint res; for(int i = 0; i  n+1; i++) if(isprime[i]) res.push_back(i); return res; }; Processing for(auto i : primes){ ans += '('; int sum = 0; for(auto j : lst) if(j % i == 0) sum += j; if(sum) ans = ans + to_string(i) + ' ' + to_string(sum); else{ ans.pop_back(); continue; } ans += ')'; } In the code above, I use a self-write function to_string. Because the output format is a string so we need to convert p and the calculated sum into string so that we can add them to ans. Here’s the code for to_string:\nstd::string to_string(int n){ std::string prefix = \"\", s = \"\"; //if n is negative, we'll keep its \"-\"  if(n  0){ n *= -1; prefix = \"-\"; } while(n  0){ int x = n % 10; n /= 10; //We detach the number from behind so the latest digist need to be put at the front  s.insert(s.begin(), x+48); } return prefix+s; }; Well done, with all the code above, we can submit and pass this kata UwU.\nPostscript My code is still naive. After submit, you’ll find out there are many solutions which are short and creative. I followed the kata’s structure, which means i don’t import anymore libary in, that’s why i have to write to_string function. If not, the code would be short and clean!\n",
+  "wordCount" : "446",
+  "inLanguage": "en",
+  "datePublished": "2021-01-18T16:50:30+07:00",
+  "dateModified": "2021-01-18T16:50:30+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/en/post/sumbyfactors/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dung's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Dung&#39;s Blog (Alt + H)">Dung&#39;s Blog</a>
+            <span class="logo-switches">
+                <span class="theme-toggle" title="(Alt + T)">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+                <span class="lang-switch">
+                    <span>|</span>
+                    <ul>
+                        <li>
+                            <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                                aria-label="Tiếng Việt">Vi</a>
+                        </li>
+                    </ul>
+                </span>
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li></ul>
+    </nav>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Sum by Factors
+    </h1>
+    <div class="post-description">
+      
+    </div>
+    <div class="post-meta">January 18, 2021
+&nbsp;|&nbsp;
+      <ul class="i18n_list">Translations:
+        <li>
+          <a href="https://yurukute.github.io/Blog/post/sumbyfactors/">Vi</a>
+        </li>
+      </ul>
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h2 id="the-problem">The problem:<a hidden class="anchor" aria-hidden="true" href="#the-problem">#</a></h2>
+<p>Source: <a href="https://www.codewars.com/kata/54d496788776e49e6b00052f">codewars</a></p>
+<p>Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] &hellip;]</p>
+<p>P will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C++ and as an array of arrays in other languages.</p>
+<p>Example:</p>
+<pre><code>I = {12, 15}; // result = &quot;(2 12)(3 27)(5 15)&quot;
+</code></pre><p>To solve this problem, we need to find prime numbers, from smallest to largest, for each found prime number, we&rsquo;ve got:</p>
+<ul>
+<li>If $i_j$ divisible by $p$
+<ul>
+<li>$sum$ += $i_j$</li>
+</ul>
+</li>
+</ul>
+<h2 id="enumerate-prime-numbers">Enumerate prime numbers<a hidden class="anchor" aria-hidden="true" href="#enumerate-prime-numbers">#</a></h2>
+<p>The fastest way to list them out is using <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">SoE</a>. We use this to find all prime numbers that are smaller than the largest absolute value of members in $I$ (i&rsquo;ll call it <code>max</code>). So, after input the array, we first find <code>max</code> and then sieve. After sieving, we&rsquo;ll save them into a vector to use them in process.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> sieve(<span style="color:#66d9ef">int</span> n){
+    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> isprime(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>);
+    isprime[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> isprime[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">*</span>i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+        <span style="color:#66d9ef">if</span>(isprime[i]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>)
+            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">*</span>i; j <span style="color:#f92672">&lt;=</span> n; j <span style="color:#f92672">+=</span> i)
+                isprime[j]<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> res;
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>)
+        <span style="color:#66d9ef">if</span>(isprime[i])
+            res.push_back(i);
+    <span style="color:#66d9ef">return</span> res;
+};
+</code></pre></div><h2 id="processing">Processing<a hidden class="anchor" aria-hidden="true" href="#processing">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> i : primes){
+    ans <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;(&#39;</span>;
+    <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> j : lst)
+        <span style="color:#66d9ef">if</span>(j <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+            sum <span style="color:#f92672">+=</span> j;
+    <span style="color:#66d9ef">if</span>(sum)
+        ans <span style="color:#f92672">=</span> ans <span style="color:#f92672">+</span> to_string(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">+</span> to_string(sum);
+    <span style="color:#66d9ef">else</span>{
+        ans.pop_back();
+        <span style="color:#66d9ef">continue</span>;
+    }
+    ans <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;)&#39;</span>;
+}
+</code></pre></div><p>In the code above, I use a self-write function <code>to_string</code>. Because the output format is a string so we need to convert <code>p</code> and the calculated <code>sum</code> into string so that we can add them to <code>ans</code>. Here&rsquo;s the code for <code>to_string</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">    std<span style="color:#f92672">::</span>string to_string(<span style="color:#66d9ef">int</span> n){
+    std<span style="color:#f92672">::</span>string prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>; <span style="color:#75715e">//if n is negative, we&#39;ll keep its &#34;-&#34;
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>){
+        n <span style="color:#f92672">*=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+        prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;-&#34;</span>;
+    }
+    <span style="color:#66d9ef">while</span>(n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+        <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> n <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;
+        n <span style="color:#f92672">/=</span> <span style="color:#ae81ff">10</span>;
+        <span style="color:#75715e">//We detach the number from behind so the latest digist need to be put at the front
+</span><span style="color:#75715e"></span>        s.insert(s.begin(), x<span style="color:#f92672">+</span><span style="color:#ae81ff">48</span>); 
+    }
+    <span style="color:#66d9ef">return</span> prefix<span style="color:#f92672">+</span>s;
+};
+</code></pre></div><p>Well done, with all the code above, we can submit and pass this kata UwU.</p>
+<h2 id="postscript">Postscript<a hidden class="anchor" aria-hidden="true" href="#postscript">#</a></h2>
+<p>My code is still naive. After submit, you&rsquo;ll find out there are many solutions which are short and creative. I followed the kata&rsquo;s structure, which means i don&rsquo;t import anymore libary in, that&rsquo;s why i have to write <code>to_string</code> function. If not, the code would be short and clean!</p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/codewars/">Codewars</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Dung&#39;s Blog</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/Blog/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.replaceState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

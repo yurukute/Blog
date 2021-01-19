@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="vi" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,11 @@
 <title>Đoạn Con Có Tổng Lớn Nhất | Blog của Dung</title>
 
 <meta name="keywords" content="Quy hoạch động, Codewars" />
-<meta name="description" content="Bài toán: Nguồn: codewars.com
+<meta name="description" content="Bài toán: Nguồn: Codewars.com
 Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
-Dữ liệu vào: 1 mảng các số tự nhiên a
-Kết quả: Tổng lớn nhất tìm được
-Ví dụ:
-Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:">
+Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng.">
 <meta name="author" content="">
-<link rel="canonical" href="https://yurukute.github.io/Blog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/" />
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/maxsubarraysum/" />
 <link href="/Blog/assets/css/stylesheet.min.d6b9f5b9a35628f539baeea5ef9a5a2774bbbe4a533799274b9dc35ea1691b4f.css" integrity="sha256-1rn1uaNWKPU5uu6l75paJ3S7vkpTN5knS53DXqFpG08=" rel="preload stylesheet"
     as="style">
 
@@ -27,27 +24,22 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớ
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.80.0" />
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/maxsubarraysum/" />
 
 
 <meta property="og:title" content="Đoạn Con Có Tổng Lớn Nhất" />
-<meta property="og:description" content="Bài toán: Nguồn: codewars.com
+<meta property="og:description" content="Bài toán: Nguồn: Codewars.com
 Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
-Dữ liệu vào: 1 mảng các số tự nhiên a
-Kết quả: Tổng lớn nhất tìm được
-Ví dụ:
-Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:" />
+Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yurukute.github.io/Blog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/post/maxsubarraysum/" />
 <meta property="article:published_time" content="2021-01-17T20:45:26+07:00" />
-<meta property="article:modified_time" content="2021-01-17T20:45:26+07:00" />
+<meta property="article:modified_time" content="2021-01-17T20:45:26+07:00" /><meta property="og:site_name" content="Blog của Dung" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Đoạn Con Có Tổng Lớn Nhất"/>
-<meta name="twitter:description" content="Bài toán: Nguồn: codewars.com
+<meta name="twitter:description" content="Bài toán: Nguồn: Codewars.com
 Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
-Dữ liệu vào: 1 mảng các số tự nhiên a
-Kết quả: Tổng lớn nhất tìm được
-Ví dụ:
-Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:"/>
+Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng."/>
 
 <script type="application/ld+json">
 {
@@ -55,18 +47,18 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớ
   "@type": "BlogPosting",
   "headline": "Đoạn Con Có Tổng Lớn Nhất",
   "name": "Đoạn Con Có Tổng Lớn Nhất",
-  "description": "Bài toán: Nguồn: codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,\u0026amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nDữ liệu vào: 1 mảng …",
+  "description": "Bài toán: Nguồn: Codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,\u0026amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, …",
   "keywords": [
     "Quy hoạch động", "Codewars"
   ],
-  "articleBody": "Bài toán: Nguồn: codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,…, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nDữ liệu vào: 1 mảng các số tự nhiên a\nKết quả: Tổng lớn nhất tìm được\nVí dụ:\nInput: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Lời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:\n Tìm tổng từng đoạn con {-2}, {1}, {-2, 1} … So sánh các tổng để tìm ra kết quả lớn nhất.  Tuy nhiên, với độ phức tạp là $O(n^3)$ cách này sẽ không giải quyết được vấn đề khi nó mang 3 nhược điểm rất lớn:\n Làm chậm quá trình xử lí do phải tính quá nhiều. Sẽ tồn tại những phép tính không cần thiết. Các hành động lặp đi lặp lại.  Chính vì vậy, ta cần một giải pháp nhanh và tốt hơn!\nCách 2:  Ta gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:  $f[0] = 0$ $f[i] = f[i-1] + a[i]$   Như vậy, tổng các phần tử từ $i$ đến $j$ là: $f[j] – f[i-1]$  Với cách này, ta sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì ta đã tính trước ở $f[i-1]$ = Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/\nCách 3: Với ý tưởng của cách 2, ta thêm một biến sum để lưu tổng đang tính. Khi duyệt mảng, ta sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn hay hắt đầu một đoạn con mới. Như vậy ta cần so sánh xem tổng hiện tại (sum) cộng thêm phần tử arr[i] đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác ta lấy max(sum + a[i], a[i]) - Đây cũng chính là kết quả cần tìm.\n#include  using namespace std; int maxSequence(const vectorint\u0026 arr){ int max=0, sum=0, size=arr.size(); for(int i=0; isize; i++){ sum+=arr[i]; if(arr[i]sum) sum=arr[i]; if(summax) max=sum; } return max; } ",
-  "wordCount" : "386",
-  "inLanguage": "en",
+  "articleBody": "Bài toán: Nguồn: Codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,…, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng. Nếu mảng chỉ có số âm, trả về $0$\nMột mảng rỗng sẽ được xem như có tổng lớn nhất là $0$. Lưu ý rằng mảng rỗng cũng là mảng con/đoạn con hợp lệ.\nLời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:\n Tìm tổng từng đoạn con {-2}, {1}, {-2, 1} … So sánh các tổng để tìm ra kết quả lớn nhất.  Tuy nhiên, với độ phức tạp là $O(n^3)$ cách này sẽ không giải quyết được vấn đề khi nó mang 3 nhược điểm rất lớn:\n Làm chậm quá trình xử lí do phải tính quá nhiều. Sẽ tồn tại những phép tính không cần thiết. Các hành động lặp đi lặp lại.  Chính vì vậy, ta cần một giải pháp nhanh và tốt hơn!\nCách 2:  Ta gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:  $f[0] = 0$ $f[i] = f[i-1] + a[i]$   Như vậy, tổng các phần tử từ $i$ đến $j$ là: $f[j] – f[i-1]$  Với cách này, ta sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì ta đã tính trước ở $f[i-1]$ = Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/\nCách 3: Với ý tưởng của cách 2, ta thêm một biến sum để lưu tổng đang tính. Khi duyệt mảng, ta sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn hay hắt đầu một đoạn con mới. Như vậy ta cần so sánh xem tổng hiện tại (sum) cộng thêm phần tử arr[i] đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác ta lấy max(sum + a[i], a[i]) - Đây cũng chính là kết quả cần tìm.\n#include  using namespace std; int maxSequence(const vectorint\u0026 arr){ int max=0, sum=0, size=arr.size(); for(int i=0; isize; i++){ sum+=arr[i]; if(arr[i]sum) sum=arr[i]; if(summax) max=sum; } return max; } Cảm ơn bạn vì đã đọc ",
+  "wordCount" : "431",
+  "inLanguage": "vi",
   "datePublished": "2021-01-17T20:45:26+07:00",
   "dateModified": "2021-01-17T20:45:26+07:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://yurukute.github.io/Blog/post/%C4%91o%E1%BA%A1n-con-c%C3%B3-t%E1%BB%95ng-l%E1%BB%9Bn-nh%E1%BA%A5t/"
+    "@id": "https://yurukute.github.io/Blog/post/maxsubarraysum/"
   },
   "publisher": {
     "@type": "Organization",
@@ -131,17 +123,21 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớ
                     </a>
                 </span>
                 
+                <span class="lang-switch">
+                    <span>|</span>
+                    <ul>
+                        <li>
+                            <a href="https://yurukute.github.io/Blog/en/" title="English"
+                                aria-label="English">En</a>
+                        </li>
+                    </ul>
+                </span>
             </span>
         </div>
         <ul class="menu" id="menu" onscroll="menu_on_scroll()">
             <li>
                 <a href="https://yurukute.github.io/Blog/archive" title="Lưu trữ">
                     <span>Lưu trữ</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://yurukute.github.io/Blog/categories" title="Danh mục">
-                    <span>Danh mục</span>
                 </a>
             </li>
             <li>
@@ -190,20 +186,24 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 vì đoạn con có tổng lớ
       
     </div>
     <div class="post-meta">January 17, 2021
-
+&nbsp;|&nbsp;
+      <ul class="i18n_list">Translations:
+        <li>
+          <a href="https://yurukute.github.io/Blog/en/post/maxsubarraysum/">En</a>
+        </li>
+      </ul>
     </div>
   </header> 
 
   <div class="post-content">
 <h2 id="bài-toán">Bài toán:<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
-<p><strong><a href="https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c">Nguồn: codewars.com</a></strong><br>
-Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con <em>(dãy gồm các phần tử liên tiếp nhau)</em> có tổng lớn nhất.<br>
-<strong>Dữ liệu vào:</strong> 1 mảng các số tự nhiên a<br>
-<strong>Kết quả:</strong> Tổng lớn nhất tìm được<br>
-Ví dụ:</p>
+<p>Nguồn: <a href="https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c">Codewars.com</a></p>
+<p>Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con <em>(dãy gồm các phần tử liên tiếp nhau)</em> có tổng lớn nhất.</p>
 <pre><code>Input:  {-2, 1, -3, 4, -1, 2, 1, -5, 4}
-Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
-</code></pre><h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
+Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
+</code></pre><p>Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng. Nếu mảng chỉ có số âm, trả về $0$</p>
+<p>Một mảng rỗng sẽ được xem như có tổng lớn nhất là $0$. Lưu ý rằng mảng rỗng cũng là mảng con/đoạn con hợp lệ.</p>
+<h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
 <h3 id="cách-1-vét-cạn">Cách 1: Vét cạn<a hidden class="anchor" aria-hidden="true" href="#cách-1-vét-cạn">#</a></h3>
 <p>Đây là cách dễ tiếp cận nhất với 2 bước:</p>
 <ol>
@@ -244,7 +244,8 @@ Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
     }
     <span style="color:#66d9ef">return</span> max;
 }
-</code></pre></div>
+</code></pre></div><h2 id="cảm-ơn-bạn-vì-đã-đọc">Cảm ơn bạn vì đã đọc<a hidden class="anchor" aria-hidden="true" href="#cảm-ơn-bạn-vì-đã-đọc">#</a></h2>
+
 </div>
   <footer class="post-footer">
     <ul class="post-tags">

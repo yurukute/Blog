@@ -6,15 +6,16 @@ tags: ["Quy hoạch động", "Codewars"]
 ---
 
 ## Bài toán: 
-**[Nguồn: codewars.com](https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c)**\
-Cho một dãy gồm n số nguyên $a_1, a_2,..., a_n$. Hãy tìm một đoạn con *(dãy gồm các phần tử liên tiếp nhau)* có tổng lớn nhất.\
-**Dữ liệu vào:** 1 mảng các số tự nhiên a\
-**Kết quả:** Tổng lớn nhất tìm được\
-Ví dụ:
+Nguồn: [Codewars.com](https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c)
+
+Cho một dãy gồm n số nguyên $a_1, a_2,..., a_n$. Hãy tìm một đoạn con *(dãy gồm các phần tử liên tiếp nhau)* có tổng lớn nhất.
 ```
 Input:  {-2, 1, -3, 4, -1, 2, 1, -5, 4}
-Output: 6 vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
+Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
 ```
+Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng. Nếu mảng chỉ có số âm, trả về $0$
+
+Một mảng rỗng sẽ được xem như có tổng lớn nhất là $0$. Lưu ý rằng mảng rỗng cũng là mảng con/đoạn con hợp lệ.
 ## Lời giải
 ### Cách 1: Vét cạn 
 Đây là cách dễ tiếp cận nhất với 2 bước:
@@ -52,3 +53,4 @@ int maxSequence(const vector<int>& arr){
     return max;
 }
 ```
+## Cảm ơn bạn vì đã đọc

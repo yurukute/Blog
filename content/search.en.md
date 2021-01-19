@@ -1,5 +1,5 @@
 ---
-title: "Tìm kiếm"
+title: "Search"
 layout: "search" 
 summary: "search"
 ---

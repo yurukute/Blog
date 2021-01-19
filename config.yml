@@ -1,39 +1,59 @@
 baseURL: "https://yurukute.github.io/Blog/"
-title: Blog của Dung
 theme: PaperMod
 publishDir: "docs"
+defaultContentLanguage: vi
 languages:
-    en:
-        languageName: "English"
+    vi:
+        languageName: "Tiếng Việt"
         weight: 1
+        title: Blog của Dung
+        homeInfoParams:
+            Title: "Chao xìn OwO)/"
+            Content: >
+                Đây là blog đầu tay của Dung về cách giải mấy bài toán tin mà Dung gặp.
+
+                - Dung viết cho vui.
+            
+                - Đừng bash Dung.
         menu:
             main:
                 - name: Lưu trữ
                   url: /archive
-                  weight: 1
+                  weight: 5
                 - name: Tìm kiếm
                   url: /search
-                  weight: 3
+                  weight: 7
                 - name: Tags
                   url: /tags
-                  weight: 4
-                - name: Danh mục
-                  url: /categories
-                  weight: 2
+                  weight: 8
+        
+    en:
+        languageName: "English"
+        weight: 2
+        title: Dung's Blog
+        homeInfoParams:
+            Title: "Hi there OwO)/"
+            Content: >
+                This is my Dung's first blog about how she solve programing problems that she has met.
 
+                - Dung writes for fun
+        
+                - Don't bash Dung
+        menu:
+            main:
+                - name: Archives
+                  url: archive/
+                  weight: 5
+                - name: Search
+                  url: search/
+                  weight: 7
+                - name: Tags
+                  url: tags/
+                  weight: 8
 params:
-    homeInfoParams:
-        Title: "Chao xìn OwO)/"
-        Content: >
-            Đây là blog đầu tay của Dung về cách giải mấy bài toán tin mà Dung gặp.
-
-            - Dung viết cho vui.
-            
-            - Đừng bash Dung.
     socialIcons:
         - name: hackerrank
           url: "https://www.hackerrank.com/yurukute"
-
 outputs:
     home:
         - HTML
