@@ -54,6 +54,8 @@ params:
     socialIcons:
         - name: hackerrank
           url: "https://www.hackerrank.com/yurukute"
+        - name: codewars
+          url: "https://www.codewars.com/users/yurukute"
 outputs:
     home:
         - HTML
