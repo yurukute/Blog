@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>codeforces on Dung&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/codeforces/</link>
+    <description>Recent content in codeforces on Dung&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 Jan 2021 15:39:07 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>T-Primes</title>
+      <link>https://yurukute.github.io/Blog/en/post/t-primes/</link>
+      <pubDate>Fri, 22 Jan 2021 15:39:07 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/t-primes/</guid>
+      <description>Promblem Source: Codeforces
+We know that prime numbers are positive integers that have exactly two distinct positive divisors. Similarly, we&amp;rsquo;ll call a positive integer $t$ Т-prime, if $t$ has exactly three distinct positive divisors.
+You are given an array of $n$ positive integers. For each of them determine whether it is Т-prime or not.
+Examples
+Input: 3 4 5 6 Output: YES NO NO Solution First, we need to find all prime numbers from 2 to $\sqrt{x}$.</description>
+    </item>
+    
+  </channel>
+</rss>
