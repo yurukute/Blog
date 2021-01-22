@@ -1,7 +1,7 @@
 ---
 title: "Sum by Factors"
 date: 2021-01-18T16:50:30+07:00
-tags: ["Codewars"]
+tags: ["codewars", "eratosthene"]
 ---
 
 ## The problem:
