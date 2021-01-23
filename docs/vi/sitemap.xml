@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/</loc>
-    <lastmod>2021-01-22T15:08:53+07:00</lastmod>
+    <lastmod>2021-01-23T20:46:06+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,6 +14,36 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/post/primesinnumbers/</loc>
+    <lastmod>2021-01-23T20:46:06+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/primesinnumbers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/primesinnumbers/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/post/</loc>
+    <lastmod>2021-01-23T20:46:06+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
                 />
   </url>
   
@@ -44,21 +74,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/tags/eratosthene/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yurukute.github.io/Blog/post/</loc>
-    <lastmod>2021-01-22T15:08:53+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
                 />
   </url>
   
