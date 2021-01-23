@@ -1,7 +1,7 @@
 ---
 title: "Maximum subarray sum"
 date: 2021-01-17T20:45:26+07:00
-tags: ["Codewars", "dynamic programing"]
+tags: ["Codewars", "Dynamic Programing"]
 #ShowToc: true
 TocOpen: true
 ---
