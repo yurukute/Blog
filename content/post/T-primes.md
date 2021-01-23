@@ -24,7 +24,7 @@ Output: YES
         NO
 ```
 ## Lời giải
-Đầu tiên, ta cần tìm tất cả các số nguyên tố từ 2 đến $\sqrt{x}$ bằng sàng Eratosthene. X giới hạn đến $10^{12}$ nên $\sqrt{x}$ lớn nhất sẽ là $10^6$.
+Đầu tiên, ta cần tìm tất cả các số nguyên tố từ 2 đến $\sqrt{x}$ bằng sàng [Eratosthene](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes). X giới hạn đến $10^{12}$ nên $\sqrt{x}$ lớn nhất sẽ là $10^6$.
 ```cpp
 int limit = 1000001
 std::vector<bool> isprime(limit, true);
