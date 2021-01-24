@@ -46,3 +46,4 @@ while (n--){
     cout << (isprime[q] && q*q == x ? "YES" : "NO") << "\n"; 
 }
 ```
+## Cảm ơn bạn vì đã đọc.

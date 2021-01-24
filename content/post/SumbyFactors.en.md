@@ -52,5 +52,6 @@ for(auto i : primes){
     }
     ans += ')';
 }
-Well done, with all the code above, we can submit and pass this kata UwU.
 ```
+Well done, with all the code above, we can submit and pass this kata UwU.
+## Thank you for reading.

@@ -58,5 +58,4 @@ for(auto i : primes){
 }
 ```
 Thế là xong! Ghép lại là có thể submit UwU.
-
-
+## Cảm ơn bạn vì đã đọc

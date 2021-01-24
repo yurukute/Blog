@@ -53,4 +53,4 @@ int maxSequence(const vector<int>& arr){
     return max;
 }
 ```
-## Cảm ơn bạn vì đã đọc
+## Cảm ơn bạn vì đã đọc.
