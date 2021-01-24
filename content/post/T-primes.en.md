@@ -1,7 +1,7 @@
 ---
 title: "T-Primes"
 date: 2021-01-22T15:39:07+07:00
-tags: ["Codeforces", "Eratosthene"]
+tags: ["Eratosthene"]
 #ShowToc: true
 TocOpen: true
 ---

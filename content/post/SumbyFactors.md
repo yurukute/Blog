@@ -1,7 +1,7 @@
 ---
 title: "Sum by Factors"
 date: 2021-01-18T16:50:30+07:00
-tags: ["Codewars", "Eratosthene"]
+tags: ["Eratosthene"]
 ---
 
 ## Bài toán:

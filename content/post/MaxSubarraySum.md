@@ -2,7 +2,7 @@
 title: "Đoạn Con Có Tổng Lớn Nhất"
 date: 2021-01-17T20:45:26+07:00
 draft: false
-tags: ["Quy hoạch động", "Codewars"]
+tags: ["Quy hoạch động"]
 ---
 
 ## Bài toán: 
