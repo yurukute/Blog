@@ -1,7 +1,7 @@
 ---
 title: "Phân tích thừa số nguyên tố"
 date: 2021-01-23T20:46:06+07:00
-tags: []
+tags: ["Số học"]
 #ShowToc: true
 TocOpen: true
 ---
@@ -22,7 +22,7 @@ Input:  n = 86240
 Output: (2**5)(5)(7**2)
 ```
 ## Lời giải 
-**Thông thường**, để phân tích $n$ ra thừa số nguyên tố, ta đem chia $n$ cho một số nguyên tố, bắt đâu từ số 2. Chia thương tìm được cho số nguyên tố đó đến khi không thể chia hết, ta xét đến số nguyên tố tiếp theo, lần lượt là 3, 5, 7,... Cứ tiếp tục như vậy cho đến khi thương = 1.
+**Thông thường**, để phân tích ra thừa số nguyên tố, ta đem chia số đó cho ước nguyên tố nhỏ nhất của nó. Cứ tiếp tục như vậy cho đến khi thương = 1.
 
 Ví dụ: n = 160
 |N  | I |
