@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Numbers on Noob&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/numbers/</link>
+    <description>Recent content in Numbers on Noob&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 23 Jan 2021 20:46:09 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/numbers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Primes in numbers</title>
+      <link>https://yurukute.github.io/Blog/en/post/primesinnumbers/</link>
+      <pubDate>Sat, 23 Jan 2021 20:46:09 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/primesinnumbers/</guid>
+      <description>Problem Codewars
+Given a positive number n &amp;gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
+($p_1$**$n_1$)($p_2$**$n_2$)&amp;hellip;($p_k$**$n_k$)
+where
+ a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
+Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor.</description>
+    </item>
+    
+  </channel>
+</rss>

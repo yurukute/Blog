@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Blog của Dung</title>
+    <title>Posts on Blog của Noob</title>
     <link>https://yurukute.github.io/Blog/post/</link>
-    <description>Recent content in Posts on Blog của Dung</description>
+    <description>Recent content in Posts on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 23 Jan 2021 20:46:06 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,11 @@
       <pubDate>Sat, 23 Jan 2021 20:46:06 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/post/primesinnumbers/</guid>
-      <description>Bài toán Nguồn: Codewars</description>
+      <description>Bài toán Nguồn: Codewars
+Đọc hiểu Cho một số dương $n$ &amp;gt; 1. Phân tích $n$ ra tích các số nguyên tố theo dạng:
+($p_1$**$n_1$)($p_2$**$n_2$)&amp;hellip;($p_k$**$n_k$)
+ Trong đó:  a**b nghĩa là $a^b$ $p_i$ liệt kê theo thứ tự tăng dần Nếu $n_i$ = 1 thì không ghi ra    Ví dụ:
+Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Thông thường, để phân tích ra thừa số nguyên tố, ta đem chia số đó cho ước nguyên tố nhỏ nhất của nó.</description>
     </item>
     
     <item>

@@ -1,35 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Blog của Dung</title>
+    <title>Tags on Blog của Noob</title>
     <link>https://yurukute.github.io/Blog/tags/</link>
-    <description>Recent content in Tags on Blog của Dung</description>
+    <description>Recent content in Tags on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 22 Jan 2021 15:08:53 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jan 2021 20:46:06 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>codeforces</title>
-      <link>https://yurukute.github.io/Blog/tags/codeforces/</link>
-      <pubDate>Fri, 22 Jan 2021 15:08:53 +0700</pubDate>
+      <title>Số học</title>
+      <link>https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/</link>
+      <pubDate>Sat, 23 Jan 2021 20:46:06 +0700</pubDate>
       
-      <guid>https://yurukute.github.io/Blog/tags/codeforces/</guid>
+      <guid>https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>eratosthene</title>
+      <title>Eratosthene</title>
       <link>https://yurukute.github.io/Blog/tags/eratosthene/</link>
       <pubDate>Fri, 22 Jan 2021 15:08:53 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/tags/eratosthene/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Codewars</title>
-      <link>https://yurukute.github.io/Blog/tags/codewars/</link>
-      <pubDate>Mon, 18 Jan 2021 16:50:30 +0700</pubDate>
-      
-      <guid>https://yurukute.github.io/Blog/tags/codewars/</guid>
       <description></description>
     </item>
     

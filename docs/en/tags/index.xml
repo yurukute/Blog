@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Dung&#39;s Blog</title>
+    <title>Tags on Noob&#39;s Blog</title>
     <link>https://yurukute.github.io/Blog/en/tags/</link>
-    <description>Recent content in Tags on Dung&#39;s Blog</description>
+    <description>Recent content in Tags on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 22 Jan 2021 15:39:07 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jan 2021 20:46:09 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>codeforces</title>
-      <link>https://yurukute.github.io/Blog/en/tags/codeforces/</link>
-      <pubDate>Fri, 22 Jan 2021 15:39:07 +0700</pubDate>
+      <title>Numbers</title>
+      <link>https://yurukute.github.io/Blog/en/tags/numbers/</link>
+      <pubDate>Sat, 23 Jan 2021 20:46:09 +0700</pubDate>
       
-      <guid>https://yurukute.github.io/Blog/en/tags/codeforces/</guid>
+      <guid>https://yurukute.github.io/Blog/en/tags/numbers/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>eratosthene</title>
+      <title>Eratosthene</title>
       <link>https://yurukute.github.io/Blog/en/tags/eratosthene/</link>
       <pubDate>Fri, 22 Jan 2021 15:39:07 +0700</pubDate>
       
@@ -25,16 +25,7 @@
     </item>
     
     <item>
-      <title>Codewars</title>
-      <link>https://yurukute.github.io/Blog/en/tags/codewars/</link>
-      <pubDate>Mon, 18 Jan 2021 16:50:30 +0700</pubDate>
-      
-      <guid>https://yurukute.github.io/Blog/en/tags/codewars/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dynamic programing</title>
+      <title>Dynamic Programing</title>
       <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
       <pubDate>Sun, 17 Jan 2021 20:45:26 +0700</pubDate>
       

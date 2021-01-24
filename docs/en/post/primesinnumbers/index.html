@@ -5,10 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Primes in numbers | Dung&#39;s Blog</title>
+<title>Primes in numbers | Noob&#39;s Blog</title>
 
-<meta name="keywords" content="" />
-<meta name="description" content="Primes in numbers - Dung&#39;s Blog">
+<meta name="keywords" content="Numbers" />
+<meta name="description" content="Problem Codewars
+Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
+($p_1$**$n_1$)($p_2$**$n_2$)&hellip;($p_k$**$n_k$)
+where
+ a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
+Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/post/primesinnumbers/" />
 <link href="/Blog/assets/css/stylesheet.min.d6b9f5b9a35628f539baeea5ef9a5a2774bbbe4a533799274b9dc35ea1691b4f.css" integrity="sha256-1rn1uaNWKPU5uu6l75paJ3S7vkpTN5knS53DXqFpG08=" rel="preload stylesheet"
@@ -26,14 +31,24 @@
 
 
 <meta property="og:title" content="Primes in numbers" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Problem Codewars
+Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
+($p_1$**$n_1$)($p_2$**$n_2$)&hellip;($p_k$**$n_k$)
+where
+ a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
+Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/en/post/primesinnumbers/" />
 <meta property="article:published_time" content="2021-01-23T20:46:09+07:00" />
-<meta property="article:modified_time" content="2021-01-23T20:46:09+07:00" /><meta property="og:site_name" content="Dung&#39;s Blog" />
+<meta property="article:modified_time" content="2021-01-23T20:46:09+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Primes in numbers"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="Problem Codewars
+Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
+($p_1$**$n_1$)($p_2$**$n_2$)&hellip;($p_k$**$n_k$)
+where
+ a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
+Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor."/>
 
 <script type="application/ld+json">
 {
@@ -41,12 +56,12 @@
   "@type": "BlogPosting",
   "headline": "Primes in numbers",
   "name": "Primes in numbers",
-  "description": "",
+  "description": "Problem Codewars\nGiven a positive number n \u0026amp;gt; 1 find the prime factor decomposition of n. The result will be a string with the following form: …",
   "keywords": [
-    
+    "Numbers"
   ],
-  "articleBody": "",
-  "wordCount" : "0",
+  "articleBody": "Problem Codewars\nGiven a positive number n  1 find the prime factor decomposition of n. The result will be a string with the following form:\n($p_1$**$n_1$)($p_2$**$n_2$)…($p_k$**$n_k$)\nwhere\n a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:\nInput: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor. We’ll repeat the steps until reaching 1.\nFor example: n = 160\n   N I     160 2   80 2   40 2   20 2   10 2   5 5   1     The idea give us code like this:\nstd::vectorint fact; int power = 0; for(int i = 2; i*i  lst; i++){ while(lst % i == 0){ power++; lst /= i; } In coding, we don’t need to find those prime factors before. Just a for loop from 2 to $\\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means. we divided the composite numbers UwU. Now, edit the code a little bit for output\nstd::string res = \"\"; std::vectorint fact; int power = 0; for(int i = 2; i*i  lst; i++){ while(lst % i == 0){ power++; lst /= i; } if(power == 0) continue; res += \"(\" + std::to_string(i) + (power == 1 ? \"\" : (\"**\" + std::to_string(power))) + \")\"; power = 0; } if(lst != 1) res += \"(\" + std::to_string(lst) + \")\"; return res; Thank you for reading. ",
+  "wordCount" : "253",
   "inLanguage": "en",
   "datePublished": "2021-01-23T20:46:09+07:00",
   "dateModified": "2021-01-23T20:46:09+07:00",
@@ -56,7 +71,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Dung's Blog",
+    "name": "Noob's Blog",
     "logo": {
       "@type": "ImageObject",
       "url": "https://yurukute.github.io/Blog/favicon.ico"
@@ -92,7 +107,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Dung&#39;s Blog (Alt + H)">Dung&#39;s Blog</a>
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
             <span class="logo-switches">
                 <span class="theme-toggle" title="(Alt + T)">
                     <a id="theme-toggle" accesskey="t">
@@ -190,13 +205,96 @@
   </header> 
 
   <div class="post-content">
+<h2 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h2>
+<p><a href="https://www.codewars.com/kata/54d512e62a5e54c96200019e">Codewars</a></p>
+<p>Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:</p>
+<p>($p_1$**$n_1$)($p_2$**$n_2$)&hellip;($p_k$**$n_k$)</p>
+<p>where</p>
+<ul>
+<li>a**b means $a^b$</li>
+<li>$p_i$ in increasing order</li>
+<li>$n_i$ empty if n(i) is 1.</li>
+</ul>
+<p>Example:</p>
+<pre><code>Input:  n = 86240 
+Output: (2**5)(5)(7**2)(11)
+</code></pre><h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
+<p>Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor. We&rsquo;ll repeat the steps until reaching 1.</p>
+<p>For example: n = 160</p>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>I</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>160</td>
+<td>2</td>
+</tr>
+<tr>
+<td>80</td>
+<td>2</td>
+</tr>
+<tr>
+<td>40</td>
+<td>2</td>
+</tr>
+<tr>
+<td>20</td>
+<td>2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The idea give us code like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> fact;
+    <span style="color:#66d9ef">int</span> power <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">*</span>i <span style="color:#f92672">&lt;</span> lst; i<span style="color:#f92672">++</span>){
+        <span style="color:#66d9ef">while</span>(lst <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+            power<span style="color:#f92672">++</span>;
+            lst <span style="color:#f92672">/=</span> i;
+        }
+</code></pre></div><p>In coding, we don&rsquo;t need to find those prime factors before. Just a <code>for</code> loop from 2 to $\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means. we divided the composite numbers UwU. Now, edit the code a little bit for output</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">std<span style="color:#f92672">::</span>string res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> fact;
+<span style="color:#66d9ef">int</span> power <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">*</span>i <span style="color:#f92672">&lt;</span> lst; i<span style="color:#f92672">++</span>){
+    <span style="color:#66d9ef">while</span>(lst <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+        power<span style="color:#f92672">++</span>;
+        lst <span style="color:#f92672">/=</span> i;
+    }
+    <span style="color:#66d9ef">if</span>(power <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+        <span style="color:#66d9ef">continue</span>;
+    res <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span> std<span style="color:#f92672">::</span>to_string(i) <span style="color:#f92672">+</span> (power <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">:</span> (<span style="color:#e6db74">&#34;**&#34;</span> <span style="color:#f92672">+</span> std<span style="color:#f92672">::</span>to_string(power))) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>;
+    power <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    }   
+    <span style="color:#66d9ef">if</span>(lst <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>)
+        res <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span> std<span style="color:#f92672">::</span>to_string(lst) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>;
+<span style="color:#66d9ef">return</span> res;
+</code></pre></div><h2 id="thank-you-for-reading">Thank you for reading.<a hidden class="anchor" aria-hidden="true" href="#thank-you-for-reading">#</a></h2>
 
 </div>
   <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/numbers/">Numbers</a></li>
+    </ul>
   </footer>
 </article>
     </main><footer class="footer">
-    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Dung&#39;s Blog</a></span>
+    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
     <span>&middot;</span>
     <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
     <span>&middot;</span>

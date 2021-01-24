@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://yurukute.github.io/Blog/en/tags/numbers/</loc>
+    <lastmod>2021-01-23T20:46:09+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yurukute.github.io/Blog/en/post/</loc>
     <lastmod>2021-01-23T20:46:09+07:00</lastmod>
     <xhtml:link
@@ -48,17 +53,17 @@
   </url>
   
   <url>
-    <loc>https://yurukute.github.io/Blog/en/tags/codeforces/</loc>
-    <lastmod>2021-01-22T15:39:07+07:00</lastmod>
+    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
+    <lastmod>2021-01-23T20:46:09+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/codeforces/"
+                href="https://yurukute.github.io/Blog/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/codeforces/"
+                href="https://yurukute.github.io/Blog/en/tags/"
                 />
   </url>
   
@@ -89,36 +94,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/post/t-primes/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
-    <lastmod>2021-01-22T15:39:07+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yurukute.github.io/Blog/en/tags/codewars/</loc>
-    <lastmod>2021-01-18T16:50:30+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/codewars/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/codewars/"
                 />
   </url>
   
