@@ -25,11 +25,7 @@ languages:
                   weight: 7
                 - name: Tags
                   url: /tags
-                  weight: 8
-                - name: Danh mục
-                  url: /categories
-                  weight: 6
-        
+                  weight: 8        
     en:
         languageName: "English"
         weight: 2
