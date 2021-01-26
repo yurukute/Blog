@@ -45,7 +45,7 @@ Generally, we use Eratosthene to find the prime numbers, now, with some changes,
 for(int i = 2; i <= n; i ++){
     if(f[i].prime){
         int power = 1;
-        for(int j = i+i; j <= n; j += i){ //Lưu ý: j = i+i chứ không còn là i*i
+        for(int j = i+i; j <= n; j += i){ //In this line, j = i+i not i*i
             f[j].prime = false;
             while(f[j].value % i == 0){
                 f[j].value /= i;
@@ -69,7 +69,7 @@ std::string decomp(int n) {
         if(f[i].prime){
             res += (" * " + std::to_string(i));
             int power = 1;
-            for(int j = i+i; j <= n; j += i){ //In this line, j = i+i not i*I
+            for(int j = i+i; j <= n; j += i){
                 prime[j] = false;
                 while(value[j] % i == 0){
                     value[j] /= i;
