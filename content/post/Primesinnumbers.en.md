@@ -66,3 +66,5 @@ for(int i = 2; i*i < lst; i++){
 return res;
 ```
 ## Thank you for reading.
+## Related post
+[Factorial decomp]({{< ref "/post/factorialdecomp" >}})

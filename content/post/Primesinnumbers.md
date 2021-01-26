@@ -65,3 +65,5 @@ for(int i = 2; i*i < lst; i++){
 return res;
 ```
 ## Cảm ơn bạn vì đã đọc.
+## Bài viết liên quan:
+[Phân tích thừa số nguyên tố của n!]({{< ref "/post/factorialdecomp" >}})
