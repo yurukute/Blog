@@ -8,8 +8,7 @@
 <title>Đoạn Con Có Tổng Lớn Nhất | Blog của Noob</title>
 
 <meta name="keywords" content="Quy hoạch động" />
-<meta name="description" content="Bài toán: Nguồn: Codewars.com
-Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+<meta name="description" content="Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/post/maxsubarraysum/" />
@@ -28,8 +27,7 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
 
 
 <meta property="og:title" content="Đoạn Con Có Tổng Lớn Nhất" />
-<meta property="og:description" content="Bài toán: Nguồn: Codewars.com
-Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+<meta property="og:description" content="Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/post/maxsubarraysum/" />
@@ -37,8 +35,7 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
 <meta property="article:modified_time" content="2021-01-17T20:45:26+07:00" /><meta property="og:site_name" content="Blog của Noob" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Đoạn Con Có Tổng Lớn Nhất"/>
-<meta name="twitter:description" content="Bài toán: Nguồn: Codewars.com
-Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+<meta name="twitter:description" content="Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng."/>
 
 <script type="application/ld+json">
@@ -47,11 +44,11 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
   "@type": "BlogPosting",
   "headline": "Đoạn Con Có Tổng Lớn Nhất",
   "name": "Đoạn Con Có Tổng Lớn Nhất",
-  "description": "Bài toán: Nguồn: Codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,\u0026amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, …",
+  "description": "Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,\u0026amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, …",
   "keywords": [
     "Quy hoạch động"
   ],
-  "articleBody": "Bài toán: Nguồn: Codewars.com\nCho một dãy gồm n số nguyên $a_1, a_2,…, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng. Nếu mảng chỉ có số âm, trả về $0$\nMột mảng rỗng sẽ được xem như có tổng lớn nhất là $0$. Lưu ý rằng mảng rỗng cũng là mảng con/đoạn con hợp lệ.\nLời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:\n Tìm tổng từng đoạn con {-2}, {1}, {-2, 1} … So sánh các tổng để tìm ra kết quả lớn nhất.  Tuy nhiên, với độ phức tạp là $O(n^3)$ cách này sẽ không giải quyết được vấn đề khi nó mang 3 nhược điểm rất lớn:\n Làm chậm quá trình xử lí do phải tính quá nhiều. Sẽ tồn tại những phép tính không cần thiết. Các hành động lặp đi lặp lại.  Chính vì vậy, ta cần một giải pháp nhanh và tốt hơn!\nCách 2:  Ta gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:  $f[0] = 0$ $f[i] = f[i-1] + a[i]$   Như vậy, tổng các phần tử từ $i$ đến $j$ là: $f[j] – f[i-1]$  Với cách này, ta sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì ta đã tính trước ở $f[i-1]$ = Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/\nCách 3: Với ý tưởng của cách 2, ta thêm một biến sum để lưu tổng đang tính. Khi duyệt mảng, ta sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn hay hắt đầu một đoạn con mới. Như vậy ta cần so sánh xem tổng hiện tại (sum) cộng thêm phần tử arr[i] đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác ta lấy max(sum + a[i], a[i]) - Đây cũng chính là kết quả cần tìm.\n#include  using namespace std; int maxSequence(const vectorint\u0026 arr){ int max=0, sum=0, size=arr.size(); for(int i=0; isize; i++){ sum+=arr[i]; if(arr[i]sum) sum=arr[i]; if(summax) max=sum; } return max; } Cảm ơn bạn vì đã đọc. ",
+  "articleBody": "Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,…, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng. Nếu mảng chỉ có số âm, trả về $0$\nMột mảng rỗng sẽ được xem như có tổng lớn nhất là $0$. Lưu ý rằng mảng rỗng cũng là mảng con/đoạn con hợp lệ.\nLời giải Cách 1: Vét cạn Đây là cách dễ tiếp cận nhất với 2 bước:\n Tìm tổng từng đoạn con {-2}, {1}, {-2, 1} … So sánh các tổng để tìm ra kết quả lớn nhất.  Tuy nhiên, với độ phức tạp là $O(n^3)$ cách này sẽ không giải quyết được vấn đề khi nó mang 3 nhược điểm rất lớn:\n Làm chậm quá trình xử lí do phải tính quá nhiều. Sẽ tồn tại những phép tính không cần thiết. Các hành động lặp đi lặp lại.  Chính vì vậy, ta cần một giải pháp nhanh và tốt hơn!\nCách 2:  Ta gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:  $f[0] = 0$ $f[i] = f[i-1] + a[i]$   Như vậy, tổng các phần tử từ $i$ đến $j$ là: $f[j] – f[i-1]$  Với cách này, ta sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì ta đã tính trước ở $f[i-1]$ = Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/\nCách 3: Với ý tưởng của cách 2, ta thêm một biến sum để lưu tổng đang tính. Khi duyệt mảng, ta sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn hay hắt đầu một đoạn con mới. Như vậy ta cần so sánh xem tổng hiện tại (sum) cộng thêm phần tử arr[i] đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác ta lấy max(sum + a[i], a[i]) - Đây cũng chính là kết quả cần tìm.\n#include  using namespace std; int maxSequence(const vectorint\u0026 arr){ int max=0, sum=0, size=arr.size(); for(int i=0; isize; i++){ sum+=arr[i]; if(arr[i]sum) sum=arr[i]; if(summax) max=sum; } return max; } Cảm ơn bạn vì đã đọc. ",
   "wordCount" : "431",
   "inLanguage": "vi",
   "datePublished": "2021-01-17T20:45:26+07:00",
@@ -197,7 +194,8 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
 
   <div class="post-content">
 <h2 id="bài-toán">Bài toán:<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
-<p>Nguồn: <a href="https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c">Codewars.com</a></p>
+<p>Nguồn: <a href="https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c" target="_blank">Codewars.com</a>
+</p>
 <p>Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con <em>(dãy gồm các phần tử liên tiếp nhau)</em> có tổng lớn nhất.</p>
 <pre><code>Input:  {-2, 1, -3, 4, -1, 2, 1, -5, 4}
 Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}

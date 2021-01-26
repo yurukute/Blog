@@ -12,8 +12,7 @@
       <pubDate>Sun, 17 Jan 2021 20:45:26 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/post/maxsubarraysum/</guid>
-      <description>Bài toán: Nguồn: Codewars.com
-Cho một dãy gồm n số nguyên $a_1, a_2,&amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+      <description>Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,&amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng.</description>
     </item>
     
