@@ -1,5 +1,5 @@
 ---
-title: "Factorial decomp"
+title: "Factorial decomposition"
 date: 2021-01-26T00:08:20+07:00
 tags: ["Numbers", "Eratosthene"]
 #ShowToc: true
