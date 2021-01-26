@@ -69,7 +69,7 @@ std::string decomp(int n) {
         if(f[i].prime){
             res += (" * " + std::to_string(i));
             int power = 1;
-            for(int j = i+i; j <= n; j += i){
+            for(int j = i+i; j <= n; j += i){ //In this line, j = i+i not i*I
                 prime[j] = false;
                 while(value[j] % i == 0){
                     value[j] /= i;
