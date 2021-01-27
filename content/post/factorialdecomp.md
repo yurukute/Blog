@@ -55,31 +55,22 @@ for(int i = 2; i <= n; i ++){
 ```
 Sau cùng, ta thêm vào vài dòng hỗ trợ cho việc output là có thể submit
 ```cpp
-std::string decomp(int n) {
-    bool prime[n+1];
-    int  value[n+1];
-    prime[0] = prime[1] = false;
-    for(int i = 2; i <= n; i++){
-        prime[i] = true;
-        value[i] = i;
-    }
-    for(int i = 2; i <= n; i ++){
-        if(f[i].prime){
-            res += (" * " + std::to_string(i));
-            int power = 1;
-            for(int j = i+i; j <= n; j += i){
-                prime[j] = false;
-                while(value[j] % i == 0){
-                    value[j] /= i;
-                    power++;
-                }
+for(int i = 2; i <= n; i ++){
+    if(f[i].prime){
+        res += (" * " + std::to_string(i));
+        int power = 1;
+        for(int j = i+i; j <= n; j += i){
+            prime[j] = false;
+            while(value[j] % i == 0){
+                value[j] /= i;
+                power++;
             }
-            if(power > 1)
-                res += ("^" + std::to_string(power));
         }
+        if(power > 1)
+            res += ("^" + std::to_string(power));
     }
-    res.erase(res.begin(), res.begin()+3);
-    return res;
 }
+res.erase(res.begin(), res.begin()+3);
+return res;
 ```
-## Cảm ơn bạn vì đã dọc.
+## Cảm ơn bạn vì đã đọc.
