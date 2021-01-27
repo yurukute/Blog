@@ -18,7 +18,7 @@ Có 1 lưu ý nho nhỏ là giá trị của $n$ có thể lên tới 4000, tấ
 ## Lời giải
 ### Ý tưởng
 Theo định nghĩa, giai thừa của $n$, kí hiệu là $n!$, là tích của $n$ số dương đầu tiên với nhau:\
-$12! = 1\times2\times3\times4\times5\times6\times7\times8\times9\times10\times11\times12$
+$$12! = 1\times2\times3\times4\times5\times6\times7\times8\times9\times10\times11\times12$$
 
 Như vậy, phân tích $n!$ cũng đồng nghĩa với việc phân tích từng thừa số của n! rồi nhân các kết quả lại với nhau. Ví dụ: với $n = 12$ ta có bảng phân tích ứng với từng thừa số sau: 
 | 12!  | 2 | 3 | 4   | 5 | 6        | 7 | 8   | 9   |10        | 11 | 12         |
@@ -26,7 +26,7 @@ Như vậy, phân tích $n!$ cũng đồng nghĩa với việc phân tích từn
 |decomp|$2$|$3$|$2^2$|$5$|$2\times3$|$7$|$2^3$|$3^2$|$2\times5$|$11$|$2^2\times3$|
 
 Sau khi nhân các kết quả lại, ta được kết quả cuối cùng là tích thừa số nguyên tố của $n!$ mà ta cần tìm
-$2\times3\times2^2\times5\times2\times3\times7\times2^3\times3^2\times2\times5\times11\times2^2\times3 = 2^{10}\times3^5\times5^2\times7\times11$
+$$2\times3\times2^2\times5\times2\times3\times7\times2^3\times3^2\times2\times5\times11\times2^2\times3 = 2^{10}\times3^5\times5^2\times7\times11$$
 ### Chương trình
 Bước đầu tiên, ta khởi tạo 2 mảng một chiêu để lưu tính nguyên tố và giá trị của các thừa số
 ```cpp
