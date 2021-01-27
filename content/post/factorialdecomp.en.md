@@ -20,7 +20,7 @@ Note that $n$ can reach 4000 and, of course, 4000! would be very big with more t
 ## Solution
 ### Idea
 By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$:
-$12! = 1\times2\times3\times4\times5\times6\times7\times8\times9\times10\times11\times12$
+$$12! = 1\times2\times3\times4\times5\times6\times7\times8\times9\times10\times11\times12$$
 
 Thus, decomp $n!$ also means decomp each factors of $n!$ then multiply them. For example, $n = 12$, we can decomp each factor as the table below:
 | 12!  | 2 | 3 | 4   | 5 | 6        | 7 | 8   | 9   |10        | 11 | 12         |
@@ -28,7 +28,7 @@ Thus, decomp $n!$ also means decomp each factors of $n!$ then multiply them. For
 |decomp|$2$|$3$|$2^2$|$5$|$2\times3$|$7$|$2^3$|$3^2$|$2\times5$|$11$|$2^2\times3$|
 
 After we multiply them, the final result is the prime factor decomposition of a $n!$ which we need to find
-$2\times3\times2^2\times5\times2\times3\times7\times2^3\times3^2\times2\times5\times11\times2^2\times3 = 2^{10}\times3^5\times5^2\times7\times11$
+$$2\times3\times2^2\times5\times2\times3\times7\times2^3\times3^2\times2\times5\times11\times2^2\times3 = 2^{10}\times3^5\times5^2\times7\times11$$
 ### Program
 First of all, we initialize 2 arrays to save the factors and their primality
 ```cpp
