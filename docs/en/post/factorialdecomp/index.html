@@ -8,12 +8,13 @@
 <title>Factorial decomposition | Noob&#39;s Blog</title>
 
 <meta name="keywords" content="Numbers, Eratosthene" />
-<meta name="description" content="Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
+<meta name="description" content="Problem Source: Codewars
+The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/post/factorialdecomp/" />
-<link href="/Blog/assets/css/stylesheet.min.01efa27e8aa9cf08c0888d5580d4ea1238445ce7031f9e72f0c167dc8ba1796e.css" integrity="sha256-Ae&#43;ifoqpzwjAiI1VgNTqEjhEXOcDH55y8MFn3IuheW4=" rel="preload stylesheet"
+<link href="/Blog/assets/css/stylesheet.min.d90a57c6abc2338fde9e74c3eb7937c12376ad122857a7def122e4fa134ebf7d.css" integrity="sha256-2QpXxqvCM4/ennTD63k3wSN2rRIoV6fe8SLk&#43;hNOv30=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
@@ -25,10 +26,12 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.80.0" />
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/factorialdecomp/" />
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/factorialdecomp/" />
 
 
 <meta property="og:title" content="Factorial decomposition" />
-<meta property="og:description" content="Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
+<meta property="og:description" content="Problem Source: Codewars
+The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!" />
 <meta property="og:type" content="article" />
@@ -37,7 +40,8 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
 <meta property="article:modified_time" content="2021-01-26T00:08:20+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Factorial decomposition"/>
-<meta name="twitter:description" content="Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
+<meta name="twitter:description" content="Problem Source: Codewars
+The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!"/>
 
@@ -47,11 +51,11 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
   "@type": "BlogPosting",
   "headline": "Factorial decomposition",
   "name": "Factorial decomposition",
-  "description": "Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:\nInput: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ …",
+  "description": "Problem Source: Codewars\nThe aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:\nInput: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ …",
   "keywords": [
     "Numbers", "Eratosthene"
   ],
-  "articleBody": "Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:\nInput: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)\nSolution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12! = 1\\times2\\times3\\times4\\times5\\times6\\times7\\times8\\times9\\times10\\times11\\times12$$\nThus, decomp $n!$ also means decomp each factors of $n!$ then multiply them. For example, $n = 12$, we can decomp each factor as the table below:\n   12! 2 3 4 5 6 7 8 9 10 11 12     decomp $2$ $3$ $2^2$ $5$ $2\\times3$ $7$ $2^3$ $3^2$ $2\\times5$ $11$ $2^2\\times3$    After we multiply them, the final result is the prime factor decomposition of a $n!$ which we need to find $$2\\times3\\times2^2\\times5\\times2\\times3\\times7\\times2^3\\times3^2\\times2\\times5\\times11\\times2^2\\times3 = 2^{10}\\times3^5\\times5^2\\times7\\times11$$\nProgram First of all, we initialize 2 arrays to save the factors and their primality\nbool prime[n+1]; int value[n+1]; prime[0] = prime[1] = false; for(int i = 2; i  n; i++){ prime[i] = true; value[i] = i; } Generally, we use Eratosthene to find the prime numbers, now, with some changes, we can decomp all composite numbers which are multiples of found prime.\nfor(int i = 2; i  n; i ++){ if(f[i].prime){ int power = 1; for(int j = i+i; j  n; j += i){ //In this line, j = i+i not i*i  f[j].prime = false; while(f[j].value % i == 0){ f[j].value /= i; power++; } } } } Finally, we add some code for output\nfor(int i = 2; i  n; i ++){ if(f[i].prime){ res += (\" * \" + std::to_string(i)); int power = 1; for(int j = i+i; j  n; j += i){ prime[j] = false; while(value[j] % i == 0){ value[j] /= i; power++; } } if(power  1) res += (\"^\" + std::to_string(power)); } } res.erase(res.begin(), res.begin()+3); return res; And done! UwU)/\nThank you for reading. ",
+  "articleBody": "Problem Source: Codewars\nThe aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:\nInput: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)\nSolution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12! = 1\\times2\\times3\\times4\\times5\\times6\\times7\\times8\\times9\\times10\\times11\\times12$$\nThus, decomp $n!$ also means decomp each factors of $n!$ then multiply them. For example, $n = 12$, we can decomp each factor as the table below:\n   12! 2 3 4 5 6 7 8 9 10 11 12     decomp $2$ $3$ $2^2$ $5$ $2\\times3$ $7$ $2^3$ $3^2$ $2\\times5$ $11$ $2^2\\times3$    After we multiply them, the final result is the prime factor decomposition of a $n!$ which we need to find $$2\\times3\\times2^2\\times5\\times2\\times3\\times7\\times2^3\\times3^2\\times2\\times5\\times11\\times2^2\\times3 = 2^{10}\\times3^5\\times5^2\\times7\\times11$$\nProgram First of all, we initialize 2 arrays to save the factors and their primality\nbool prime[n+1]; int value[n+1]; prime[0] = prime[1] = false; for(int i = 2; i  n; i++){ prime[i] = true; value[i] = i; } Generally, we use Eratosthene to find the prime numbers, now, with some changes, we can decomp all composite numbers which are multiples of found prime.\nfor(int i = 2; i  n; i ++){ if(f[i].prime){ int power = 1; for(int j = i+i; j  n; j += i){ //In this line, j = i+i not i*i  f[j].prime = false; while(f[j].value % i == 0){ f[j].value /= i; power++; } } } } Finally, we add some code for output\nfor(int i = 2; i  n; i ++){ if(f[i].prime){ res += (\" * \" + std::to_string(i)); int power = 1; for(int j = i+i; j  n; j += i){ prime[j] = false; while(value[j] % i == 0){ value[j] /= i; power++; } } if(power  1) res += (\"^\" + std::to_string(power)); } } res.erase(res.begin(), res.begin()+3); return res; And done! UwU)/\nThank you for reading. ",
   "wordCount" : "342",
   "inLanguage": "en",
   "datePublished": "2021-01-26T00:08:20+07:00",
@@ -100,41 +104,38 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
             <span class="logo-switches">
-                <span class="theme-toggle" title="(Alt + T)">
-                    <a id="theme-toggle" accesskey="t">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </a>
-                </span>
+                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </a>
                 
-                <span class="lang-switch">
-                    <span>|</span>
-                    <ul>
-                        <li>
-                            <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
-                                aria-label="Tiếng Việt">Vi</a>
-                        </li>
-                    </ul>
-                </span>
+                
+
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                            aria-label="Tiếng Việt">Vi</a>
+                    </li>
+                </ul>
             </span>
         </div>
-        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu" onscroll="menu_on_scroll()">
             <li>
                 <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
                     <span>Archives</span>
@@ -182,12 +183,8 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
     <h1 class="post-title">
       Factorial decomposition
     </h1>
-    <div class="post-description">
-      
-    </div>
     <div class="post-meta">January 26, 2021
-&nbsp;|&nbsp;
-      <ul class="i18n_list">Translations:
+&nbsp;|&nbsp;<ul class="i18n_list">Translations:
         <li>
           <a href="https://yurukute.github.io/Blog/post/factorialdecomp/">Vi</a>
         </li>
@@ -197,8 +194,7 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
 
   <div class="post-content">
 <h2 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h2>
-<p>Source: <a href="https://www.codewars.com/kata/5a045fee46d843effa000070" target="_blank">Codewars</a>
-</p>
+<p>Source: <a href="https://www.codewars.com/kata/5a045fee46d843effa000070">Codewars</a></p>
 <p>The aim of the kata is to decompose $n!$(factorial n) into its prime factors.
 For example:</p>
 <pre><code>Input:  n = 12
@@ -335,7 +331,7 @@ res.erase(res.begin(), res.begin()<span style="color:#f92672">+</span><span styl
             if (id === "top") {
                 history.replaceState(null, null, " ");
             } else {
-                history.replaceState(null, null, `#${id}`);
+                history.pushState(null, null, `#${id}`);
             }
         });
     });

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Bitwise operators&#39; application | Noob&#39;s Blog</title>
+
+<meta name="keywords" content="Bitwise" />
+<meta name="description" content="Summary    Name Operator Description      AND &amp; Both bits are 1, return 1. Otherwise, return 0.   OR \ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are different return 1. Otherwise, return 0.   NOT ~ Flip bit, 0 becomes 1, 1 becomes 0    Shift left &lt;&lt; Shifts all the bits to the left    Right left &gt;&gt; Shifts all the bits to the right     Application Integer Change bit //Set nth bit x |= (1 &lt;&lt; n); //Set the right-most 0 bit to 1 x |= (x&#43;1); //Unset nth bit x &amp;= ~(1 &lt;&lt; n); //Set the right-most 1 bit to 0 x &amp;= (x-1); //Toggle nth bit x ^= (1 &lt;&lt; n); //Get the mth bit of n (x &gt;&gt; n) &amp; 1; //Swap Adjacent bits ((x &amp; 10101010) &gt;&gt; 1) | ((x &amp; 01010101) &lt;&lt; 1); Multiplication / Division x by $2^n$ x &lt;&lt; n //multiplication x &gt;&gt; n //division Round up to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; Round down to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; x = x &gt;&gt; 1; //the same with the code above but added this line Floor x x &gt;&gt; 0; 6.">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/bitwise/" />
+<link href="/Blog/assets/css/stylesheet.min.d90a57c6abc2338fde9e74c3eb7937c12376ad122857a7def122e4fa134ebf7d.css" integrity="sha256-2QpXxqvCM4/ennTD63k3wSN2rRIoV6fe8SLk&#43;hNOv30=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/bitwise/" />
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/bitwise/" />
+
+
+<meta property="og:title" content="Bitwise operators&#39; application" />
+<meta property="og:description" content="Summary    Name Operator Description      AND &amp; Both bits are 1, return 1. Otherwise, return 0.   OR \ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are different return 1. Otherwise, return 0.   NOT ~ Flip bit, 0 becomes 1, 1 becomes 0    Shift left &lt;&lt; Shifts all the bits to the left    Right left &gt;&gt; Shifts all the bits to the right     Application Integer Change bit //Set nth bit x |= (1 &lt;&lt; n); //Set the right-most 0 bit to 1 x |= (x&#43;1); //Unset nth bit x &amp;= ~(1 &lt;&lt; n); //Set the right-most 1 bit to 0 x &amp;= (x-1); //Toggle nth bit x ^= (1 &lt;&lt; n); //Get the mth bit of n (x &gt;&gt; n) &amp; 1; //Swap Adjacent bits ((x &amp; 10101010) &gt;&gt; 1) | ((x &amp; 01010101) &lt;&lt; 1); Multiplication / Division x by $2^n$ x &lt;&lt; n //multiplication x &gt;&gt; n //division Round up to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; Round down to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; x = x &gt;&gt; 1; //the same with the code above but added this line Floor x x &gt;&gt; 0; 6." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/bitwise/" />
+<meta property="article:published_time" content="2021-01-29T20:52:33+07:00" />
+<meta property="article:modified_time" content="2021-01-29T20:52:33+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bitwise operators&#39; application"/>
+<meta name="twitter:description" content="Summary    Name Operator Description      AND &amp; Both bits are 1, return 1. Otherwise, return 0.   OR \ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are different return 1. Otherwise, return 0.   NOT ~ Flip bit, 0 becomes 1, 1 becomes 0    Shift left &lt;&lt; Shifts all the bits to the left    Right left &gt;&gt; Shifts all the bits to the right     Application Integer Change bit //Set nth bit x |= (1 &lt;&lt; n); //Set the right-most 0 bit to 1 x |= (x&#43;1); //Unset nth bit x &amp;= ~(1 &lt;&lt; n); //Set the right-most 1 bit to 0 x &amp;= (x-1); //Toggle nth bit x ^= (1 &lt;&lt; n); //Get the mth bit of n (x &gt;&gt; n) &amp; 1; //Swap Adjacent bits ((x &amp; 10101010) &gt;&gt; 1) | ((x &amp; 01010101) &lt;&lt; 1); Multiplication / Division x by $2^n$ x &lt;&lt; n //multiplication x &gt;&gt; n //division Round up to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; Round down to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; x = x &gt;&gt; 1; //the same with the code above but added this line Floor x x &gt;&gt; 0; 6."/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Bitwise operators' application",
+  "name": "Bitwise operators\u0027 application",
+  "description": "Summary    Name Operator Description      AND \u0026amp;amp; Both bits are 1, return 1. Otherwise, return 0.   OR \\ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are …",
+  "keywords": [
+    "Bitwise"
+  ],
+  "articleBody": "Summary    Name Operator Description      AND \u0026 Both bits are 1, return 1. Otherwise, return 0.   OR \\ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are different return 1. Otherwise, return 0.   NOT ~ Flip bit, 0 becomes 1, 1 becomes 0    Shift left  Shifts all the bits to the left    Right left  Shifts all the bits to the right     Application Integer Change bit //Set nth bit x |= (1  n); //Set the right-most 0 bit to 1 x |= (x+1); //Unset nth bit x \u0026= ~(1  n); //Set the right-most 1 bit to 0 x \u0026= (x-1); //Toggle nth bit x ^= (1  n); //Get the mth bit of n (x  n) \u0026 1; //Swap Adjacent bits ((x \u0026 10101010)  1) | ((x \u0026 01010101)  1); Multiplication / Division x by $2^n$ x  n //multiplication x  n //division Round up to the next power of two x--; x |= x  1; x |= x  2; x |= x  4; x |= x  8; x |= x  16; x++; Round down to the next power of two x--; x |= x  1; x |= x  2; x |= x  4; x |= x  8; x |= x  16; x++; x = x  1; //the same with the code above but added this line Floor x x  0; 6.723  0; //6 Flip the sign x = ~x + 1; // or x = (x ^ -1) + 1; // x = -x Absolute value of x int abs = (x ^ (x  31)) - (x  31); The greatest power of 2 that divides x x \u0026 (-x); Get the minimum / maximum integer (and long) int minInt = 1  31; int minInt = 1  -1; int maxInt = ~(1  31); int maxInt = (1  31) - 1; int maxInt = (1  -1) - 1; int maxInt = -1u  1; int maxLong = ((long)1  127) -1; The min / max of two values //First way int min = a \u0026 ((a-b)  31) | b \u0026 (~(a-b)  31); int max = b \u0026 ((a-b)  31) | a \u0026 (~(a-b)  31); //Second way int min = (b ^ (a ^ b) \u0026 -(a  b)); int max = (a ^ (a ^ b) \u0026 -(a  b)); Average int avg = (x + y)  1; int avg = ((x ^ y)  1) + (x \u0026 y); Swap 2 variables //First way a ^= b; b ^= a; a ^= b; //Second way a = a ^ b ^ (b = a) Quick conditional assignment In some cases. you may require some conditional assignment such as\nif(x == a) x = b; //hoặc if(x == b) x = a; You can use bitwise XOR operator for these type of assignment.\nx ^= a ^ b; Check if…   nth bit is set   x \u0026 (1  n)   x is an odd number   (x \u0026 1) == 1;   x is a power of 2   x  0 \u0026\u0026 (x \u0026 (x - 1)) == 0;   a = b   (35% faster in Javascript)\n(a ^ b) == 0;   both number have the same sign   (a ^ b) = 0; String Convert letter to lowercase or uppercase c \u0026 '_' If the converting letter is uppercase, nothing change. Eg:\nchar c; c = 'a' \u0026 '_'; //c = 'A' c = 'A' \u0026 '_'; //c = 'A' Chuyển kí tự thường thành hoa c | ' ' If the converting letter ia lowercase, nothing change. Eg:\nchar c; c = 'A' | ' '; //c = 'a' c = 'a' | ' '; //c = 'a' Invert letter’s case c ^ ' ' For example:\nchar c; c = 'A' ^ ' '; //c = 'a' c = 'a' ^ ' '; //c = 'A' Letter’s position in alphabet //For lowercase only c ^ '`' //For uppercase only c ^ '@' //Letter case is not important c \u0026 \"\\x1F\" Miscellaneous Use XOR for basic encryption and decryption #include#define key 5  int main(){ std::string s; std::cin  s; //Mã hóa  for(char \u0026i : s){ i ^= key; } std::cout  s + \"\\n\"; //Giải mã  for(char \u0026i : s){ i ^= key; } std::cout  s + \"\\n\"; } Input: Hello Output: M`iij Hello Fast color conversion from R5G5B5 to R8G8B8 pixel format using shifts R8 = (R5  2) G8 = (R5  2) B8 = (R5  2) I’m gonna lose my mind after finished this post, thanks for reading.\n",
+  "wordCount" : "799",
+  "inLanguage": "en",
+  "datePublished": "2021-01-29T20:52:33+07:00",
+  "dateModified": "2021-01-29T20:52:33+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/en/post/bitwise/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
+            <span class="logo-switches">
+                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </a>
+                
+                
+
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                            aria-label="Tiếng Việt">Vi</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li></ul>
+    </nav>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Bitwise operators&#39; application
+    </h1>
+    <div class="post-meta">January 29, 2021
+&nbsp;|&nbsp;<ul class="i18n_list">Translations:
+        <li>
+          <a href="https://yurukute.github.io/Blog/post/bitwise/">Vi</a>
+        </li>
+      </ul>
+    </div>
+  </header> 
+
+  <div class="toc">
+    <details  open>
+      <summary accesskey="c" title="(Alt + C)">
+        <div class="details">Table of Contents</div>
+      </summary>
+      <div class="inner"><ul><li>
+        <a href="#summary" aria-label="Summary">Summary</a></li><li>
+        <a href="#application" aria-label="Application">Application</a><ul>
+            <li>
+        <a href="#integer" aria-label="Integer">Integer</a><ul>
+            <li>
+        <a href="#change-bit" aria-label="Change bit">Change bit</a></li><li>
+        <a href="#multiplication--division-x-by-2n" aria-label="Multiplication / Division x by $2^n$">Multiplication / Division x by $2^n$</a></li><li>
+        <a href="#round-up-to-the-next-power-of-two" aria-label="Round up to the next power of two">Round up to the next power of two</a></li><li>
+        <a href="#round-down-to-the-next-power-of-two" aria-label="Round down to the next power of two">Round <em>down</em> to the next power of two</a></li><li>
+        <a href="#floor-x" aria-label="Floor x">Floor x</a></li><li>
+        <a href="#flip-the-sign" aria-label="Flip the sign">Flip the sign</a></li><li>
+        <a href="#absolute-value-of-x" aria-label="Absolute value of x">Absolute value of x</a></li><li>
+        <a href="#the-greatest-power-of-2-that-divides-x" aria-label="The greatest power of 2 that divides x">The greatest power of 2 that divides x</a></li><li>
+        <a href="#get-the-minimum--maximum-integer-and-long" aria-label="Get the minimum / maximum integer (and long)">Get the minimum / maximum integer (and long)</a></li><li>
+        <a href="#the-min--max-of-two-values" aria-label="The min / max of two values">The min / max of two values</a></li><li>
+        <a href="#average" aria-label="Average">Average</a></li><li>
+        <a href="#swap-2-variables" aria-label="Swap 2 variables">Swap 2 variables</a></li><li>
+        <a href="#quick-conditional-assignment" aria-label="Quick conditional assignment">Quick conditional assignment</a></li><li>
+        <a href="#check-if" aria-label="Check if&amp;hellip;">Check if&hellip;</a><ul>
+            <li>
+        <a href="#nth-bit-is-set" aria-label="nth bit is set">nth bit is set</a></li><li>
+        <a href="#x-is-an-odd-number" aria-label="x is an odd number">x is an odd number</a></li><li>
+        <a href="#x-is-a-power-of-2" aria-label="x is a power of 2">x is a power of 2</a></li><li>
+        <a href="#a--b" aria-label="a = b">a = b</a></li><li>
+        <a href="#both-number-have-the-same-sign" aria-label="both number have the same sign">both number have the same sign</a></li></ul>
+    </li></ul>
+    </li><li>
+        <a href="#string" aria-label="String">String</a><ul>
+            <li>
+        <a href="#convert-letter-to-lowercase-or-uppercase" aria-label="Convert letter to lowercase or uppercase">Convert letter to lowercase or uppercase</a></li><li>
+        <a href="#chuy%e1%bb%83n-k%c3%ad-t%e1%bb%b1-th%c6%b0%e1%bb%9dng-th%c3%a0nh-hoa" aria-label="Chuyển kí tự thường thành hoa">Chuyển kí tự thường thành hoa</a></li><li>
+        <a href="#invert-letters-case" aria-label="Invert letter&amp;rsquo;s case">Invert letter&rsquo;s case</a></li><li>
+        <a href="#letters-position-in-alphabet" aria-label="Letter&amp;rsquo;s position in alphabet">Letter&rsquo;s position in alphabet</a></li></ul>
+    </li><li>
+        <a href="#miscellaneous" aria-label="Miscellaneous">Miscellaneous</a><ul>
+            <li>
+        <a href="#use-xor-for-basic-encryption-and-decryption" aria-label="Use XOR for basic encryption and decryption">Use XOR for basic encryption and decryption</a></li><li>
+        <a href="#fast-color-conversion-from-r5g5b5-to-r8g8b8-pixel-format-using-shifts" aria-label="Fast color conversion from R5G5B5 to R8G8B8 pixel format using shifts">Fast color conversion from R5G5B5 to R8G8B8 pixel format using shifts</a></li></ul>
+</li></ul>
+</li></ul>
+      </div>
+    </details>
+  </div>
+  <div class="post-content">
+<h1 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">Operator</th>
+<th style="text-align:left">Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">AND</td>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:left"><strong>Both bits</strong> are 1, return 1.</td>
+<td>Otherwise, return 0.</td>
+</tr>
+<tr>
+<td style="text-align:center">OR</td>
+<td style="text-align:center">\</td>
+<td style="text-align:left"><strong>One of both</strong> bit is 1, return 1.</td>
+<td>Otherwise, return 0.</td>
+</tr>
+<tr>
+<td style="text-align:center">XOR</td>
+<td style="text-align:center">^</td>
+<td style="text-align:left"><strong>Two bits are different</strong> return 1.</td>
+<td>Otherwise, return 0.</td>
+</tr>
+<tr>
+<td style="text-align:center">NOT</td>
+<td style="text-align:center">~</td>
+<td style="text-align:left">Flip bit, 0 becomes 1, 1 becomes 0</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Shift left</td>
+<td style="text-align:center">&lt;&lt;</td>
+<td style="text-align:left">Shifts all the bits to the left</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Right left</td>
+<td style="text-align:center">&gt;&gt;</td>
+<td style="text-align:left">Shifts all the bits to the right</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="application">Application<a hidden class="anchor" aria-hidden="true" href="#application">#</a></h1>
+<h2 id="integer">Integer<a hidden class="anchor" aria-hidden="true" href="#integer">#</a></h2>
+<h3 id="change-bit">Change bit<a hidden class="anchor" aria-hidden="true" href="#change-bit">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//Set nth bit
+</span><span style="color:#75715e"></span>x <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
+
+<span style="color:#75715e">//Set the right-most 0 bit to 1
+</span><span style="color:#75715e"></span>x <span style="color:#f92672">|=</span> (x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+
+<span style="color:#75715e">//Unset nth bit
+</span><span style="color:#75715e"></span>x <span style="color:#f92672">&amp;=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
+
+<span style="color:#75715e">//Set the right-most 1 bit to 0
+</span><span style="color:#75715e"></span>x <span style="color:#f92672">&amp;=</span> (x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+
+<span style="color:#75715e">//Toggle nth bit
+</span><span style="color:#75715e"></span>x <span style="color:#f92672">^=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
+
+<span style="color:#75715e">//Get the mth bit of n
+</span><span style="color:#75715e"></span>(x <span style="color:#f92672">&gt;&gt;</span> n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>;
+
+<span style="color:#75715e">//Swap Adjacent bits
+</span><span style="color:#75715e"></span>((x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">10101010</span>) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">|</span> ((x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">01010101</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div><h3 id="multiplication--division-x-by-2n">Multiplication / Division x by $2^n$<a hidden class="anchor" aria-hidden="true" href="#multiplication--division-x-by-2n">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#75715e">//multiplication
+</span><span style="color:#75715e"></span>x <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#75715e">//division
+</span></code></pre></div><h3 id="round-up-to-the-next-power-of-two">Round up to the next power of two<a hidden class="anchor" aria-hidden="true" href="#round-up-to-the-next-power-of-two">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x<span style="color:#f92672">--</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span>;
+x<span style="color:#f92672">++</span>;
+</code></pre></div><h3 id="round-down-to-the-next-power-of-two">Round <em>down</em> to the next power of two<a hidden class="anchor" aria-hidden="true" href="#round-down-to-the-next-power-of-two">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x<span style="color:#f92672">--</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span>;
+x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span>;
+x<span style="color:#f92672">++</span>;
+x <span style="color:#f92672">=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">//the same with the code above but added this line
+</span></code></pre></div><h3 id="floor-x">Floor x<a hidden class="anchor" aria-hidden="true" href="#floor-x">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#ae81ff">6.723</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//6   
+</span></code></pre></div><h3 id="flip-the-sign">Flip the sign<a hidden class="anchor" aria-hidden="true" href="#flip-the-sign">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// or
+</span><span style="color:#75715e"></span>x <span style="color:#f92672">=</span> (x <span style="color:#f92672">^</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// x = -x
+</span></code></pre></div><h3 id="absolute-value-of-x">Absolute value of x<a hidden class="anchor" aria-hidden="true" href="#absolute-value-of-x">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> abs <span style="color:#f92672">=</span> (x <span style="color:#f92672">^</span> (x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>)) <span style="color:#f92672">-</span> (x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
+</code></pre></div><h3 id="the-greatest-power-of-2-that-divides-x">The greatest power of 2 that divides x<a hidden class="anchor" aria-hidden="true" href="#the-greatest-power-of-2-that-divides-x">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">-</span>x);
+</code></pre></div><h3 id="get-the-minimum--maximum-integer-and-long">Get the minimum / maximum integer (and long)<a hidden class="anchor" aria-hidden="true" href="#get-the-minimum--maximum-integer-and-long">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> minInt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>;
+<span style="color:#66d9ef">int</span> minInt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+
+<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>);
+<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1u</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+
+<span style="color:#66d9ef">int</span> maxLong <span style="color:#f92672">=</span> ((<span style="color:#66d9ef">long</span>)<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">127</span>) <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</code></pre></div><h3 id="the-min--max-of-two-values">The min / max of two values<a hidden class="anchor" aria-hidden="true" href="#the-min--max-of-two-values">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//First way
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> a <span style="color:#f92672">&amp;</span> ((a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">|</span> b <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">~</span>(a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
+<span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> b <span style="color:#f92672">&amp;</span> ((a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">|</span> a <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">~</span>(a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
+
+<span style="color:#75715e">//Second way
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> (b <span style="color:#f92672">^</span> (a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>(a <span style="color:#f92672">&lt;</span> b));
+<span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> (a <span style="color:#f92672">^</span> (a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>(a <span style="color:#f92672">&lt;</span> b));
+</code></pre></div><h3 id="average">Average<a hidden class="anchor" aria-hidden="true" href="#average">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> avg <span style="color:#f92672">=</span> (x <span style="color:#f92672">+</span> y) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">int</span> avg <span style="color:#f92672">=</span> ((x <span style="color:#f92672">^</span> y) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> (x <span style="color:#f92672">&amp;</span> y);
+</code></pre></div><h3 id="swap-2-variables">Swap 2 variables<a hidden class="anchor" aria-hidden="true" href="#swap-2-variables">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//First way
+</span><span style="color:#75715e"></span>a <span style="color:#f92672">^=</span> b;
+b <span style="color:#f92672">^=</span> a;
+a <span style="color:#f92672">^=</span> b;
+
+<span style="color:#75715e">//Second way
+</span><span style="color:#75715e"></span>a <span style="color:#f92672">=</span> a <span style="color:#f92672">^</span> b <span style="color:#f92672">^</span> (b <span style="color:#f92672">=</span> a)
+</code></pre></div><h3 id="quick-conditional-assignment">Quick conditional assignment<a hidden class="anchor" aria-hidden="true" href="#quick-conditional-assignment">#</a></h3>
+<p>In some cases. you may require some conditional assignment such as</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">if</span>(x <span style="color:#f92672">==</span> a)
+    x <span style="color:#f92672">=</span> b;
+<span style="color:#75715e">//hoặc
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(x <span style="color:#f92672">==</span> b)
+    x <span style="color:#f92672">=</span> a;
+</code></pre></div><p>You can use bitwise XOR operator for these type of assignment.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">^=</span> a <span style="color:#f92672">^</span> b;
+</code></pre></div><h3 id="check-if">Check if&hellip;<a hidden class="anchor" aria-hidden="true" href="#check-if">#</a></h3>
+<ul>
+<li>
+<h4 id="nth-bit-is-set">nth bit is set<a hidden class="anchor" aria-hidden="true" href="#nth-bit-is-set">#</a></h4>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n)
+</code></pre></div><ul>
+<li>
+<h4 id="x-is-an-odd-number">x is an odd number<a hidden class="anchor" aria-hidden="true" href="#x-is-an-odd-number">#</a></h4>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">(x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>;
+</code></pre></div><ul>
+<li>
+<h4 id="x-is-a-power-of-2">x is a power of 2<a hidden class="anchor" aria-hidden="true" href="#x-is-a-power-of-2">#</a></h4>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> (x <span style="color:#f92672">&amp;</span> (x <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
+</code></pre></div><ul>
+<li>
+<h4 id="a--b">a = b<a hidden class="anchor" aria-hidden="true" href="#a--b">#</a></h4>
+</li>
+</ul>
+<p><em>(35% faster in Javascript)</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">(a <span style="color:#f92672">^</span> b) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
+</code></pre></div><ul>
+<li>
+<h4 id="both-number-have-the-same-sign">both number have the same sign<a hidden class="anchor" aria-hidden="true" href="#both-number-have-the-same-sign">#</a></h4>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">(a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>;
+</code></pre></div><h2 id="string">String<a hidden class="anchor" aria-hidden="true" href="#string">#</a></h2>
+<h3 id="convert-letter-to-lowercase-or-uppercase">Convert letter to lowercase or uppercase<a hidden class="anchor" aria-hidden="true" href="#convert-letter-to-lowercase-or-uppercase">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">c <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>
+</code></pre></div><p>If the converting letter is uppercase, nothing change. Eg:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">char</span> c;
+c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>;  <span style="color:#75715e">//c = &#39;A&#39;
+</span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>;  <span style="color:#75715e">//c = &#39;A&#39;
+</span></code></pre></div><h3 id="chuyển-kí-tự-thường-thành-hoa">Chuyển kí tự thường thành hoa<a hidden class="anchor" aria-hidden="true" href="#chuyển-kí-tự-thường-thành-hoa">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">c <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>
+</code></pre></div><p>If the converting letter ia lowercase, nothing change. Eg:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">char</span> c;
+c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>;  <span style="color:#75715e">//c = &#39;a&#39;
+</span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>;  <span style="color:#75715e">//c = &#39;a&#39;
+</span></code></pre></div><h3 id="invert-letters-case">Invert letter&rsquo;s case<a hidden class="anchor" aria-hidden="true" href="#invert-letters-case">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>
+</code></pre></div><p>For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">char</span> c;
+c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>; <span style="color:#75715e">//c = &#39;a&#39;
+</span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>; <span style="color:#75715e">//c = &#39;A&#39;
+</span></code></pre></div><h3 id="letters-position-in-alphabet">Letter&rsquo;s position in alphabet<a hidden class="anchor" aria-hidden="true" href="#letters-position-in-alphabet">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//For lowercase only
+</span><span style="color:#75715e"></span>c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39;`&#39;</span>
+
+<span style="color:#75715e">//For uppercase only
+</span><span style="color:#75715e"></span>c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39;@&#39;</span>
+
+<span style="color:#75715e">//Letter case is not important
+</span><span style="color:#75715e"></span>c <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x1F</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><h2 id="miscellaneous">Miscellaneous<a hidden class="anchor" aria-hidden="true" href="#miscellaneous">#</a></h2>
+<h3 id="use-xor-for-basic-encryption-and-decryption">Use XOR for basic encryption and decryption<a hidden class="anchor" aria-hidden="true" href="#use-xor-for-basic-encryption-and-decryption">#</a></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#define key 5
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+    std<span style="color:#f92672">::</span>string s;
+    std<span style="color:#f92672">::</span>cin <span style="color:#f92672">&gt;&gt;</span> s;
+    
+    <span style="color:#75715e">//Mã hóa
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">&amp;</span>i : s){
+        i <span style="color:#f92672">^=</span> key;
+    }
+    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+    
+    <span style="color:#75715e">//Giải mã
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">&amp;</span>i : s){
+        i <span style="color:#f92672">^=</span> key;
+    }
+    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+}
+</code></pre></div><pre><code>Input:  Hello
+Output: M`iij
+        Hello
+</code></pre><h3 id="fast-color-conversion-from-r5g5b5-to-r8g8b8-pixel-format-using-shifts">Fast color conversion from R5G5B5 to R8G8B8 pixel format using shifts<a hidden class="anchor" aria-hidden="true" href="#fast-color-conversion-from-r5g5b5-to-r8g8b8-pixel-format-using-shifts">#</a></h3>
+<pre><code>R8 = (R5 &lt;&lt; 3) | (R5 &gt;&gt; 2)
+G8 = (R5 &lt;&lt; 3) | (R5 &gt;&gt; 2)
+B8 = (R5 &lt;&lt; 3) | (R5 &gt;&gt; 2)
+</code></pre><p>I&rsquo;m gonna lose my mind after finished this post, thanks for reading.</p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/bitwise/">Bitwise</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/Blog/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

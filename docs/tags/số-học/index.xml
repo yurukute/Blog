@@ -12,7 +12,8 @@
       <pubDate>Tue, 26 Jan 2021 00:08:16 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/post/factorialdecomp/</guid>
-      <description>Bài toán Nguồn: Codewars Cho một số $n$ được nhập vào, việc của chúng ta là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
+      <description>Bài toán Nguồn: Codewars
+Cho một số $n$ được nhập vào, việc của chúng ta là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá trị của $n$ có thể lên tới 4000, tất nhiên, 4000! sẽ trở thành 1 con số không hề nhỏ, nó có hơn 12000 chữ số lận á!</description>
     </item>
     
@@ -22,7 +23,8 @@ Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá
       <pubDate>Sat, 23 Jan 2021 20:46:06 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/post/primesinnumbers/</guid>
-      <description>Bài toán Nguồn: Codewars Đọc hiểu Cho một số dương $n$ &amp;gt; 1. Phân tích $n$ ra tích các số nguyên tố theo dạng:
+      <description>Bài toán Nguồn: Codewars
+Đọc hiểu Cho một số dương $n$ &amp;gt; 1. Phân tích $n$ ra tích các số nguyên tố theo dạng:
 ($p_1$**$n_1$)($p_2$**$n_2$)&amp;hellip;($p_k$**$n_k$)
  Trong đó:  a**b nghĩa là $a^b$ $p_i$ liệt kê theo thứ tự tăng dần Nếu $n_i$ = 1 thì không ghi ra    Ví dụ:
 Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Thông thường, để phân tích ra thừa số nguyên tố, ta đem chia số đó cho ước nguyên tố nhỏ nhất của nó.</description>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitwise on Noob&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/bitwise/</link>
+    <description>Recent content in Bitwise on Noob&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Jan 2021 20:52:33 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/bitwise/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bitwise operators&#39; application</title>
+      <link>https://yurukute.github.io/Blog/en/post/bitwise/</link>
+      <pubDate>Fri, 29 Jan 2021 20:52:33 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/bitwise/</guid>
+      <description>Summary    Name Operator Description      AND &amp;amp; Both bits are 1, return 1. Otherwise, return 0.   OR \ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are different return 1. Otherwise, return 0.   NOT ~ Flip bit, 0 becomes 1, 1 becomes 0    Shift left &amp;lt;&amp;lt; Shifts all the bits to the left    Right left &amp;gt;&amp;gt; Shifts all the bits to the right     Application Integer Change bit //Set nth bit x |= (1 &amp;lt;&amp;lt; n); //Set the right-most 0 bit to 1 x |= (x+1); //Unset nth bit x &amp;amp;= ~(1 &amp;lt;&amp;lt; n); //Set the right-most 1 bit to 0 x &amp;amp;= (x-1); //Toggle nth bit x ^= (1 &amp;lt;&amp;lt; n); //Get the mth bit of n (x &amp;gt;&amp;gt; n) &amp;amp; 1; //Swap Adjacent bits ((x &amp;amp; 10101010) &amp;gt;&amp;gt; 1) | ((x &amp;amp; 01010101) &amp;lt;&amp;lt; 1); Multiplication / Division x by $2^n$ x &amp;lt;&amp;lt; n //multiplication x &amp;gt;&amp;gt; n //division Round up to the next power of two x--; x |= x &amp;gt;&amp;gt; 1; x |= x &amp;gt;&amp;gt; 2; x |= x &amp;gt;&amp;gt; 4; x |= x &amp;gt;&amp;gt; 8; x |= x &amp;gt;&amp;gt; 16; x++; Round down to the next power of two x--; x |= x &amp;gt;&amp;gt; 1; x |= x &amp;gt;&amp;gt; 2; x |= x &amp;gt;&amp;gt; 4; x |= x &amp;gt;&amp;gt; 8; x |= x &amp;gt;&amp;gt; 16; x++; x = x &amp;gt;&amp;gt; 1; //the same with the code above but added this line Floor x x &amp;gt;&amp;gt; 0; 6.</description>
+    </item>
+    
+  </channel>
+</rss>
