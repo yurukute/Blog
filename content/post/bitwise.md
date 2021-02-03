@@ -166,7 +166,7 @@ char c;
 c = 'a' & '_';  //c = 'A'
 c = 'A' & '_';  //c = 'A'
 ```
-### Chuyển kí tự thường thành hoa
+### Chuyển kí tự hoa thành thường
 ```cpp
 c | ' '
 ```

@@ -167,11 +167,11 @@ char c;
 c = 'a' & '_';  //c = 'A'
 c = 'A' & '_';  //c = 'A'
 ```
-### Chuyển kí tự thường thành hoa
+### Convert letter to an uppercase or lowercase
 ```cpp
 c | ' '
 ```
-If the converting letter ia lowercase, nothing change. Eg:
+If the converting letter is a lowercase, nothing change. Eg:
 ```cpp
 char c;
 c = 'A' | ' ';  //c = 'a'
