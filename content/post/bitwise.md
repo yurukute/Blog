@@ -160,7 +160,7 @@ x > 0 && (x & (x - 1)) == 0;
 ```cpp
 c & '_'
 ```
-Nếu kí tự được chuyển đã là kí tự thường thì không thay đổi. Ví dụ:
+Nếu kí tự được chuyển đã là kí tự hoa thì không thay đổi. Ví dụ:
 ```cpp
 char c;
 c = 'a' & '_';  //c = 'A'
