@@ -27,16 +27,16 @@ Tuy nhiên, với độ phức tạp là $O(n^3)$ cách này sẽ không giải 
 2. Sẽ tồn tại những phép tính không cần thiết.
 3. Các hành động lặp đi lặp lại.
 
-Chính vì vậy, ta cần một giải pháp nhanh và tốt hơn!
+Chính vì vậy, mình cần một giải pháp nhanh và tốt hơn!
 ### Cách 2:
-- Ta gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:
+- mình gọi $f[i]$ là tổng $i$ phần tử đầu tiên, $f[i]$ được tính như sau:
     - $f[0] = 0$
     - $f[i] = f[i-1] + a[i]$
 - Như vậy, tổng các phần tử từ $i$ đến $j$ là: $f[j] – f[i-1]$
 
-Với cách này, ta sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì ta đã tính trước ở $f[i-1]$ => Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/
+Với cách này, mình sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì mình đã tính trước ở $f[i-1]$ => Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/
 ### Cách 3: 
-Với ý tưởng của cách 2, ta thêm một biến `sum` để lưu tổng đang tính. Khi duyệt mảng, ta sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn ***hay*** hắt đầu một đoạn con mới. Như vậy ta cần so sánh xem tổng hiện tại (`sum`) cộng thêm phần tử `arr[i]` đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác ta lấy `max(sum + a[i], a[i])` -> Đây cũng chính là kết quả cần tìm.
+Với ý tưởng của cách 2, mình thêm một biến `sum` để lưu tổng đang tính. Khi duyệt mảng, mình sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn ***hay*** hắt đầu một đoạn con mới. Như vậy mình cần so sánh xem tổng hiện tại (`sum`) cộng thêm phần tử `arr[i]` đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác mình lấy `max(sum + a[i], a[i])` -> Đây cũng chính là kết quả cần tìm.
 ```cpp
 #include <vector>
 
@@ -53,4 +53,4 @@ int maxSequence(const vector<int>& arr){
     return max;
 }
 ```
-## Cảm ơn bạn vì đã đọc.
+Cảm ơn bạn vì đã đọc.

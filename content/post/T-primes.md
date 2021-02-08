@@ -13,7 +13,7 @@ Một số được gọi là t-prime nếu nó có đúng 3 ước số dương
 
 Nói cách khác, $x$ là t-prime nếu nó là **bình phương của 1 số nguyên tố.**
 
-Trong bài toán này, ta sẽ kiểm tra 1 dãy $n$ các số $x$ rằng $x_i$ có phải là t-prime hay không.
+Trong bài toán này, mình sẽ kiểm tra 1 dãy $n$ các số $x$ rằng $x_i$ có phải là t-prime hay không.
 
 Ví dụ
 ```
@@ -24,7 +24,7 @@ Output: YES
         NO
 ```
 ## Lời giải
-Đầu tiên, ta cần tìm tất cả các số nguyên tố từ 2 đến $\sqrt{x}$ bằng sàng [Eratosthene](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes). X giới hạn đến $10^{12}$ nên $\sqrt{x}$ lớn nhất sẽ là $10^6$.
+Đầu tiên, mình cần tìm tất cả các số nguyên tố từ 2 đến $\sqrt{x}$ bằng sàng [Eratosthene](https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes). X giới hạn đến $10^{12}$ nên $\sqrt{x}$ lớn nhất sẽ là $10^6$.
 ```cpp
 int limit = 1000001
 std::vector<bool> isprime(limit, true);
@@ -46,4 +46,4 @@ while (n--){
     cout << (isprime[q] && q*q == x ? "YES" : "NO") << "\n"; 
 }
 ```
-## Cảm ơn bạn vì đã đọc.
+Cảm ơn bạn vì đã đọc.

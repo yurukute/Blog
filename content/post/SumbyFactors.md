@@ -57,5 +57,6 @@ for(auto i : primes){
     ans += ')';
 }
 ```
-Thế là xong! Ghép lại là có thể submit UwU.
-## Cảm ơn bạn vì đã đọc
+Thế là xong! Ghép lại là có thể submit UwU. 
+
+Cảm ơn bạn vì đã đọc

@@ -65,6 +65,6 @@ for(int i = 2; i*i < lst; i++){
         res += "(" + std::to_string(lst) + ")";
 return res;
 ```
-## Thank you for reading.
+Thank you for reading.
 ## Related post
 [Factorial decomp]({{< ref "/post/factorialdecomp" >}})

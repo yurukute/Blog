@@ -8,7 +8,7 @@ TocOpen: true
 ## Bài toán 
 Nguồn: [Codewars](https://www.codewars.com/kata/5a045fee46d843effa000070)
 
-Cho một số $n$ được nhập vào, việc của chúng ta là phân tích **giai thừa** của nó ra thừa số nguyên tố. 
+Cho một số $n$ được nhập vào, việc của tụi mình là phân tích **giai thừa** của nó ra thừa số nguyên tố. 
 Ví dụ:
 ```
 Input:  n = 12
@@ -20,15 +20,15 @@ Có 1 lưu ý nho nhỏ là giá trị của $n$ có thể lên tới 4000, tấ
 Theo định nghĩa, giai thừa của $n$, kí hiệu là $n!$, là tích của $n$ số dương đầu tiên với nhau:\
 $$12! = 1\times2\times3\times4\times5\times6\times7\times8\times9\times10\times11\times12$$
 
-Như vậy, phân tích $n!$ cũng đồng nghĩa với việc phân tích từng thừa số của $n!$ rồi nhân các kết quả lại với nhau. Ví dụ: với $n = 12$ ta có bảng phân tích ứng với từng thừa số sau: 
+Như vậy, phân tích $n!$ cũng đồng nghĩa với việc phân tích từng thừa số của $n!$ rồi nhân các kết quả lại với nhau. Ví dụ: với $n = 12$ mình có bảng phân tích ứng với từng thừa số sau: 
 | 12!  | 2 | 3 | 4   | 5 | 6        | 7 | 8   | 9   |10        | 11 | 12         |
 |:-:   |:-:|:-:|:-:  |:-:|:-:       |:-:|:-:  |:-:  |:-:       |:-: |:-:         |
 |decomp|$2$|$3$|$2^2$|$5$|$2\times3$|$7$|$2^3$|$3^2$|$2\times5$|$11$|$2^2\times3$|
 
-Sau khi nhân các kết quả lại, ta được kết quả cuối cùng là tích thừa số nguyên tố của $n!$ mà ta cần tìm
+Sau khi nhân các kết quả lại, mình được kết quả cuối cùng là tích thừa số nguyên tố của $n!$ mà mình cần tìm
 $$2\times3\times2^2\times5\times2\times3\times7\times2^3\times3^2\times2\times5\times11\times2^2\times3 = 2^{10}\times3^5\times5^2\times7\times11$$
 ### Chương trình
-Bước đầu tiên, ta khởi tạo 2 mảng một chiêu để lưu tính nguyên tố và giá trị của các thừa số
+Bước đầu tiên, mình khởi tạo 2 mảng một chiêu để lưu tính nguyên tố và giá trị của các thừa số
 ```cpp
 bool prime[n+1];
 int  value[n+1];
@@ -38,7 +38,7 @@ for(int i = 2; i <= n; i++){
     value[i] = i;
 }
 ```
-Thông thường, ta dùng sàng Eratosthene để đánh dấu các số nguyên tố nhưng với một chút thay đổi, ta có thể phân tích một lượt các hợp số là bội của số nguyên tố tìm được. Như vậy sẽ tiết kiệm thời gian hơn so với ta phân tích từng số một rồi mới tổng hợp kết quả.
+Thông thường, mình dùng sàng Eratosthene để đánh dấu các số nguyên tố nhưng với một chút thay đổi, mình có thể phân tích một lượt các hợp số là bội của số nguyên tố tìm được. Như vậy sẽ tiết kiệm thời gian hơn so với mình phân tích từng số một rồi mới tổng hợp kết quả.
 ```cpp
 for(int i = 2; i <= n; i ++){
     if(f[i].prime){
@@ -53,7 +53,7 @@ for(int i = 2; i <= n; i ++){
     }
 }
 ```
-Sau cùng, ta thêm vào vài dòng hỗ trợ cho việc output là có thể submit
+Sau cùng, mình thêm vào vài dòng hỗ trợ cho việc output là có thể submit
 ```cpp
 for(int i = 2; i <= n; i ++){
     if(f[i].prime){
@@ -73,4 +73,4 @@ for(int i = 2; i <= n; i ++){
 res.erase(res.begin(), res.begin()+3);
 return res;
 ```
-## Cảm ơn bạn vì đã đọc.
+Cảm ơn bạn vì đã đọc.
