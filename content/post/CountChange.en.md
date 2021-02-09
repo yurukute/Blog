@@ -27,7 +27,7 @@ We'll go through at each stage to considera certain coin and see how it changes 
 
 Each cell on the table is a subproblem and they are all related to eachother. Let's imagine i'm at the cell $ways[1][1]$, then i'll have to find the answer for *total ways make change* amount $1$ with no coin; if i'm at the cell $ways[1][1]$, i'll have to find the answer for *total ways make change* amount $3$ with coins {1,2}. So does value at cell $ways[i][j]$ would be the answer for *total ways make change* amount $j$ with coins at row $i$.
 
-And notice, every row represents the addition of another coin (shown in bold). Thus, row $i$ will answer the question: *Will i you the $i^th$ coin?*
+And notice, every row represents the addition of another coin (shown in bold). Thus, row $i$ will answer the question: *Will i use the $i^th$ coin?*
 
 Obviously, i won't use the $i^th$ coin if $coins[i-1] > j$, on the contracy, i can. Therefore:
 $$ways[i][j]=
