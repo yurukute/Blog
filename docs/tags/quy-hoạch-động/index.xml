@@ -13,7 +13,7 @@
       
       <guid>https://yurukute.github.io/Blog/post/countchange/</guid>
       <description>Bài toán Nguồn: Leetcode, Codewars
-Đọc hiểu: Bạn có một lượng đồng xu với các mệnh giá khác nhau và một tổng số tiền amount. Nhiệm vụ của bạn là tính xem có bao nhiêu cách khác nhau để đổi được số tiền với số xu đã cho.
+Đọc hiểu: Bạn có một lượng đồng xu với các mệnh giá khác nhau và một tổng số tiền amount. Nhiệm vụ của bạn là tính xem có bao nhiêu cách khác nhau để đổi được số tiền với số xu đã cho. Số lượng xu không giới hạn.
 Ví dụ:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2+2+1, 2+1+1+1, 1+1+1+1+1} Lời giải Với bài này mình sẽ lần lượt đi qua các giai đoạn của nó mà ở mỗi gia đoạn số xu của mình sẽ thay đổi dẫn đến sự thay đổi của kết quả bài toán.</description>
     </item>
