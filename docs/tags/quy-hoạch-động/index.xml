@@ -5,7 +5,31 @@
     <link>https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</link>
     <description>Recent content in Quy hoạch động on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jan 2021 20:45:26 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Feb 2021 13:12:26 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tổng số cách đổi xu</title>
+      <link>https://yurukute.github.io/Blog/post/countchange/</link>
+      <pubDate>Tue, 09 Feb 2021 13:12:26 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/countchange/</guid>
+      <description>Bài toán Nguồn: Leetcode, Codewars
+Đọc hiểu: Bạn có một lượng đồng xu với các mệnh giá khác nhau và một tổng số tiền amount. Nhiệm vụ của bạn là tính xem có bao nhiêu cách khác nhau để đổi được số tiền với số xu đã cho.
+Ví dụ:
+Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2+2+1, 2+1+1+1, 1+1+1+1+1} Lời giải Với bài này mình sẽ lần lượt đi qua các giai đoạn của nó mà ở mỗi gia đoạn số xu của mình sẽ thay đổi dẫn đến sự thay đổi của kết quả bài toán.</description>
+    </item>
+    
+    <item>
+      <title>Số xu cần ít nhất để đổi một số tiền</title>
+      <link>https://yurukute.github.io/Blog/post/coinchange/</link>
+      <pubDate>Mon, 08 Feb 2021 15:29:10 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/coinchange/</guid>
+      <description>Bài toán Nguồn: Leetcode
+Đọc hiểu Bạn có một lượng đồng xu có các mệnh giá khác nhau và tổng số tiền amount. Nhiệm vụ của bạn là tìm số xu ít cần ít nhất để tạo nên số tiền đó (không giới hạn số đồng xu). Nếu số tiền đó không thể tạo thành thì trả về -1.
+Ví dụ:
+Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Lời giải Cách 1: Vét cạn bằng đệ qui Lấy ví dụ như trên, mình có amount là 11.</description>
+    </item>
+    
     <item>
       <title>Đoạn Con Có Tổng Lớn Nhất</title>
       <link>https://yurukute.github.io/Blog/post/maxsubarraysum/</link>

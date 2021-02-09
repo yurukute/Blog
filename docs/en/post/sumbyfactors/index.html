@@ -13,7 +13,7 @@ Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have 
 P will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C&#43;&#43; and as an array of arrays in other languages.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/post/sumbyfactors/" />
-<link href="/Blog/assets/css/stylesheet.min.d90a57c6abc2338fde9e74c3eb7937c12376ad122857a7def122e4fa134ebf7d.css" integrity="sha256-2QpXxqvCM4/ennTD63k3wSN2rRIoV6fe8SLk&#43;hNOv30=" rel="preload stylesheet"
+<link href="/Blog/assets/css/stylesheet.min.5601e01efed08baf0633c521dde519f4a73330d89816e94e954a68436d36e6bd.css" integrity="sha256-VgHgHv7Qi68GM8Uh3eUZ9KczMNiYFulOlUpoQ2025r0=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
@@ -52,7 +52,7 @@ P will be sorted by increasing order of the prime numbers. The final result has 
   "keywords": [
     "Eratosthene"
   ],
-  "articleBody": "The problem: Source: codewars\nGiven an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] …]\nP will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C++ and as an array of arrays in other languages.\nExample:\nI = {12, 15}; // result = \"(2 12)(3 27)(5 15)\" To solve this problem, we need to find prime numbers, from smallest to largest, for each found prime number, we’ve got:\n If $i_j$ divisible by $p$  $sum$ += $i_j$    Solution Enumerate prime numbers The fastest way to list them out is using SoE. We use this to find all prime numbers that are smaller than the largest absolute value of members in $I$ (i’ll call it max). So, after input the array, we first find max and then sieve. After sieving, we’ll save them into a vector to use them in process.\nstd::vectorint sieve(int n){ std::vectorbool isprime(n+1, 1); isprime[0] = isprime[1] = 0; for(int i = 2; i*i  n; i++) if(isprime[i]==1) for(int j = i*i; j  n; j += i) isprime[j]=0; std::vectorint res; for(int i = 0; i  n+1; i++) if(isprime[i]) res.push_back(i); return res; }; Processing for(auto i : primes){ ans += '('; int sum = 0; for(auto j : lst) if(j % i == 0) sum += j; if(sum) ans = ans + to_string(i) + ' ' + to_string(sum); else{ ans.pop_back(); continue; } ans += ')'; } Well done, with all the code above, we can submit and pass this kata UwU.\nThank you for reading. ",
+  "articleBody": "The problem: Source: codewars\nGiven an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] …]\nP will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C++ and as an array of arrays in other languages.\nExample:\nI = {12, 15}; // result = \"(2 12)(3 27)(5 15)\" To solve this problem, we need to find prime numbers, from smallest to largest, for each found prime number, we’ve got:\n If $i_j$ divisible by $p$  $sum$ += $i_j$    Solution Enumerate prime numbers The fastest way to list them out is using SoE. We use this to find all prime numbers that are smaller than the largest absolute value of members in $I$ (i’ll call it max). So, after input the array, we first find max and then sieve. After sieving, we’ll save them into a vector to use them in process.\nstd::vectorint sieve(int n){ std::vectorbool isprime(n+1, 1); isprime[0] = isprime[1] = 0; for(int i = 2; i*i  n; i++) if(isprime[i]==1) for(int j = i*i; j  n; j += i) isprime[j]=0; std::vectorint res; for(int i = 0; i  n+1; i++) if(isprime[i]) res.push_back(i); return res; }; Processing for(auto i : primes){ ans += '('; int sum = 0; for(auto j : lst) if(j % i == 0) sum += j; if(sum) ans = ans + to_string(i) + ' ' + to_string(sum); else{ ans.pop_back(); continue; } ans += ')'; } Well done, with all the code above, we can submit and pass this kata UwU.\nThank you for reading.\n",
   "wordCount" : "296",
   "inLanguage": "en",
   "datePublished": "2021-01-18T16:50:30+07:00",
@@ -171,6 +171,7 @@ P will be sorted by increasing order of the prime numbers. The final result has 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
 </header>
 
     <main class="main">
@@ -236,7 +237,7 @@ P will be sorted by increasing order of the prime numbers. The final result has 
     ans <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;)&#39;</span>;
 }
 </code></pre></div><p>Well done, with all the code above, we can submit and pass this kata UwU.</p>
-<h2 id="thank-you-for-reading">Thank you for reading.<a hidden class="anchor" aria-hidden="true" href="#thank-you-for-reading">#</a></h2>
+<p>Thank you for reading.</p>
 
 </div>
   <footer class="post-footer">

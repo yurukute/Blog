@@ -5,7 +5,32 @@
     <link>https://yurukute.github.io/Blog/en/</link>
     <description>Recent content on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Jan 2021 20:52:33 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Feb 2021 13:12:29 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Total ways make change</title>
+      <link>https://yurukute.github.io/Blog/en/post/countchange/</link>
+      <pubDate>Tue, 09 Feb 2021 13:12:29 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/countchange/</guid>
+      <description>Problem Source: Leetcode, Codewars
+You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+For example:
+Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2+2+1, 2+1+1+1, 1+1+1+1+1} Solution We&amp;rsquo;ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change.</description>
+    </item>
+    
+    <item>
+      <title>Fewest coins make change</title>
+      <link>https://yurukute.github.io/Blog/en/post/coinchange/</link>
+      <pubDate>Mon, 08 Feb 2021 15:29:18 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/coinchange/</guid>
+      <description>Problem Source: Leetcode
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+You may assume that you have an infinite number of each kind of coin.
+Examples:
+Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11.</description>
+    </item>
+    
     <item>
       <title>Bitwise operators&#39; application</title>
       <link>https://yurukute.github.io/Blog/en/post/bitwise/</link>

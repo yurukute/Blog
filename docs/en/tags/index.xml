@@ -5,7 +5,16 @@
     <link>https://yurukute.github.io/Blog/en/tags/</link>
     <description>Recent content in Tags on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Jan 2021 20:52:33 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Feb 2021 13:12:29 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dynamic Programing</title>
+      <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
+      <pubDate>Tue, 09 Feb 2021 13:12:29 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Bitwise</title>
       <link>https://yurukute.github.io/Blog/en/tags/bitwise/</link>
@@ -30,15 +39,6 @@
       <pubDate>Tue, 26 Jan 2021 00:08:20 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/en/tags/numbers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dynamic Programing</title>
-      <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
-      <pubDate>Sun, 17 Jan 2021 20:45:26 +0700</pubDate>
-      
-      <guid>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</guid>
       <description></description>
     </item>
     

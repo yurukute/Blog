@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Fewest coins make change | Noob&#39;s Blog</title>
+
+<meta name="keywords" content="Dynamic Programing" />
+<meta name="description" content="Problem Source: Leetcode
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+You may assume that you have an infinite number of each kind of coin.
+Examples:
+Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11.">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/coinchange/" />
+<link href="/Blog/assets/css/stylesheet.min.5601e01efed08baf0633c521dde519f4a73330d89816e94e954a68436d36e6bd.css" integrity="sha256-VgHgHv7Qi68GM8Uh3eUZ9KczMNiYFulOlUpoQ2025r0=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/coinchange/" />
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/coinchange/" />
+
+
+<meta property="og:title" content="Fewest coins make change" />
+<meta property="og:description" content="Problem Source: Leetcode
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+You may assume that you have an infinite number of each kind of coin.
+Examples:
+Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/coinchange/" />
+<meta property="article:published_time" content="2021-02-08T15:29:18+07:00" />
+<meta property="article:modified_time" content="2021-02-08T15:29:18+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fewest coins make change"/>
+<meta name="twitter:description" content="Problem Source: Leetcode
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+You may assume that you have an infinite number of each kind of coin.
+Examples:
+Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11."/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fewest coins make change",
+  "name": "Fewest coins make change",
+  "description": "Problem Source: Leetcode\nYou are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to …",
+  "keywords": [
+    "Dynamic Programing"
+  ],
+  "articleBody": "Problem Source: Leetcode\nYou are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.\nYou may assume that you have an infinite number of each kind of coin.\nExamples:\nInput: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11. Let’s image 5 is the last used coin then the fewest coins we need will be the fewest coins to make change whatever is left plus 1. In other words, $$coinChange(11) = coinChange(11 - 5) + 1$$ Meanwhile, the problem become fewest coins make change whatever is left. This is a subproblem. Same as coin 1 and 2, those subproblem can be showed as a diagram like this: graph TD; A((11))--B((10)) A--C((9)) A--D((6)) B--E((9)) B--F((8)) B--G((5)) C--H((8)) C--I((7)) C--J((4)) D--K((5)) D--L((4)) D--M((1))  I just draw a part of the diagram but as you can see, if we consider those subproblems one by one, we will have to recalculate some similar subproblems (number 9, number 8,… are calculated twice). Thus, we need a better way, that is dynamic programing.\nApproach 2: Dynamic programing By the idea above, this time i have an array like this, called dp\n   0 1 2 3 4 5 6 7 8 9 10 11                      Each cell is a subproblem: Fewest coins make change the amount $i$. So, the answer at $11^th$ cell is the answer that we’re looking for this problem. And because it’s calculated by the cells on its left, so we can reused the answer of the subprolem and avoid duplicating them.\nTo begin, i’ll fill the array like this:\n   0 1 2 3 4 5 6 7 8 9 10 11      0 12 12 12 12 12 12 12 12 12 12 12     For each cell, i’ll consider each coin whether it is greater than the amount at that cell. If not, which means we can use that coin, the value for that cell would be $$dp[i] = min(dp[i-coin] + 1,dp[i])$$ If $i = 1$ then $dp[1] = min(0+1, 12)$. Just like that, at the end, the array will be filled as:\n   0 1 2 3 4 5 6 7 8 9 10 11      0 1 1 2 2 1 2 2 3 3 2 3     $11^th$ cell’s value is 3, that is the answer for the example test. From there, i have a code like this:\nvectorint dp(amount+1, amount+1); dp[0] = 0; for(int i = 1; i  amount; i++) for(int coin : coins) if(coin  i \u0026\u0026 dp[i - coin] + 1  dp[i]) dp[i] = dp[i - coin] + 1; return dp[amount]; That’s is the idea. But in reality, this code would recieve wrong answer instantly after submit, because of the careless when we read the problem. They said:\n If that amount of money cannot be made up by any combination of the coins, return -1. So we need to edit return line for that case to get passed UwU.\n return (dp[amount]  amount ? dp[amount] : -1); Thank you for reading.\nRelated topics Total ways to make change\n",
+  "wordCount" : "562",
+  "inLanguage": "en",
+  "datePublished": "2021-02-08T15:29:18+07:00",
+  "dateModified": "2021-02-08T15:29:18+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/en/post/coinchange/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
+            <span class="logo-switches">
+                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </a>
+                
+                
+
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                            aria-label="Tiếng Việt">Vi</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li></ul>
+    </nav>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+<script async src="https://unpkg.com/mermaid@latest/dist/mermaid.min.js"></script>
+
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Fewest coins make change
+    </h1>
+    <div class="post-meta">February 8, 2021
+&nbsp;|&nbsp;<ul class="i18n_list">Translations:
+        <li>
+          <a href="https://yurukute.github.io/Blog/post/coinchange/">Vi</a>
+        </li>
+      </ul>
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h2 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h2>
+<p>Source: <a href="https://leetcode.com/problems/coin-change/">Leetcode</a></p>
+<p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.</p>
+<p>You may assume that you have an infinite number of each kind of coin.</p>
+<p>Examples:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  coins <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>}, amount <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>
+Output: <span style="color:#ae81ff">3</span> <span style="color:#75715e">//2 đồng 5 và 1 đồng 1
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  coins <span style="color:#f92672">=</span> {<span style="color:#ae81ff">2</span>}, amount <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+Output: <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> 
+</code></pre></div><h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
+<h3 id="approach-1-brute-force">Approach 1: Brute force<a hidden class="anchor" aria-hidden="true" href="#approach-1-brute-force">#</a></h3>
+<p>By above example, <em>amount</em> = 11. Let&rsquo;s image 5 is the last used coin then the fewest coins we need will be the fewest coins to make change whatever is left plus 1. In other words,
+$$coinChange(11) = coinChange(11 - 5) + 1$$
+Meanwhile, the problem become <em><strong>fewest coins make change whatever is left</strong></em>. This is a subproblem. Same as coin 1 and 2, those subproblem can be showed as a diagram like this:
+
+<div class="mermaid" align="center">
+graph TD;
+    A((11))-->B((10))
+    A-->C((9))
+    A-->D((6))
+    B-->E((9))
+    B-->F((8))
+    B-->G((5))
+    C-->H((8))
+    C-->I((7))
+    C-->J((4))
+    D-->K((5))
+    D-->L((4))
+    D-->M((1))
+</div>
+I just draw a part of the diagram but as you can see, if we consider those subproblems one by one, we will have to recalculate some similar subproblems (number 9, number 8,&hellip; are calculated twice). Thus, we need a better way, that is dynamic programing.</p>
+<h2 id="approach-2-dynamic-programing">Approach 2: Dynamic programing<a hidden class="anchor" aria-hidden="true" href="#approach-2-dynamic-programing">#</a></h2>
+<p>By the idea above, this time i have an array like this, called <code>dp</code></p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Each cell is a subproblem: <em><strong>Fewest coins make change the amount $i$</strong></em>. So, the answer at $11^th$ cell is the answer that we&rsquo;re looking for this problem. And because it&rsquo;s calculated by the cells on its left, so we can reused the answer of the subprolem and avoid duplicating them.</p>
+<p>To begin, i&rsquo;ll fill the array like this:</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>For each cell, i&rsquo;ll consider each coin whether it is greater than the amount at that cell. If not, which means we can use that coin, the value for that cell would be
+$$dp[i] = min(dp[i-coin] + 1,dp[i])$$
+If $i = 1$ then $dp[1] = min(0+1, 12)$. Just like that, at the end, the array will be filled as:</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>$11^th$ cell&rsquo;s value is 3, that is the answer for the example test. From there, i have a code like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> dp(amount<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, amount<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+dp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> amount; i<span style="color:#f92672">++</span>)
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> coin : coins)
+        <span style="color:#66d9ef">if</span>(coin <span style="color:#f92672">&lt;=</span> i <span style="color:#f92672">&amp;&amp;</span> dp[i <span style="color:#f92672">-</span> coin] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> dp[i])
+            dp[i] <span style="color:#f92672">=</span> dp[i <span style="color:#f92672">-</span> coin] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">return</span> dp[amount];
+</code></pre></div><p>That&rsquo;s is the idea. But in reality, this code would recieve <code>wrong answer</code> instantly after submit, because of the careless when we read the problem. They said:</p>
+<blockquote>
+<p>If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.
+So we need to edit <code>return</code> line for that case to get <code>passed</code> UwU.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">return</span> (dp[amount] <span style="color:#f92672">&lt;=</span> amount <span style="color:#f92672">?</span> dp[amount] <span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</code></pre></div><p>Thank you for reading.</p>
+<h2 id="related-topics">Related topics<a hidden class="anchor" aria-hidden="true" href="#related-topics">#</a></h2>
+<p><a href="post/CountChange.en.md">Total ways to make change</a></p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/">Dynamic Programing</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/Blog/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

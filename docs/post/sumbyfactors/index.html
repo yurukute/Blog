@@ -16,7 +16,7 @@ Trong đó:
 I = {12, 15}; //kết quả: &quot;(2 12)(3 27)(5 15)&quot; Như vậy, để giải được bài này ta cần tìm các số nguyên tố từ nhỏ đến lớn, ứng với mỗi số nguyên tố, ta có:">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/post/sumbyfactors/" />
-<link href="/Blog/assets/css/stylesheet.min.d90a57c6abc2338fde9e74c3eb7937c12376ad122857a7def122e4fa134ebf7d.css" integrity="sha256-2QpXxqvCM4/ennTD63k3wSN2rRIoV6fe8SLk&#43;hNOv30=" rel="preload stylesheet"
+<link href="/Blog/assets/css/stylesheet.min.5601e01efed08baf0633c521dde519f4a73330d89816e94e954a68436d36e6bd.css" integrity="sha256-VgHgHv7Qi68GM8Uh3eUZ9KczMNiYFulOlUpoQ2025r0=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
@@ -61,7 +61,7 @@ I = {12, 15}; //kết quả: &quot;(2 12)(3 27)(5 15)&quot; Như vậy, để gi
   "keywords": [
     "Eratosthene"
   ],
-  "articleBody": "Bài toán: Nguồn: Codewars.com\nĐọc hiểu: Input: Một mảng các số nguyên: $I = [i_1, i_2 ,…, i_n]$\nOutput: một chuỗi theo dạng ($p_1$ $sum_1$) ($p_2$ $sum_2$) … ($p_x$ $sum_m$)\nTrong đó:\n $p$ : số nguyên tố $sum$ : tổng các số trong mảng I chia hết cho p  Ví dụ:\nI = {12, 15}; //kết quả: \"(2 12)(3 27)(5 15)\" Như vậy, để giải được bài này ta cần tìm các số nguyên tố từ nhỏ đến lớn, ứng với mỗi số nguyên tố, ta có:\n Nếu số $i_j$ chia hết cho $p$  $sum$ += $i_j$    Lời giải Liệt kê các số nguyên tố Cách liệt kê nhanh nhất là dùng sàng Eratosthene. Chúng ta sẽ tìm tất cả các số nguyên tố nhỏ hơn giá trị tuyệt đối lớn nhất trong mảng (max). Vì vậy, việc đầu tiên cần làm sau khi nhập mảng là tìm max, lưu lại các số nguyên tố bé hơn max để dùng cho bước xử lí.\nstd::vectorint sieve(int n){ std::vectorbool isprime(n+1, 1); isprime[0] = isprime[1] = 0; for(int i = 2; i*i  n; i++) if(isprime[i]==1) for(int j = i*i; j  n; j += i) isprime[j]=0; std::vectorint res; for(int i = 0; i  n+1; i++) if(isprime[i]) res.push_back(i); return res; }; Bắt đầu xử lí for(auto i : primes){ ans += '('; int sum = 0; for(auto j : lst) if(j % i == 0) sum += j; if(sum) ans = ans + to_string(i) + ' ' + to_string(sum); else{ ans.pop_back(); continue; } ans += ')'; } Thế là xong! Ghép lại là có thể submit UwU.\nCảm ơn bạn vì đã đọc ",
+  "articleBody": "Bài toán: Nguồn: Codewars.com\nĐọc hiểu: Input: Một mảng các số nguyên: $I = [i_1, i_2 ,…, i_n]$\nOutput: một chuỗi theo dạng ($p_1$ $sum_1$) ($p_2$ $sum_2$) … ($p_x$ $sum_m$)\nTrong đó:\n $p$ : số nguyên tố $sum$ : tổng các số trong mảng I chia hết cho p  Ví dụ:\nI = {12, 15}; //kết quả: \"(2 12)(3 27)(5 15)\" Như vậy, để giải được bài này ta cần tìm các số nguyên tố từ nhỏ đến lớn, ứng với mỗi số nguyên tố, ta có:\n Nếu số $i_j$ chia hết cho $p$  $sum$ += $i_j$    Lời giải Liệt kê các số nguyên tố Cách liệt kê nhanh nhất là dùng sàng Eratosthene. Chúng ta sẽ tìm tất cả các số nguyên tố nhỏ hơn giá trị tuyệt đối lớn nhất trong mảng (max). Vì vậy, việc đầu tiên cần làm sau khi nhập mảng là tìm max, lưu lại các số nguyên tố bé hơn max để dùng cho bước xử lí.\nstd::vectorint sieve(int n){ std::vectorbool isprime(n+1, 1); isprime[0] = isprime[1] = 0; for(int i = 2; i*i  n; i++) if(isprime[i]==1) for(int j = i*i; j  n; j += i) isprime[j]=0; std::vectorint res; for(int i = 0; i  n+1; i++) if(isprime[i]) res.push_back(i); return res; }; Bắt đầu xử lí for(auto i : primes){ ans += '('; int sum = 0; for(auto j : lst) if(j % i == 0) sum += j; if(sum) ans = ans + to_string(i) + ' ' + to_string(sum); else{ ans.pop_back(); continue; } ans += ')'; } Thế là xong! Ghép lại là có thể submit UwU.\nCảm ơn bạn vì đã đọc\n",
   "wordCount" : "272",
   "inLanguage": "vi",
   "datePublished": "2021-01-18T16:50:30+07:00",
@@ -180,6 +180,7 @@ I = {12, 15}; //kết quả: &quot;(2 12)(3 27)(5 15)&quot; Như vậy, để gi
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
 </header>
 
     <main class="main">
@@ -251,7 +252,7 @@ I = {12, 15}; //kết quả: &quot;(2 12)(3 27)(5 15)&quot; Như vậy, để gi
     ans <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;)&#39;</span>;
 }
 </code></pre></div><p>Thế là xong! Ghép lại là có thể submit UwU.</p>
-<h2 id="cảm-ơn-bạn-vì-đã-đọc">Cảm ơn bạn vì đã đọc<a hidden class="anchor" aria-hidden="true" href="#cảm-ơn-bạn-vì-đã-đọc">#</a></h2>
+<p>Cảm ơn bạn vì đã đọc</p>
 
 </div>
   <footer class="post-footer">

@@ -47,7 +47,7 @@ Cũng với ý tưởng trên, lần này mình có một mảng như sau, gọi
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
 |||||||||||||
 
-Ô thứ $i$ của mảng lúc này là bài toán con: ***số xu cần ít nhất để đổi số tiền $i$***. Như vậy, đáp án của ô thứ *amount* chính là đáp án của bài toán. Và tất nhiên, đáp án đấy sẽ được tích từ các ô trước đó nên mình có thể tận dụng các đáp số đã tính sẵn mà không cần tính lại như cách trên ^w^. 
+Ô thứ $i$ của mảng lúc này là bài toán con: ***số xu cần ít nhất để đổi số tiền $i$***. Như vậy, đáp án của ô thứ *amount* chính là đáp án của bài toán. Và tất nhiên, đáp án đấy sẽ được tính từ các ô trước đó nên mình có thể tận dụng các đáp số đã tính sẵn mà không cần tính lại như cách trên ^w^. 
 
 Để bắt đầu, mình cần điền trước vào mảng như thế này:
 |0|1|2|3|4|5|6|7|8|9|10|11|

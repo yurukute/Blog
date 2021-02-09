@@ -3,6 +3,86 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
+    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/</loc>
+    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/post/</loc>
+    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
+    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/post/countchange/</loc>
+    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/countchange/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/countchange/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/post/coinchange/</loc>
+    <lastmod>2021-02-08T15:29:18+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/coinchange/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/coinchange/"
+                />
+  </url>
+  
+  <url>
     <loc>https://yurukute.github.io/Blog/en/tags/bitwise/</loc>
     <lastmod>2021-01-29T20:52:33+07:00</lastmod>
     <xhtml:link
@@ -29,51 +109,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/post/bitwise/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yurukute.github.io/Blog/en/</loc>
-    <lastmod>2021-01-29T20:52:33+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yurukute.github.io/Blog/en/post/</loc>
-    <lastmod>2021-01-29T20:52:33+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
-    <lastmod>2021-01-29T20:52:33+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
                 />
   </url>
   
@@ -155,11 +190,6 @@
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/post/sumbyfactors/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
-    <lastmod>2021-01-17T20:45:26+07:00</lastmod>
   </url>
   
   <url>

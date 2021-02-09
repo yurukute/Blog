@@ -13,7 +13,7 @@ The maximum sum subarray problem consists in finding the maximum sum of a contig
 maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/post/maxsubarraysum/" />
-<link href="/Blog/assets/css/stylesheet.min.d90a57c6abc2338fde9e74c3eb7937c12376ad122857a7def122e4fa134ebf7d.css" integrity="sha256-2QpXxqvCM4/ennTD63k3wSN2rRIoV6fe8SLk&#43;hNOv30=" rel="preload stylesheet"
+<link href="/Blog/assets/css/stylesheet.min.5601e01efed08baf0633c521dde519f4a73330d89816e94e954a68436d36e6bd.css" integrity="sha256-VgHgHv7Qi68GM8Uh3eUZ9KczMNiYFulOlUpoQ2025r0=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
@@ -52,7 +52,7 @@ maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy 
   "keywords": [
     "Dynamic Programing"
   ],
-  "articleBody": "Problem: Source: Codewars.com\nThe maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:\nmaxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.\nEmpty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.\nSolution Approach 1: Brute Force This is the most accessible way to solve this promblem. It has 2 step:\n Find each sum of each subarray {-2}, {1}, {-2, 1},… Compare them to each other to find the largest  Beside its complexity is $O(n^3)$, however, this way has 3 weaknesses:\n Bottlernecks Unnessary works Duplicate works  Therefore, we’ll need a more efficient solution for this kata.\nApproach 2:  We call $f[i]$ is a sum of $i$ first elements, we have $f[i]$ calculated:  $f[0] = 0$ $f[i] = f[i-1] + arr[i]$   So, the sum from $i$th to $j$th element is $f[j] – f[i-1]$  With this, we can find $f[i]$ without duplicate works because we found $f[i-1]$ = We avoided the first approach’s 3rd weakness (UwU). The complexity now is $O(n^2)$. But, this kata can also be solved with an $O(n)$ solution: Kadane’s solution OwO)/\nApproach 3: With second approach’s idea, we use a variable sum to save the calculating sum. We’ll have 2 choices to ask ourself while calculating: Do we add this number to sum OR we start a new subarray/new sum at this number? So that, we have to compare the [present sum plus arr[i]] with the arr[i] itself. In other words, we find max(sum + a[i], a[i]) aka the result.\n#include  using namespace std; int maxSequence(const vectorint\u0026 arr){ int max=0, sum=0, size=arr.size(); for(int i=0; isize; i++){ sum+=arr[i]; if(arr[i]sum) sum=arr[i]; if(summax) max=sum; } return max; } Thank you for reading. ",
+  "articleBody": "Problem: Source: Codewars.com\nThe maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:\nmaxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.\nEmpty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.\nSolution Approach 1: Brute Force This is the most accessible way to solve this promblem. It has 2 step:\n Find each sum of each subarray {-2}, {1}, {-2, 1},… Compare them to each other to find the largest  Beside its complexity is $O(n^3)$, however, this way has 3 weaknesses:\n Bottlernecks Unnessary works Duplicate works  Therefore, we’ll need a more efficient solution for this kata.\nApproach 2:  We call $f[i]$ is a sum of $i$ first elements, we have $f[i]$ calculated:  $f[0] = 0$ $f[i] = f[i-1] + arr[i]$   So, the sum from $i$th to $j$th element is $f[j] – f[i-1]$  With this, we can find $f[i]$ without duplicate works because we found $f[i-1]$ = We avoided the first approach’s 3rd weakness (UwU). The complexity now is $O(n^2)$. But, this kata can also be solved with an $O(n)$ solution: Kadane’s solution OwO)/\nApproach 3: With second approach’s idea, we use a variable sum to save the calculating sum. We’ll have 2 choices to ask ourself while calculating: Do we add this number to sum OR we start a new subarray/new sum at this number? So that, we have to compare the [present sum plus arr[i]] with the arr[i] itself. In other words, we find max(sum + a[i], a[i]) aka the result.\n#include  using namespace std; int maxSequence(const vectorint\u0026 arr){ int max=0, sum=0, size=arr.size(); for(int i=0; isize; i++){ sum+=arr[i]; if(arr[i]sum) sum=arr[i]; if(summax) max=sum; } return max; } Thank you for reading.\n",
   "wordCount" : "339",
   "inLanguage": "en",
   "datePublished": "2021-01-17T20:45:26+07:00",
@@ -171,6 +171,7 @@ maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
 </header>
 
     <main class="main">
@@ -238,7 +239,7 @@ maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy 
     }
     <span style="color:#66d9ef">return</span> max;
 }
-</code></pre></div><h2 id="thank-you-for-reading">Thank you for reading.<a hidden class="anchor" aria-hidden="true" href="#thank-you-for-reading">#</a></h2>
+</code></pre></div><p>Thank you for reading.</p>
 
 </div>
   <footer class="post-footer">

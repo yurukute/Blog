@@ -13,7 +13,7 @@
       
       <guid>https://yurukute.github.io/Blog/post/factorialdecomp/</guid>
       <description>Bài toán Nguồn: Codewars
-Cho một số $n$ được nhập vào, việc của chúng ta là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
+Cho một số $n$ được nhập vào, việc của tụi mình là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá trị của $n$ có thể lên tới 4000, tất nhiên, 4000! sẽ trở thành 1 con số không hề nhỏ, nó có hơn 12000 chữ số lận á!</description>
     </item>
     
