@@ -55,6 +55,7 @@ params:
           url: "https://www.hackerrank.com/yurukute"
         - name: codewars
           url: "https://www.codewars.com/users/yurukute"
+    ShowPostNavLinks: true
 outputs:
     home:
         - HTML
