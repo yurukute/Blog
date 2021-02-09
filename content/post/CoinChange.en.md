@@ -46,21 +46,21 @@ I just draw a part of the diagram but as you can see, if we consider those subpr
 ## Approach 2: Dynamic programing
 By the idea above, this time i have an array like this, called `dp`
 |0|1|2|3|4|5|6|7|8|9|10|11|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |||||||||||||
 
 Each cell is a subproblem: ***Fewest coins make change the amount $i$***. So, the answer at $11^th$ cell is the answer that we're looking for this problem. And because it's calculated by the cells on its left, so we can reused the answer of the subprolem and avoid duplicating them.
 
 To begin, i'll fill the array like this:
 |0|1|2|3|4|5|6|7|8|9|10|11|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |0|12|12|12|12|12|12|12|12|12|12|12|
 
 For each cell, i'll consider each coin whether it is greater than the amount at that cell. If not, which means we can use that coin, the value for that cell would be
 $$dp[i] = min(dp[i-coin] + 1,dp[i])$$
 If $i = 1$ then $dp[1] = min(0+1, 12)$. Just like that, at the end, the array will be filled as:
 |0|1|2|3|4|5|6|7|8|9|10|11|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |0|1|1|2|2|1|2|2|3|3|2|3|
 
 $11^th$ cell's value is 3, that is the answer for the example test. From there, i have a code like this:

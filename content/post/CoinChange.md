@@ -44,20 +44,20 @@ Mình chỉ vẽ một phần của sơ đồ nhưng có thể thấy, khi xét 
 ### Cách 2: Quy hoạch động
 Cũng với ý tưởng trên, lần này mình có một mảng như sau, gọi là `dp` nhé:
 |0|1|2|3|4|5|6|7|8|9|10|11|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |||||||||||||
 
 Ô thứ $i$ của mảng lúc này là bài toán con: ***số xu cần ít nhất để đổi số tiền $i$***. Như vậy, đáp án của ô thứ *amount* chính là đáp án của bài toán. Và tất nhiên, đáp án đấy sẽ được tính từ các ô trước đó nên mình có thể tận dụng các đáp số đã tính sẵn mà không cần tính lại như cách trên ^w^. 
 
 Để bắt đầu, mình cần điền trước vào mảng như thế này:
 |0|1|2|3|4|5|6|7|8|9|10|11|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |0|12|12|12|12|12|12|12|12|12|12|12|
 
 Với mỗi ô, mình sẽ xét từng xu một xem nó có lớn hơn số tiền mình đang xét hay không? Nếu không có nghĩa là mình có thể dùng đồng xu và đó giá trị của ô đó sẽ là $$dp[i] = min(dp[i-coin] + 1,dp[i])$$
 Giả sử $i = 1$, vậy $dp[1] = min(0+1, 12)$. Tính lần lượt như vậy, cuối cùng mảng của mình trở thành:
 |0|1|2|3|4|5|6|7|8|9|10|11|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |0|1|1|2|2|1|2|2|3|3|2|3|
 
 Ô 11 có giá trị bằng 3, cũng tức là đáp án của bài toán ví dụ. Từ đấy, mình có đoạn code thế này:
