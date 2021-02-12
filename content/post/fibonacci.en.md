@@ -94,4 +94,5 @@ matrix power(matrix a, long long b){
 }
 ```
 Finally, for $F = \begin{bmatrix} 1 & 1 \\\\ 1 & 0 \end{bmatrix}$, the final result is `power(F,n).c`. 
+
 Thank you for reading.
