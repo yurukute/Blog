@@ -4,12 +4,32 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
-    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:49+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/post/fibonacci/</loc>
+    <lastmod>2021-02-12T04:39:49+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/fibonacci/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/fibonacci/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/tags/matrix/</loc>
+    <lastmod>2021-02-12T04:39:49+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://yurukute.github.io/Blog/en/</loc>
-    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:49+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -24,7 +44,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/en/post/</loc>
-    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:49+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -39,7 +59,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/en/tags/</loc>
-    <lastmod>2021-02-09T13:12:29+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:49+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"

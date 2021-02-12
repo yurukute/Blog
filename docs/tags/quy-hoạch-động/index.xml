@@ -5,7 +5,21 @@
     <link>https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</link>
     <description>Recent content in Quy hoạch động on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Feb 2021 13:12:26 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 04:39:42 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fibonacci</title>
+      <link>https://yurukute.github.io/Blog/post/fibonacci/</link>
+      <pubDate>Fri, 12 Feb 2021 04:39:42 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/fibonacci/</guid>
+      <description>Bài toán Nguồn: Codeforces
+Đọc hiểu Tìm phần dư của số fibonacci thứ $n$ ($n &amp;lt;= 10^18$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trogn dãy số được định nghĩa: $$
+\begin{aligned} F_0 &amp;amp; = 0\\
+F_1 &amp;amp; = 1\\
+F_i &amp;amp; = F_{i-1} + F_{i-2} (i &amp;gt;= 2) \end{aligned} $$ Ví dụ:
+Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phương trình sai phân của dãy fibonacci là công thức truy hồi, mình có thể viết thành đoạn code sau:</description>
+    </item>
+    
     <item>
       <title>Tổng số cách đổi xu</title>
       <link>https://yurukute.github.io/Blog/post/countchange/</link>

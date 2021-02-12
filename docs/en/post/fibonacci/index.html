@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Fibonacci | Noob&#39;s Blog</title>
+
+<meta name="keywords" content="Matrix, Dynamic Programing" />
+<meta name="description" content="Problem Source: Codeforces
+Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+\begin{aligned} F_0 &amp; = 0\\
+F_1 &amp; = 1\\
+F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
+Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci&rsquo;s difference equation as a recurrence relation, i can write to a program like this:
+int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code&rsquo;s complexity is $O(n)$ which is fine with $n &lt;= 5.">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/fibonacci/" />
+<link href="/Blog/assets/css/stylesheet.min.5601e01efed08baf0633c521dde519f4a73330d89816e94e954a68436d36e6bd.css" integrity="sha256-VgHgHv7Qi68GM8Uh3eUZ9KczMNiYFulOlUpoQ2025r0=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/fibonacci/" />
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/fibonacci/" />
+
+
+<meta property="og:title" content="Fibonacci" />
+<meta property="og:description" content="Problem Source: Codeforces
+Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+\begin{aligned} F_0 &amp; = 0\\
+F_1 &amp; = 1\\
+F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
+Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci&rsquo;s difference equation as a recurrence relation, i can write to a program like this:
+int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code&rsquo;s complexity is $O(n)$ which is fine with $n &lt;= 5." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/fibonacci/" />
+<meta property="article:published_time" content="2021-02-12T04:39:49+07:00" />
+<meta property="article:modified_time" content="2021-02-12T04:39:49+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fibonacci"/>
+<meta name="twitter:description" content="Problem Source: Codeforces
+Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+\begin{aligned} F_0 &amp; = 0\\
+F_1 &amp; = 1\\
+F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
+Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci&rsquo;s difference equation as a recurrence relation, i can write to a program like this:
+int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code&rsquo;s complexity is $O(n)$ which is fine with $n &lt;= 5."/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fibonacci",
+  "name": "Fibonacci",
+  "description": "Problem Source: Codeforces\nFind the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$\n\\begin{aligned} F_0 \u0026amp;amp; = 0\\\\\nF_1 \u0026amp;amp; = …",
+  "keywords": [
+    "Matrix", "Dynamic Programing"
+  ],
+  "articleBody": "Problem Source: Codeforces\nFind the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$\n\\begin{aligned} F_0 \u0026 = 0\\\\\nF_1 \u0026 = 1\\\\\nF_i \u0026 = F_{i-1} + F_{i-2} (i = 2) \\end{aligned} $$ Example:\nInput: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:\nint f0 = 0, f1 = 1, fn; for(int i = 2; i  n; i++){ fn = f0 + f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n Approach 2: Matrix exponentiation I can rewrite its different equation as $$ \\begin{aligned} F_{n+1} \u0026 = 1\\ F_n + 1\\ F_{n-1}\\\\\nF_{n} \u0026 = 1\\ F_n + 0\\ F_{n-1}\\\\\n\\\\\n= \\begin{bmatrix} F_{n+1} \\\\ F_n \\end{bmatrix} \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix} \\begin{bmatrix} F_n \\\\ F_{n-1} \\end{bmatrix} \\\\\\\\ \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}^n \\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix} \\end{aligned} $$ As you can see, F_n is equal to $2^{nd}$ row $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$ multiply by $\\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix}$. Also, $F_1 = 1, F_0 = 0$ so $F_n$ is now a value at $2^{nd}$ row and $1^{st}$ column of $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$.\nLarge n power I’ll calculate power with large $n$ by square the base and halve the exponent rather than multiply the base $n$ times as definition. For example, instead of calculate $2^6 = 2\\times2\\times2\\times2\\times2\\times2$, i’ll do $2^6 = 4^4 = 8^2$\nIn other words, i’ll try to replace multiplying a small many times to multiphying 2 or 3 times large numbers.\nint res = 1; while (b  0){ if(b % 2) res = res * a; a = a * a; b = 1 } Now, the base is not a number but a $2 \\times 2$ matrix so i need to declare a struct, so does the funtions for calculating and storing:\nconst unsigned long long mod = 1e9 + 7; struct matrix{ unsigned long long a, b, c, d; }; matrix multiply(matrix A, matrix B){ matrix C; C.a = (A.a*B.a + A.b*B.c) % mod; C.b = (A.a*B.b + A.b*B.d) % mod; C.c = (A.c*B.a + A.d*B.c) % mod; C.d = (A.c*B.b + A.d*B.d) % mod; return C; } matrix power(matrix a, long long b){ matrix res; //res is an identity matrix  res.a = res.d = 1; res.b = res.c = 0; while (b  0){ if(b % 2) res = multiply(res, a); a = multiply(a, a); b = 1; } return res; } Finally, for $F = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}$, the final result is power(F,n).c. Thank you for reading.\n",
+  "wordCount" : "495",
+  "inLanguage": "en",
+  "datePublished": "2021-02-12T04:39:49+07:00",
+  "dateModified": "2021-02-12T04:39:49+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/en/post/fibonacci/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
+            <span class="logo-switches">
+                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </a>
+                
+                
+
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                            aria-label="Tiếng Việt">Vi</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li></ul>
+    </nav>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Fibonacci
+    </h1>
+    <div class="post-meta">February 12, 2021
+&nbsp;|&nbsp;<ul class="i18n_list">Translations:
+        <li>
+          <a href="https://yurukute.github.io/Blog/post/fibonacci/">Vi</a>
+        </li>
+      </ul>
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h2 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h2>
+<p>Source: <a href="https://codeforces.com/gym/102644/problem/C">Codeforces</a></p>
+<p>Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as
+$$<br>
+\begin{aligned}
+F_0 &amp; = 0\\<br>
+F_1 &amp; = 1\\<br>
+F_i &amp; = F_{i-1} + F_{i-2} (i &gt;= 2)
+\end{aligned}
+$$
+Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  <span style="color:#ae81ff">50</span>
+Output: <span style="color:#ae81ff">586268941</span>
+</code></pre></div><h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
+<h3 id="approach-1-dynamic-programing">Approach 1: Dynamic Programing<a hidden class="anchor" aria-hidden="true" href="#approach-1-dynamic-programing">#</a></h3>
+<p>Using fibonacci&rsquo;s difference equation as a recurrence relation, i can write to a program like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> f0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, f1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, fn;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
+    fn <span style="color:#f92672">=</span> f0 <span style="color:#f92672">+</span> f1;
+    f0 <span style="color:#f92672">=</span> f1;
+    f1 <span style="color:#f92672">=</span> fn;
+}
+<span style="color:#66d9ef">return</span> fn;
+</code></pre></div><p>This code&rsquo;s complexity is $O(n)$ which is fine with $n &lt;= 5. 10^6$. However, $n$ is up to $10^18$ in this problem so i need a better way, must be at least $O(log^2 n)$ complexity.</p>
+<h3 id="approach-2-matrix-exponentiation">Approach 2: Matrix exponentiation<a hidden class="anchor" aria-hidden="true" href="#approach-2-matrix-exponentiation">#</a></h3>
+<p>I can rewrite its different equation as
+$$
+\begin{aligned}
+F_{n+1} &amp; = 1\ F_n + 1\ F_{n-1}\\<br>
+F_{n}   &amp; = 1\ F_n + 0\ F_{n-1}\\<br>
+\\<br>
+=&gt; \begin{bmatrix} F_{n+1} \\ F_n \end{bmatrix} &amp; =
+\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} \begin{bmatrix} F_n \\ F_{n-1} \end{bmatrix}
+\\\\ &amp; =
+\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}^n \begin{bmatrix} F_1 \\ F_0 \end{bmatrix}
+\end{aligned}
+$$
+As you can see, F_n is equal to $2^{nd}$ row $\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0\end{bmatrix}^n$ multiply by
+$\begin{bmatrix} F_1 \\ F_0 \end{bmatrix}$. Also, $F_1 = 1, F_0 = 0$ so $F_n$ is now a value at $2^{nd}$ row and $1^{st}$ column of $\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0\end{bmatrix}^n$.</p>
+<h3 id="large-n-power">Large n power<a hidden class="anchor" aria-hidden="true" href="#large-n-power">#</a></h3>
+<p>I&rsquo;ll calculate power with large $n$ by square the base and halve the exponent rather than multiply the base $n$ times as definition. For example, instead of calculate $2^6 = 2\times2\times2\times2\times2\times2$, i&rsquo;ll do $2^6 = 4^4 = 8^2$</p>
+<p>In other words, i&rsquo;ll try to replace multiplying a small <em>many times</em> to multiphying 2 or 3 times large numbers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">while</span> (b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+    <span style="color:#66d9ef">if</span>(b <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>)
+        res <span style="color:#f92672">=</span> res <span style="color:#f92672">*</span> a;
+    a <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> a;
+    b <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>
+}
+</code></pre></div><p>Now, the base is not a number but a $2 \times 2$ matrix so i need to declare a <code>struct</code>, so does the funtions for calculating and storing:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> mod <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span>;
+
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">matrix</span>{
+    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> a, b, c, d;
+};
+
+matrix <span style="color:#a6e22e">multiply</span>(matrix A, matrix B){
+    matrix C;
+    C.a <span style="color:#f92672">=</span> (A.a<span style="color:#f92672">*</span>B.a <span style="color:#f92672">+</span> A.b<span style="color:#f92672">*</span>B.c) <span style="color:#f92672">%</span> mod;
+    C.b <span style="color:#f92672">=</span> (A.a<span style="color:#f92672">*</span>B.b <span style="color:#f92672">+</span> A.b<span style="color:#f92672">*</span>B.d) <span style="color:#f92672">%</span> mod;
+    C.c <span style="color:#f92672">=</span> (A.c<span style="color:#f92672">*</span>B.a <span style="color:#f92672">+</span> A.d<span style="color:#f92672">*</span>B.c) <span style="color:#f92672">%</span> mod;
+    C.d <span style="color:#f92672">=</span> (A.c<span style="color:#f92672">*</span>B.b <span style="color:#f92672">+</span> A.d<span style="color:#f92672">*</span>B.d) <span style="color:#f92672">%</span> mod;
+    <span style="color:#66d9ef">return</span> C;
+}
+
+matrix <span style="color:#a6e22e">power</span>(matrix a, <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> b){
+    matrix res;
+    <span style="color:#75715e">//res is an identity matrix
+</span><span style="color:#75715e"></span>    res.a <span style="color:#f92672">=</span> res.d <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    res.b <span style="color:#f92672">=</span> res.c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">while</span> (b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+        <span style="color:#66d9ef">if</span>(b <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>)
+            res <span style="color:#f92672">=</span> multiply(res, a);
+        a <span style="color:#f92672">=</span> multiply(a, a);
+        b <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>;
+    }
+    <span style="color:#66d9ef">return</span> res;
+}
+</code></pre></div><p>Finally, for $F = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}$, the final result is <code>power(F,n).c</code>. Thank you for reading.</p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/matrix/">Matrix</a></li>
+      <li><a href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/">Dynamic Programing</a></li>
+    </ul>
+    <nav class="paginav">
+      <a class="prev" href="https://yurukute.github.io/Blog/en/post/countchange/">
+        <span class="title">« Prev Post</span>
+        <br>
+        <span>Total ways make change</span>
+      </a>
+    </nav>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/Blog/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

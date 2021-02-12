@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/</loc>
-    <lastmod>2021-02-09T13:12:26+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,8 +18,28 @@
   </url>
   
   <url>
+    <loc>https://yurukute.github.io/Blog/post/fibonacci/</loc>
+    <lastmod>2021-02-12T04:39:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/fibonacci/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/fibonacci/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/tags/ma-tr%E1%BA%ADn/</loc>
+    <lastmod>2021-02-12T04:39:42+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yurukute.github.io/Blog/post/</loc>
-    <lastmod>2021-02-09T13:12:26+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,12 +54,12 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</loc>
-    <lastmod>2021-02-09T13:12:26+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:42+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://yurukute.github.io/Blog/tags/</loc>
-    <lastmod>2021-02-09T13:12:26+07:00</lastmod>
+    <lastmod>2021-02-12T04:39:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

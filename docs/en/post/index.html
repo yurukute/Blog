@@ -31,7 +31,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/en/post/" />
-<meta property="og:updated_time" content="2021-02-09T13:12:29+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta property="og:updated_time" content="2021-02-12T04:39:49+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -145,6 +145,26 @@
 
 
 
+<article class="post-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Fibonacci
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Problem Source: Codeforces
+Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+\begin{aligned} F_0 &amp; = 0\\
+F_1 &amp; = 1\\
+F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
+Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:
+int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n &lt;= 5....</p>
+  </section>
+  <footer class="entry-footer">February 12, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to Fibonacci" href="https://yurukute.github.io/Blog/en/post/fibonacci/"></a>
+</article>
 <article class="post-entry"> 
 
   <header class="entry-header">
