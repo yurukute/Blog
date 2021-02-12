@@ -94,4 +94,6 @@ matrix power(matrix a, long long b){
     return res;
 }
 ```
-Cuối cùng, ta cho $F = \begin{bmatrix} 1 & 1 \\\\ 1 & 0 \end{bmatrix}$, kết quả cuối cùng sẽ là `power(F,n).c`. Cảm ơn bạn vì đã đọc.
+Cuối cùng, ta cho $F = \begin{bmatrix} 1 & 1 \\\\ 1 & 0 \end{bmatrix}$, kết quả cuối cùng sẽ là `power(F,n).c`. 
+
+Cảm ơn bạn vì đã đọc. Chúc bạn có một năm mới tràn đầy niềm vui và hạnh phúc =w=.
