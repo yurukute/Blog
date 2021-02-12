@@ -33,7 +33,7 @@ for(int i = 2; i <= n; i++){
 }
 return fn;
 ```
-This code's complexity is $O(n)$ which is fine with $n <= 5. 10^6$. However, $n$ is up to $10^18$ in this problem so i need a better way, must be at least $O(log^2 n)$ complexity.
+This code's complexity is $O(n)$ which is fine with $n <= 5. 10^6$. However, $n$ is up to $10^{18}$ in this problem so i need a better way, must be at least $O(log^2 n)$ complexity.
 ### Approach 2: Matrix exponentiation
 I can rewrite its different equation as
 $$

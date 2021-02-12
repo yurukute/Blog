@@ -9,7 +9,7 @@ TocOpen: true
 Nguồn: [Codeforces](https://codeforces.com/gym/102644/problem/C)
 
 ### Đọc hiểu
-Tìm phần dư của số fibonacci thứ $n$ ($n <= 10^18$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trogn dãy số được định nghĩa:
+Tìm phần dư của số fibonacci thứ $n$ ($n <= 10^{18}$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trogn dãy số được định nghĩa:
 $$  
     \begin{aligned}
         F_0 & = 0\\\\
@@ -34,7 +34,7 @@ for(int i = 2; i <= n; i++){
 }
 return fn;
 ```
-Với độ phức tạp là $O(n)$, đoạn code này chạy ổn với $n <= 5. 10^6$. Tuy nhiên, $n$ có thể lên đến $10^18$ ở bài toán này nên mình cần một giải thuật tốt hơn, ít nhất phải là $O(log^2 n)$
+Với độ phức tạp là $O(n)$, đoạn code này chạy ổn với $n <= 5. 10^6$. Tuy nhiên, $n$ có thể lên đến $10^{18}$ ở bài toán này nên mình cần một giải thuật tốt hơn, ít nhất phải là $O(log^2 n)$
 ### Cách 2: Nhân ma trận
 Từ phương trình sai phân của dãy fibonacci, mình có thể viết lại như sau:
 $$
