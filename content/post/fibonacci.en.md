@@ -52,7 +52,7 @@ $\begin{bmatrix} F_1 \\\\ F_0 \end{bmatrix}$. Also, $F_1 = 1, F_0 = 0$ so $F_n$ 
 ### Large n power
 I'll calculate power with large $n$ by square the base and halve the exponent rather than multiply the base $n$ times as definition. For example, instead of calculate $2^6 = 2\times2\times2\times2\times2\times2,$ i'll do $2^6 = 4^4 = 8^2$
 
-In other words, i'll try to replace multiplying a small *many times* to multiplying 2 or 3 times large numbers.
+In other words, i'll try to replace multiplying a small *many times* to multiplying 2 or 3 times large numbers. By this, i can reduce the complexity to $O(logn)$
 ```cpp
 int res = 1;
 while (b > 0){

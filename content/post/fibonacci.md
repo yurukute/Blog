@@ -9,7 +9,7 @@ TocOpen: true
 Nguồn: [Codeforces](https://codeforces.com/gym/102644/problem/C)
 
 ### Đọc hiểu
-Tìm phần dư của số fibonacci thứ $n$ ($n <= 10^{18}$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trogn dãy số được định nghĩa:
+Tìm phần dư của số fibonacci thứ $n$ ($n <= 10^{18}$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa:
 $$  
     \begin{aligned}
         F_0 & = 0\\\\
@@ -48,12 +48,12 @@ $$
     \begin{bmatrix} 1 & 1 \\\\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} F_1 \\\\ F_0 \end{bmatrix}
 \end{aligned}
 $$
-Có thể thấy F_n sẽ bằng dòng thứ 2 của $\begin{bmatrix} 1 & 1 \\\\ 1 & 0\end{bmatrix}^n$ nhân với 
+Có thể thấy $F_n$ sẽ bằng dòng thứ 2 của $\begin{bmatrix} 1 & 1 \\\\ 1 & 0\end{bmatrix}^n$ nhân với 
 $\begin{bmatrix} F_1 \\\\ F_0 \end{bmatrix}$. Mình lại có $F_1 = 1, F_0 = 0$ nên $F_n$ lúc này sẽ là phần tử ở dòng 2 cột 1 của $\begin{bmatrix} 1 & 1 \\\\ 1 & 0\end{bmatrix}^n$.
 #### Tính lũy thừa với n lớn
 Đối với $n$ lớn, thay vì cứ nhân cơ số $n$ lần theo định nghĩa, mình sẽ bình phương cơ số, đồng thời giảm số mũ đi một nửa. Ví dụ: Thay vì tính $2^6 = 2\times2\times2\times2\times2\times2,$ mình sẽ tính $2^6 = 4^4 = 8^2$
 
-Nói cách khác, mình sẽ cố gắng thay thế việc nhân *nhiều lần* một số nhỏ thành nhân *vài lần* các số lớn với nhau.
+Nói cách khác, mình sẽ cố gắng thay thế việc nhân *nhiều lần* một số nhỏ thành nhân *vài lần* các số lớn với nhau. Với cách này mình sẽ đưa độ phức tạp về $O(logn)$.
 ```cpp
 int res = 1;
 while (b > 0){
