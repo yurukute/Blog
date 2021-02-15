@@ -32,8 +32,8 @@ And notice, every row represents the addition of another coin (shown in bold). T
 Obviously, i won't use the $i^th$ coin if $coins[i-1] > j$, on the contracy, i can. Therefore:
 $$ways[i][j]=
     \begin{cases} 
-        ways[i-1][j],                         & coins[i-1] > j \\\\
-        ways[i-1][j] + ways[i][j-coins[i-1]],   & coins[i-1] <= j 
+        ways[i-1][j],                           & coins[i-1] > j \\\\
+        ways[i-1][j] + ways[i][j-coins[i-1]],   & coins[i-1] \leq j 
     \end{cases}
 $$
 Let me explain a bit about the formula above. When i don't use the coin, the subproblem become the same with the subproblem at the previous row, the row that don't contain $coins[i-1]$ then i'll go back that cell and use its value. But if i use the coin, the amount we have is only $j - coins[i-1]$ so i'll comeback the cell $ways[i][j-coins[i-1]]$ to get its value plus the case *[don't use that coin]*
@@ -70,7 +70,7 @@ return ways[coins.size()][amount];
 |{1,**2**}|1|1|2|2|3|3|
 |{1,2,**5**}|1|1|2|2|3|**4**|
 ### Improvement
-The solution above has a weakness. After we calculated the $n^th$ row, we don't need to store the value from the $1^st$ row to the $(n-1)^th$ row because we only need $n^th$ to calculated the next row. Therefore, i'll change from 2 dimmensions array to 1 dimmension to store and calculate itself.
+The solution above has a weakness. After we calculated the $n^{th}$ row, we don't need to store the value from the $1^{st}$ row to the $(n-1)^{th}$ row because we only need $n^th$ to calculated the next row. Therefore, i'll change from 2 dimmensions array to 1 dimmension to store and calculate itself.
 ```cpp
 vector<int> ways(amount + 1);
     ways[0] = 1;
@@ -85,3 +85,5 @@ return ways[amount];
 |1|1|2|2|3|**4**|
 
 Thank you for reading.
+## Related post
+[Explosive sum]({{< ref "post/ExplosiveSum">}})
