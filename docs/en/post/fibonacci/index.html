@@ -8,8 +8,7 @@
 <title>Fibonacci | Noob&#39;s Blog</title>
 
 <meta name="keywords" content="Matrix, Dynamic Programing" />
-<meta name="description" content="Problem Source: Codeforces
-Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+<meta name="description" content="Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
 \begin{aligned} F_0 &amp; = 0\\
 F_1 &amp; = 1\\
 F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
@@ -33,8 +32,7 @@ int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1
 
 
 <meta property="og:title" content="Fibonacci" />
-<meta property="og:description" content="Problem Source: Codeforces
-Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+<meta property="og:description" content="Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
 \begin{aligned} F_0 &amp; = 0\\
 F_1 &amp; = 1\\
 F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
@@ -46,8 +44,7 @@ int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1
 <meta property="article:modified_time" content="2021-02-12T04:39:49+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fibonacci"/>
-<meta name="twitter:description" content="Problem Source: Codeforces
-Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+<meta name="twitter:description" content="Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
 \begin{aligned} F_0 &amp; = 0\\
 F_1 &amp; = 1\\
 F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
@@ -60,11 +57,11 @@ int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1
   "@type": "BlogPosting",
   "headline": "Fibonacci",
   "name": "Fibonacci",
-  "description": "Problem Source: Codeforces\nFind the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$\n\\begin{aligned} F_0 \u0026amp;amp; = 0\\\\\nF_1 \u0026amp;amp; = …",
+  "description": "Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$\n\\begin{aligned} F_0 \u0026amp;amp; = 0\\\\\nF_1 \u0026amp;amp; = …",
   "keywords": [
     "Matrix", "Dynamic Programing"
   ],
-  "articleBody": "Problem Source: Codeforces\nFind the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$\n\\begin{aligned} F_0 \u0026 = 0\\\\\nF_1 \u0026 = 1\\\\\nF_i \u0026 = F_{i-1} + F_{i-2} (i = 2) \\end{aligned} $$ Example:\nInput: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:\nint f0 = 0, f1 = 1, fn; for(int i = 2; i  n; i++){ fn = f0 + f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n Approach 2: Matrix exponentiation I can rewrite its different equation as $$ \\begin{aligned} F_{n+1} \u0026 = 1\\ F_n + 1\\ F_{n-1}\\\\\nF_{n} \u0026 = 1\\ F_n + 0\\ F_{n-1}\\\\\n\\\\\n= \\begin{bmatrix} F_{n+1} \\\\ F_n \\end{bmatrix} \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix} \\begin{bmatrix} F_n \\\\ F_{n-1} \\end{bmatrix} \\\\\\\\ \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}^n \\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix} \\end{aligned} $$ As you can see, F_n is equal to $2^{nd}$ row $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$ multiply by $\\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix}$. Also, $F_1 = 1, F_0 = 0$ so $F_n$ is now a value at $2^{nd}$ row and $1^{st}$ column of $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$.\nLarge n power I’ll calculate power with large $n$ by square the base and halve the exponent rather than multiply the base $n$ times as definition. For example, instead of calculate $2^6 = 2\\times2\\times2\\times2\\times2\\times2,$ i’ll do $2^6 = 4^4 = 8^2$\nIn other words, i’ll try to replace multiplying a small many times to multiplying 2 or 3 times large numbers. By this, i can reduce the complexity to $O(logn)$\nint res = 1; while (b  0){ if(b % 2) res = res * a; a = a * a; b = 1 } Now, the base is not a number but a $2 \\times 2$ matrix so i need to declare a struct, so does the funtions for calculating and storing:\nconst unsigned long long mod = 1e9 + 7; struct matrix{ unsigned long long a, b, c, d; }; matrix multiply(matrix A, matrix B){ matrix C; C.a = (A.a*B.a + A.b*B.c) % mod; C.b = (A.a*B.b + A.b*B.d) % mod; C.c = (A.c*B.a + A.d*B.c) % mod; C.d = (A.c*B.b + A.d*B.d) % mod; return C; } matrix power(matrix a, long long b){ matrix res; //res is an identity matrix  res.a = res.d = 1; res.b = res.c = 0; while (b  0){ if(b % 2) res = multiply(res, a); a = multiply(a, a); b = 1; } return res; } Finally, for $F = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}$, the final result is power(F,n).c.\nThank you for reading.\n",
+  "articleBody": "Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$\n\\begin{aligned} F_0 \u0026 = 0\\\\\nF_1 \u0026 = 1\\\\\nF_i \u0026 = F_{i-1} + F_{i-2} (i = 2) \\end{aligned} $$ Example:\nInput: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:\nint f0 = 0, f1 = 1, fn; for(int i = 2; i  n; i++){ fn = f0 + f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n Approach 2: Matrix exponentiation I can rewrite its different equation as $$ \\begin{aligned} F_{n+1} \u0026 = 1\\ F_n + 1\\ F_{n-1}\\\\\nF_{n} \u0026 = 1\\ F_n + 0\\ F_{n-1}\\\\\n\\\\\n= \\begin{bmatrix} F_{n+1} \\\\ F_n \\end{bmatrix} \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix} \\begin{bmatrix} F_n \\\\ F_{n-1} \\end{bmatrix} \\\\\\\\ \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}^n \\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix} \\end{aligned} $$ As you can see, F_n is equal to $2^{nd}$ row $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$ multiply by $\\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix}$. Also, $F_1 = 1, F_0 = 0$ so $F_n$ is now a value at $2^{nd}$ row and $1^{st}$ column of $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$.\nLarge n power I’ll calculate power with large $n$ by square the base and halve the exponent rather than multiply the base $n$ times as definition. For example, instead of calculate $2^6 = 2\\times2\\times2\\times2\\times2\\times2,$ i’ll do $2^6 = 4^4 = 8^2$\nIn other words, i’ll try to replace multiplying a small many times to multiplying 2 or 3 times large numbers. By this, i can reduce the complexity to $O(logn)$\nint res = 1; while (b  0){ if(b % 2) res = res * a; a = a * a; b = 1 } Now, the base is not a number but a $2 \\times 2$ matrix so i need to declare a struct, so does the funtions for calculating and storing:\nconst unsigned long long mod = 1e9 + 7; struct matrix{ unsigned long long a, b, c, d; }; matrix multiply(matrix A, matrix B){ matrix C; C.a = (A.a*B.a + A.b*B.c) % mod; C.b = (A.a*B.b + A.b*B.d) % mod; C.c = (A.c*B.a + A.d*B.c) % mod; C.d = (A.c*B.b + A.d*B.d) % mod; return C; } matrix power(matrix a, long long b){ matrix res; //res is an identity matrix  res.a = res.d = 1; res.b = res.c = 0; while (b  0){ if(b % 2) res = multiply(res, a); a = multiply(a, a); b = 1; } return res; } Finally, for $F = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}$, the final result is power(F,n).c.\nThank you for reading.\n",
   "wordCount" : "504",
   "inLanguage": "en",
   "datePublished": "2021-02-12T04:39:49+07:00",
@@ -204,7 +201,8 @@ int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1
 
   <div class="post-content">
 <h2 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h2>
-<p>Source: <a href="https://codeforces.com/gym/102644/problem/C">Codeforces</a></p>
+<p>Source: <a href="https://codeforces.com/gym/102644/problem/C" target="_blank">Codeforces</a>
+</p>
 <p>Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as
 $$<br>
 \begin{aligned}
@@ -295,6 +293,11 @@ matrix <span style="color:#a6e22e">power</span>(matrix a, <span style="color:#66
         <span class="title">« Prev Post</span>
         <br>
         <span>Total ways make change</span>
+      </a>
+      <a class="next" href="https://yurukute.github.io/Blog/en/post/explosivesum/">
+        <span class="title">Next Post »</span>
+        <br>
+        <span>Explosive Sum</span>
       </a>
     </nav>
   </footer>

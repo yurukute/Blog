@@ -8,8 +8,7 @@
 <title>Total ways make change | Noob&#39;s Blog</title>
 
 <meta name="keywords" content="Dynamic Programing" />
-<meta name="description" content="Problem Source: Leetcode, Codewars
-You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+<meta name="description" content="Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We&rsquo;ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change.">
 <meta name="author" content="">
@@ -30,8 +29,7 @@ Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&
 
 
 <meta property="og:title" content="Total ways make change" />
-<meta property="og:description" content="Problem Source: Leetcode, Codewars
-You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+<meta property="og:description" content="Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We&rsquo;ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change." />
 <meta property="og:type" content="article" />
@@ -40,8 +38,7 @@ Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&
 <meta property="article:modified_time" content="2021-02-09T13:12:29+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Total ways make change"/>
-<meta name="twitter:description" content="Problem Source: Leetcode, Codewars
-You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+<meta name="twitter:description" content="Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We&rsquo;ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change."/>
 
@@ -51,12 +48,12 @@ Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&
   "@type": "BlogPosting",
   "headline": "Total ways make change",
   "name": "Total ways make change",
-  "description": "Problem Source: Leetcode, Codewars\nYou are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up …",
+  "description": "Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up …",
   "keywords": [
     "Dynamic Programing"
   ],
-  "articleBody": "Problem Source: Leetcode, Codewars\nYou are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.\nFor example:\nInput: amount = 5, coins = {1,2,5} Output: 4 //{5, 2+2+1, 2+1+1+1, 1+1+1+1+1} Solution We’ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change. Look at the dynamic programing table (ways) now:\n    0 1 2 3 4 5     {}         {1}         {1,2}         {1,2,5}          Each cell on the table is a subproblem and they are all related to eachother. Let’s imagine i’m at the cell $ways[1][1]$, then i’ll have to find the answer for total ways make change amount $1$ with no coin; if i’m at the cell $ways[1][1]$, i’ll have to find the answer for total ways make change amount $3$ with coins {1,2}. So does value at cell $ways[i][j]$ would be the answer for total ways make change amount $j$ with coins at row $i$.\nAnd notice, every row represents the addition of another coin (shown in bold). Thus, row $i$ will answer the question: Will i use the $i^th$ coin?\nObviously, i won’t use the $i^th$ coin if $coins[i-1]  j$, on the contracy, i can. Therefore: $$ways[i][j]= \\begin{cases} ways[i-1][j], \u0026 coins[i-1]  j \\\\\nways[i-1][j] + ways[i][j-coins[i-1]], \u0026 coins[i-1] [don’t use that coin]\nFill the base To begin, i have to fill the zero row and zero column. Zero row means we don’t have anycoin so we can’t make change, the value here would be 0. The zero column means we use the coins to make change… zero amount, so that those cell’s value would be 1 because the only way is do nothing.\nFor convenience, i’ll create a 2 dimmension vector with all value are 0. Then, i just have to fill the zero column.\nvectorvectorint ways(coins.size() +1, vectorint (amount + 1, 0)); for(int i = 0; i  coins.size(); i++) ways[i][0] = 1;     0 1 2 3 4 5     {} 1 0 0 0 0 0   {1} 1 0 0 0 0 0   {1,2} 1 0 0 0 0 0   {1,2,5} 1 0 0 0 0 0    The next thing to do is fill the remain cells. The final cell is the answer for this problem.\nfor(int i = 1; i  coins.size(); i++) for(int j = 1; j  amount; j++) ways[i][j] = ways[i-1][j]; if(j = coins[i-1]) ways[i][j] += ways[i][j - coins[i-1]]; return ways[coins.size()][amount];     0 1 2 3 4 5     {} 1 0 0 0 0 0   {1} 1 1 1 1 1 1   {1,2} 1 1 2 2 3 3   {1,2,5} 1 1 2 2 3 4    Improvement The solution above has a weakness. After we calculated the $n^th$ row, we don’t need to store the value from the $1^st$ row to the $(n-1)^th$ row because we only need $n^th$ to calculated the next row. Therefore, i’ll change from 2 dimmensions array to 1 dimmension to store and calculate itself.\nvectorint ways(amount + 1); ways[0] = 1; for(auto coin : coins) for(int i = 1; i  amount; i++) if(i = coin) ways[i] += ways[i - coin]; return ways[amount];    0 1 2 3 4 5     1 1 2 2 3 4    Thank you for reading.\n",
-  "wordCount" : "636",
+  "articleBody": "Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.\nFor example:\nInput: amount = 5, coins = {1,2,5} Output: 4 //{5, 2+2+1, 2+1+1+1, 1+1+1+1+1} Solution We’ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change. Look at the dynamic programing table (ways) now:\n    0 1 2 3 4 5     {}         {1}         {1,2}         {1,2,5}          Each cell on the table is a subproblem and they are all related to eachother. Let’s imagine i’m at the cell $ways[1][1]$, then i’ll have to find the answer for total ways make change amount $1$ with no coin; if i’m at the cell $ways[1][1]$, i’ll have to find the answer for total ways make change amount $3$ with coins {1,2}. So does value at cell $ways[i][j]$ would be the answer for total ways make change amount $j$ with coins at row $i$.\nAnd notice, every row represents the addition of another coin (shown in bold). Thus, row $i$ will answer the question: Will i use the $i^th$ coin?\nObviously, i won’t use the $i^th$ coin if $coins[i-1]  j$, on the contracy, i can. Therefore: $$ways[i][j]= \\begin{cases} ways[i-1][j], \u0026 coins[i-1]  j \\\\\nways[i-1][j] + ways[i][j-coins[i-1]], \u0026 coins[i-1] \\leq j \\end{cases} $$ Let me explain a bit about the formula above. When i don’t use the coin, the subproblem become the same with the subproblem at the previous row, the row that don’t contain $coins[i-1]$ then i’ll go back that cell and use its value. But if i use the coin, the amount we have is only $j - coins[i-1]$ so i’ll comeback the cell $ways[i][j-coins[i-1]]$ to get its value plus the case [don’t use that coin]\nFill the base To begin, i have to fill the zero row and zero column. Zero row means we don’t have anycoin so we can’t make change, the value here would be 0. The zero column means we use the coins to make change… zero amount, so that those cell’s value would be 1 because the only way is do nothing.\nFor convenience, i’ll create a 2 dimmension vector with all value are 0. Then, i just have to fill the zero column.\nvectorvectorint ways(coins.size() +1, vectorint (amount + 1, 0)); for(int i = 0; i  coins.size(); i++) ways[i][0] = 1;     0 1 2 3 4 5     {} 1 0 0 0 0 0   {1} 1 0 0 0 0 0   {1,2} 1 0 0 0 0 0   {1,2,5} 1 0 0 0 0 0    The next thing to do is fill the remain cells. The final cell is the answer for this problem.\nfor(int i = 1; i  coins.size(); i++) for(int j = 1; j  amount; j++) ways[i][j] = ways[i-1][j]; if(j = coins[i-1]) ways[i][j] += ways[i][j - coins[i-1]]; return ways[coins.size()][amount];     0 1 2 3 4 5     {} 1 0 0 0 0 0   {1} 1 1 1 1 1 1   {1,2} 1 1 2 2 3 3   {1,2,5} 1 1 2 2 3 4    Improvement The solution above has a weakness. After we calculated the $n^{th}$ row, we don’t need to store the value from the $1^{st}$ row to the $(n-1)^{th}$ row because we only need $n^th$ to calculated the next row. Therefore, i’ll change from 2 dimmensions array to 1 dimmension to store and calculate itself.\nvectorint ways(amount + 1); ways[0] = 1; for(auto coin : coins) for(int i = 1; i  amount; i++) if(i = coin) ways[i] += ways[i - coin]; return ways[amount];    0 1 2 3 4 5     1 1 2 2 3 4    Thank you for reading.\nRelated post Explosive sum ",
+  "wordCount" : "641",
   "inLanguage": "en",
   "datePublished": "2021-02-09T13:12:29+07:00",
   "dateModified": "2021-02-09T13:12:29+07:00",
@@ -195,8 +192,10 @@ Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&
 
   <div class="post-content">
 <h2 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h2>
-<p>Source: <a href="https://leetcode.com/problems/coin-change-2/">Leetcode</a>,
-<a href="https://www.codewars.com/kata/541af676b589989aed0009e7">Codewars</a></p>
+<p>Source: <a href="https://leetcode.com/problems/coin-change-2/" target="_blank">Leetcode</a>
+,
+<a href="https://www.codewars.com/kata/541af676b589989aed0009e7" target="_blank">Codewars</a>
+</p>
 <p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.</p>
 <p>For example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  amount <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, coins <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>}
@@ -259,8 +258,8 @@ Output: <span style="color:#ae81ff">4</span> <span style="color:#75715e">//{5, 2
 <p>Obviously, i won&rsquo;t use the $i^th$ coin if $coins[i-1] &gt; j$, on the contracy, i can. Therefore:
 $$ways[i][j]=
 \begin{cases}
-ways[i-1][j],                         &amp; coins[i-1] &gt; j \\<br>
-ways[i-1][j] + ways[i][j-coins[i-1]],   &amp; coins[i-1] &lt;= j
+ways[i-1][j],                           &amp; coins[i-1] &gt; j \\<br>
+ways[i-1][j] + ways[i][j-coins[i-1]],   &amp; coins[i-1] \leq j
 \end{cases}
 $$
 Let me explain a bit about the formula above. When i don&rsquo;t use the coin, the subproblem become the same with the subproblem at the previous row, the row that don&rsquo;t contain $coins[i-1]$ then i&rsquo;ll go back that cell and use its value. But if i use the coin, the amount we have is only $j - coins[i-1]$ so i&rsquo;ll comeback the cell $ways[i][j-coins[i-1]]$ to get its value plus the case <em>[don&rsquo;t use that coin]</em></p>
@@ -380,7 +379,7 @@ Let me explain a bit about the formula above. When i don&rsquo;t use the coin, t
 </tbody>
 </table>
 <h3 id="improvement">Improvement<a hidden class="anchor" aria-hidden="true" href="#improvement">#</a></h3>
-<p>The solution above has a weakness. After we calculated the $n^th$ row, we don&rsquo;t need to store the value from the $1^st$ row to the $(n-1)^th$ row because we only need $n^th$ to calculated the next row. Therefore, i&rsquo;ll change from 2 dimmensions array to 1 dimmension to store and calculate itself.</p>
+<p>The solution above has a weakness. After we calculated the $n^{th}$ row, we don&rsquo;t need to store the value from the $1^{st}$ row to the $(n-1)^{th}$ row because we only need $n^th$ to calculated the next row. Therefore, i&rsquo;ll change from 2 dimmensions array to 1 dimmension to store and calculate itself.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> ways(amount <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
     ways[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> coin : coins)
@@ -411,6 +410,9 @@ Let me explain a bit about the formula above. When i don&rsquo;t use the coin, t
 </tbody>
 </table>
 <p>Thank you for reading.</p>
+<h2 id="related-post">Related post<a hidden class="anchor" aria-hidden="true" href="#related-post">#</a></h2>
+<p><a href="https://yurukute.github.io/Blog/en/post/explosivesum/">Explosive sum</a>
+</p>
 
 </div>
   <footer class="post-footer">

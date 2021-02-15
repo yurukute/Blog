@@ -32,7 +32,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/en/" />
-<meta property="og:updated_time" content="2021-02-12T04:39:49+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta property="og:updated_time" content="2021-02-15T18:49:58+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Noob&#39;s Blog"/>
 <meta name="twitter:description" content=""/>
@@ -193,12 +193,27 @@
 
   <header class="entry-header">
     <h2>
+      Explosive Sum
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Problem Source: Codewars How many ways can you make the sum of a number?
+From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
+ Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i’ll use dynamic programing instead (Oω&lt;)☆....</p>
+  </section>
+  <footer class="entry-footer">February 15, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to Explosive Sum" href="https://yurukute.github.io/Blog/en/post/explosivesum/"></a>
+</article>
+<article class="post-entry"> 
+
+  <header class="entry-header">
+    <h2>
       Fibonacci
     </h2>
   </header>
   <section class="entry-content">
-    <p>Problem Source: Codeforces
-Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
+    <p>Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
 \begin{aligned} F_0 &amp; = 0\\
 F_1 &amp; = 1\\
 F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
@@ -217,8 +232,7 @@ int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1
     </h2>
   </header>
   <section class="entry-content">
-    <p>Problem Source: Leetcode, Codewars
-You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+    <p>Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We’ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change....</p>
   </section>
@@ -234,8 +248,7 @@ Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&
     </h2>
   </header>
   <section class="entry-content">
-    <p>Problem Source: Leetcode
-You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+    <p>Problem Source: Leetcode You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 You may assume that you have an infinite number of each kind of coin.
 Examples:
 Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11....</p>
@@ -266,8 +279,7 @@ Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Inpu
     </h2>
   </header>
   <section class="entry-content">
-    <p>Problem Source: Codewars
-The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
+    <p>Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!...</p>
   </section>
@@ -283,8 +295,7 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
     </h2>
   </header>
   <section class="entry-content">
-    <p>Problem Codewars
-Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
+    <p>Problem Codewars Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
 ($p_1$**$n_1$)($p_2$**$n_2$)…($p_k$**$n_k$)
 where
  a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
@@ -302,8 +313,7 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
     </h2>
   </header>
   <section class="entry-content">
-    <p>Promblem Source: Codeforces
-We know that prime numbers are positive integers that have exactly two distinct positive divisors. Similarly, we’ll call a positive integer $t$ Т-prime, if $t$ has exactly three distinct positive divisors.
+    <p>Promblem Source: Codeforces We know that prime numbers are positive integers that have exactly two distinct positive divisors. Similarly, we’ll call a positive integer $t$ Т-prime, if $t$ has exactly three distinct positive divisors.
 You are given an array of $n$ positive integers. For each of them determine whether it is Т-prime or not.
 Examples
 Input: 3 4 5 6 Output: YES NO NO Solution First, we need to find all prime numbers from 2 to $\sqrt{x}$....</p>
@@ -320,8 +330,7 @@ Input: 3 4 5 6 Output: YES NO NO Solution First, we need to find all prime numbe
     </h2>
   </header>
   <section class="entry-content">
-    <p>The problem: Source: codewars
-Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] …]
+    <p>The problem: Source: codewars Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] …]
 P will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C&#43;&#43; and as an array of arrays in other languages....</p>
   </section>
   <footer class="entry-footer">January 18, 2021
@@ -336,8 +345,7 @@ P will be sorted by increasing order of the prime numbers. The final result has 
     </h2>
   </header>
   <section class="entry-content">
-    <p>Problem: Source: Codewars.com
-The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
+    <p>Problem: Source: Codewars.com The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
 maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead....</p>
   </section>
   <footer class="entry-footer">January 17, 2021

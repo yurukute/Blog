@@ -5,15 +5,25 @@
     <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
     <description>Recent content in Dynamic Programing on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 12 Feb 2021 04:39:49 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Feb 2021 18:49:58 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Explosive Sum</title>
+      <link>https://yurukute.github.io/Blog/en/post/explosivesum/</link>
+      <pubDate>Mon, 15 Feb 2021 18:49:58 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/explosivesum/</guid>
+      <description>Problem Source: Codewars How many ways can you make the sum of a number?
+From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
+ Input: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i&amp;rsquo;ll use dynamic programing instead (Oω&amp;lt;)☆.</description>
+    </item>
+    
     <item>
       <title>Fibonacci</title>
       <link>https://yurukute.github.io/Blog/en/post/fibonacci/</link>
       <pubDate>Fri, 12 Feb 2021 04:39:49 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/en/post/fibonacci/</guid>
-      <description>Problem Source: Codeforces
-Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$
+      <description>Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$
 \begin{aligned} F_0 &amp;amp; = 0\\
 F_1 &amp;amp; = 1\\
 F_i &amp;amp; = F_{i-1} + F_{i-2} (i &amp;gt;= 2) \end{aligned} $$ Example:
@@ -27,8 +37,7 @@ int f0 = 0, f1 = 1, fn; for(int i = 2; i &amp;lt;= n; i++){ fn = f0 + f1; f0 = f
       <pubDate>Tue, 09 Feb 2021 13:12:29 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/en/post/countchange/</guid>
-      <description>Problem Source: Leetcode, Codewars
-You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+      <description>Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2+2+1, 2+1+1+1, 1+1+1+1+1} Solution We&amp;rsquo;ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change.</description>
     </item>
@@ -39,8 +48,7 @@ Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2+2+1, 2+1+1+1, 1+1+1+1+1} So
       <pubDate>Mon, 08 Feb 2021 15:29:18 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/en/post/coinchange/</guid>
-      <description>Problem Source: Leetcode
-You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+      <description>Problem Source: Leetcode You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 You may assume that you have an infinite number of each kind of coin.
 Examples:
 Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11.</description>
@@ -52,8 +60,7 @@ Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Inpu
       <pubDate>Sun, 17 Jan 2021 20:45:26 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/en/post/maxsubarraysum/</guid>
-      <description>Problem: Source: Codewars.com
-The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
+      <description>Problem: Source: Codewars.com The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
 maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.</description>
     </item>
     

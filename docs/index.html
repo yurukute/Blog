@@ -32,7 +32,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/" />
-<meta property="og:updated_time" content="2021-02-12T04:39:42+07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta property="og:updated_time" content="2021-02-15T18:49:54+07:00" /><meta property="og:site_name" content="Blog của Noob" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Blog của Noob"/>
 <meta name="twitter:description" content=""/>
@@ -193,12 +193,27 @@
 
   <header class="entry-header">
     <h2>
+      Tổng số cách phân tích n
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Bài toán Nguồn: Codewars Đọc hiểu Có bao nhiêu cách phân tích số n thành tổng các số?
+Theo wikipedia: https://vi.wikipedia.org/wiki/Phân_hoạch_(lý_thuyết_số)  Trong số học, sự phân tích một số nguyên dương n là cách viết số đó dưới dạng tổng của các số nguyên dương. Hai cách phân tích có các số hạng giống nhau được coi là một cách phân tích. Ví dụ:
+ Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Lời giải Bài toàn này có thể dùng phương pháp liệt kê để đếm nhưng mà như vậy rất là chậm khi $n$ là số lớn nên mình sẽ dùng quy hoạch động (Oω&lt;)☆....</p>
+  </section>
+  <footer class="entry-footer">February 15, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to Tổng số cách phân tích n" href="https://yurukute.github.io/Blog/post/explosivesum/"></a>
+</article>
+<article class="post-entry"> 
+
+  <header class="entry-header">
+    <h2>
       Fibonacci
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán Nguồn: Codeforces
-Đọc hiểu Tìm phần dư của số fibonacci thứ $n$ ($n &lt;= 10^{18}$) cho $10^9 &#43; 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa: $$
+    <p>Bài toán Nguồn: Codeforces Đọc hiểu Tìm phần dư của số fibonacci thứ $n$ ($n &lt;= 10^{18}$) cho $10^9 &#43; 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa: $$
 \begin{aligned} F_0 &amp; = 0\\
 F_1 &amp; = 1\\
 F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Ví dụ:
@@ -216,8 +231,7 @@ Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phươ
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán Nguồn: Leetcode, Codewars
-Đọc hiểu: Bạn có một lượng đồng xu với các mệnh giá khác nhau và một tổng số tiền amount. Nhiệm vụ của bạn là tính xem có bao nhiêu cách khác nhau để đổi được số tiền với số xu đã cho. Số lượng xu không giới hạn.
+    <p>Bài toán Nguồn: Leetcode , Codewars Đọc hiểu: Bạn có một lượng đồng xu với các mệnh giá khác nhau và một tổng số tiền amount. Nhiệm vụ của bạn là tính xem có bao nhiêu cách khác nhau để đổi được số tiền với số xu đã cho. Số lượng xu không giới hạn.
 Ví dụ:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Lời giải Với bài này mình sẽ lần lượt đi qua các giai đoạn của nó mà ở mỗi gia đoạn số xu của mình sẽ thay đổi dẫn đến sự thay đổi của kết quả bài toán....</p>
   </section>
@@ -233,8 +247,7 @@ Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán Nguồn: Leetcode
-Đọc hiểu Bạn có một lượng đồng xu có các mệnh giá khác nhau và tổng số tiền amount. Nhiệm vụ của bạn là tìm số xu ít cần ít nhất để tạo nên số tiền đó (không giới hạn số đồng xu). Nếu số tiền đó không thể tạo thành thì trả về -1.
+    <p>Bài toán Nguồn: Leetcode Đọc hiểu Bạn có một lượng đồng xu có các mệnh giá khác nhau và tổng số tiền amount. Nhiệm vụ của bạn là tìm số xu ít cần ít nhất để tạo nên số tiền đó (không giới hạn số đồng xu). Nếu số tiền đó không thể tạo thành thì trả về -1.
 Ví dụ:
 Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Lời giải Cách 1: Vét cạn bằng đệ qui Lấy ví dụ như trên, mình có amount là 11....</p>
   </section>
@@ -264,8 +277,7 @@ Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Inpu
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán Nguồn: Codewars
-Cho một số $n$ được nhập vào, việc của tụi mình là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
+    <p>Bài toán Nguồn: Codewars Cho một số $n$ được nhập vào, việc của tụi mình là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá trị của $n$ có thể lên tới 4000, tất nhiên, 4000! sẽ trở thành 1 con số không hề nhỏ, nó có hơn 12000 chữ số lận á!...</p>
   </section>
   <footer class="entry-footer">January 26, 2021
@@ -280,8 +292,7 @@ Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán Nguồn: Codewars
-Đọc hiểu Cho một số dương $n$ &gt; 1. Phân tích $n$ ra tích các số nguyên tố theo dạng:
+    <p>Bài toán Nguồn: Codewars Đọc hiểu Cho một số dương $n$ &gt; 1. Phân tích $n$ ra tích các số nguyên tố theo dạng:
 ($p_1$**$n_1$)($p_2$**$n_2$)…($p_k$**$n_k$)
  Trong đó:  a**b nghĩa là $a^b$ $p_i$ liệt kê theo thứ tự tăng dần Nếu $n_i$ = 1 thì không ghi ra    Ví dụ:
 Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Thông thường, để phân tích ra thừa số nguyên tố, mỉnh đem chia số đó cho ước nguyên tố nhỏ nhất của nó....</p>
@@ -298,8 +309,7 @@ Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Thông thường, để ph
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán Nguồn: Codeforces
-Đọc hiểu Một số được gọi là t-prime nếu nó có đúng 3 ước số dương. Một số nguyên dương sẽ có 2 ước số là 1 và chính nó. Ngoài ra, nếu số đó, tạm gọi là $x$, có thêm 1 ước số nhỏ hơn $\sqrt{x}$ thì chắc chắn nó sẽ có ước khác. Để $x$ có đúng 3 ước số thì ước số nhỏ hơn $\sqrt{x}$ của nó phải là 1 số nguyên tố....</p>
+    <p>Bài toán Nguồn: Codeforces Đọc hiểu Một số được gọi là t-prime nếu nó có đúng 3 ước số dương. Một số nguyên dương sẽ có 2 ước số là 1 và chính nó. Ngoài ra, nếu số đó, tạm gọi là $x$, có thêm 1 ước số nhỏ hơn $\sqrt{x}$ thì chắc chắn nó sẽ có ước khác. Để $x$ có đúng 3 ước số thì ước số nhỏ hơn $\sqrt{x}$ của nó phải là 1 số nguyên tố....</p>
   </section>
   <footer class="entry-footer">January 22, 2021
 </footer>
@@ -313,8 +323,7 @@ Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Thông thường, để ph
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán: Nguồn: Codewars.com
-Đọc hiểu: Input: Một mảng các số nguyên: $I = [i_1, i_2 ,…, i_n]$
+    <p>Bài toán: Nguồn: Codewars.com Đọc hiểu: Input: Một mảng các số nguyên: $I = [i_1, i_2 ,…, i_n]$
 Output: một chuỗi theo dạng ($p_1$ $sum_1$) ($p_2$ $sum_2$) … ($p_x$ $sum_m$)
 Trong đó:
  $p$ : số nguyên tố $sum$ : tổng các số trong mảng I chia hết cho p  Ví dụ:
@@ -332,8 +341,7 @@ I = {12, 15}; //kết quả: &#34;(2 12)(3 27)(5 15)&#34; Như vậy, để gi�
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bài toán: Nguồn: Codewars.com
-Cho một dãy gồm n số nguyên $a_1, a_2,…, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
+    <p>Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,…, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng....</p>
   </section>
   <footer class="entry-footer">January 17, 2021
