@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backtracking on Noob&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/backtracking/</link>
+    <description>Recent content in Backtracking on Noob&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Feb 2021 20:36:47 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/backtracking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Longest common subsequence</title>
+      <link>https://yurukute.github.io/Blog/en/post/lcs/</link>
+      <pubDate>Wed, 17 Feb 2021 20:36:47 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/lcs/</guid>
+      <description>Bài toán Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
+ Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters.</description>
+    </item>
+    
+  </channel>
+</rss>

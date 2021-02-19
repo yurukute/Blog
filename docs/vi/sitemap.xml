@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/</loc>
-    <lastmod>2021-02-15T18:49:54+07:00</lastmod>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/post/</loc>
-    <lastmod>2021-02-15T18:49:54+07:00</lastmod>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,13 +33,18 @@
   </url>
   
   <url>
+    <loc>https://yurukute.github.io/Blog/tags/quay-lui/</loc>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</loc>
-    <lastmod>2021-02-15T18:49:54+07:00</lastmod>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://yurukute.github.io/Blog/tags/</loc>
-    <lastmod>2021-02-15T18:49:54+07:00</lastmod>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -49,6 +54,21 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/post/lcs/</loc>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/lcs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/lcs/"
                 />
   </url>
   

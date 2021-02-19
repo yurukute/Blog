@@ -3,28 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
-    <lastmod>2021-02-15T18:49:58+07:00</lastmod>
+    <loc>https://yurukute.github.io/Blog/en/tags/backtracking/</loc>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yurukute.github.io/Blog/en/post/explosivesum/</loc>
-    <lastmod>2021-02-15T18:49:58+07:00</lastmod>
+    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/post/lcs/</loc>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/explosivesum/"
+                href="https://yurukute.github.io/Blog/post/lcs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/explosivesum/"
+                href="https://yurukute.github.io/Blog/en/post/lcs/"
                 />
   </url>
   
   <url>
     <loc>https://yurukute.github.io/Blog/en/</loc>
-    <lastmod>2021-02-15T18:49:58+07:00</lastmod>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -39,7 +44,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/en/post/</loc>
-    <lastmod>2021-02-15T18:49:58+07:00</lastmod>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -54,7 +59,7 @@
   
   <url>
     <loc>https://yurukute.github.io/Blog/en/tags/</loc>
-    <lastmod>2021-02-15T18:49:58+07:00</lastmod>
+    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -64,6 +69,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yurukute.github.io/Blog/en/post/explosivesum/</loc>
+    <lastmod>2021-02-15T18:49:58+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/explosivesum/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/explosivesum/"
                 />
   </url>
   
