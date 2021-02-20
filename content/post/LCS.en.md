@@ -71,7 +71,7 @@ My dynamic programing will look like this:
 |**a** |0 |1|1|1|
 |**a** |0 |1|1|1|
 |**b** |0 |1|1|2|
-### Bước 2
+### Step 2:
 Noticed that, at the cell which has the upper cell and the left cell contain the smaller value, that cell's row (or column) is represent for the common character. To find the subsequence, i'll start at the last cell (`dp[n][m]`), go back to the upper row (or left column) until i meet the cell like i mentioned above, store the common character, then go to the cell on its left and up (`dp[i-1][j-1]`) to continue.
 ```cpp
 string res = "";

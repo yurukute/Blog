@@ -71,7 +71,7 @@ Bảng quy hoạch động của mình sẽ trông như thế này
 |**a** |0 |1|1|1|
 |**a** |0 |1|1|1|
 |**b** |0 |1|1|2|
-### Bước 2
+### Bước 2:
 Để ý rằng, tại những ô mà ô phía trên và ô bên trái của nó có giá trị nhỏ hơn thì cột (hoặc hàng) của ô đó đại diện cho kí tự chung. Để tìm được xâu con chung, mình bắt từ ô cuối cùng (`dp[n][m]`), lùi dần lên (hoặc sang trái) cho đến khi gặp ô như mình đã nói, lưu lại kí tự chung, sau đó nhảy sang ô ở hàng trên và cột bên trái của nó (`dp[i-1][j-1]`) để dò tiếp.
 ```cpp
 string res = "";
