@@ -6,7 +6,7 @@ tags: ["Dynamic Programing", "Backtracking"]
 TocOpen: true
 mermaid: true
 ---
-## Bài toán
+## Problem
 Source: [Codewars](https://www.codewars.com/kata/593ff8b39e1cc4bae9000070)
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)

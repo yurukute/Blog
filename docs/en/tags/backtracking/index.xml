@@ -12,7 +12,7 @@
       <pubDate>Wed, 17 Feb 2021 20:36:47 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/en/post/lcs/</guid>
-      <description>Bài toán Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
+      <description>Problem Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
  Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters.</description>
     </item>
     
