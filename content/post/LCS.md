@@ -1,5 +1,5 @@
 ---
-title: "Xâu con chung đài nhất"
+title: "Xâu con chung dài nhất"
 date: 2021-02-17T20:36:47+07:00
 tags: ["Quy hoạch động", "Quay lui"]
 #ShowToc: true
