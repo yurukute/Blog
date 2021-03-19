@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="vi" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Dãy con tăng dài nhất | Blog của Noob</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="Bài toán Nguồn:
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/lis/" />
+<link href="/Blog/assets/css/stylesheet.min.499f27d846821e4c8ac28c591121a2648deef86387d10dbc0346521d2e6dc139.css" integrity="sha256-SZ8n2EaCHkyKwoxZESGiZI3u&#43;GOH0Q28A0ZSHS5twTk=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.81.0" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/lis/" />
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/lis/" />
+
+
+<meta property="og:title" content="Dãy con tăng dài nhất" />
+<meta property="og:description" content="Bài toán Nguồn:
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/post/lis/" />
+<meta property="article:published_time" content="2021-03-09T19:44:16+07:00" />
+<meta property="article:modified_time" content="2021-03-09T19:44:16+07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dãy con tăng dài nhất"/>
+<meta name="twitter:description" content="Bài toán Nguồn:
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Dãy con tăng dài nhất",
+  "name": "Dãy con tăng dài nhất",
+  "description": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. …",
+  "keywords": [
+    
+  ],
+  "articleBody": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \\begin{align} \u0026i_1 Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Lời giải Vét cạn Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.\nQuy hoạch động Giải thuật $O(n^2)$ Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với nums = {0,1,0,3,2,3}, các bài toán con mà mình cần giải quyết lần lượt là:\nTìm dãy con tăng đơn điệu dài nhất của:\n[0-0] {0}\n[0-1] {0, 1}\n[0-2] {0, 1, 0}\n[0-3] {0, 1, 0, 3}\n[0-4] {0, 1, 0, 3, 2}\n[0-5] {0, 1, 0, 3, 2, 3} $\\Rightarrow$ Bài toán đang giải.\nVậy, bảng quy hoạch động d của mình sẽ gồm 5 ô mà mỗi ô tượng trưng cho 1 bài toán con. Giả sử mình đã có đáp án cho các ô 0, 1, 2 và cần tìm đáp án cho ô thứ 3, khi đó, mình cần hỏi bản thân 3 câu hỏi:\n Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[0]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[1]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[2]$ hay không?  Và nếu câu trà lời là có (tức là $nums[3]  nums[i]$), mình sẽ lựa chọn xem có nên hay không nên việc thêm $nums[3]$ vào nếu đáp án ở ô $nums[3]$ hiện tại bé hơn / lớn hơn cái tìm được.\nKhái quát hơn: $$d[i] = \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cơ sở của d sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của minì là làm tăng dáp án đó lên khi duyệt qua nó.\n   i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 1 1 1 1 1    Vậy lúc này, công thức sẽ trở thành $$d[i] = \\max\\left(1, \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] int lis(vectorint\u0026 nums){ int n = nums.size(), max = 1; std::vectorint lis(n,1); for(int i = 1; i  n; i++){ for(int j = 0; j  i; j++) if(nums[j]  nums[i] \u0026\u0026 lis[i]  lis[j]+1) lis[i] = lis[j] + 1; if(lis[i]  max) max = lis[i]; } return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 2 1 3 3 4 $\\Rightarrow$ đáp án    Giải thuật $O(n\\log n)$ Mình sẽ vẫn sử dùng bảng quy hoạch động d nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.\nCơ sở quy hoạch động là $d[0] = -\\infty$ trong khi các ô còn lại $d[i] = \\infty$\nVậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] int lis(vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++) for (int j = 1; j  n; j++) { if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; } Cảm ơn bạn vì đã đọc.\n",
+  "wordCount" : "686",
+  "inLanguage": "vi",
+  "datePublished": "2021-03-09T19:44:16+07:00",
+  "dateModified": "2021-03-09T19:44:16+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/post/lis/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Noob",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
+            <span class="logo-switches">
+                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </a>
+                
+                
+
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://yurukute.github.io/Blog/archive" title="Lưu trữ">
+                    <span>Lưu trữ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/search" title="Tìm kiếm">
+                    <span>Tìm kiếm</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li></ul>
+    </nav>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Dãy con tăng dài nhất
+    </h1>
+    <div class="post-meta">March 9, 2021
+&nbsp;|&nbsp;<ul class="i18n_list">Bản dịch:
+        <li>
+          <a href="https://yurukute.github.io/Blog/en/post/lis/">En</a>
+        </li>
+      </ul>
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h1>
+<p>Nguồn:</p>
+<ul>
+<li>Tiếng Việt:
+<ul>
+<li><a href="https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F" target="_blank">Codeforces - Bản dễ</a>
+   <em>Có thể giải với $O(n^2)$</em></li>
+<li><a href="https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/G" target="_blank">Codeforces - Bản khó</a>
+ <em>Cần giải bằng $O(n\log n)$</em></li>
+</ul>
+</li>
+<li>Tiếng Anh:
+<ul>
+<li><a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">Leetcode</a>
+</li>
+</ul>
+</li>
+</ul>
+<p>Cho một dãy số nguyên <code>nums</code>. Tìm độ dài của dãy con tăng đơn điệu dài nhất.
+Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn
+$$
+\begin{align}
+&amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\<br>
+&amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k]
+\end{align}
+$$
+Ví dụ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  {<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>}
+Output: <span style="color:#ae81ff">4</span> <span style="color:#75715e">//{0,1,2,3}
+</span></code></pre></div><h1 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h1>
+<h2 id="vét-cạn">Vét cạn<a hidden class="anchor" aria-hidden="true" href="#vét-cạn">#</a></h2>
+<p>Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.</p>
+<h2 id="quy-hoạch-động">Quy hoạch động<a hidden class="anchor" aria-hidden="true" href="#quy-hoạch-động">#</a></h2>
+<h3 id="giải-thuật-on2">Giải thuật $O(n^2)$<a hidden class="anchor" aria-hidden="true" href="#giải-thuật-on2">#</a></h3>
+<p>Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với <em><code>nums</code> = {0,1,0,3,2,3}</em>, các bài toán con mà mình cần giải quyết lần lượt là:</p>
+<p><em><strong>Tìm dãy con tăng đơn điệu dài nhất của:</strong></em><br>
+[0-0]   <em>{0}</em><br>
+[0-1]   <em>{0, 1}</em><br>
+[0-2]   <em>{0, 1, 0}</em><br>
+[0-3]   <em>{0, 1, 0, 3}</em><br>
+[0-4]   <em>{0, 1, 0, 3, 2}</em><br>
+[0-5]   <em>{0, 1, 0, 3, 2, 3}</em> $\Rightarrow$ Bài toán đang giải.</p>
+<p>Vậy, bảng quy hoạch động <code>d</code> của mình sẽ gồm 5 ô mà mỗi ô tượng trưng cho 1 bài toán con. Giả sử mình đã có đáp án cho các ô <code>0</code>, <code>1</code>, <code>2</code> và cần tìm đáp án cho ô thứ <code>3</code>, khi đó, mình cần hỏi bản thân <em>3</em> câu hỏi:</p>
+<ul>
+<li>Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[0]$ hay không?</li>
+<li>Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[1]$ hay không?</li>
+<li>Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[2]$ hay không?</li>
+</ul>
+<p>Và nếu câu trà lời là <code>có</code> (tức là $nums[3] &gt; nums[i]$), mình sẽ lựa chọn xem có <code>nên</code> hay <code>không nên</code> việc thêm $nums[3]$ vào nếu đáp án ở ô $nums[3]$ hiện tại <strong>bé hơn</strong> / <strong>lớn hơn</strong> cái tìm được.</p>
+<p>Khái quát hơn:
+$$d[i] = \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] + 1\right)$$</p>
+<p>Cơ sở của <code>d</code> sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của minì là làm tăng dáp án đó lên khi duyệt qua nó.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$nums$</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>$d$</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Vậy lúc này, công thức sẽ trở thành $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] + 1\right)\right)$$
+Triển khai công thức thành code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums){
+    <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> nums.size(), max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> lis(n,<span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>){
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> i; j<span style="color:#f92672">++</span>)
+            <span style="color:#66d9ef">if</span>(nums[j] <span style="color:#f92672">&lt;</span> nums[i] <span style="color:#f92672">&amp;&amp;</span> lis[i] <span style="color:#f92672">&lt;</span> lis[j]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+                lis[i] <span style="color:#f92672">=</span> lis[j] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">if</span>(lis[i] <span style="color:#f92672">&gt;</span> max)
+            max <span style="color:#f92672">=</span> lis[i];
+        }
+    <span style="color:#66d9ef">return</span> max;
+}
+</code></pre></div><table>
+<thead>
+<tr>
+<th>i</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$nums$</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>$d$</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td><strong>4</strong> $\Rightarrow$ đáp án</td>
+</tr>
+</tbody>
+</table>
+<h3 id="giải-thuật-onlog-n">Giải thuật $O(n\log n)$<a hidden class="anchor" aria-hidden="true" href="#giải-thuật-onlog-n">#</a></h3>
+<p>Mình sẽ vẫn sử dùng bảng quy hoạch động <code>d</code> nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.</p>
+<p>Cơ sở quy hoạch động là $d[0] = -\infty$ trong khi các ô còn lại $d[i] = \infty$<br>
+Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] &lt; \infty$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
+    <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> nums.size(), max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> INF <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;
+    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> d(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, INF);
+    d[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>INF;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> (d[j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span> nums[i] <span style="color:#f92672">&amp;&amp;</span> nums[i] <span style="color:#f92672">&lt;</span> d[j])
+                d[j] <span style="color:#f92672">=</span> nums[i];
+        }
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+        <span style="color:#66d9ef">if</span> (d[i] <span style="color:#f92672">&lt;</span> INF) max <span style="color:#f92672">=</span> i;
+    <span style="color:#66d9ef">return</span> max;
+}
+</code></pre></div><p>Cảm ơn bạn vì đã đọc.</p>
+
+</div>
+  <footer class="post-footer">
+    <nav class="paginav">
+      <a class="prev" href="https://yurukute.github.io/Blog/post/lcs/">
+        <span class="title">« Bài viết trước</span>
+        <br>
+        <span>Xâu con chung đài nhất</span>
+      </a>
+    </nav>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>
