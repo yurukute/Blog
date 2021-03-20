@@ -6,7 +6,7 @@ tags: ["Dynamic Programing"]
 TocOpen: true
 ---
 
-# Problem 
+## Problem 
 Source: 
 - Vietnamese:
     - [Codeforces - Easy](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F)&nbsp;&nbsp;&nbsp;*Can be solve with $O(n^2)$ solution*
@@ -28,11 +28,10 @@ For example:
 Input:  {0,1,0,3,2,3}
 Output: 4 //{0,1,2,3}
 ```
-# Solution
-## Brute Force
+## Solution
+### Brute Force
 This method is the simplest solution can approach: We can enumerate all subsets of the original array and then test them for the increasing property then find the longest. This is too expensive with $O(2^n)$ complexity while $n$ can be a large number
-## Dynamic programing
-### $O(n^2)$ Solution
+### Dynamic programing $O(n^2)$
 To solve this, I at first divide the problem into subproblems and find the answer for each. For *`nums` = {0,1,0,3,2,3}*, the subproblems I need to answer are:
 ***Find the length of the longest increasing subsequence:***\
     [0-0]&nbsp;&nbsp;&nbsp;*{0}*\
@@ -78,7 +77,7 @@ int lis(vector<int>& nums){
 |-|-|-|-|-|-|-|
 |$nums$|0|1|0|3|2|3|
 |$d$|1|2|1|3|3|**4** $\Rightarrow$ result|
-### $O(n\log n)$ Solution
+### DP and Binary search $O(n\log n)$
 I keep the dynamic programing table `d` but to store the element at which a subsequence of length $i$ terminates.
 
 Initially we assume $d[0] = -\infty$ and for all other elements $d[i] = \infty$.\
@@ -98,5 +97,30 @@ int lis(vector<int>& nums) {
         if (d[i] < INF) max = i;
     return max;
 }
+```
+|i|0|1|2|3|4|5|
+|-|-|-|-|-|-|-|
+|$nums$|0|1|0|3|2|3|
+|$d$|$-\infty$|0|1|2|3|$\infty$|
+
+I noticed that:
+- `d` is always sorted
+- $nums[i]$ would update at most one value $d[j]$
+
+Thus, I can find this element in the `d` using *Binary search* in O(logn). In fact I'm simply looking in `d` for the first number that is strictly greater than $a[i]$, and trying to update this element in the same way as the above implementation.
+```cpp
+int lis(std::vector<int>& nums) {
+    int n = nums.size(), max = 1;
+    const int INF = 1e9;
+    std::vector<int> d(n+1, INF);
+    d[0] = -INF;
+    for (int i = 0; i < n; i++){
+        int j = upper_bound(d.begin(), d.end(), a[i]) - d.begin();
+        if (d[j-1] < nums[i] && nums[i] < d[j])
+            d[j] = nums[i];
+    }
+    for (int i = 0; i <= n; i++)
+        if (d[i] < INF) max = i;
+    return max;
 ```
 Thank you for reading.

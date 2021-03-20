@@ -6,7 +6,7 @@ tags: ["Quy hoạch động"]
 TocOpen: true
 ---
 
-# Bài toán 
+## Bài toán 
 Nguồn: 
 - Tiếng Việt:
     - [Codeforces - Bản dễ](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F)&nbsp;&nbsp;&nbsp;*Có thể giải với $O(n^2)$*
@@ -27,11 +27,10 @@ Ví dụ:
 Input:  {0,1,0,3,2,3}
 Output: 4 //{0,1,2,3}
 ```
-# Lời giải
-## Vét cạn
+## Lời giải
+### Vét cạn
 Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.
-## Quy hoạch động
-### Giải thuật $O(n^2)$
+### Quy hoạch động $O(n^2)$
 Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với *`nums` = {0,1,0,3,2,3}*, các bài toán con mà mình cần giải quyết lần lượt là: 
 
 ***Tìm dãy con tăng đơn điệu dài nhất của:***\
@@ -62,7 +61,7 @@ Vậy lúc này, công thức sẽ trở thành $$d[i] = \max\left(1, \max_{\sub
 
 Cuối cùng, đáp dán chính là ô mang giá trị lớn nhất trong `d`.
 ```cpp
-int lis(vector<int>& nums){
+int lis(std::vector<int>& nums){
     int n = nums.size(), max = 1;
     std::vector<int> lis(n,1);
     for(int i = 1; i < n; i++){
@@ -79,13 +78,13 @@ int lis(vector<int>& nums){
 |-|-|-|-|-|-|-|
 |$nums$|0|1|0|3|2|3|
 |$d$|1|2|1|3|3|**4** $\Rightarrow$ đáp án|
-### Giải thuật $O(n\log n)$
+### Quy hoạch động và tìm kiếm nhị phân $O(n\log n)$
 Mình sẽ vẫn sử dùng bảng quy hoạch động `d` nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$. 
 
 Cơ sở quy hoạch động là $d[0] = -\infty$ trong khi các ô còn lại $d[i] = \infty$ \
 Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] < \infty$
 ```cpp
-int lis(vector<int>& nums) {
+int lis(std::vector<int>& nums) {
     int n = nums.size(), max = 1;
     const int INF = 1e9;
     std::vector<int> d(n+1, INF);
@@ -99,5 +98,30 @@ int lis(vector<int>& nums) {
         if (d[i] < INF) max = i;
     return max;
 }
+```
+|i|0|1|2|3|4|5|
+|-|-|-|-|-|-|-|
+|$nums$|0|1|0|3|2|3|
+|$d$|$-\infty$|0|1|2|3|$\infty$|
+
+Mình thấy được rằng:
+- `d` luôn được sắp xếp tăng dần
+- phần tử $nums[i]$ sẽ chỉ cập nhật nhiều nhất một giá trị $d[j]$
+
+Vì vậy, mình có thể tìm phần tử ttrong `d` bằng *Tìm kiếm nhị phân* O($\log n$). Trên thực tế, mình chỉ đơn giản là tìm phần tử đầu tiên lớn hơn $nums[i]$ và cập nhật nó như cách thực hiện bên trên.
+```cpp
+int lis(std::vector<int>& nums) {
+    int n = nums.size(), max = 1;
+    const int INF = 1e9;
+    std::vector<int> d(n+1, INF);
+    d[0] = -INF;
+    for (int i = 0; i < n; i++){
+        int j = upper_bound(d.begin(), d.end(), a[i]) - d.begin();
+        if (d[j-1] < nums[i] && nums[i] < d[j])
+            d[j] = nums[i];
+    }
+    for (int i = 0; i <= n; i++)
+        if (d[i] < INF) max = i;
+    return max;
 ```
 Cảm ơn bạn vì đã đọc.

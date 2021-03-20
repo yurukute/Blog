@@ -49,8 +49,8 @@
   "keywords": [
     "Quy hoạch động"
   ],
-  "articleBody": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \\begin{align} \u0026i_1 Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Lời giải Vét cạn Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.\nQuy hoạch động Giải thuật $O(n^2)$ Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với nums = {0,1,0,3,2,3}, các bài toán con mà mình cần giải quyết lần lượt là:\nTìm dãy con tăng đơn điệu dài nhất của:\n[0-0] {0}\n[0-1] {0, 1}\n[0-2] {0, 1, 0}\n[0-3] {0, 1, 0, 3}\n[0-4] {0, 1, 0, 3, 2}\n[0-5] {0, 1, 0, 3, 2, 3} $\\Rightarrow$ Bài toán đang giải.\nVậy, bảng quy hoạch động d của mình sẽ gồm 5 ô mà mỗi ô tượng trưng cho 1 bài toán con. Giả sử mình đã có đáp án cho các ô 0, 1, 2 và cần tìm đáp án cho ô thứ 3, khi đó, mình cần hỏi bản thân 3 câu hỏi:\n Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[0]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[1]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[2]$ hay không?  Và nếu câu trà lời là có (tức là $nums[3]  nums[i]$), mình sẽ lựa chọn xem có nên hay không nên việc thêm $nums[3]$ vào nếu đáp án ở ô $nums[3]$ hiện tại bé hơn / lớn hơn cái tìm được.\nKhái quát hơn: $$d[i] = \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cơ sở của d sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng dáp án đó lên khi duyệt qua nó.\n   i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 1 1 1 1 1    Vậy lúc này, công thức sẽ trở thành $$d[i] = \\max\\left(1, \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cuối cùng, đáp dán chính là ô mang giá trị lớn nhất trong d.\nint lis(vectorint\u0026 nums){ int n = nums.size(), max = 1; std::vectorint lis(n,1); for(int i = 1; i  n; i++){ for(int j = 0; j  i; j++) if(nums[j]  nums[i] \u0026\u0026 lis[i]  lis[j]+1) lis[i] = lis[j] + 1; if(lis[i]  max) max = lis[i]; } return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 2 1 3 3 4 $\\Rightarrow$ đáp án    Giải thuật $O(n\\log n)$ Mình sẽ vẫn sử dùng bảng quy hoạch động d nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.\nCơ sở quy hoạch động là $d[0] = -\\infty$ trong khi các ô còn lại $d[i] = \\infty$\nVậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] int lis(vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++) for (int j = 1; j  n; j++) { if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; } Cảm ơn bạn vì đã đọc.\n",
-  "wordCount" : "694",
+  "articleBody": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \\begin{align} \u0026i_1 Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Lời giải Vét cạn Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.\nQuy hoạch động $O(n^2)$ Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với nums = {0,1,0,3,2,3}, các bài toán con mà mình cần giải quyết lần lượt là:\nTìm dãy con tăng đơn điệu dài nhất của:\n[0-0] {0}\n[0-1] {0, 1}\n[0-2] {0, 1, 0}\n[0-3] {0, 1, 0, 3}\n[0-4] {0, 1, 0, 3, 2}\n[0-5] {0, 1, 0, 3, 2, 3} $\\Rightarrow$ Bài toán đang giải.\nVậy, bảng quy hoạch động d của mình sẽ gồm 5 ô mà mỗi ô tượng trưng cho 1 bài toán con. Giả sử mình đã có đáp án cho các ô 0, 1, 2 và cần tìm đáp án cho ô thứ 3, khi đó, mình cần hỏi bản thân 3 câu hỏi:\n Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[0]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[1]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[2]$ hay không?  Và nếu câu trà lời là có (tức là $nums[3]  nums[i]$), mình sẽ lựa chọn xem có nên hay không nên việc thêm $nums[3]$ vào nếu đáp án ở ô $nums[3]$ hiện tại bé hơn / lớn hơn cái tìm được.\nKhái quát hơn: $$d[i] = \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cơ sở của d sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng dáp án đó lên khi duyệt qua nó.\n   i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 1 1 1 1 1    Vậy lúc này, công thức sẽ trở thành $$d[i] = \\max\\left(1, \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cuối cùng, đáp dán chính là ô mang giá trị lớn nhất trong d.\nint lis(std::vectorint\u0026 nums){ int n = nums.size(), max = 1; std::vectorint lis(n,1); for(int i = 1; i  n; i++){ for(int j = 0; j  i; j++) if(nums[j]  nums[i] \u0026\u0026 lis[i]  lis[j]+1) lis[i] = lis[j] + 1; if(lis[i]  max) max = lis[i]; } return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 2 1 3 3 4 $\\Rightarrow$ đáp án    Quy hoạch động và tìm kiếm nhị phân $O(n\\log n)$ Mình sẽ vẫn sử dùng bảng quy hoạch động d nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.\nCơ sở quy hoạch động là $d[0] = -\\infty$ trong khi các ô còn lại $d[i] = \\infty$\nVậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] int lis(std::vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++) for (int j = 1; j  n; j++) { if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ $-\\infty$ 0 1 2 3 $\\infty$    Mình thấy được rằng:\n d luôn được sắp xếp tăng dần phần tử $nums[i]$ sẽ chỉ cập nhật nhiều nhất một giá trị $d[j]$  Vì vậy, mình có thể tìm phần tử ttrong d bằng Tìm kiếm nhị phân O($\\log n$). Trên thực tế, mình chỉ đơn giản là tìm phần tử đầu tiên lớn hơn $nums[i]$ và cập nhật nó như cách thực hiện bên trên.\nint lis(std::vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++){ int j = upper_bound(d.begin(), d.end(), a[i]) - d.begin(); if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; Cảm ơn bạn vì đã đọc.\n",
+  "wordCount" : "855",
   "inLanguage": "vi",
   "datePublished": "2021-03-09T19:44:16+07:00",
   "dateModified": "2021-03-09T19:44:16+07:00",
@@ -188,7 +188,7 @@
   </header> 
 
   <div class="post-content">
-<h1 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h1>
+<h2 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
 <p>Nguồn:</p>
 <ul>
 <li>Tiếng Việt:
@@ -217,11 +217,10 @@ $$
 Ví dụ:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  {<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>}
 Output: <span style="color:#ae81ff">4</span> <span style="color:#75715e">//{0,1,2,3}
-</span></code></pre></div><h1 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h1>
-<h2 id="vét-cạn">Vét cạn<a hidden class="anchor" aria-hidden="true" href="#vét-cạn">#</a></h2>
+</span></code></pre></div><h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
+<h3 id="vét-cạn">Vét cạn<a hidden class="anchor" aria-hidden="true" href="#vét-cạn">#</a></h3>
 <p>Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.</p>
-<h2 id="quy-hoạch-động">Quy hoạch động<a hidden class="anchor" aria-hidden="true" href="#quy-hoạch-động">#</a></h2>
-<h3 id="giải-thuật-on2">Giải thuật $O(n^2)$<a hidden class="anchor" aria-hidden="true" href="#giải-thuật-on2">#</a></h3>
+<h3 id="quy-hoạch-động-on2">Quy hoạch động $O(n^2)$<a hidden class="anchor" aria-hidden="true" href="#quy-hoạch-động-on2">#</a></h3>
 <p>Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với <em><code>nums</code> = {0,1,0,3,2,3}</em>, các bài toán con mà mình cần giải quyết lần lượt là:</p>
 <p><em><strong>Tìm dãy con tăng đơn điệu dài nhất của:</strong></em><br>
 [0-0]   <em>{0}</em><br>
@@ -275,7 +274,7 @@ $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] +
 </table>
 <p>Vậy lúc này, công thức sẽ trở thành $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] + 1\right)\right)$$</p>
 <p>Cuối cùng, đáp dán chính là ô mang giá trị lớn nhất trong <code>d</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums){
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums){
     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> nums.size(), max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
     std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> lis(n,<span style="color:#ae81ff">1</span>);
     <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>){
@@ -320,11 +319,11 @@ $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] +
 </tr>
 </tbody>
 </table>
-<h3 id="giải-thuật-onlog-n">Giải thuật $O(n\log n)$<a hidden class="anchor" aria-hidden="true" href="#giải-thuật-onlog-n">#</a></h3>
+<h3 id="quy-hoạch-động-và-tìm-kiếm-nhị-phân-onlog-n">Quy hoạch động và tìm kiếm nhị phân $O(n\log n)$<a hidden class="anchor" aria-hidden="true" href="#quy-hoạch-động-và-tìm-kiếm-nhị-phân-onlog-n">#</a></h3>
 <p>Mình sẽ vẫn sử dùng bảng quy hoạch động <code>d</code> nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.</p>
 <p>Cơ sở quy hoạch động là $d[0] = -\infty$ trong khi các ô còn lại $d[i] = \infty$<br>
 Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] &lt; \infty$</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> nums.size(), max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
     <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> INF <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;
     std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> d(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, INF);
@@ -338,6 +337,58 @@ Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ v�
         <span style="color:#66d9ef">if</span> (d[i] <span style="color:#f92672">&lt;</span> INF) max <span style="color:#f92672">=</span> i;
     <span style="color:#66d9ef">return</span> max;
 }
+</code></pre></div><table>
+<thead>
+<tr>
+<th>i</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$nums$</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>$d$</td>
+<td>$-\infty$</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>$\infty$</td>
+</tr>
+</tbody>
+</table>
+<p>Mình thấy được rằng:</p>
+<ul>
+<li><code>d</code> luôn được sắp xếp tăng dần</li>
+<li>phần tử $nums[i]$ sẽ chỉ cập nhật nhiều nhất một giá trị $d[j]$</li>
+</ul>
+<p>Vì vậy, mình có thể tìm phần tử ttrong <code>d</code> bằng <em>Tìm kiếm nhị phân</em> O($\log n$). Trên thực tế, mình chỉ đơn giản là tìm phần tử đầu tiên lớn hơn $nums[i]$ và cập nhật nó như cách thực hiện bên trên.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
+    <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> nums.size(), max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> INF <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;
+    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> d(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, INF);
+    d[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>INF;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>){
+        <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> upper_bound(d.begin(), d.end(), a[i]) <span style="color:#f92672">-</span> d.begin();
+        <span style="color:#66d9ef">if</span> (d[j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span> nums[i] <span style="color:#f92672">&amp;&amp;</span> nums[i] <span style="color:#f92672">&lt;</span> d[j])
+            d[j] <span style="color:#f92672">=</span> nums[i];
+    }
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+        <span style="color:#66d9ef">if</span> (d[i] <span style="color:#f92672">&lt;</span> INF) max <span style="color:#f92672">=</span> i;
+    <span style="color:#66d9ef">return</span> max;
 </code></pre></div><p>Cảm ơn bạn vì đã đọc.</p>
 
 </div>
