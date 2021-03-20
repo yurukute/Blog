@@ -5,7 +5,19 @@
     <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
     <description>Recent content in Dynamic Programing on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Feb 2021 20:36:47 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 19:44:24 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Longest increasing subsequence</title>
+      <link>https://yurukute.github.io/Blog/en/post/lis/</link>
+      <pubDate>Fri, 19 Mar 2021 19:44:24 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/lis/</guid>
+      <description>Problem Source:
+ Vietnamese:  Codeforces - Easy Can be solve with $O(n^2)$ solution Codeforces - Hard Need to be solved in $O(n\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.
+An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\
+&amp;amp;nums[i_1] &amp;lt; nums[i_2] &amp;lt; \dots &amp;lt; nums[i_k] \end{align} $$ For example:</description>
+    </item>
+    
     <item>
       <title>Longest common subsequence</title>
       <link>https://yurukute.github.io/Blog/en/post/lcs/</link>
