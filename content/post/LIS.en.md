@@ -1,7 +1,7 @@
 ---
 title: "Longest increasing subsequence"
 date: 2021-03-19T19:44:24+07:00
-tags: []
+tags: ["Dynamic Programing"]
 #ShowToc: true
 TocOpen: true
 ---
@@ -9,8 +9,8 @@ TocOpen: true
 # Problem 
 Source: 
 - Vietnamese:
-    - [Codeforces - Bản dễ](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F)&nbsp;&nbsp;&nbsp;*Can be solve with $O(n^2)$ solution*
-    - [Codeforces - Bản khó](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/G)&nbsp;*Need to be solved in $O(n\log n) solution$*
+    - [Codeforces - Easy](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F)&nbsp;&nbsp;&nbsp;*Can be solve with $O(n^2)$ solution*
+    - [Codeforces - Hard](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/G)&nbsp;*Need to be solved in $O(n\log n) solution$*
 - English:
     - [Leetcode](https://leetcode.com/problems/longest-increasing-subsequence/)
 
@@ -58,7 +58,8 @@ The automatic / default answer for `d` would be 1 because if the array has only 
 |$d$|1|1|1|1|1|1|
 
 Then, the fomular become $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \left(d[j] + 1\right)\right)$$
-Let's write that down >D<
+
+Finally, the answer is cell $d[i]$ that contain the largest value.
 ```cpp
 int lis(vector<int>& nums){
     int n = nums.size(), max = 1;

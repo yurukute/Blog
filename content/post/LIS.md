@@ -1,7 +1,7 @@
 ---
-title: "Dãy con tăng dài nhất"
+title: "Dãy con tăng đơn điệu dài nhất"
 date: 2021-03-09T19:44:16+07:00
-tags: []
+tags: ["Quy hoạch động"]
 #ShowToc: true
 TocOpen: true
 ---
@@ -52,14 +52,15 @@ Và nếu câu trà lời là `có` (tức là $nums[3] > nums[i]$), mình sẽ 
 Khái quát hơn:
 $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \left(d[j] + 1\right)$$
 
-Cơ sở của `d` sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của minì là làm tăng dáp án đó lên khi duyệt qua nó.
+Cơ sở của `d` sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng dáp án đó lên khi duyệt qua nó.
 |i|0|1|2|3|4|5|
 |-|-|-|-|-|-|-|
 |$nums$|0|1|0|3|2|3|
 |$d$|1|1|1|1|1|1|
 
 Vậy lúc này, công thức sẽ trở thành $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \left(d[j] + 1\right)\right)$$
-Triển khai công thức thành code:
+
+Cuối cùng, đáp dán chính là ô mang giá trị lớn nhất trong `d`.
 ```cpp
 int lis(vector<int>& nums){
     int n = nums.size(), max = 1;

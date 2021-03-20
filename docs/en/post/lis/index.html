@@ -7,9 +7,9 @@
 <meta name="robots" content="index, follow">
 <title>Longest increasing subsequence | Noob&#39;s Blog</title>
 
-<meta name="keywords" content="" />
+<meta name="keywords" content="Dynamic Programing" />
 <meta name="description" content="Problem Source:
- Vietnamese:  Codeforces - Bản dễ Can be solve with $O(n^2)$ solution Codeforces - Bản khó Need to be solved in $O(n\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.
+ Vietnamese:  Codeforces - Easy Can be solve with $O(n^2)$ solution Codeforces - Hard Need to be solved in $O(n\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.
 An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\
 &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ For example:">
 <meta name="author" content="">
@@ -31,7 +31,7 @@ An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &a
 
 <meta property="og:title" content="Longest increasing subsequence" />
 <meta property="og:description" content="Problem Source:
- Vietnamese:  Codeforces - Bản dễ Can be solve with $O(n^2)$ solution Codeforces - Bản khó Need to be solved in $O(n\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.
+ Vietnamese:  Codeforces - Easy Can be solve with $O(n^2)$ solution Codeforces - Hard Need to be solved in $O(n\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.
 An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\
 &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ For example:" />
 <meta property="og:type" content="article" />
@@ -41,7 +41,7 @@ An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &a
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Longest increasing subsequence"/>
 <meta name="twitter:description" content="Problem Source:
- Vietnamese:  Codeforces - Bản dễ Can be solve with $O(n^2)$ solution Codeforces - Bản khó Need to be solved in $O(n\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.
+ Vietnamese:  Codeforces - Easy Can be solve with $O(n^2)$ solution Codeforces - Hard Need to be solved in $O(n\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.
 An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\
 &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ For example:"/>
 
@@ -51,12 +51,12 @@ An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &a
   "@type": "BlogPosting",
   "headline": "Longest increasing subsequence",
   "name": "Longest increasing subsequence",
-  "description": "Problem Source:\n Vietnamese:  Codeforces - Bản dễ Can be solve with $O(n^2)$ solution Codeforces - Bản khó Need to be solved in $O(n\\log n) solution$   English:  Leetcode     Give …",
+  "description": "Problem Source:\n Vietnamese:  Codeforces - Easy Can be solve with $O(n^2)$ solution Codeforces - Hard Need to be solved in $O(n\\log n) solution$   English:  Leetcode     Give an …",
   "keywords": [
-    
+    "Dynamic Programing"
   ],
-  "articleBody": "Problem Source:\n Vietnamese:  Codeforces - Bản dễ Can be solve with $O(n^2)$ solution Codeforces - Bản khó Need to be solved in $O(n\\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.\nAn increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \\begin{align} \u0026i_1 Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Solution Brute Force This method is the simplest solution can approach: We can enumerate all subsets of the original array and then test them for the increasing property then find the longest. This is too expensive with $O(2^n)$ complexity while $n$ can be a large number\nDynamic programing $O(n^2)$ Solution To solve this, I at first divide the problem into subproblems and find the answer for each. For nums = {0,1,0,3,2,3}, the subproblems I need to answer are: Find the length of the longest increasing subsequence:\n[0-0] {0}\n[0-1] {0, 1}\n[0-2] {0, 1, 0}\n[0-3] {0, 1, 0, 3}\n[0-4] {0, 1, 0, 3, 2}\n[0-5] {0, 1, 0, 3, 2, 3} $\\Rightarrow$ Original problem\nSo, my dynamic programing table d would have 5 cells, each cell store the answer of a subproblem. Assume that I’ve found the answer for cell 0, 1, 2 and I’m fiding the answer for cell 3, then, I need to ask myself 3 questions:\n Can I extend $nums[3]$ into subsequence i’ve found in cell $d[0]$? Can I extend $nums[3]$ into subsequence i’ve found in cell $d[1]$? Can I extend $nums[3]$ into subsequence i’ve found in cell $d[2]$?  And if i can (that means $nums[3]  $nums[i]), should I extend it or keep the current answer at that cell.\nGenerally, $$d[i] = \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] The automatic / default answer for d would be 1 because if the array has only 1 element, the array is the longest subsequence itself. My job is increasing that default value while processing.\n   i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 1 1 1 1 1    Then, the fomular become $$d[i] = \\max\\left(1, \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Dint lis(vectorint\u0026 nums){ int n = nums.size(), max = 1; std::vectorint lis(n,1); for(int i = 1; i  n; i++){ for(int j = 0; j  i; j++) if(nums[j]  nums[i] \u0026\u0026 lis[i]  lis[j]+1) lis[i] = lis[j] + 1; if(lis[i]  max) max = lis[i]; } return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 2 1 3 3 4 $\\Rightarrow$ result    $O(n\\log n)$ Solution I keep the dynamic programing table d but to store the element at which a subsequence of length $i$ terminates.\nInitially we assume $d[0] = -\\infty$ and for all other elements $d[i] = \\infty$.\nthe length of the desired subsequence is the largest $l$ with $d[l] int lis(vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++) for (int j = 1; j  n; j++) { if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; } Thank you for reading.\n",
-  "wordCount" : "582",
+  "articleBody": "Problem Source:\n Vietnamese:  Codeforces - Easy Can be solve with $O(n^2)$ solution Codeforces - Hard Need to be solved in $O(n\\log n) solution$   English:  Leetcode     Give an integer array nums. Return the length of the longest increasing subsequence.\nAn increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \\begin{align} \u0026i_1 Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Solution Brute Force This method is the simplest solution can approach: We can enumerate all subsets of the original array and then test them for the increasing property then find the longest. This is too expensive with $O(2^n)$ complexity while $n$ can be a large number\nDynamic programing $O(n^2)$ Solution To solve this, I at first divide the problem into subproblems and find the answer for each. For nums = {0,1,0,3,2,3}, the subproblems I need to answer are: Find the length of the longest increasing subsequence:\n[0-0] {0}\n[0-1] {0, 1}\n[0-2] {0, 1, 0}\n[0-3] {0, 1, 0, 3}\n[0-4] {0, 1, 0, 3, 2}\n[0-5] {0, 1, 0, 3, 2, 3} $\\Rightarrow$ Original problem\nSo, my dynamic programing table d would have 5 cells, each cell store the answer of a subproblem. Assume that I’ve found the answer for cell 0, 1, 2 and I’m fiding the answer for cell 3, then, I need to ask myself 3 questions:\n Can I extend $nums[3]$ into subsequence i’ve found in cell $d[0]$? Can I extend $nums[3]$ into subsequence i’ve found in cell $d[1]$? Can I extend $nums[3]$ into subsequence i’ve found in cell $d[2]$?  And if i can (that means $nums[3]  $nums[i]), should I extend it or keep the current answer at that cell.\nGenerally, $$d[i] = \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] The automatic / default answer for d would be 1 because if the array has only 1 element, the array is the longest subsequence itself. My job is increasing that default value while processing.\n   i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 1 1 1 1 1    Then, the fomular become $$d[i] = \\max\\left(1, \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Finally, the answer is cell $d[i]$ that contain the largest value.\nint lis(vectorint\u0026 nums){ int n = nums.size(), max = 1; std::vectorint lis(n,1); for(int i = 1; i  n; i++){ for(int j = 0; j  i; j++) if(nums[j]  nums[i] \u0026\u0026 lis[i]  lis[j]+1) lis[i] = lis[j] + 1; if(lis[i]  max) max = lis[i]; } return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 2 1 3 3 4 $\\Rightarrow$ result    $O(n\\log n)$ Solution I keep the dynamic programing table d but to store the element at which a subsequence of length $i$ terminates.\nInitially we assume $d[0] = -\\infty$ and for all other elements $d[i] = \\infty$.\nthe length of the desired subsequence is the largest $l$ with $d[l] int lis(vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++) for (int j = 1; j  n; j++) { if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; } Thank you for reading.\n",
+  "wordCount" : "586",
   "inLanguage": "en",
   "datePublished": "2021-03-19T19:44:24+07:00",
   "dateModified": "2021-03-19T19:44:24+07:00",
@@ -199,9 +199,9 @@ An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &a
 <ul>
 <li>Vietnamese:
 <ul>
-<li><a href="https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F" target="_blank">Codeforces - Bản dễ</a>
+<li><a href="https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F" target="_blank">Codeforces - Easy</a>
    <em>Can be solve with $O(n^2)$ solution</em></li>
-<li><a href="https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/G" target="_blank">Codeforces - Bản khó</a>
+<li><a href="https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/G" target="_blank">Codeforces - Hard</a>
  <em>Need to be solved in $O(n\log n) solution$</em></li>
 </ul>
 </li>
@@ -278,8 +278,8 @@ Output: <span style="color:#ae81ff">4</span> <span style="color:#75715e">//{0,1,
 </tr>
 </tbody>
 </table>
-<p>Then, the fomular become $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] + 1\right)\right)$$
-Let&rsquo;s write that down &gt;D&lt;</p>
+<p>Then, the fomular become $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] + 1\right)\right)$$</p>
+<p>Finally, the answer is cell $d[i]$ that contain the largest value.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums){
     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> nums.size(), max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
     std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> lis(n,<span style="color:#ae81ff">1</span>);
@@ -347,6 +347,9 @@ the length of the desired subsequence is the largest $l$ with $d[l] &lt; \infty$
 
 </div>
   <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/">Dynamic Programing</a></li>
+    </ul>
     <nav class="paginav">
       <a class="prev" href="https://yurukute.github.io/Blog/en/post/lcs/">
         <span class="title">« Prev Post</span>

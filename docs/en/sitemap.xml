@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
+    <lastmod>2021-03-19T19:44:24+07:00</lastmod>
+  </url><url>
     <loc>https://yurukute.github.io/Blog/en/post/lis/</loc>
     <lastmod>2021-03-19T19:44:24+07:00</lastmod>
     <xhtml:link
@@ -41,10 +44,20 @@
                 href="https://yurukute.github.io/Blog/en/post/"
                 />
   </url><url>
-    <loc>https://yurukute.github.io/Blog/en/tags/backtracking/</loc>
-    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
+    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
+    <lastmod>2021-03-19T19:44:24+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/"
+                />
   </url><url>
-    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
+    <loc>https://yurukute.github.io/Blog/en/tags/backtracking/</loc>
     <lastmod>2021-02-17T20:36:47+07:00</lastmod>
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/post/lcs/</loc>
@@ -58,19 +71,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/post/lcs/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
-    <lastmod>2021-02-17T20:36:47+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/post/explosivesum/</loc>
