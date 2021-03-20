@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tìm kiếm nhị phân on Blog của Noob</title>
+    <link>https://yurukute.github.io/Blog/tags/t%C3%ACm-ki%E1%BA%BFm-nh%E1%BB%8B-ph%C3%A2n/</link>
+    <description>Recent content in Tìm kiếm nhị phân on Blog của Noob</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Mar 2021 19:44:16 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/t%C3%ACm-ki%E1%BA%BFm-nh%E1%BB%8B-ph%C3%A2n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dãy con tăng đơn điệu dài nhất</title>
+      <link>https://yurukute.github.io/Blog/post/lis/</link>
+      <pubDate>Tue, 09 Mar 2021 19:44:16 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/lis/</guid>
+      <description>Bài toán Nguồn:
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\</description>
+    </item>
+    
+  </channel>
+</rss>

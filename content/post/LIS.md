@@ -1,7 +1,7 @@
 ---
 title: "Dãy con tăng đơn điệu dài nhất"
 date: 2021-03-09T19:44:16+07:00
-tags: ["Quy hoạch động"]
+tags: ["Quy hoạch động", "Tìm kiếm nhị phân"]
 #ShowToc: true
 TocOpen: true
 ---
