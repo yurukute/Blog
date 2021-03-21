@@ -10,7 +10,7 @@ TocOpen: true
 Source: 
 - Vietnamese:
     - [Codeforces - Easy](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/F)&nbsp;&nbsp;&nbsp;*Can be solve with $O(n^2)$ solution*
-    - [Codeforces - Hard](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/G)&nbsp;*Need to be solved in $O(n\log n) solution$*
+    - [Codeforces - Hard](https://codeforces.com/group/FLVn1Sc504/contest/274501/problem/G)&nbsp;*Need to be solved in $O(n\log n)$ solution*
 - English:
     - [Leetcode](https://leetcode.com/problems/longest-increasing-subsequence/)
 
@@ -46,7 +46,7 @@ So, my dynamic programing table `d` would have 5 cells, each cell store the answ
 - Can I extend $nums[3]$ into subsequence i've found in cell $d[1]$?
 - Can I extend $nums[3]$ into subsequence i've found in cell $d[2]$?
 
-And if i can (that means $nums[3] > $nums[i]), `should` I extend it or keep the current answer at that cell.
+And if i can (that means $nums[3] > nums[i]$), `should` I extend it or keep the current answer at that cell.
 
 Generally, $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \left(d[j] + 1\right)$$
 

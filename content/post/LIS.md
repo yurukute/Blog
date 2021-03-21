@@ -51,7 +51,7 @@ Và nếu câu trà lời là `có` (tức là $nums[3] > nums[i]$), mình sẽ 
 Khái quát hơn:
 $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \left(d[j] + 1\right)$$
 
-Cơ sở của `d` sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng dáp án đó lên khi duyệt qua nó.
+Cơ sở của `d` sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng đáp án đó lên khi duyệt qua nó.
 |i|0|1|2|3|4|5|
 |-|-|-|-|-|-|-|
 |$nums$|0|1|0|3|2|3|
@@ -59,7 +59,7 @@ Cơ sở của `d` sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 ch
 
 Vậy lúc này, công thức sẽ trở thành $$d[i] = \max\left(1, \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \left(d[j] + 1\right)\right)$$
 
-Cuối cùng, đáp dán chính là ô mang giá trị lớn nhất trong `d`.
+Cuối cùng, đáp án chính là ô mang giá trị lớn nhất trong `d`.
 ```cpp
 int lis(std::vector<int>& nums){
     int n = nums.size(), max = 1;
@@ -108,7 +108,7 @@ Mình thấy được rằng:
 - `d` luôn được sắp xếp tăng dần
 - phần tử $nums[i]$ sẽ chỉ cập nhật nhiều nhất một giá trị $d[j]$
 
-Vì vậy, mình có thể tìm phần tử ttrong `d` bằng *Tìm kiếm nhị phân* O($\log n$). Trên thực tế, mình chỉ đơn giản là tìm phần tử đầu tiên lớn hơn $nums[i]$ và cập nhật nó như cách thực hiện bên trên.
+Vì vậy, mình có thể tìm phần tử trong `d` bằng *Tìm kiếm nhị phân* O($\log n$). Trên thực tế, mình chỉ đơn giản là tìm phần tử đầu tiên lớn hơn $nums[i]$ và cập nhật nó như cách thực hiện bên trên.
 ```cpp
 int lis(std::vector<int>& nums) {
     int n = nums.size(), max = 1;
