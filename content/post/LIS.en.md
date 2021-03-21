@@ -1,6 +1,6 @@
 ---
 title: "Longest increasing subsequence"
-date: 2021-03-19T19:44:24+07:00
+date: 2021-03-09T19:44:24+07:00
 tags: ["Dynamic Programing", "Binary search"]
 #ShowToc: true
 TocOpen: true

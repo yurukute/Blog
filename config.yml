@@ -26,6 +26,8 @@ languages:
                 - name: Tags
                   url: /tags
                   weight: 8        
+        params:
+            DateFormat: "02 Tháng 1, 2006"
     en:
         languageName: "English"
         weight: 2
