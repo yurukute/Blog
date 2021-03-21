@@ -52,7 +52,7 @@ Generally, $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \
 
 The automatic / default answer for `d` would be 1 because if the array has only 1 element, the array is the longest subsequence itself. My job is increasing that default value while processing.
 |i|0|1|2|3|4|5|
-|-|-|-|-|-|-|-|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |$nums$|0|1|0|3|2|3|
 |$d$|1|1|1|1|1|1|
 
@@ -74,7 +74,7 @@ int lis(vector<int>& nums){
 }
 ```
 |i|0|1|2|3|4|5|
-|-|-|-|-|-|-|-|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-|
 |$nums$|0|1|0|3|2|3|
 |$d$|1|2|1|3|3|**4** $\Rightarrow$ result|
 ### DP and Binary search $O(n\log n)$
@@ -99,7 +99,7 @@ int lis(vector<int>& nums) {
 }
 ```
 |i|0|1|2|3|4|5|
-|-|-|-|-|-|-|-|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |$nums$|0|1|0|3|2|3|
 |$d$|$-\infty$|0|1|2|3|$\infty$|
 

@@ -53,7 +53,7 @@ $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\\\\ nums[j] < nums[i]}} \left(d[j] +
 
 Cơ sở của `d` sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng đáp án đó lên khi duyệt qua nó.
 |i|0|1|2|3|4|5|
-|-|-|-|-|-|-|-|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |$nums$|0|1|0|3|2|3|
 |$d$|1|1|1|1|1|1|
 
@@ -75,7 +75,7 @@ int lis(std::vector<int>& nums){
 }
 ```
 |i|0|1|2|3|4|5|
-|-|-|-|-|-|-|-|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-|
 |$nums$|0|1|0|3|2|3|
 |$d$|1|2|1|3|3|**4** $\Rightarrow$ đáp án|
 ### Quy hoạch động và tìm kiếm nhị phân $O(n\log n)$
@@ -100,7 +100,7 @@ int lis(std::vector<int>& nums) {
 }
 ```
 |i|0|1|2|3|4|5|
-|-|-|-|-|-|-|-|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |$nums$|0|1|0|3|2|3|
 |$d$|$-\infty$|0|1|2|3|$\infty$|
 
