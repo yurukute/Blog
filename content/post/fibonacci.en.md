@@ -8,7 +8,7 @@ TocOpen: true
 ## Problem
 Source: [Codeforces](https://codeforces.com/gym/102644/problem/C)
 
-Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as
+Find the $n^th$ [Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number) number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as
 $$  
     \begin{aligned}
         F_0 & = 0\\\\
