@@ -9,7 +9,7 @@ TocOpen: true
 Nguồn: [Codeforces](https://codeforces.com/gym/102644/problem/C)
 
 ### Đọc hiểu
-Tìm phần dư của [số fibonacci](https://vi.wikipedia.org/wiki/D%C3%A3y_Fibonacci) thứ $n$ ($n <= 10^{18}$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa:
+Tìm phần dư của [số Fibonacci](https://vi.wikipedia.org/wiki/D%C3%A3y_Fibonacci) thứ $n$ ($n <= 10^{18}$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa:
 $$  
     \begin{aligned}
         F_0 & = 0\\\\
