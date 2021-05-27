@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths on Noob&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/maths/</link>
+    <description>Recent content in Maths on Noob&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 27 May 2021 20:37:44 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/maths/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two Knights</title>
+      <link>https://yurukute.github.io/Blog/en/post/2knights/</link>
+      <pubDate>Thu, 27 May 2021 20:37:44 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/2knights/</guid>
+      <description>Problem Source: CSES Your task is to count for $k=1,2,…,n$ the number of ways two knights can be placed on a $k \times k$ chessboard so that they do not attack each other.
+For example:
+Input: 8 Output: 0 6 28 96 252 550 1056 1848 Solution Idea The most reachable method is for each of the first knight&amp;rsquo;s position, i&amp;rsquo;m looking for pertinent positions to place the second knight and sum them all.</description>
+    </item>
+    
+    <item>
+      <title>Factorial decomposition</title>
+      <link>https://yurukute.github.io/Blog/en/post/factorialdecomp/</link>
+      <pubDate>Tue, 26 Jan 2021 00:08:20 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/factorialdecomp/</guid>
+      <description>Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
+Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
+Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!</description>
+    </item>
+    
+  </channel>
+</rss>

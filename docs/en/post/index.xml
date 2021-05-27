@@ -5,7 +5,18 @@
     <link>https://yurukute.github.io/Blog/en/post/</link>
     <description>Recent content in Posts on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Mar 2021 19:44:24 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 May 2021 20:37:44 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two Knights</title>
+      <link>https://yurukute.github.io/Blog/en/post/2knights/</link>
+      <pubDate>Thu, 27 May 2021 20:37:44 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/2knights/</guid>
+      <description>Problem Source: CSES Your task is to count for $k=1,2,…,n$ the number of ways two knights can be placed on a $k \times k$ chessboard so that they do not attack each other.
+For example:
+Input: 8 Output: 0 6 28 96 252 550 1056 1848 Solution Idea The most reachable method is for each of the first knight&amp;rsquo;s position, i&amp;rsquo;m looking for pertinent positions to place the second knight and sum them all.</description>
+    </item>
+    
     <item>
       <title>Longest increasing subsequence</title>
       <link>https://yurukute.github.io/Blog/en/post/lis/</link>

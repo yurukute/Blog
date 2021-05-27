@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yurukute.github.io/Blog/en/tags/maths/</loc>
+    <lastmod>2021-05-27T20:37:44+07:00</lastmod>
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/</loc>
+    <lastmod>2021-05-27T20:37:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/post/</loc>
+    <lastmod>2021-05-27T20:37:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
+    <lastmod>2021-05-27T20:37:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/post/2knights/</loc>
+    <lastmod>2021-05-27T20:37:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/2knights/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/2knights/"
+                />
+  </url><url>
     <loc>https://yurukute.github.io/Blog/en/tags/binary-search/</loc>
     <lastmod>2021-03-09T19:44:24+07:00</lastmod>
   </url><url>
@@ -19,45 +74,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/post/lis/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/</loc>
-    <lastmod>2021-03-09T19:44:24+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/post/</loc>
-    <lastmod>2021-03-09T19:44:24+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
-    <lastmod>2021-03-09T19:44:24+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/tags/backtracking/</loc>
@@ -184,7 +200,7 @@
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/tags/numbers/</loc>
-    <lastmod>2021-01-26T00:08:20+07:00</lastmod>
+    <lastmod>2021-01-23T20:46:09+07:00</lastmod>
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/post/primesinnumbers/</loc>
     <lastmod>2021-01-23T20:46:09+07:00</lastmod>

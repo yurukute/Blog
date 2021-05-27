@@ -7,13 +7,13 @@
 <meta name="robots" content="index, follow">
 <title>Factorial decomposition | Noob&#39;s Blog</title>
 
-<meta name="keywords" content="Numbers, Eratosthene" />
+<meta name="keywords" content="Maths, Eratosthene" />
 <meta name="description" content="Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/post/factorialdecomp/" />
-<link href="/Blog/assets/css/stylesheet.min.f9defba0905ee65d62cbe8d34693383c1a0f2a1b6824d683f58f29c024d70b4f.css" integrity="sha256-&#43;d77oJBe5l1iy&#43;jTRpM4PBoPKhtoJNaD9Y8pwCTXC08=" rel="preload stylesheet"
+<link href="/Blog/assets/css/stylesheet.min.499f27d846821e4c8ac28c591121a2648deef86387d10dbc0346521d2e6dc139.css" integrity="sha256-SZ8n2EaCHkyKwoxZESGiZI3u&#43;GOH0Q28A0ZSHS5twTk=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
@@ -23,7 +23,7 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/factorialdecomp/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/factorialdecomp/" />
 
@@ -50,7 +50,7 @@ Solution Idea By definition, the factorial of a positive integer $n$, denoted by
   "name": "Factorial decomposition",
   "description": "Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:\nInput: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ …",
   "keywords": [
-    "Numbers", "Eratosthene"
+    "Maths", "Eratosthene"
   ],
   "articleBody": "Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:\nInput: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)\nSolution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12! = 1\\times2\\times3\\times4\\times5\\times6\\times7\\times8\\times9\\times10\\times11\\times12$$\nThus, decomp $n!$ also means decomp each factors of $n!$ then multiply them. For example, $n = 12$, we can decomp each factor as the table below:\n   12! 2 3 4 5 6 7 8 9 10 11 12     decomp $2$ $3$ $2^2$ $5$ $2\\times3$ $7$ $2^3$ $3^2$ $2\\times5$ $11$ $2^2\\times3$    After we multiply them, the final result is the prime factor decomposition of a $n!$ which we need to find $$2\\times3\\times2^2\\times5\\times2\\times3\\times7\\times2^3\\times3^2\\times2\\times5\\times11\\times2^2\\times3 = 2^{10}\\times3^5\\times5^2\\times7\\times11$$\nProgram First of all, we initialize 2 arrays to save the factors and their primality\nbool prime[n+1]; int value[n+1]; prime[0] = prime[1] = false; for(int i = 2; i  n; i++){ prime[i] = true; value[i] = i; } Generally, we use Eratosthene to find the prime numbers, now, with some changes, we can decomp all composite numbers which are multiples of found prime.\nfor(int i = 2; i  n; i ++){ if(f[i].prime){ int power = 1; for(int j = i+i; j  n; j += i){ //In this line, j = i+i not i*i  f[j].prime = false; while(f[j].value % i == 0){ f[j].value /= i; power++; } } } } Finally, we add some code for output\nfor(int i = 2; i  n; i ++){ if(f[i].prime){ res += (\" * \" + std::to_string(i)); int power = 1; for(int j = i+i; j  n; j += i){ prime[j] = false; while(value[j] % i == 0){ value[j] /= i; power++; } } if(power  1) res += (\"^\" + std::to_string(power)); } } res.erase(res.begin(), res.begin()+3); return res; And done! UwU)/\nThank you for reading.\n",
   "wordCount" : "342",
@@ -286,7 +286,7 @@ res.erase(res.begin(), res.begin()<span style="color:#f92672">+</span><span styl
 </div>
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://yurukute.github.io/Blog/en/tags/numbers/">Numbers</a></li>
+      <li><a href="https://yurukute.github.io/Blog/en/tags/maths/">Maths</a></li>
       <li><a href="https://yurukute.github.io/Blog/en/tags/eratosthene/">Eratosthene</a></li>
     </ul>
     <nav class="paginav">
