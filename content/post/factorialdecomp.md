@@ -1,7 +1,7 @@
 ---
 title: "Phân tích thừa số nguyên tố của n!"
 date: 2021-01-26T00:08:16+07:00
-tags: ["Số học", "Eratosthene"]
+tags: ["Toán", "Eratosthene"]
 #ShowToc: true
 TocOpen: true
 ---
