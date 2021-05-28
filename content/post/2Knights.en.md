@@ -34,16 +34,16 @@ Noticed that, the knights can attack each other when they form a  diagonal line 
 
 Here are the steps:
 - Start from top left, imagine i'm having a $2 \times 3$ rectangle there.
-- Shift 1 square to right to find how many times i can shift it to the right. Because i'm not allowed to let 2 columns of the rectangle move out of the chessboard so i can shift it $n-2$ times.
-- Similarly, shifting it to bottom and finding how many times i can shift it. There are $n-1$ times since i can't let the last row move out of the chessboard.
+- Shift 1 square to right to find how many times i can shift it to the right. Because i'm not allowed to let 2 columns of the rectangle move out of the chessboard so i can shift it $k-2$ times.
+- Similarly, shifting it to bottom and finding how many times i can shift it. There are $k-1$ times since i can't let the last row move out of the chessboard.
 - Finally, multiply them and duplicate the answer.
-$$2(n-1)(n-2)$$
+$$2(k-1)(k-2)$$
 
 Moreover, there are two diagonal lines in a rectangle, that means there are two ways the knights can attack each other in each case. Thus, `number of ways two knights can be placed to attack each other` is:
-$$4(n-1)(n-2)$$
+$$4(k-1)(k-2)$$
 
 In the end, the result of this problem is:
-$$\frac{k^2(k^2-1)}{2} - 4(n-1)(n-2)$$
+$$\frac{k^2(k^2-1)}{2} - 4(k-1)(k-2)$$
 
 ### Code
 ```cpp
