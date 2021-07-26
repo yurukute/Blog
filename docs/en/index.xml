@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Noob&#39;s Blog</title>
     <link>https://yurukute.github.io/Blog/en/</link>
     <description>Recent content on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 May 2021 20:37:44 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 18:51:10 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roman Numerals Helper</title>
+      <link>https://yurukute.github.io/Blog/en/post/romannumeral/</link>
+      <pubDate>Sun, 25 Jul 2021 18:51:10 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/romannumeral/</guid>
+      <description>The problem Source: Codewars Create a RomanNumerals class that can convert a roman numeral to and from an integer value.
+#include &amp;lt;string&amp;gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.
+Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero.</description>
+    </item>
+    
     <item>
       <title>Two Knights</title>
       <link>https://yurukute.github.io/Blog/en/post/2knights/</link>
@@ -152,23 +163,7 @@ P will be sorted by increasing order of the prime numbers. The final result has 
 maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.</description>
     </item>
     
-    <item>
-      <title>Archives</title>
-      <link>https://yurukute.github.io/Blog/en/archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yurukute.github.io/Blog/en/archive/</guid>
-      <description></description>
-    </item>
     
-    <item>
-      <title>Search</title>
-      <link>https://yurukute.github.io/Blog/en/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yurukute.github.io/Blog/en/search/</guid>
-      <description>search</description>
-    </item>
     
   </channel>
 </rss>

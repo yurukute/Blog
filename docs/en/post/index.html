@@ -6,14 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Posts | Noob&#39;s Blog</title>
-
 <meta name="keywords" content="" />
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/post/" />
-<link href="/Blog/assets/css/stylesheet.min.499f27d846821e4c8ac28c591121a2648deef86387d10dbc0346521d2e6dc139.css" integrity="sha256-SZ8n2EaCHkyKwoxZESGiZI3u&#43;GOH0Q28A0ZSHS5twTk=" rel="preload stylesheet"
-    as="style">
-
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.54f6c9d466536685c178d3731e598fa709615953fd7c0ece43b065e7a8b7c6d1.css" integrity="sha256-VPbJ1GZTZoXBeNNzHlmPpwlhWVP9fA7OQ7Bl56i3xtE=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
@@ -21,23 +18,34 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.83.1" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://yurukute.github.io/Blog/en/post/index.xml">
+<meta name="generator" content="Hugo 0.86.0" />
+<link rel="alternate" type="application/rss+xml" href="https://yurukute.github.io/Blog/en/post/index.xml">
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/" />
-
-
 <meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/" />
-<meta property="og:updated_time" content="2021-05-27T20:37:44+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
 
 
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/en/post/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="list" id="top">
@@ -53,19 +61,48 @@
 </script>
 <noscript>
     <style type="text/css">
-        .theme-toggle,
+        #theme-toggle,
         .top-link {
             display: none;
         }
 
     </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
 </noscript>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
             <span class="logo-switches">
-                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -84,10 +121,7 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                </a>
-                
-                
-
+                </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
@@ -96,7 +130,7 @@
                 </ul>
             </span>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
                     <span>Archives</span>
@@ -111,7 +145,8 @@
                 <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
     <script>
     MathJax = {
@@ -137,36 +172,40 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
 </header>
-
-    <main class="main"> 
+<main class="main"> 
 <header class="page-header">
   <h1>Posts</h1>
 </header>
 
-
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Roman Numerals Helper</h2>
+  </header>
+  <section class="entry-content">
+    <p>The problem Source: Codewars Create a RomanNumerals class that can convert a roman numeral to and from an integer value.
+#include &lt;string&gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.
+Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero....</p>
+  </section>
+  <footer class="entry-footer">July 25, 2021</footer>
+  <a class="entry-link" aria-label="post link to Roman Numerals Helper" href="https://yurukute.github.io/Blog/en/post/romannumeral/"></a>
+</article>
 
 <article class="post-entry"> 
-
   <header class="entry-header">
-    <h2>
-      Two Knights
-    </h2>
+    <h2>Two Knights</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: CSES Your task is to count for $k=1,2,…,n$ the number of ways two knights can be placed on a $k \times k$ chessboard so that they do not attack each other.
 For example:
 Input: 8 Output: 0 6 28 96 252 550 1056 1848 Solution Idea The most reachable method is for each of the first knight’s position, i’m looking for pertinent positions to place the second knight and sum them all....</p>
   </section>
-  <footer class="entry-footer">May 27, 2021
-</footer>
+  <footer class="entry-footer">May 27, 2021</footer>
   <a class="entry-link" aria-label="post link to Two Knights" href="https://yurukute.github.io/Blog/en/post/2knights/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Longest increasing subsequence
-    </h2>
+    <h2>Longest increasing subsequence</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source:
@@ -174,47 +213,38 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Solution Idea The most reachable me
 An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\
 &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ For example:...</p>
   </section>
-  <footer class="entry-footer">March 9, 2021
-</footer>
+  <footer class="entry-footer">March 9, 2021</footer>
   <a class="entry-link" aria-label="post link to Longest increasing subsequence" href="https://yurukute.github.io/Blog/en/post/lis/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Longest common subsequence
-    </h2>
+    <h2>Longest common subsequence</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
  Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters....</p>
   </section>
-  <footer class="entry-footer">February 17, 2021
-</footer>
+  <footer class="entry-footer">February 17, 2021</footer>
   <a class="entry-link" aria-label="post link to Longest common subsequence" href="https://yurukute.github.io/Blog/en/post/lcs/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Explosive Sum
-    </h2>
+    <h2>Explosive Sum</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars How many ways can you make the sum of a number?
 From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
  Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i’ll use dynamic programing instead (Oω&lt;)☆....</p>
   </section>
-  <footer class="entry-footer">February 15, 2021
-</footer>
+  <footer class="entry-footer">February 15, 2021</footer>
   <a class="entry-link" aria-label="post link to Explosive Sum" href="https://yurukute.github.io/Blog/en/post/explosivesum/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Fibonacci
-    </h2>
+    <h2>Fibonacci</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
@@ -224,32 +254,26 @@ F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
 Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:
 int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n &lt;= 5....</p>
   </section>
-  <footer class="entry-footer">February 12, 2021
-</footer>
+  <footer class="entry-footer">February 12, 2021</footer>
   <a class="entry-link" aria-label="post link to Fibonacci" href="https://yurukute.github.io/Blog/en/post/fibonacci/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Total ways make change
-    </h2>
+    <h2>Total ways make change</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We’ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change....</p>
   </section>
-  <footer class="entry-footer">February 9, 2021
-</footer>
+  <footer class="entry-footer">February 9, 2021</footer>
   <a class="entry-link" aria-label="post link to Total ways make change" href="https://yurukute.github.io/Blog/en/post/countchange/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Fewest coins make change
-    </h2>
+    <h2>Fewest coins make change</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Leetcode You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
@@ -257,70 +281,46 @@ You may assume that you have an infinite number of each kind of coin.
 Examples:
 Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11....</p>
   </section>
-  <footer class="entry-footer">February 8, 2021
-</footer>
+  <footer class="entry-footer">February 8, 2021</footer>
   <a class="entry-link" aria-label="post link to Fewest coins make change" href="https://yurukute.github.io/Blog/en/post/coinchange/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Bitwise operators&#39; application
-    </h2>
+    <h2>Bitwise operators&#39; application</h2>
   </header>
   <section class="entry-content">
     <p>Summary    Name Operator Description      AND &amp; Both bits are 1, return 1. Otherwise, return 0.   OR \ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are different return 1. Otherwise, return 0.   NOT ~ Flip bit, 0 becomes 1, 1 becomes 0    Shift left &lt;&lt; Shifts all the bits to the left    Right left &gt;&gt; Shifts all the bits to the right     Application Integer Change bit //Set nth bit x |= (1 &lt;&lt; n); //Set the right-most 0 bit to 1 x |= (x&#43;1); //Unset nth bit x &amp;= ~(1 &lt;&lt; n); //Set the right-most 1 bit to 0 x &amp;= (x-1); //Toggle nth bit x ^= (1 &lt;&lt; n); //Get the mth bit of n (x &gt;&gt; n) &amp; 1; //Swap Adjacent bits ((x &amp; 10101010) &gt;&gt; 1) | ((x &amp; 01010101) &lt;&lt; 1); Multiplication / Division x by $2^n$ x &lt;&lt; n //multiplication x &gt;&gt; n //division Round up to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; Round down to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; x = x &gt;&gt; 1; //the same with the code above but added this line Floor x x &gt;&gt; 0; 6....</p>
   </section>
-  <footer class="entry-footer">January 29, 2021
-</footer>
+  <footer class="entry-footer">January 29, 2021</footer>
   <a class="entry-link" aria-label="post link to Bitwise operators&#39; application" href="https://yurukute.github.io/Blog/en/post/bitwise/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Factorial decomposition
-    </h2>
+    <h2>Factorial decomposition</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!...</p>
   </section>
-  <footer class="entry-footer">January 26, 2021
-</footer>
+  <footer class="entry-footer">January 26, 2021</footer>
   <a class="entry-link" aria-label="post link to Factorial decomposition" href="https://yurukute.github.io/Blog/en/post/factorialdecomp/"></a>
-</article>
-<article class="post-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Primes in numbers
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Problem Codewars Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
-($p_1$**$n_1$)($p_2$**$n_2$)…($p_k$**$n_k$)
-where
- a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
-Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor....</p>
-  </section>
-  <footer class="entry-footer">January 23, 2021
-</footer>
-  <a class="entry-link" aria-label="post link to Primes in numbers" href="https://yurukute.github.io/Blog/en/post/primesinnumbers/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="https://yurukute.github.io/Blog/en/post/page/2/">Next Page »</a>
   </nav>
 </footer>
-
-    </main><footer class="footer">
+    </main>
+    <footer class="footer">
     <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
@@ -330,14 +330,13 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
     </button>
 </a>
 
-
-
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
-        }
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
     }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -356,6 +355,9 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
             }
         });
     });
+
+</script>
+<script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -366,10 +368,6 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
             mybutton.style.opacity = "0";
         }
     };
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
-    }
 
 </script>
 <script>
@@ -384,7 +382,6 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
     })
 
 </script>
-
 </body>
 
 </html>

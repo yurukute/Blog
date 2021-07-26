@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Blog của Noob</title>
     <link>https://yurukute.github.io/Blog/post/</link>
     <description>Recent content in Posts on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 May 2021 18:13:29 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 18:51:05 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chuyển đổi số la mã</title>
+      <link>https://yurukute.github.io/Blog/post/romannumeral/</link>
+      <pubDate>Sun, 25 Jul 2021 18:51:05 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/romannumeral/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Cho lớp RomanNumerals để chuyển đổi các chữ số la mã về số nguyên và ngược lại.
+#include &amp;lt;string&amp;gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:
+  Chữ số La Mã hiện đại được viết bằng cách thể hiện từng chữ số riêng biệt bắt đầu bằng chữ số tận cùng bên trái và bỏ qua bất kỳ chữ số nào có giá trị bằng 0.</description>
+    </item>
+    
     <item>
       <title>Hai con mã</title>
       <link>https://yurukute.github.io/Blog/post/2knights/</link>

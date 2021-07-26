@@ -6,15 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Tìm kiếm | Blog của Noob</title>
-
 <meta name="keywords" content="" />
 <meta name="description" content="search">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/search/" />
-<link href="/Blog/assets/css/stylesheet.min.499f27d846821e4c8ac28c591121a2648deef86387d10dbc0346521d2e6dc139.css" integrity="sha256-SZ8n2EaCHkyKwoxZESGiZI3u&#43;GOH0Q28A0ZSHS5twTk=" rel="preload stylesheet"
-    as="style">
-<link rel="preload" as="fetch" href="../index.json" crossOrigin="anonymous">
-<script defer src="/Blog/assets/js/search.min.04de57819ac7e980f9b67a741eabe699fe5a835345e23fdc8039aadb595b547e.js" onload="loadSearch();" integrity="sha256-BN5XgZrH6YD5tnp0Hqvmmf5ag1NF4j/cgDmq21lbVH4="></script>
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.54f6c9d466536685c178d3731e598fa709615953fd7c0ece43b065e7a8b7c6d1.css" integrity="sha256-VPbJ1GZTZoXBeNNzHlmPpwlhWVP9fA7OQ7Bl56i3xtE=" rel="preload stylesheet" as="style"><link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/search.min.2a74d1516b684f13a7dfe09ba6e75af40e05736d14d7010f5e4654c7ec1c67e7.js" integrity="sha256-KnTRUWtoTxOn3&#43;Cbpuda9A4Fc20U1wEPXkZUx&#43;wcZ&#43;c="></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
@@ -22,20 +19,35 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.0" />
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/search/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/search/" />
-
-
 <meta property="og:title" content="Tìm kiếm" />
 <meta property="og:description" content="search" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yurukute.github.io/Blog/search/" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/search/" /><meta property="article:section" content="" />
+
 <meta property="og:site_name" content="Blog của Noob" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tìm kiếm"/>
 <meta name="twitter:description" content="search"/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Tìm kiếm",
+      "item": "https://yurukute.github.io/Blog/search/"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,9 +77,6 @@
   }
 }
 </script>
-
-
-
 </head>
 
 <body class="list" id="top">
@@ -83,19 +92,48 @@
 </script>
 <noscript>
     <style type="text/css">
-        .theme-toggle,
+        #theme-toggle,
         .top-link {
             display: none;
         }
 
     </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
 </noscript>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
             <span class="logo-switches">
-                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -114,10 +152,7 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                </a>
-                
-                
-
+                </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://yurukute.github.io/Blog/en/" title="English"
@@ -126,7 +161,7 @@
                 </ul>
             </span>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://yurukute.github.io/Blog/archive" title="Lưu trữ">
                     <span>Lưu trữ</span>
@@ -141,7 +176,8 @@
                 <a href="https://yurukute.github.io/Blog/tags" title="Tags">
                     <span>Tags</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
     <script>
     MathJax = {
@@ -167,35 +203,36 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
 </header>
-
-    <main class="main">
+<main class="main">
 
 <header class="page-header">
-    <h1>Tìm kiếm
+    <h1>Tìm kiếm&nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
     </h1>
-    <div class="post-meta"><ul class="i18n_list">Bản dịch:
-            <li>
-                <a href="https://yurukute.github.io/Blog/en/search/">En</a>
-            </li>
-        </ul>
-    </div>
+    <div class="post-meta">
+<ul class="i18n_list">Bản dịch:
+    <li>
+        <a href="https://yurukute.github.io/Blog/en/search/">En</a>
+    </li>
+</ul></div>
 </header>
 
 <div id="searchbox">
-    <input id="searchInput" autofocus placeholder="Tìm kiếm ↵" aria-label="search">
+    <input id="searchInput" autofocus placeholder="Tìm kiếm ↵" aria-label="search" type="search">
     <ul id="searchResults" aria-label="search results"></ul>
 </div>
-    </main><footer class="footer">
+    </main>
+    <footer class="footer">
     <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
@@ -205,14 +242,13 @@
     </button>
 </a>
 
-
-
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
-        }
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
     }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -231,6 +267,9 @@
             }
         });
     });
+
+</script>
+<script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -241,10 +280,6 @@
             mybutton.style.opacity = "0";
         }
     };
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
-    }
 
 </script>
 <script>
@@ -259,7 +294,6 @@
     })
 
 </script>
-
 </body>
 
 </html>

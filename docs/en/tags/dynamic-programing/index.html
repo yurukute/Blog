@@ -6,14 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Dynamic Programing | Noob&#39;s Blog</title>
-
 <meta name="keywords" content="" />
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/" />
-<link href="/Blog/assets/css/stylesheet.min.499f27d846821e4c8ac28c591121a2648deef86387d10dbc0346521d2e6dc139.css" integrity="sha256-SZ8n2EaCHkyKwoxZESGiZI3u&#43;GOH0Q28A0ZSHS5twTk=" rel="preload stylesheet"
-    as="style">
-
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.54f6c9d466536685c178d3731e598fa709615953fd7c0ece43b065e7a8b7c6d1.css" integrity="sha256-VPbJ1GZTZoXBeNNzHlmPpwlhWVP9fA7OQ7Bl56i3xtE=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
@@ -21,21 +18,17 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.83.1" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/index.xml">
+<meta name="generator" content="Hugo 0.86.0" />
+<link rel="alternate" type="application/rss+xml" href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/index.xml">
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/" />
-
-
 <meta property="og:title" content="Dynamic Programing" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yurukute.github.io/Blog/en/tags/dynamic-programing/" />
-<meta property="og:updated_time" content="2021-03-09T19:44:24+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/tags/dynamic-programing/" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dynamic Programing"/>
 <meta name="twitter:description" content=""/>
-
-
 
 </head>
 
@@ -52,19 +45,48 @@
 </script>
 <noscript>
     <style type="text/css">
-        .theme-toggle,
+        #theme-toggle,
         .top-link {
             display: none;
         }
 
     </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
 </noscript>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
             <span class="logo-switches">
-                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -83,10 +105,7 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                </a>
-                
-                
-
+                </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
@@ -95,7 +114,7 @@
                 </ul>
             </span>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
                     <span>Archives</span>
@@ -110,7 +129,8 @@
                 <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
     <script>
     MathJax = {
@@ -136,20 +156,14 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
 </header>
-
-    <main class="main"> 
+<main class="main"> 
 <header class="page-header">
   <h1>Dynamic Programing</h1>
 </header>
 
-
-
 <article class="post-entry tag-entry"> 
-
   <header class="entry-header">
-    <h2>
-      Longest increasing subsequence
-    </h2>
+    <h2>Longest increasing subsequence</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source:
@@ -157,47 +171,38 @@
 An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\
 &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ For example:...</p>
   </section>
-  <footer class="entry-footer">March 9, 2021
-</footer>
+  <footer class="entry-footer">March 9, 2021</footer>
   <a class="entry-link" aria-label="post link to Longest increasing subsequence" href="https://yurukute.github.io/Blog/en/post/lis/"></a>
 </article>
-<article class="post-entry tag-entry"> 
 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>
-      Longest common subsequence
-    </h2>
+    <h2>Longest common subsequence</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
  Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters....</p>
   </section>
-  <footer class="entry-footer">February 17, 2021
-</footer>
+  <footer class="entry-footer">February 17, 2021</footer>
   <a class="entry-link" aria-label="post link to Longest common subsequence" href="https://yurukute.github.io/Blog/en/post/lcs/"></a>
 </article>
-<article class="post-entry tag-entry"> 
 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>
-      Explosive Sum
-    </h2>
+    <h2>Explosive Sum</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars How many ways can you make the sum of a number?
 From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
  Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i’ll use dynamic programing instead (Oω&lt;)☆....</p>
   </section>
-  <footer class="entry-footer">February 15, 2021
-</footer>
+  <footer class="entry-footer">February 15, 2021</footer>
   <a class="entry-link" aria-label="post link to Explosive Sum" href="https://yurukute.github.io/Blog/en/post/explosivesum/"></a>
 </article>
-<article class="post-entry tag-entry"> 
 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>
-      Fibonacci
-    </h2>
+    <h2>Fibonacci</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
@@ -207,32 +212,26 @@ F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
 Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:
 int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n &lt;= 5....</p>
   </section>
-  <footer class="entry-footer">February 12, 2021
-</footer>
+  <footer class="entry-footer">February 12, 2021</footer>
   <a class="entry-link" aria-label="post link to Fibonacci" href="https://yurukute.github.io/Blog/en/post/fibonacci/"></a>
 </article>
-<article class="post-entry tag-entry"> 
 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>
-      Total ways make change
-    </h2>
+    <h2>Total ways make change</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We’ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change....</p>
   </section>
-  <footer class="entry-footer">February 9, 2021
-</footer>
+  <footer class="entry-footer">February 9, 2021</footer>
   <a class="entry-link" aria-label="post link to Total ways make change" href="https://yurukute.github.io/Blog/en/post/countchange/"></a>
 </article>
-<article class="post-entry tag-entry"> 
 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>
-      Fewest coins make change
-    </h2>
+    <h2>Fewest coins make change</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Leetcode You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
@@ -240,32 +239,29 @@ You may assume that you have an infinite number of each kind of coin.
 Examples:
 Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11....</p>
   </section>
-  <footer class="entry-footer">February 8, 2021
-</footer>
+  <footer class="entry-footer">February 8, 2021</footer>
   <a class="entry-link" aria-label="post link to Fewest coins make change" href="https://yurukute.github.io/Blog/en/post/coinchange/"></a>
 </article>
-<article class="post-entry tag-entry"> 
 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>
-      Maximum subarray sum
-    </h2>
+    <h2>Maximum subarray sum</h2>
   </header>
   <section class="entry-content">
     <p>Problem: Source: Codewars.com The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
 maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead....</p>
   </section>
-  <footer class="entry-footer">January 17, 2021
-</footer>
+  <footer class="entry-footer">January 17, 2021</footer>
   <a class="entry-link" aria-label="post link to Maximum subarray sum" href="https://yurukute.github.io/Blog/en/post/maxsubarraysum/"></a>
 </article>
-
-    </main><footer class="footer">
+    </main>
+    <footer class="footer">
     <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
@@ -275,14 +271,13 @@ maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy 
     </button>
 </a>
 
-
-
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
-        }
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
     }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -301,6 +296,9 @@ maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy 
             }
         });
     });
+
+</script>
+<script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -311,10 +309,6 @@ maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy 
             mybutton.style.opacity = "0";
         }
     };
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
-    }
 
 </script>
 <script>
@@ -329,7 +323,6 @@ maxSequence({-2, 1, -3, 4, -1, 2, 1, -5, 4}); //should be 6: {4, -1, 2, 1} Easy 
     })
 
 </script>
-
 </body>
 
 </html>

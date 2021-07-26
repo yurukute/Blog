@@ -6,15 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Đoạn Con Có Tổng Lớn Nhất | Blog của Noob</title>
-
 <meta name="keywords" content="Quy hoạch động" />
 <meta name="description" content="Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/post/maxsubarraysum/" />
-<link href="/Blog/assets/css/stylesheet.min.499f27d846821e4c8ac28c591121a2648deef86387d10dbc0346521d2e6dc139.css" integrity="sha256-SZ8n2EaCHkyKwoxZESGiZI3u&#43;GOH0Q28A0ZSHS5twTk=" rel="preload stylesheet"
-    as="style">
-
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.54f6c9d466536685c178d3731e598fa709615953fd7c0ece43b065e7a8b7c6d1.css" integrity="sha256-VPbJ1GZTZoXBeNNzHlmPpwlhWVP9fA7OQ7Bl56i3xtE=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
@@ -22,30 +21,50 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.0" />
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/maxsubarraysum/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/maxsubarraysum/" />
-
-
 <meta property="og:title" content="Đoạn Con Có Tổng Lớn Nhất" />
 <meta property="og:description" content="Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yurukute.github.io/Blog/post/maxsubarraysum/" />
-<meta property="article:published_time" content="2021-01-17T20:45:26+07:00" />
-<meta property="article:modified_time" content="2021-01-17T20:45:26+07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/post/maxsubarraysum/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-01-17T20:45:26&#43;07:00" />
+<meta property="article:modified_time" content="2021-01-17T20:45:26&#43;07:00" /><meta property="og:site_name" content="Blog của Noob" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Đoạn Con Có Tổng Lớn Nhất"/>
 <meta name="twitter:description" content="Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.
 Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng."/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Đoạn Con Có Tổng Lớn Nhất",
+      "item": "https://yurukute.github.io/Blog/post/maxsubarraysum/"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Đoạn Con Có Tổng Lớn Nhất",
   "name": "Đoạn Con Có Tổng Lớn Nhất",
-  "description": "Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,\u0026amp;hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, …",
+  "description": "Bài toán: Nguồn: Codewars.com Cho một dãy gồm n số nguyên $a_1, a_2,\u0026hellip;, a_n$. Hãy tìm một đoạn con (dãy gồm các phần tử liên tiếp nhau) có tổng lớn nhất.\nInput: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1} Trường hợp đơn giản nhất là mảng chỉ có số dương, khi đó kết quả chính là tổng tất cả các số trong mảng.",
   "keywords": [
     "Quy hoạch động"
   ],
@@ -68,9 +87,6 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
   }
 }
 </script>
-
-
-
 </head>
 
 <body class="" id="top">
@@ -86,19 +102,48 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
 </script>
 <noscript>
     <style type="text/css">
-        .theme-toggle,
+        #theme-toggle,
         .top-link {
             display: none;
         }
 
     </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
 </noscript>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
             <span class="logo-switches">
-                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -117,10 +162,7 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                </a>
-                
-                
-
+                </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://yurukute.github.io/Blog/en/" title="English"
@@ -129,7 +171,7 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
                 </ul>
             </span>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://yurukute.github.io/Blog/archive" title="Lưu trữ">
                     <span>Lưu trữ</span>
@@ -144,7 +186,8 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
                 <a href="https://yurukute.github.io/Blog/tags" title="Tags">
                     <span>Tags</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
     <script>
     MathJax = {
@@ -170,25 +213,23 @@ Input: {-2, 1, -3, 4, -1, 2, 1, -5, 4} Output: 6 //vì đoạn con có tổng l�
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
 </header>
-
-    <main class="main">
+<main class="main">
 
 <article class="post-single">
   <header class="post-header">
+    
     <h1 class="post-title">
       Đoạn Con Có Tổng Lớn Nhất
     </h1>
-    <div class="post-meta">17 Tháng 1, 2021
-&nbsp;|&nbsp;<ul class="i18n_list">Bản dịch:
-        <li>
-          <a href="https://yurukute.github.io/Blog/en/post/maxsubarraysum/">En</a>
-        </li>
-      </ul>
-    </div>
+    <div class="post-meta">17 Tháng 1, 2021&nbsp;|&nbsp;
+<ul class="i18n_list">Bản dịch:
+    <li>
+        <a href="https://yurukute.github.io/Blog/en/post/maxsubarraysum/">En</a>
+    </li>
+</ul>
+</div>
   </header> 
-
-  <div class="post-content">
-<h2 id="bài-toán">Bài toán:<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
+  <div class="post-content"><h2 id="bài-toán">Bài toán:<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
 <p>Nguồn: <a href="https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c" target="_blank">Codewars.com</a>
 </p>
 <p>Cho một dãy gồm n số nguyên $a_1, a_2,&hellip;, a_n$. Hãy tìm một đoạn con <em>(dãy gồm các phần tử liên tiếp nhau)</em> có tổng lớn nhất.</p>
@@ -223,7 +264,7 @@ Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
 <p>Với cách này, mình sẽ tính được $f[i]$ mà không phải lặp lại việc tính toán vì mình đã tính trước ở $f[i-1]$ =&gt; Không mắc nhược điểm thứ 3 của cách 1 (UwU). Vậy là giảm độ phức tạp xuống còn $O(n^2)$. Nhưng mà, bài toán này coàn có một cách giải với độ phức tạp $O(n)$ OwO)/</p>
 <h3 id="cách-3">Cách 3:<a hidden class="anchor" aria-hidden="true" href="#cách-3">#</a></h3>
 <p>Với ý tưởng của cách 2, mình thêm một biến <code>sum</code> để lưu tổng đang tính. Khi duyệt mảng, mình sẽ đứng trước 2 lựa chọn: Thêm phần tử đang xét vào đoạn <em><strong>hay</strong></em> hắt đầu một đoạn con mới. Như vậy mình cần so sánh xem tổng hiện tại (<code>sum</code>) cộng thêm phần tử <code>arr[i]</code> đang xét liệu có lớn hơn phần tử đó hay không. Nói cách khác mình lấy <code>max(sum + a[i], a[i])</code> -&gt; Đây cũng chính là kết quả cần tìm.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 
@@ -239,26 +280,29 @@ Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
 }
 </code></pre></div><p>Cảm ơn bạn vì đã đọc.</p>
 
-</div>
+
+  </div>
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/">Quy hoạch động</a></li>
     </ul>
     <nav class="paginav">
-      <a class="next" href="https://yurukute.github.io/Blog/post/sumbyfactors/">
-        <span class="title">Bài viết sau »</span>
+      <a class="prev" href="https://yurukute.github.io/Blog/post/sumbyfactors/">
+        <span class="title">« Bài mới hơn</span>
         <br>
         <span>Sum by Factors</span>
       </a>
     </nav>
   </footer>
 </article>
-    </main><footer class="footer">
+    </main>
+    <footer class="footer">
     <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
@@ -268,16 +312,13 @@ Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
     </button>
 </a>
 
-
-
-<script defer src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
-    onload="hljs.initHighlightingOnLoad();"></script>
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
-        }
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
     }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -296,6 +337,9 @@ Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
             }
         });
     });
+
+</script>
+<script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -306,10 +350,6 @@ Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
             mybutton.style.opacity = "0";
         }
     };
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
-    }
 
 </script>
 <script>
@@ -324,7 +364,6 @@ Output: 6 //vì đoạn con có tổng lớn nhất là {4, -1, 2, 1}
     })
 
 </script>
-
 </body>
 
 </html>

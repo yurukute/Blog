@@ -7,13 +7,10 @@
 <meta name="robots" content="index, follow">
 <title>Noob&#39;s Blog</title>
 
-<meta name="keywords" content="" />
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/" />
-<link href="/Blog/assets/css/stylesheet.min.499f27d846821e4c8ac28c591121a2648deef86387d10dbc0346521d2e6dc139.css" integrity="sha256-SZ8n2EaCHkyKwoxZESGiZI3u&#43;GOH0Q28A0ZSHS5twTk=" rel="preload stylesheet"
-    as="style">
-
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.54f6c9d466536685c178d3731e598fa709615953fd7c0ece43b065e7a8b7c6d1.css" integrity="sha256-VPbJ1GZTZoXBeNNzHlmPpwlhWVP9fA7OQ7Bl56i3xtE=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
@@ -21,18 +18,16 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.83.1" />
-<link rel="alternate" type="application/rss&#43;xml" href="https://yurukute.github.io/Blog/en/index.xml">
+<meta name="generator" content="Hugo 0.86.0" />
+<link rel="alternate" type="application/rss+xml" href="https://yurukute.github.io/Blog/en/index.xml">
 <link rel="alternate" type="application/json" href="https://yurukute.github.io/Blog/en/index.json">
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/" />
-
-
 <meta property="og:title" content="Noob&#39;s Blog" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yurukute.github.io/Blog/en/" />
-<meta property="og:updated_time" content="2021-05-27T20:37:44+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Noob&#39;s Blog"/>
 <meta name="twitter:description" content=""/>
@@ -50,8 +45,6 @@
   ]
 }
 </script>
-
-
 </head>
 
 <body class="list" id="top">
@@ -67,19 +60,48 @@
 </script>
 <noscript>
     <style type="text/css">
-        .theme-toggle,
+        #theme-toggle,
         .top-link {
             display: none;
         }
 
     </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
 </noscript>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
             <span class="logo-switches">
-                <a id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -98,10 +120,7 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                </a>
-                
-                
-
+                </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
                         <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
@@ -110,7 +129,7 @@
                 </ul>
             </span>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
                     <span>Archives</span>
@@ -125,7 +144,8 @@
                 <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
     <script>
     MathJax = {
@@ -151,11 +171,7 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
 </header>
-
-    <main class="main"> 
-
-
-
+<main class="main"> 
 <article class="first-entry home-info">
     <header class="entry-header">
         <h1>Hi there, I&rsquo;m Noob OwO)/</h1>
@@ -168,8 +184,10 @@
 </ul>
 </p>
     </section>
-    <footer class="entry-footer"><div class="social-icons"><a href="https://www.hackerrank.com/yurukute" target="_blank" rel="noopener noreferrer me"
-        title="Hackerrank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <footer class="entry-footer">
+        <div class="social-icons">
+    <a href="https://www.hackerrank.com/yurukute" target="_blank" rel="noopener noreferrer me" title="Hackerrank">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     preserveAspectRatio="xMidYMid meet" viewBox="0 0 50 35" fill="currentColor" stroke-width="0" stroke="currentColor">
     <g>
         <path
@@ -179,38 +197,50 @@
             d="M27.19 32.95L38.63 32.95L50.06 32.95L50.06 17.5L50.06 2.05L38.63 2.05L27.19 2.05L27.19 17.5L27.19 32.95Z"
             id="dgDKP06E5"></path>
     </g>
-</svg></a><a href="https://www.codewars.com/users/yurukute" target="_blank" rel="noopener noreferrer me"
-        title="Codewars"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.4"
+</svg>
+    </a>
+    <a href="https://www.codewars.com/users/yurukute" target="_blank" rel="noopener noreferrer me" title="Codewars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.4"
     stroke-linecap="round" stroke-linejoin="round">
     <path
         d="M.76 12.2l-.08-.04c-.18-.1-.32-.25-.42-.44-.14-.26-.2-.5-.2-.75l.02-.13c0-.2.05-.38.14-.55l.08-.15c.04-.08.1-.15.15-.22.06-.07.07-.16.05-.24l-.05-.16c-.06-.2-.1-.4-.1-.6L.32 8.8c0-.22.06-.44.2-.6l.1-.13c.07-.1.18-.16.3-.2.1-.03.17-.13.18-.25l.02-.34c0-.27.13-.52.33-.7l.24-.18c.05-.05.1-.1.14-.18.05-.06.06-.14.05-.2-.02-.1 0-.13.05-.14.16.06.26.04.33-.04l.13-.17.36-.4c.1-.1.14-.28.08-.42l-.12-.26c-.02-.06 0-.13.05-.15.13 0 .22.05.26.13l.04.07c.06.12.2.18.3.13.22-.08.4-.1.57-.1h.32c.22 0 .4-.15.44-.38.04-.28.14-.5.28-.65.15-.17.32-.3.52-.4.26-.14.42-.34.47-.6.07-.32.24-.55.47-.7l.76-.43.22-.13c.13-.08.25-.18.35-.3l.2-.24c.1-.1.2-.17.32-.2.1-.03.24-.05.36-.04l.4.03c.2 0 .36.05.52.12l.1.05c.1.04.2.02.25-.05L10 .7l.43-.45c.1-.1.22-.14.35-.12.13.02.26.07.38.13.18.1.33.14.5.14h.1c.22 0 .44.03.66.08l.15.04c.15.04.3-.02.4-.14.03-.05.1-.06.14-.02.03.02.04.04.05.07.02.2.14.35.3.4l.16.05c.17.05.32.16.42.3.1.15.22.3.36.4l.1.1c.1.1.24.14.38.13h.59c.24 0 .47.04.7.14.22.1.45.12.66.04.22-.07.45-.1.68-.07l.43.07c.2.02.4.12.52.27l.05.05c.1.1.2.23.3.37.06.13.2.2.34.2h.62c.15 0 .3.03.42.1.13.1.24.2.34.3l.1.13c.12.14.18.33.17.53 0 .16.12.3.28.3l.2.02c.14 0 .26.1.33.23l.1.2.26.58c.04.1.05.2.04.28 0 .1.03.18.1.22l.1.07c.13.1.2.25.18.42l-.07.47-.02.2c-.02.1.03.23.12.3.15.1.22.23.23.38v.2c0 .1-.02.22-.1.3-.06.08-.1.18-.1.3l.03.23c0 .16.1.3.2.4.14.1.22.26.24.42.04.25.05.45.05.65v.23c0 .08 0 .16.03.24.02.07.07.14.13.18l.2.15c.2.13.34.3.42.53.1.22.13.45.13.68v.08c0 .18-.02.37-.08.54-.05.18-.04.35.03.5.08.14.13.3.15.47.04.2.02.4-.05.56l-.02.07c-.05.12-.13.23-.23.32-.1.1-.2.16-.26.23-.06.06-.1.16-.07.25l.03.14c.05.2.05.4 0 .58v.08c-.04.15-.1.28-.16.4-.07.13-.17.23-.3.3l-.15.1c-.07.04-.12.13-.12.22 0 .1-.04.2-.1.26l-.15.2c-.1.13-.23.24-.37.3-.14.1-.26.2-.35.3-.1.12-.18.26-.22.4-.04.18-.18.28-.33.28h-.54c-.14 0-.27.1-.33.22-.07.16-.14.27-.23.37-.1.1-.16.22-.2.36-.02.12-.12.2-.22.16-.13-.06-.26 0-.32.1-.12.2-.24.35-.37.48l-.07.06c-.13.1-.3.18-.45.18-.18 0-.27.08-.3.2-.03.1-.05.23-.06.34-.02.12-.06.23-.1.33l-.05.06c-.1.15-.18.3-.28.43l-.04.06c-.13.17-.3.3-.5.35-.24.08-.45.1-.66.1h-.14c-.1 0-.2.06-.27.16l-.06.1-.06.12-.13.22c-.1.18-.25.3-.45.36-.2.05-.43.07-.64.06l-.16-.02c-.14 0-.27-.04-.4-.1-.1-.04-.24 0-.3.1-.1.14-.22.22-.35.26l-.3.1c-.2.05-.42.05-.63 0l-.16-.05c-.1 0-.2-.05-.28-.1-.1-.05-.2-.07-.3-.06l-.13.02c-.2.02-.38 0-.56-.05l-.27-.06c-.12-.04-.23-.12-.3-.23-.05-.1-.16-.18-.3-.2H9.9c-.2-.03-.38-.1-.5-.25L9 22.5l-.14-.12-.22-.16-.13-.1c-.15-.1-.33-.18-.52-.2l-.6-.1c-.06 0-.1-.02-.16-.03L7 21.74c-.1-.02-.2-.1-.27-.2-.06-.1-.17-.14-.27-.1-.2.08-.36.1-.52.13H5.8c-.26.02-.5-.02-.74-.13-.24-.1-.4-.25-.55-.44-.12-.17-.3-.3-.52-.34l-.28-.06c-.2-.04-.4-.12-.58-.24-.2-.14-.3-.27-.38-.43-.08-.15-.13-.32-.14-.5v-.08c-.02-.2-.16-.38-.35-.43-.23-.07-.4-.17-.55-.3-.14-.13-.22-.32-.22-.52l.02-.44c0-.17-.05-.32-.17-.43-.12-.12-.2-.27-.2-.43l-.03-.36c-.02-.26-.07-.52-.13-.78-.06-.23.03-.46.22-.57l.07-.05c.1-.07.14-.2.08-.32l-.08-.1c-.1-.1-.2-.17-.3-.2-.08-.02-.1-.1-.1-.15l.1-.12c.06-.07.05-.18 0-.24-.08-.08-.12-.18-.13-.28l-.02-.7c0-.14.02-.28.06-.42.04-.12 0-.26-.12-.32zm9.9-1.32c.07-.07.06-.2 0-.25-.1-.08-.17-.17-.23-.27l-.1-.16c-.07-.13-.16-.24-.26-.34l-.02-.02c-.1-.08-.17-.18-.23-.3-.05-.1-.05-.2 0-.3l.06-.1c.06-.1.1-.24.1-.36v-.04c0-.1-.04-.2-.1-.3-.04-.08-.08-.18-.1-.28V8.1c-.03-.12 0-.25.08-.35.08-.13.14-.25.17-.4v-.02c.04-.1.02-.23-.04-.33s-.08-.2-.04-.32l.07-.2c.06-.18.15-.34.27-.48l.14-.15.1-.12.06-.06c.06-.06.07-.16.02-.24-.05-.1-.08-.2-.06-.3l.02-.14c.03-.2.1-.4.23-.56l.04-.04c.15-.2.34-.33.56-.4l.27-.1c.12-.04.2-.17.2-.3 0-.16.05-.3.14-.43l.05-.05c.1-.17.22-.34.3-.52l.07-.13c.02-.03.03-.07.03-.1 0-.17-.1-.32-.26-.33L11.76 2c-.25-.02-.5 0-.74 0l-.85.1c-.13 0-.23.1-.24.24 0 .14-.1.26-.22.3l-.36.1-.1.03-.3.1c-.22.07-.4.23-.5.45l-.08.13c-.1.22-.27.4-.48.53-.2.13-.3.34-.32.58v.1c-.02.2-.08.4-.2.54l-.05.08c-.08.1-.1.23-.05.34.05.12.08.25.07.38v.53c0 .14-.1.26-.2.3-.14.05-.23.16-.27.3l-.05.2c-.04.2.03.4.2.52.16.12.26.3.3.52v.18c.03.2.14.4.32.5.18.12.32.3.4.5l.05.16c.08.22.26.35.46.37h.06c.18 0 .34.1.44.26.1.16.26.27.44.3l.28.08c.17.05.33.14.46.27l.02.02c.1.08.26.07.35-.04l.07-.08zm1.14-.92c.1.06.2.03.24-.06l.03-.05c.07-.14.16-.28.26-.4l.2-.3c.03 0 .04-.02.05-.04l.24-.32c.1-.1.22-.17.36-.17.13 0 .24-.07.3-.2.04-.14.1-.27.22-.38l.05-.06c.1-.1.2-.15.3-.2.13-.02.25-.04.37-.04h.3c.12 0 .22-.05.28-.15.06-.1.15-.17.25-.22l.1-.04c.16-.07.34-.12.52-.14l.2-.02c.12 0 .25 0 .37.07.1.07.23.06.33-.02l.07-.04c.15-.1.32-.18.5-.2h.02c.2-.04.38-.04.58-.03h.1c.2.03.37.1.5.25l.03.04c.1.1.26.18.4.18h.17c.05 0 .1-.02.13-.07.03-.03.08-.06.13-.06h.1c.14 0 .27.04.4.08l.17.07c.16.05.33.1.5.12h.12c.08 0 .13-.05.13-.12 0-.1-.02-.2-.07-.28L20.68 7c-.08-.13-.14-.27-.2-.4l-.02-.05c-.05-.1-.05-.2 0-.3V6.2c.02-.08-.02-.17-.1-.2L20.28 6c-.16-.05-.3-.14-.4-.27l-.1-.1c-.1-.1-.16-.25-.2-.4-.05-.13-.16-.23-.3-.23h-.42c-.15-.02-.28-.1-.37-.22l-.04-.05c-.07-.1-.13-.22-.17-.34-.05-.1-.16-.16-.26-.13l-.12.04c-.2.07-.4.1-.6.08l-.16-.02c-.17 0-.33-.07-.46-.17l-.1-.07c-.08-.06-.16-.1-.25-.14-.1-.04-.18-.02-.24.05l-.05.06c-.1.1-.24.18-.38.2l-.54.03c-.1 0-.2.05-.27.12-.08.07-.17.12-.27.14h-.02c-.1 0-.2.07-.3.14v.02c-.1.1-.23.15-.36.15l-.04.02c-.12 0-.24 0-.36.03h-.12c-.17.03-.3.17-.34.35l-.04.23c-.03.16-.1.3-.2.43-.1.12-.22.2-.37.2h-.15-.02c-.1.02-.2.13-.18.25.02.17 0 .32-.03.47l-.04.17c-.04.15-.14.27-.27.32l-.06.03h-.02c-.06.04-.1.13-.05.2.06.1.08.2.07.3l-.03.32c0 .12-.05.23-.1.33-.06.1-.06.2-.02.3l.1.22c.05.1.06.2.03.32-.03.1-.05.2-.04.3 0 .1.06.2.14.24l.02.02zm7.9 7.23c.1.1.25.14.37.06l.2-.13c.1-.07.18-.17.22-.3v-.02l.1-.3.06-.1.04-.1.04-.07c.04-.08.1-.14.2-.17l.04-.02c.08-.02.13-.1.13-.18 0-.1.05-.18.1-.25l.08-.07.2-.26v-.02c.06-.08.1-.17.12-.27.02-.1 0-.2-.04-.3l-.02-.04c-.04-.1-.06-.17-.07-.26l-.03-.28-.03-.3c0-.1.04-.2.1-.3.07-.08.12-.18.16-.28v-.04l.02-.02c.02-.1-.03-.2-.12-.2-.1-.05-.2-.13-.23-.25l-.03-.06c-.05-.18-.08-.36-.08-.54l.02-.5v-.03c0-.17-.14-.3-.3-.3h-.02c-.2 0-.36-.06-.5-.2l-.08-.1-.2-.23-.26-.3c-.1-.14-.2-.26-.33-.38-.1-.1-.25-.2-.4-.22l-.2-.03c-.1-.02-.23-.07-.34-.14-.08-.06-.2-.04-.28.04l-.13.14-.06.04c-.07.02-.14-.02-.17-.1-.04-.12-.04-.26.02-.38v-.06c0-.07-.06-.12-.12-.1h-.16c-.18 0-.36-.02-.53-.1l-.1-.04c-.1-.05-.22-.08-.33-.08-.1 0-.2.02-.3.08l-.04.03c-.12.08-.26.12-.4.13h-.33c-.15 0-.3.05-.4.13-.13.08-.27.13-.42.16l-.27.04c-.12.03-.25.08-.36.17-.1.1-.24.16-.37.2l-.05.02c-.16.05-.3.15-.4.3l-.12.12c-.07.1-.07.22 0 .32.06.1.18.13.3.1l.15-.06c.08-.03.17 0 .24.04.06.05.15.08.24.07l.25-.03c.14 0 .28 0 .42.04.15.05.28.1.4.2s.25.14.4.16c.15.02.3.05.44.1l.1.02c.1.03.18.1.24.2.05.08.1.2.1.3v.03c0 .12.1.2.2.2h.06c.16 0 .33.02.5.07l.07.03c.1.04.2.1.27.2.08.1.13.2.16.3l.03.14c.03.15.04.3.04.46v.05c0 .1.07.2.18.24.1.02.22.06.33.12l.05.02c.13.08.26.18.36.3l.05.07c.13.15.2.34.2.53v.07c0 .15-.03.3-.08.44-.04.12 0 .26.13.3l.07.05c.15.06.28.17.38.3.1.15.14.32.14.5v.3c-.02.1-.05.18-.1.25s-.05.17 0 .24l.06.1zm-6.4-5.12h-.02c-.04 0-.06.05-.05.1l.04.2c.04.16.06.32.08.48.02.16.1.3.22.4h.04c.15.12.24.3.25.48v.5c-.02.1 0 .2.06.28l.05.05c.1.12.14.26.15.4l.03.55c0 .13-.08.24-.2.26l-.1.02c-.07 0-.1.08-.1.15 0 .08.03.17.06.25v.02c.03.1.04.2.03.3l-.04.27c-.04.2-.1.38-.2.56l-.07.12c-.05.1-.12.16-.2.2-.1.04-.17.12-.2.22l-.08.36c-.05.2-.14.4-.26.6h-.02c-.12.16-.27.3-.45.4l-.12.08-.3.15c-.1.04-.16.13-.18.24l-.05.33c-.03.2-.1.37-.24.5l-.13.15-.15.15L11 21c-.12.14-.3.2-.5.17l-.36-.07-.33-.04h-.09c-.04.04-.05.1-.02.16.07.12.18.2.3.2l.22.04c.1 0 .22.05.32.1.1.07.2.12.32.15h.02c.13.05.27.06.4.05l.15-.02c.17-.02.33 0 .47.06l.12.04c.05.02.13 0 .18-.05.06-.06.12-.1.2-.13l.08-.02c.13-.04.26-.06.4-.06h.08c.12 0 .23.02.33.08l.04.02c.07.03.15 0 .2-.06.03-.07.1-.14.17-.2l.25-.17.16-.1.08-.05c.1-.07.24-.1.36-.1l.36-.03c.14-.02.26-.12.3-.26.04-.15.1-.3.2-.43s.2-.24.3-.34c.13-.1.26-.15.4-.16h.08c.16-.03.28-.18.27-.34v-.02V18.77c.02-.1.06-.23.12-.33l.2-.3.08-.1c.06-.05.1-.12.17-.2l.1-.13c.06-.1.06-.23-.02-.32-.1-.1-.15-.24-.17-.38v-.04c-.02-.16-.02-.33.03-.5v-.05c.05-.13.12-.26.2-.38.08-.1.07-.24-.03-.32l-.17-.15c-.14-.12-.22-.3-.24-.48l-.02-.2c0-.06 0-.13-.02-.2l-.02-.15c-.02-.17-.12-.3-.26-.4l-.07-.02c-.1-.06-.2-.15-.28-.27-.08-.1-.12-.24-.15-.38l-.03-.17c0-.06-.04-.1-.1-.13l-.16-.05-.32-.1c-.1-.02-.2-.1-.27-.17h-.02c-.06-.08-.16-.08-.22-.02l-.1.1c-.02.03-.04.04-.07.03-.06 0-.1-.05-.08-.1.02-.16-.04-.32-.17-.42l-.13-.1-.3-.2c-.08-.03-.2 0-.24.1l-.04.06c0 .02-.03.03-.04.04-.04 0-.1 0-.1-.05l-.03-.05c-.03-.06-.1-.1-.16-.12zm-1.2 1l-.05-.05c-.05-.04-.1-.03-.15.02-.07.12-.13.25-.16.38v.02c-.03.13-.15.22-.27.2h-.1-.02c-.14 0-.25.12-.25.26 0 .18-.06.36-.17.5l-.06.06c-.1.13-.25.22-.4.27l-.08.02c-.1.03-.18.1-.2.22 0 .1-.06.2-.14.28l-.1.08c-.12.13-.3.2-.48.22l-.5.05c-.16 0-.3.1-.4.25-.1.15-.25.25-.4.27l-.22.02c-.16.02-.33.02-.5-.02l-.1-.02-.27-.07c-.1-.03-.18 0-.24.07l-.1.13c-.13.15-.32.22-.5.2l-.65-.08c-.1 0-.18-.05-.27-.1-.1-.06-.17-.13-.24-.2l-.25-.3c-.03-.02-.08-.03-.13-.02l-.14.06-.56.14c-.1.03-.23 0-.33-.06-.1-.08-.22-.1-.34-.1H3.2c-.12.03-.2.16-.16.28l.04.2c.03.1.02.22-.03.32s-.04.2.03.3l.06.08c.08.12.2.22.3.32.1.1.2.2.28.33l.15.27c.08.14.2.22.36.22.15 0 .3.05.42.15l.3.28c.08.07.2.08.28.02l.05-.02c.06 0 .1.04.1.1v.05c0 .13.1.25.23.3l.45.1c.16.05.32.1.47.2h.08c.08 0 .15-.07.14-.16v-.35c0-.1.04-.2.12-.24l.05-.02c.05.02.1.06.08.1v.17c0 .13.04.25.13.34.1.1.23.12.34.08.12-.05.24-.06.37-.05l.37.02c.18.02.35 0 .5-.07.18-.06.33-.14.47-.25l.06-.04.3-.27c.1-.1.23-.15.35-.15h.4c.2-.02.38-.2.4-.4l.04-.2c0-.13.06-.25.15-.35.1-.1.2-.16.3-.2l.12-.05c.17-.07.3-.22.36-.4l.06-.24c.05-.2.15-.4.3-.53l.02-.02c.12-.1.14-.3.06-.44l-.03-.07c-.07-.1-.08-.25-.03-.38.05-.14.1-.26.18-.38l.1-.14c.04-.08.04-.2-.02-.27-.06-.08-.1-.18-.1-.28l-.02-.14v-.34c.02-.1 0-.23-.03-.33l-.04-.12zm-1.43-.76v-.03c0-.1-.06-.16-.14-.16h-.26c-.1.02-.2.02-.28 0h-.45c-.23 0-.45-.04-.67-.1l-.24-.06-.2-.06-.45-.15c-.24-.07-.42-.23-.53-.45l-.05-.1c-.07-.15-.22-.23-.37-.2-.17 0-.34 0-.5-.08l-.12-.05c-.23-.1-.4-.3-.4-.57l-.04-.27c-.03-.14-.12-.27-.24-.32-.14-.06-.27-.14-.4-.23l-.05-.03c-.15-.12-.28-.28-.35-.47l-.02-.06c-.05-.16-.06-.33-.02-.5l.02-.06c.04-.13.05-.26.05-.4 0-.12-.05-.24-.14-.33l-.14-.13c-.16-.13-.26-.32-.27-.53-.02-.22-.02-.43.02-.64V6.3v-.03c0-.12-.1-.2-.2-.2H4.2c-.13 0-.24.08-.3.2-.05.14-.13.25-.22.36l-.04.05-.2.2-.1.1c-.1.1-.16.25-.18.4-.02.15-.06.3-.12.44l-.02.05c-.05.12-.13.23-.23.3-.1.08-.17.2-.17.32l-.02.46c0 .2-.03.4-.1.6l-.02.08c-.05.13 0 .27.12.33l.42.18.04.02c.03 0 .04.02.05.05.03.04 0 .1-.03.1l-.1.05c-.06.02-.1.08-.12.15l-.02.1v.02l-.1.56c-.02.08-.02.17-.02.26 0 .08.05.15.12.18l.22.1c.1.06.22.13.3.2l.1.08c.03.04.08.08.12.1l.04.04c.07.06.12.14.14.23l.1.45c0 .12.1.22.2.25l.16.05s.03 0 .05.02l.2.06c.16.05.3.14.42.26.12.1.24.23.34.37l.04.04c.08.1.2.15.32.12s.25-.04.38-.04h.15c.1 0 .23.03.34.1.1.06.23.1.35.15h.03c.12.05.25.03.35-.04.1-.08.23-.12.36-.12l.47.03c.1 0 .2-.02.25-.1h.02l.17-.16.05-.05c.08-.1.2-.14.32-.15h.45c.12 0 .23-.1.28-.2.05-.1.15-.18.27-.2l.2-.04c.08 0 .15-.07.18-.16.03-.1.08-.18.15-.24l.16-.16c.1-.1.15-.2.17-.32z">
     </path>
-</svg></a></div>
-</footer>
+</svg>
+    </a>
+</div>
+
+    </footer>
 </article>
 
 <article class="post-entry"> 
-
   <header class="entry-header">
-    <h2>
-      Two Knights
-    </h2>
+    <h2>Roman Numerals Helper</h2>
+  </header>
+  <section class="entry-content">
+    <p>The problem Source: Codewars Create a RomanNumerals class that can convert a roman numeral to and from an integer value.
+#include &lt;string&gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.
+Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero....</p>
+  </section>
+  <footer class="entry-footer">July 25, 2021</footer>
+  <a class="entry-link" aria-label="post link to Roman Numerals Helper" href="https://yurukute.github.io/Blog/en/post/romannumeral/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Two Knights</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: CSES Your task is to count for $k=1,2,…,n$ the number of ways two knights can be placed on a $k \times k$ chessboard so that they do not attack each other.
 For example:
 Input: 8 Output: 0 6 28 96 252 550 1056 1848 Solution Idea The most reachable method is for each of the first knight’s position, i’m looking for pertinent positions to place the second knight and sum them all....</p>
   </section>
-  <footer class="entry-footer">May 27, 2021
-</footer>
+  <footer class="entry-footer">May 27, 2021</footer>
   <a class="entry-link" aria-label="post link to Two Knights" href="https://yurukute.github.io/Blog/en/post/2knights/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Longest increasing subsequence
-    </h2>
+    <h2>Longest increasing subsequence</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source:
@@ -218,47 +248,38 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Solution Idea The most reachable me
 An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\
 &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ For example:...</p>
   </section>
-  <footer class="entry-footer">March 9, 2021
-</footer>
+  <footer class="entry-footer">March 9, 2021</footer>
   <a class="entry-link" aria-label="post link to Longest increasing subsequence" href="https://yurukute.github.io/Blog/en/post/lis/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Longest common subsequence
-    </h2>
+    <h2>Longest common subsequence</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
  Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters....</p>
   </section>
-  <footer class="entry-footer">February 17, 2021
-</footer>
+  <footer class="entry-footer">February 17, 2021</footer>
   <a class="entry-link" aria-label="post link to Longest common subsequence" href="https://yurukute.github.io/Blog/en/post/lcs/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Explosive Sum
-    </h2>
+    <h2>Explosive Sum</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars How many ways can you make the sum of a number?
 From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
  Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i’ll use dynamic programing instead (Oω&lt;)☆....</p>
   </section>
-  <footer class="entry-footer">February 15, 2021
-</footer>
+  <footer class="entry-footer">February 15, 2021</footer>
   <a class="entry-link" aria-label="post link to Explosive Sum" href="https://yurukute.github.io/Blog/en/post/explosivesum/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Fibonacci
-    </h2>
+    <h2>Fibonacci</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9&#43;7$. So, you need to find $F_n$ in the sequence defined as $$
@@ -268,32 +289,26 @@ F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Example:
 Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:
 int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n &lt;= 5....</p>
   </section>
-  <footer class="entry-footer">February 12, 2021
-</footer>
+  <footer class="entry-footer">February 12, 2021</footer>
   <a class="entry-link" aria-label="post link to Fibonacci" href="https://yurukute.github.io/Blog/en/post/fibonacci/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Total ways make change
-    </h2>
+    <h2>Total ways make change</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Leetcode , Codewars You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We’ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change....</p>
   </section>
-  <footer class="entry-footer">February 9, 2021
-</footer>
+  <footer class="entry-footer">February 9, 2021</footer>
   <a class="entry-link" aria-label="post link to Total ways make change" href="https://yurukute.github.io/Blog/en/post/countchange/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Fewest coins make change
-    </h2>
+    <h2>Fewest coins make change</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Leetcode You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
@@ -301,70 +316,46 @@ You may assume that you have an infinite number of each kind of coin.
 Examples:
 Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11....</p>
   </section>
-  <footer class="entry-footer">February 8, 2021
-</footer>
+  <footer class="entry-footer">February 8, 2021</footer>
   <a class="entry-link" aria-label="post link to Fewest coins make change" href="https://yurukute.github.io/Blog/en/post/coinchange/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Bitwise operators&#39; application
-    </h2>
+    <h2>Bitwise operators&#39; application</h2>
   </header>
   <section class="entry-content">
     <p>Summary    Name Operator Description      AND &amp; Both bits are 1, return 1. Otherwise, return 0.   OR \ One of both bit is 1, return 1. Otherwise, return 0.   XOR ^ Two bits are different return 1. Otherwise, return 0.   NOT ~ Flip bit, 0 becomes 1, 1 becomes 0    Shift left &lt;&lt; Shifts all the bits to the left    Right left &gt;&gt; Shifts all the bits to the right     Application Integer Change bit //Set nth bit x |= (1 &lt;&lt; n); //Set the right-most 0 bit to 1 x |= (x&#43;1); //Unset nth bit x &amp;= ~(1 &lt;&lt; n); //Set the right-most 1 bit to 0 x &amp;= (x-1); //Toggle nth bit x ^= (1 &lt;&lt; n); //Get the mth bit of n (x &gt;&gt; n) &amp; 1; //Swap Adjacent bits ((x &amp; 10101010) &gt;&gt; 1) | ((x &amp; 01010101) &lt;&lt; 1); Multiplication / Division x by $2^n$ x &lt;&lt; n //multiplication x &gt;&gt; n //division Round up to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; Round down to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; x = x &gt;&gt; 1; //the same with the code above but added this line Floor x x &gt;&gt; 0; 6....</p>
   </section>
-  <footer class="entry-footer">January 29, 2021
-</footer>
+  <footer class="entry-footer">January 29, 2021</footer>
   <a class="entry-link" aria-label="post link to Bitwise operators&#39; application" href="https://yurukute.github.io/Blog/en/post/bitwise/"></a>
 </article>
-<article class="post-entry"> 
 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>
-      Factorial decomposition
-    </h2>
+    <h2>Factorial decomposition</h2>
   </header>
   <section class="entry-content">
     <p>Problem Source: Codewars The aim of the kata is to decompose $n!$(factorial n) into its prime factors. For example:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!...</p>
   </section>
-  <footer class="entry-footer">January 26, 2021
-</footer>
+  <footer class="entry-footer">January 26, 2021</footer>
   <a class="entry-link" aria-label="post link to Factorial decomposition" href="https://yurukute.github.io/Blog/en/post/factorialdecomp/"></a>
-</article>
-<article class="post-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Primes in numbers
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Problem Codewars Given a positive number n &gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
-($p_1$**$n_1$)($p_2$**$n_2$)…($p_k$**$n_k$)
-where
- a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
-Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor....</p>
-  </section>
-  <footer class="entry-footer">January 23, 2021
-</footer>
-  <a class="entry-link" aria-label="post link to Primes in numbers" href="https://yurukute.github.io/Blog/en/post/primesinnumbers/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="https://yurukute.github.io/Blog/en/page/2/">Next Page »</a>
   </nav>
 </footer>
-
-    </main><footer class="footer">
+    </main>
+    <footer class="footer">
     <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
     <button class="top-link" id="top-link" type="button" accesskey="g">
@@ -374,14 +365,13 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
     </button>
 </a>
 
-
-
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
-        }
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
     }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -400,6 +390,9 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
             }
         });
     });
+
+</script>
+<script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -410,10 +403,6 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
             mybutton.style.opacity = "0";
         }
     };
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
-    }
 
 </script>
 <script>
@@ -428,7 +417,6 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
     })
 
 </script>
-
 </body>
 
 </html>
