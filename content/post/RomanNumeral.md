@@ -13,6 +13,7 @@ Nguồn: [Codewars](https://www.codewars.com/kata/51b66044bce5799a7f000003)
 Cho lớp `RomanNumerals` để chuyển đổi các chữ số la mã về số nguyên và ngược lại. 
 ```cpp
 #include <string>
+#include <vector>
 
 class RomanHelper{
 public:
@@ -62,16 +63,15 @@ std::string to_roman(unsigned int n){
 Như đã biết, mỗi kí tự số la mã đại diện cho một số nguyên, nên trước hết mình sẽ đưa từng kí tự về số nguyên mà nó đại diện.
 ```cpp
 int from_roman(std::string rn){
-    int size = rn.size();
-    int a[size];
-    for(int i = 0; i < size; i++){
-        if (rn[i] == 'I') a[i] = 1;
-        if (rn[i] == 'V') a[i] = 5;
-        if (rn[i] == 'X') a[i] = 10;
-        if (rn[i] == 'L') a[i] = 50;
-        if (rn[i] == 'C') a[i] = 100;
-        if (rn[i] == 'D') a[i] = 500;
-        if (rn[i] == 'M') a[i] = 1000;
+    std::vector<int> a;
+    for(char i : rn){
+        if (i == 'I') a.push_back(1);
+        if (i == 'V') a.push_back(5);
+        if (i == 'X') a.push_back(10);
+        if (i == 'L') a.push_back(50);
+        if (i == 'C') a.push_back(100);
+        if (i == 'D') a.push_back(500);
+        if (i == 'M') a.push_back(1000);
     }
     ...
 }
@@ -80,7 +80,7 @@ Mục đích của việc này là để tiện cho việc so sánh. Để ý r�
 ```cpp
 int from_roman(std::string rn){
     ...
-    int res = a[size - 1];
+    int res = a.back(), size = a.size();
     for(int  i = 0; i < size-1; i++)
         if(a[i] >= a[i+1])
             res += a[i];
