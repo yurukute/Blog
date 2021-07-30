@@ -63,15 +63,18 @@ std::string to_roman(unsigned int n){
 Như đã biết, mỗi kí tự số la mã đại diện cho một số nguyên, nên trước hết mình sẽ đưa từng kí tự về số nguyên mà nó đại diện.
 ```cpp
 int from_roman(std::string rn){
+    int from_roman(std::string rn){
     std::vector<int> a;
     for(char i : rn){
-        if (i == 'I') a.push_back(1);
-        if (i == 'V') a.push_back(5);
-        if (i == 'X') a.push_back(10);
-        if (i == 'L') a.push_back(50);
-        if (i == 'C') a.push_back(100);
-        if (i == 'D') a.push_back(500);
-        if (i == 'M') a.push_back(1000);
+        switch(i){
+            case 'I': a.push_back(1);    break;
+            case 'V': a.push_back(5);    break;
+            case 'X': a.push_back(10);   break;
+            case 'L': a.push_back(50);   break;
+            case 'C': a.push_back(100);  break;
+            case 'D': a.push_back(500);  break;
+            case 'M': a.push_back(1000); break;
+        }
     }
     ...
 }
