@@ -5,7 +5,17 @@
     <link>https://yurukute.github.io/Blog/en/post/</link>
     <description>Recent content in Posts on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 25 Jul 2021 18:51:10 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jul 2021 09:40:22 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sum of intervals</title>
+      <link>https://yurukute.github.io/Blog/en/post/sumofintervals/</link>
+      <pubDate>Tue, 27 Jul 2021 09:40:22 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/sumofintervals/</guid>
+      <description>Problem Source: Codewars Write a function called sumIntervals/sum_intervals() that accepts an array of intervals, and returns the sum of all the interval lengths. Overlapping intervals should only be counted once.
+Intervals Intervals are represented by a pair of integers in the form of an array. The first value of the interval will always be less than the second value. Interval example: [1, 5] is an interval from 1 to 5. The length of this interval is 4.</description>
+    </item>
+    
     <item>
       <title>Roman Numerals Helper</title>
       <link>https://yurukute.github.io/Blog/en/post/romannumeral/</link>
@@ -13,7 +23,7 @@
       
       <guid>https://yurukute.github.io/Blog/en/post/romannumeral/</guid>
       <description>The problem Source: Codewars Create a RomanNumerals class that can convert a roman numeral to and from an integer value.
-#include &amp;lt;string&amp;gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.
+#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.
 Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero.</description>
     </item>
     

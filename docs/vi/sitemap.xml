@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yurukute.github.io/Blog/</loc>
-    <lastmod>2021-07-25T18:51:05+07:00</lastmod>
+    <lastmod>2021-07-27T09:40:22+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,32 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/</loc>
+    <lastmod>2021-07-27T09:40:22+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/sumofintervals/</loc>
+    <lastmod>2021-07-27T09:40:22+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/sumofintervals/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/sumofintervals/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/romannumeral/</loc>
@@ -26,19 +52,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/post/romannumeral/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/post/</loc>
-    <lastmod>2021-07-25T18:51:05+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/2knights/</loc>

@@ -214,11 +214,24 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Tổng các khoảng thời gian</h2>
+  </header>
+  <section class="entry-content">
+    <p>Bài toán Nguồn: Codewars Đọc hiểu Viết hàm tên sumIntervals/sum_intervals() nhận vào 1 mảng các cặp số nguyên biểu thị thời điểm đầu và cuối của một khoảng thời gian. Nhiệm vụ của mình là tính tổng độ dài của các khoảng ấy. Các khoảng lồng nhau như [1, 4] với [3, 5] thì tính là [1, 5] luôn o.o)/
+Ví dụ
+sum_intervals( { {1,2}, {6, 10}, {11, 15} } ); // =&gt; 9  sum_intervals( { {1,4}, {7, 10}, {3, 5} } ); // =&gt; 7  sum_intervals( { {1,5}, {10, 20}, {1, 6}, {16, 19}, {5, 11} } ); // =&gt; 19 Lời giải Để ý rằng, nếu một khoảng thời gian có thời điểm đầu nhỏ hơn thời điểm cuối của khoảng thời gian liền trước thì chúng đang lồng nhau....</p>
+  </section>
+  <footer class="entry-footer">27 Tháng 7, 2021</footer>
+  <a class="entry-link" aria-label="post link to Tổng các khoảng thời gian" href="https://yurukute.github.io/Blog/post/sumofintervals/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Chuyển đổi số la mã</h2>
   </header>
   <section class="entry-content">
     <p>Bài toán Nguồn: Codewars Đọc hiểu Cho lớp RomanNumerals để chuyển đổi các chữ số la mã về số nguyên và ngược lại.
-#include &lt;string&gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:
+#include &lt;string&gt;#include &lt;vector&gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:
   Chữ số La Mã hiện đại được viết bằng cách thể hiện từng chữ số riêng biệt bắt đầu bằng chữ số tận cùng bên trái và bỏ qua bất kỳ chữ số nào có giá trị bằng 0....</p>
   </section>
   <footer class="entry-footer">25 Tháng 7, 2021</footer>
@@ -325,18 +338,6 @@ Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Inpu
   </section>
   <footer class="entry-footer">29 Tháng 1, 2021</footer>
   <a class="entry-link" aria-label="post link to Ứng dụng của các phép thao tác bit" href="https://yurukute.github.io/Blog/post/bitwise/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Phân tích thừa số nguyên tố của n!</h2>
-  </header>
-  <section class="entry-content">
-    <p>Bài toán Nguồn: Codewars Cho một số $n$ được nhập vào, việc của tụi mình là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
-Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá trị của $n$ có thể lên tới 4000, tất nhiên, 4000! sẽ trở thành 1 con số không hề nhỏ, nó có hơn 12000 chữ số lận á!...</p>
-  </section>
-  <footer class="entry-footer">26 Tháng 1, 2021</footer>
-  <a class="entry-link" aria-label="post link to Phân tích thừa số nguyên tố của n!" href="https://yurukute.github.io/Blog/post/factorialdecomp/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
