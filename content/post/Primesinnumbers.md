@@ -22,7 +22,7 @@ Input:  n = 86240
 Output: (2**5)(5)(7**2)
 ```
 ## Lời giải 
-**Thông thường**, để phân tích ra thừa số nguyên tố, mỉnh đem chia số đó cho ước nguyên tố nhỏ nhất của nó. Cứ tiếp tục như vậy cho đến khi thương = 1.
+Để phân tích ra thừa số nguyên tố, mỉnh đem chia số đó cho ước nguyên tố nhỏ nhất của nó. Cứ tiếp tục như vậy cho đến khi thương = 1.
 
 Ví dụ: n = 160
 |N  | I |
@@ -38,14 +38,15 @@ Ví dụ: n = 160
 Với ý tưởng trên, mỉnh có đoạn code sau:
 ```cpp
 std::vector<int> fact;
-    int power = 0;
-    for(int i = 2; i*i < lst; i++){
-        while(lst % i == 0){
-            power++;
-            lst /= i;
-        }
+int power = 0;
+for(int i = 2; i*i < lst; i++){
+    while(lst % i == 0){
+		power++;
+		lst /= i;
+	}
+}
 ```
-**Đối với code**, mỉnh không cần phải tìm trước các số nguyên tố mà chỉ cần 1 dòng `for` từ 2 đến $\sqrt{n}$ để xét tính chia hết là đủ. Bởi vì thương sẽ chia mãi cho đến khi không thể chia hết, đồng nghĩa với việc đã chia cả các hợp số nên không cần băn khoăn nữa UwU. Bây giờ chỉnh sửa lại một tí cho output là xong
+Mỉnh không cần phải tìm trước các số nguyên tố mà chỉ cần 1 dòng `for` từ 2 đến $\sqrt{n}$ để xét tính chia hết là đủ. Bởi vì thương sẽ chia mãi cho đến khi không thể chia hết, đồng nghĩa với việc đã chia cả các hợp số nên không cần băn khoăn nữa UwU. Kết thúc vòng lặp thì `lst` là thừa số cuối cùng, nó có thể là 1 hoặc một số nguyên tố. Vì vậy, nếu nó khác 1 ta cần thêm vào chuỗi kết quả.
 ```cpp
 std::string res = "";
 std::vector<int> fact;

@@ -39,14 +39,15 @@ For example: n = 160
 The idea give us code like this: 
 ```cpp
 std::vector<int> fact;
-    int power = 0;
-    for(int i = 2; i*i < lst; i++){
-        while(lst % i == 0){
-            power++;
-            lst /= i;
-        }
+int power = 0;
+for(int i = 2; i*i < lst; i++){
+	while(lst % i == 0){
+		power++;
+		lst /= i;
+	}
+}
 ```
-In coding, we don't need to find those prime factors before. Just a `for` loop from 2 to $\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means. we divided the composite numbers UwU. Now, edit the code a little bit for output
+In coding, we don't need to find those prime factors before. Just a `for` loop from 2 to $\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means, we divided the composite numbers UwU. After the loop finished, `lst`, the remain factor, would be either 1 or a prime number. Thus, add it to the result string if it is not 1.
 ```cpp
 std::string res = "";
 std::vector<int> fact;

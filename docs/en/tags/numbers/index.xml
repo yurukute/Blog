@@ -5,7 +5,16 @@
     <link>https://yurukute.github.io/Blog/en/tags/numbers/</link>
     <description>Recent content in Numbers on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 23 Jan 2021 20:46:09 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/numbers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Sep 2021 05:23:34 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/numbers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Carmichael function</title>
+      <link>https://yurukute.github.io/Blog/en/post/carmichael/</link>
+      <pubDate>Sat, 04 Sep 2021 05:23:34 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/carmichael/</guid>
+      <description>Problem Source: Codewars In number theory, the Carmichael function of a positive integer $n$, denoted $\lambda(n)$, is defined as the smallest positive integer m such that $$a^m \equiv 1 \mod n$$ for every integer $a \leq n$ that is coprime to $n$. The Carmichael function is also known as the reduced totient function (as it is linked to Euler Totient function) or the least universal exponent function. The Carmichael function is important in number theory.</description>
+    </item>
+    
     <item>
       <title>Primes in numbers</title>
       <link>https://yurukute.github.io/Blog/en/post/primesinnumbers/</link>

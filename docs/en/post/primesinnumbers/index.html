@@ -24,7 +24,7 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.86.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/primesinnumbers/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/primesinnumbers/" />
 <meta property="og:title" content="Primes in numbers" />
@@ -77,8 +77,8 @@ Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to cal
   "keywords": [
     "Numbers"
   ],
-  "articleBody": "Problem Codewars Given a positive number n  1 find the prime factor decomposition of n. The result will be a string with the following form:\n($p_1$**$n_1$)($p_2$**$n_2$)…($p_k$**$n_k$)\nwhere\n a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:\nInput: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor. We’ll repeat the steps until reaching 1.\nFor example: n = 160\n   N I     160 2   80 2   40 2   20 2   10 2   5 5   1     The idea give us code like this:\nstd::vectorint fact; int power = 0; for(int i = 2; i*i  lst; i++){ while(lst % i == 0){ power++; lst /= i; } In coding, we don’t need to find those prime factors before. Just a for loop from 2 to $\\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means. we divided the composite numbers UwU. Now, edit the code a little bit for output\nstd::string res = \"\"; std::vectorint fact; int power = 0; for(int i = 2; i*i  lst; i++){ while(lst % i == 0){ power++; lst /= i; } if(power == 0) continue; res += \"(\" + std::to_string(i) + (power == 1 ? \"\" : (\"**\" + std::to_string(power))) + \")\"; power = 0; } if(lst != 1) res += \"(\" + std::to_string(lst) + \")\"; return res; Thank you for reading.\nRelated post Factorial decomp ",
-  "wordCount" : "257",
+  "articleBody": "Problem Codewars Given a positive number n  1 find the prime factor decomposition of n. The result will be a string with the following form:\n($p_1$**$n_1$)($p_2$**$n_2$)…($p_k$**$n_k$)\nwhere\n a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:\nInput: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor. We’ll repeat the steps until reaching 1.\nFor example: n = 160\n   N I     160 2   80 2   40 2   20 2   10 2   5 5   1     The idea give us code like this:\nstd::vectorint fact; int power = 0; for(int i = 2; i*i  lst; i++){ while(lst % i == 0){ power++; lst /= i; } } In coding, we don’t need to find those prime factors before. Just a for loop from 2 to $\\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means, we divided the composite numbers UwU. After the loop finished, lst, the remain factor, would be either 1 or a prime number. Thus, add it to the result string if it is not 1.\nstd::string res = \"\"; std::vectorint fact; int power = 0; for(int i = 2; i*i  lst; i++){ while(lst % i == 0){ power++; lst /= i; } if(power == 0) continue; res += \"(\" + std::to_string(i) + (power == 1 ? \"\" : (\"**\" + std::to_string(power))) + \")\"; power = 0; } if(lst != 1) res += \"(\" + std::to_string(lst) + \")\"; return res; Thank you for reading.\nRelated post Factorial decomp ",
+  "wordCount" : "277",
   "inLanguage": "en",
   "datePublished": "2021-01-23T20:46:09+07:00",
   "dateModified": "2021-01-23T20:46:09+07:00",
@@ -295,13 +295,14 @@ Output: (2**5)(5)(7**2)(11)
 </table>
 <p>The idea give us code like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> fact;
-    <span style="color:#66d9ef">int</span> power <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">*</span>i <span style="color:#f92672">&lt;</span> lst; i<span style="color:#f92672">++</span>){
-        <span style="color:#66d9ef">while</span>(lst <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
-            power<span style="color:#f92672">++</span>;
-            lst <span style="color:#f92672">/=</span> i;
-        }
-</code></pre></div><p>In coding, we don&rsquo;t need to find those prime factors before. Just a <code>for</code> loop from 2 to $\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means. we divided the composite numbers UwU. Now, edit the code a little bit for output</p>
+<span style="color:#66d9ef">int</span> power <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">*</span>i <span style="color:#f92672">&lt;</span> lst; i<span style="color:#f92672">++</span>){
+	<span style="color:#66d9ef">while</span>(lst <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+		power<span style="color:#f92672">++</span>;
+		lst <span style="color:#f92672">/=</span> i;
+	}
+}
+</code></pre></div><p>In coding, we don&rsquo;t need to find those prime factors before. Just a <code>for</code> loop from 2 to $\sqrt{n}$ would be enough. Because we repeat the division until the quotient is not divisible, that means, we divided the composite numbers UwU. After the loop finished, <code>lst</code>, the remain factor, would be either 1 or a prime number. Thus, add it to the result string if it is not 1.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">std<span style="color:#f92672">::</span>string res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
 std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> fact;
 <span style="color:#66d9ef">int</span> power <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
