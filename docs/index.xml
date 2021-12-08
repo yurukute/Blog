@@ -5,7 +5,18 @@
     <link>https://yurukute.github.io/Blog/</link>
     <description>Recent content on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Sep 2021 05:23:34 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Dec 2021 17:49:22 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Số phân số tối giản với mẫu số d</title>
+      <link>https://yurukute.github.io/Blog/post/reducedfractions/</link>
+      <pubDate>Wed, 08 Dec 2021 17:49:22 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/reducedfractions/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Với $n$ là tử số và $d$ là mẫu số, phân số được định nghĩa là tối giản nếu và chỉ nếu $GCD(n,d) = 1$.
+Ví dụ, $\displaystyle\frac{5}{16}$ là phân số tối giản, trong khi $\displaystyle\frac{6}{16}$ không phải vì cả 6 và 16 đều chia hết cho 2 nên phân số rút gọn thành $\displaystyle\frac{3}{8}$
+Cho một số $d$, hỏi có bao nhiêu phân số thực sự (phân số có tử bé hơn mẫu) tối giản nếu dùng $d$ làm mẫu số?</description>
+    </item>
+    
     <item>
       <title>Hàm Carmichael</title>
       <link>https://yurukute.github.io/Blog/post/carmichael/</link>

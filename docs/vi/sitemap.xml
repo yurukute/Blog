@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yurukute.github.io/Blog/</loc>
-    <lastmod>2021-09-04T05:23:34+07:00</lastmod>
+    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,48 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/</loc>
+    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/</loc>
+    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/reducedfractions/</loc>
+    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/reducedfractions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/reducedfractions/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/tags/</loc>
+    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/carmichael/</loc>
@@ -26,35 +68,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/post/carmichael/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/post/</loc>
-    <lastmod>2021-09-04T05:23:34+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/</loc>
-    <lastmod>2021-09-04T05:23:34+07:00</lastmod>
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/tags/</loc>
-    <lastmod>2021-09-04T05:23:34+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/sumofintervals/</loc>

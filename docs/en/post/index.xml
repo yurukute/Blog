@@ -5,7 +5,18 @@
     <link>https://yurukute.github.io/Blog/en/post/</link>
     <description>Recent content in Posts on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Sep 2021 05:23:34 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Dec 2021 17:49:22 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Number of reduced fractions with denominator d</title>
+      <link>https://yurukute.github.io/Blog/en/post/reducedfractions/</link>
+      <pubDate>Wed, 08 Dec 2021 17:49:22 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/reducedfractions/</guid>
+      <description>Problem If n is the numerator and d the denominator of a fraction, that fraction is defined a reduced fraction if and only if GCD(n,d)==1.
+For example $\displaystyle\frac{5}{16}$ is a reduced fraction, while $\displaystyle\frac{5}{16}$ is not, as both 6 and 16 are divisible by 2, thus the fraction can be reduced to $\displaystyle\frac{3}{8}$.
+Now, if you consider a given number d, how many reduced fractions can be built using d as a denominator?</description>
+    </item>
+    
     <item>
       <title>Carmichael function</title>
       <link>https://yurukute.github.io/Blog/en/post/carmichael/</link>
