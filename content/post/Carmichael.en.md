@@ -59,7 +59,7 @@ You have to code `Carmichael` function, that take an integer $1 ≤ n$ as input 
 Input range: $1 ≤ n ≤ 1e10$
 ## Solution
 Euler Totient function of $n = p_1^{w_1} \times p_2^{w_2} \times...\times p_k^{w_n}$ is calculated by formula:
-$$ \phi(n) = n \times (1 - \frac{1}{p_1}) \times (1 - \frac{1}{p_2}) \times...\times 1 - \frac{1}{p_k} $$
+$$ \phi(n) = n \times (1 - \frac{1}{p_1}) \times (1 - \frac{1}{p_2}) \times...\times (1 - \frac{1}{p_k}) $$
 
 Given $n = p^w$, the fomula can be rewritten:
 $$ \phi(n) = p^w \times (1 - \frac{1}{p}) = p^{w-1} \times (p-1)$$

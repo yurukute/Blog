@@ -8,10 +8,10 @@
 <title>Dãy con tăng đơn điệu dài nhất | Blog của Noob</title>
 <meta name="keywords" content="Quy hoạch động, Tìm kiếm nhị phân" />
 <meta name="description" content="Bài toán Nguồn:
- Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\">
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\ &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ Ví dụ:">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/post/lis/" />
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.54f6c9d466536685c178d3731e598fa709615953fd7c0ece43b065e7a8b7c6d1.css" integrity="sha256-VPbJ1GZTZoXBeNNzHlmPpwlhWVP9fA7OQ7Bl56i3xtE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
@@ -21,12 +21,73 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.89.4" />
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/lis/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/lis/" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
 <meta property="og:title" content="Dãy con tăng đơn điệu dài nhất" />
 <meta property="og:description" content="Bài toán Nguồn:
- Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\" />
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\ &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ Ví dụ:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/post/lis/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-03-09T19:44:16&#43;07:00" />
@@ -35,7 +96,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dãy con tăng đơn điệu dài nhất"/>
 <meta name="twitter:description" content="Bài toán Nguồn:
- Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\"/>
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\ &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ Ví dụ:"/>
 
 
 <script type="application/ld+json">
@@ -64,11 +125,11 @@
   "@type": "BlogPosting",
   "headline": "Dãy con tăng đơn điệu dài nhất",
   "name": "Dãy con tăng đơn điệu dài nhất",
-  "description": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \\begin{align} \u0026amp;i_1 \u0026lt; i_2 \u0026lt; \\dots \u0026lt; i_k,\\\\\\",
+  "description": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \\begin{align} \u0026amp;i_1 \u0026lt; i_2 \u0026lt; \\dots \u0026lt; i_k,\\\\\\ \u0026amp;nums[i_1] \u0026lt; nums[i_2] \u0026lt; \\dots \u0026lt; nums[i_k] \\end{align} $$ Ví dụ:",
   "keywords": [
     "Quy hoạch động", "Tìm kiếm nhị phân"
   ],
-  "articleBody": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \\begin{align} \u0026i_1 Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Lời giải Vét cạn Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.\nQuy hoạch động $O(n^2)$ Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với nums = {0,1,0,3,2,3}, các bài toán con mà mình cần giải quyết lần lượt là:\nTìm dãy con tăng đơn điệu dài nhất của:\n[0-0] {0}\n[0-1] {0, 1}\n[0-2] {0, 1, 0}\n[0-3] {0, 1, 0, 3}\n[0-4] {0, 1, 0, 3, 2}\n[0-5] {0, 1, 0, 3, 2, 3} $\\Rightarrow$ Bài toán đang giải.\nVậy, bảng quy hoạch động d của mình sẽ gồm 5 ô mà mỗi ô tượng trưng cho 1 bài toán con. Giả sử mình đã có đáp án cho các ô 0, 1, 2 và cần tìm đáp án cho ô thứ 3, khi đó, mình cần hỏi bản thân 3 câu hỏi:\n Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[0]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[1]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[2]$ hay không?  Và nếu câu trà lời là có (tức là $nums[3]  nums[i]$), mình sẽ lựa chọn xem có nên hay không nên việc thêm $nums[3]$ vào nếu đáp án ở ô $nums[3]$ hiện tại bé hơn / lớn hơn cái tìm được.\nKhái quát hơn: $$d[i] = \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cơ sở của d sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng đáp án đó lên khi duyệt qua nó.\n   i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 1 1 1 1 1    Vậy lúc này, công thức sẽ trở thành $$d[i] = \\max\\left(1, \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cuối cùng, đáp án chính là ô mang giá trị lớn nhất trong d.\nint lis(std::vectorint\u0026 nums){ int n = nums.size(), max = 1; std::vectorint lis(n,1); for(int i = 1; i  n; i++){ for(int j = 0; j  i; j++) if(nums[j]  nums[i] \u0026\u0026 lis[i]  lis[j]+1) lis[i] = lis[j] + 1; if(lis[i]  max) max = lis[i]; } return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 2 1 3 3 4 $\\Rightarrow$ đáp án    Quy hoạch động và tìm kiếm nhị phân $O(n\\log n)$ Mình sẽ vẫn sử dùng bảng quy hoạch động d nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.\nCơ sở quy hoạch động là $d[0] = -\\infty$ trong khi các ô còn lại $d[i] = \\infty$\nVậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] int lis(std::vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++) for (int j = 1; j  n; j++) { if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ $-\\infty$ 0 1 2 3 $\\infty$    Mình thấy được rằng:\n d luôn được sắp xếp tăng dần phần tử $nums[i]$ sẽ chỉ cập nhật nhiều nhất một giá trị $d[j]$  Vì vậy, mình có thể tìm phần tử trong d bằng Tìm kiếm nhị phân O($\\log n$). Trên thực tế, mình chỉ đơn giản là tìm phần tử đầu tiên lớn hơn $nums[i]$ và cập nhật nó như cách thực hiện bên trên.\nint lis(std::vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++){ int j = upper_bound(d.begin(), d.end(), a[i]) - d.begin(); if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; Cảm ơn bạn vì đã đọc.\n",
+  "articleBody": "Bài toán Nguồn:\n Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \\begin{align} \u0026i_1 Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Lời giải Vét cạn Đây là phương pháp bần nhất có thể nghĩ: liệt kê hết tất cả các dãy con tăng đơn điệu rồi tìm đâu là dãy con lớn nhất để trả về kết quả. Với độ phức tạp là $O(2^n),$ đây cũng là cách không hiệu quả nhất khi $n$ trở nên lớn.\nQuy hoạch động $O(n^2)$ Để giải bài này, mình chia nó thành các bài toán con và tìm từng kết quả của chúng. Chẳng hạn với nums = {0,1,0,3,2,3}, các bài toán con mà mình cần giải quyết lần lượt là:\nTìm dãy con tăng đơn điệu dài nhất của:\n[0-0] {0}\n[0-1] {0, 1}\n[0-2] {0, 1, 0}\n[0-3] {0, 1, 0, 3}\n[0-4] {0, 1, 0, 3, 2}\n[0-5] {0, 1, 0, 3, 2, 3} $\\Rightarrow$ Bài toán đang giải.\nVậy, bảng quy hoạch động d của mình sẽ gồm 5 ô mà mỗi ô tượng trưng cho 1 bài toán con. Giả sử mình đã có đáp án cho các ô 0, 1, 2 và cần tìm đáp án cho ô thứ 3, khi đó, mình cần hỏi bản thân 3 câu hỏi:\n Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[0]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[1]$ hay không? Liệu mình có thể thêm $nums[3]$ vào dãy con đã tìm ở $d[2]$ hay không?  Và nếu câu trà lời là có (tức là $nums[3]  nums[i]$), mình sẽ lựa chọn xem có nên hay không nên việc thêm $nums[3]$ vào nếu đáp án ở ô $nums[3]$ hiện tại bé hơn / lớn hơn cái tìm được.\nKhái quát hơn: $$d[i] = \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cơ sở của d sẽ là 1 vì với một dãy chỉ có 1 phần tử, 1 chính là đáp áp, việc của mình là làm tăng đáp án đó lên khi duyệt qua nó.\n   i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 1 1 1 1 1    Vậy lúc này, công thức sẽ trở thành $$d[i] = \\max\\left(1, \\max_{\\substack{j = 0 \\dots i-1 \\\\\\ nums[j] Cuối cùng, đáp án chính là ô mang giá trị lớn nhất trong d.\nint lis(std::vectorint\u0026 nums){ int n = nums.size(), max = 1; std::vectorint lis(n,1); for(int i = 1; i  n; i++){ for(int j = 0; j  i; j++) if(nums[j]  nums[i] \u0026\u0026 lis[i]  lis[j]+1) lis[i] = lis[j] + 1; if(lis[i]  max) max = lis[i]; } return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ 1 2 1 3 3 4 $\\Rightarrow$ đáp án    Quy hoạch động và tìm kiếm nhị phân $O(n\\log n)$ Mình sẽ vẫn sử dùng bảng quy hoạch động d nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.\nCơ sở quy hoạch động là $d[0] = -\\infty$ trong khi các ô còn lại $d[i] = \\infty$ Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] int lis(std::vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++) for (int j = 1; j  n; j++) { if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; }    i 0 1 2 3 4 5     $nums$ 0 1 0 3 2 3   $d$ $-\\infty$ 0 1 2 3 $\\infty$    Mình thấy được rằng:\n d luôn được sắp xếp tăng dần phần tử $nums[i]$ sẽ chỉ cập nhật nhiều nhất một giá trị $d[j]$  Vì vậy, mình có thể tìm phần tử trong d bằng Tìm kiếm nhị phân O($\\log n$). Trên thực tế, mình chỉ đơn giản là tìm phần tử đầu tiên lớn hơn $nums[i]$ và cập nhật nó như cách thực hiện bên trên.\nint lis(std::vectorint\u0026 nums) { int n = nums.size(), max = 1; const int INF = 1e9; std::vectorint d(n+1, INF); d[0] = -INF; for (int i = 0; i  n; i++){ int j = upper_bound(d.begin(), d.end(), a[i]) - d.begin(); if (d[j-1]  nums[i] \u0026\u0026 nums[i]  d[j]) d[j] = nums[i]; } for (int i = 0; i  n; i++) if (d[i]  INF) max = i; return max; Cảm ơn bạn vì đã đọc.\n",
   "wordCount" : "855",
   "inLanguage": "vi",
   "datePublished": "2021-03-09T19:44:16+07:00",
@@ -100,43 +161,6 @@
     }
 
 </script>
-<noscript>
-    <style type="text/css">
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: #1d1e20;
-                --entry: #2e2e33;
-                --primary: rgba(255, 255, 255, 0.84);
-                --secondary: rgba(255, 255, 255, 0.56);
-                --tertiary: rgba(255, 255, 255, 0.16);
-                --content: rgba(255, 255, 255, 0.74);
-                --hljs-bg: #2e2e33;
-                --code-bg: #37383e;
-                --border: #333;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
 
 <header class="header">
     <nav class="nav">
@@ -189,29 +213,6 @@
             </li>
         </ul>
     </nav>
-    <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$','$$'], ['\\[', '\\]']],
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-      }
-    };
-  
-    window.addEventListener('load', (event) => {
-        document.querySelectorAll("mjx-container").forEach(function(x){
-          x.parentElement.classList += 'has-jax'})
-      });
-  
-  </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
 </header>
 <main class="main">
 
@@ -221,12 +222,13 @@
     <h1 class="post-title">
       Dãy con tăng đơn điệu dài nhất
     </h1>
-    <div class="post-meta">09 Tháng 3, 2021&nbsp;|&nbsp;
+    <div class="post-meta"><span title='2021-03-09 19:44:16 +0700 +07'>09 Tháng 3, 2021</span>&nbsp;|&nbsp;
 <ul class="i18n_list">Bản dịch:
     <li>
         <a href="https://yurukute.github.io/Blog/en/post/lis/">En</a>
     </li>
 </ul>
+
 </div>
   </header> 
   <div class="post-content"><h2 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
@@ -251,7 +253,7 @@
 Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn
 $$
 \begin{align}
-&amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\<br>
+&amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\
 &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k]
 \end{align}
 $$
@@ -362,7 +364,7 @@ $$d[i] = \max_{\substack{j = 0 \dots i-1 \\\ nums[j] &lt; nums[i]}} \left(d[j] +
 </table>
 <h3 id="quy-hoạch-động-và-tìm-kiếm-nhị-phân-onlog-n">Quy hoạch động và tìm kiếm nhị phân $O(n\log n)$<a hidden class="anchor" aria-hidden="true" href="#quy-hoạch-động-và-tìm-kiếm-nhị-phân-onlog-n">#</a></h3>
 <p>Mình sẽ vẫn sử dùng bảng quy hoạch động <code>d</code> nhưng để lưu lại phần tử kết thúc của dãy con có độ dài là $i$.</p>
-<p>Cơ sở quy hoạch động là $d[0] = -\infty$ trong khi các ô còn lại $d[i] = \infty$<br>
+<p>Cơ sở quy hoạch động là $d[0] = -\infty$ trong khi các ô còn lại $d[i] = \infty$ <br>
 Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ với $l$ lớn nhất mà $d[l] &lt; \infty$</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lis</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> nums.size(), max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
@@ -434,27 +436,30 @@ Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ v�
 
 
   </div>
+
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/">Quy hoạch động</a></li>
       <li><a href="https://yurukute.github.io/Blog/tags/t%C3%ACm-ki%E1%BA%BFm-nh%E1%BB%8B-ph%C3%A2n/">Tìm kiếm nhị phân</a></li>
     </ul>
-    <nav class="paginav">
-      <a class="prev" href="https://yurukute.github.io/Blog/post/2knights/">
-        <span class="title">« Bài mới hơn</span>
-        <br>
-        <span>Hai con mã</span>
-      </a>
-      <a class="next" href="https://yurukute.github.io/Blog/post/lcs/">
-        <span class="title">Bài cũ hơn »</span>
-        <br>
-        <span>Xâu con chung dài nhất</span>
-      </a>
-    </nav>
+<nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/post/2knights/">
+    <span class="title">« Trang trước</span>
+    <br>
+    <span>Hai con mã</span>
+  </a>
+  <a class="next" href="https://yurukute.github.io/Blog/post/lcs/">
+    <span class="title">Trang tiếp theo »</span>
+    <br>
+    <span>Xâu con chung dài nhất</span>
+  </a>
+</nav>
+
   </footer>
 </article>
     </main>
-    <footer class="footer">
+    
+<footer class="footer">
     <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
     <span>
         Powered by
@@ -462,19 +467,19 @@ Vậy độ dài của dãy con tăng đơn điệu dài nhất sẽ là $l$ v�
         <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-            <path d="M12 6H0l6-6z" />
-        </svg>
-    </button>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
 <script>
     let menu = document.getElementById('menu')
-    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-    menu.onscroll = function () {
-        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

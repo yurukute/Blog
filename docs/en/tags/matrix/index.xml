@@ -13,9 +13,7 @@
       
       <guid>https://yurukute.github.io/Blog/en/post/fibonacci/</guid>
       <description>Problem Source: Codeforces Find the $n^th$ Fibonacci number modulo $10^9+7$. So, you need to find $F_n$ in the sequence defined as $$
-\begin{aligned} F_0 &amp;amp; = 0\\
-F_1 &amp;amp; = 1\\
-F_i &amp;amp; = F_{i-1} + F_{i-2} (i &amp;gt;= 2) \end{aligned} $$ Example:
+\begin{aligned} F_0 &amp;amp; = 0\\ F_1 &amp;amp; = 1\\ F_i &amp;amp; = F_{i-1} + F_{i-2} (i &amp;gt;= 2) \end{aligned} $$ Example:
 Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci&amp;rsquo;s difference equation as a recurrence relation, i can write to a program like this:
 int f0 = 0, f1 = 1, fn; for(int i = 2; i &amp;lt;= n; i++){ fn = f0 + f1; f0 = f1; f1 = fn; } return fn; This code&amp;rsquo;s complexity is $O(n)$ which is fine with $n &amp;lt;= 5.</description>
     </item>

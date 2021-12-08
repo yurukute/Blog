@@ -48,7 +48,7 @@ Viết hàm `Carmichael`, nhận vào một số nguyên $n \geq 1$ và trả v�
 Khoảng nhập: $1 \leq n \leq 1e10$
 ## Lời giải
 Hàm phi Euler của $n = p_1^{w_1} \times p_2^{w_2} \times...\times p_k^{w_n}$ được tính bởi công thức sau:
-$$ \phi(n) = n \times (1 - \frac{1}{p_1}) \times (1 - \frac{1}{p_2}) \times...\times 1 - \frac{1}{p_k} $$
+$$ \phi(n) = n \times (1 - \frac{1}{p_1}) \times (1 - \frac{1}{p_2}) \times...\times (1 - \frac{1}{p_k})$$
 
 Cho $n = p^w$ công thức được viết lại như sau:
 $$ \phi(n) = p^w \times (1 - \frac{1}{p}) = p^{w-1} \times (p-1)$$

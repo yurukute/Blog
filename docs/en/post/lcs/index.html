@@ -11,7 +11,7 @@
  Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/post/lcs/" />
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.54f6c9d466536685c178d3731e598fa709615953fd7c0ece43b065e7a8b7c6d1.css" integrity="sha256-VPbJ1GZTZoXBeNNzHlmPpwlhWVP9fA7OQ7Bl56i3xtE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
@@ -21,9 +21,72 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.89.4" />
 <link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/lcs/" />
 <link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/lcs/" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<script async src="https://unpkg.com/mermaid@latest/dist/mermaid.min.js"></script>
+
+
 <meta property="og:title" content="Longest common subsequence" />
 <meta property="og:description" content="Problem Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
  Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters." />
@@ -68,7 +131,7 @@
   "keywords": [
     "Dynamic Programing", "Backtracking"
   ],
-  "articleBody": "Problem Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.\n Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters.\nFor example\nInput: \"ab\" \"azb\" Output: \"ab\" Solution I solved this kata in 2 steps:\n Find subsequence’s length by dynamic programing. Using backtracking on dynamic programing table to find the subsequence.  Step 1: Give lcs(\"aab\", \"azb\") as a function to find the longest common subsequence. Its process can be understood as:\n Considering the last characters from 2 strings, they’re the same:  Lengthening the subsequence by 1. The problem become lcs(\"aa\", \"az\").   Considering the new strings, their last characters are different:  One by one, remove the last character from each string and find its longest common subsequence. max(lcs(\"a\", \"az\"), lcs(\"aa\", \"a\")    graph TD; A(\"lcs(aab, azb)\")--B((1)) A--C(\"lcs(aa, az)\") C--D(\"max(lcs(a, az), lcs(aa, a)\") D--E(\"lcs(a,az)\") D--F(\"lcs(aa, a)\") E--G(\"max(lcs(a, a), lcs(``, az)\") F--H((1)) F--I(\"lcs(a, ``)\") G--J(\"lcs(a, a)\")--L((1)) G--K(\"lcs(``, az)\")--M((0)) I--N((0))  For dp[i][j] is the length of the longest common subsequence from $i$ fist characters of string $x$ $x$ and $j$ first characters of string $y$, that means: $$dp[i][j]= \\begin{cases} 1 + dp[i-1][j-1] \u0026 x[i] = y[j]\\\\\nmax(dp[i-1][j],\\ dp[i][j-1]) \u0026 x[i] \\ne y[j] \\end{cases} $$\nint n = x.length(), m = y.length(); vectorvectorint dp(n+1, vector(m+1, 0)); for(int i = 1; i  n; i++) for(int j = 1; j  m; j++) if(x[i-1] == y[j-1]) dp[i][j] = 1 + dp[i-1][j-1]; else dp[i][j] = (dp[i-1][j]  dp[i][j-1] ? dp[i-1][j] : dp[i][j-1]); My dynamic programing will look like this:\n    \"\" a z b     \"\" 0 0 0 0   a 0 1 1 1   a 0 1 1 1   b 0 1 1 2    Step 2: Noticed that, at the cell which has the upper cell and the left cell contain the smaller value, that cell’s row (or column) is represent for the common character. To find the subsequence, i’ll start at the last cell (dp[n][m]), go back to the upper row (or left column) until i meet the cell like i mentioned above, store the common character, then go to the cell on its left and up (dp[i-1][j-1]) to continue.\nstring res = \"\"; while(dp[n][m] != 0){ while(dp[n][m] == dp[n-1][m]){ n--; } while(dp[n][m] == dp[n][m-1]){ m--; } res.insert(res.begin(), x[n-1]); n--; m--; } return res; Thank you for reading.\n",
+  "articleBody": "Problem Source: Codewars From Wikipedia  The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences. It differs from problems of finding common substrings: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.\n Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters.\nFor example\nInput: \"ab\" \"azb\" Output: \"ab\" Solution I solved this kata in 2 steps:\n Find subsequence’s length by dynamic programing. Using backtracking on dynamic programing table to find the subsequence.  Step 1: Give lcs(\"aab\", \"azb\") as a function to find the longest common subsequence. Its process can be understood as:\n Considering the last characters from 2 strings, they’re the same:  Lengthening the subsequence by 1. The problem become lcs(\"aa\", \"az\").   Considering the new strings, their last characters are different:  One by one, remove the last character from each string and find its longest common subsequence. max(lcs(\"a\", \"az\"), lcs(\"aa\", \"a\")    graph TD; A(\"lcs(aab, azb)\")--B((1)) A--C(\"lcs(aa, az)\") C--D(\"max(lcs(a, az), lcs(aa, a)\") D--E(\"lcs(a,az)\") D--F(\"lcs(aa, a)\") E--G(\"max(lcs(a, a), lcs(``, az)\") F--H((1)) F--I(\"lcs(a, ``)\") G--J(\"lcs(a, a)\")--L((1)) G--K(\"lcs(``, az)\")--M((0)) I--N((0))  For dp[i][j] is the length of the longest common subsequence from $i$ fist characters of string $x$ $x$ and $j$ first characters of string $y$, that means: $$dp[i][j]= \\begin{cases} 1 + dp[i-1][j-1] \u0026 x[i] = y[j]\\\\ max(dp[i-1][j],\\ dp[i][j-1]) \u0026 x[i] \\ne y[j] \\end{cases} $$\nint n = x.length(), m = y.length(); vectorvectorint dp(n+1, vector(m+1, 0)); for(int i = 1; i  n; i++) for(int j = 1; j  m; j++) if(x[i-1] == y[j-1]) dp[i][j] = 1 + dp[i-1][j-1]; else dp[i][j] = (dp[i-1][j]  dp[i][j-1] ? dp[i-1][j] : dp[i][j-1]); My dynamic programing will look like this:\n    \"\" a z b     \"\" 0 0 0 0   a 0 1 1 1   a 0 1 1 1   b 0 1 1 2    Step 2: Noticed that, at the cell which has the upper cell and the left cell contain the smaller value, that cell’s row (or column) is represent for the common character. To find the subsequence, i’ll start at the last cell (dp[n][m]), go back to the upper row (or left column) until i meet the cell like i mentioned above, store the common character, then go to the cell on its left and up (dp[i-1][j-1]) to continue.\nstring res = \"\"; while(dp[n][m] != 0){ while(dp[n][m] == dp[n-1][m]){ n--; } while(dp[n][m] == dp[n][m-1]){ m--; } res.insert(res.begin(), x[n-1]); n--; m--; } return res; Thank you for reading.\n",
   "wordCount" : "419",
   "inLanguage": "en",
   "datePublished": "2021-02-17T20:36:47+07:00",
@@ -100,43 +163,6 @@
     }
 
 </script>
-<noscript>
-    <style type="text/css">
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: #1d1e20;
-                --entry: #2e2e33;
-                --primary: rgba(255, 255, 255, 0.84);
-                --secondary: rgba(255, 255, 255, 0.56);
-                --tertiary: rgba(255, 255, 255, 0.16);
-                --content: rgba(255, 255, 255, 0.74);
-                --hljs-bg: #2e2e33;
-                --code-bg: #37383e;
-                --border: #333;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
 
 <header class="header">
     <nav class="nav">
@@ -189,31 +215,6 @@
             </li>
         </ul>
     </nav>
-    <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$','$$'], ['\\[', '\\]']],
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-      }
-    };
-  
-    window.addEventListener('load', (event) => {
-        document.querySelectorAll("mjx-container").forEach(function(x){
-          x.parentElement.classList += 'has-jax'})
-      });
-  
-  </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-<script async src="https://unpkg.com/mermaid@latest/dist/mermaid.min.js"></script>
-
 </header>
 <main class="main">
 
@@ -223,12 +224,13 @@
     <h1 class="post-title">
       Longest common subsequence
     </h1>
-    <div class="post-meta">February 17, 2021&nbsp;|&nbsp;
+    <div class="post-meta"><span title='2021-02-17 20:36:47 +0700 +07'>February 17, 2021</span>&nbsp;|&nbsp;
 <ul class="i18n_list">Translations:
     <li>
         <a href="https://yurukute.github.io/Blog/post/lcs/">Vi</a>
     </li>
 </ul>
+
 </div>
   </header> 
   <div class="post-content"><h2 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h2>
@@ -280,10 +282,11 @@ graph TD;
     G-->K("lcs(``, az)")-->M((0))
     I-->N((0))
 </div>
+
 <p>For <code>dp[i][j]</code> is the length of the longest common subsequence from $i$ fist characters of string $x$ $x$ and $j$ first characters of string $y$, that means:
 $$dp[i][j]=
 \begin{cases}
-1 + dp[i-1][j-1]            &amp; x[i] = y[j]\\<br>
+1 + dp[i-1][j-1]            &amp; x[i] = y[j]\\
 max(dp[i-1][j],\ dp[i][j-1]) &amp; x[i] \ne y[j]
 \end{cases}
 $$</p>
@@ -356,27 +359,30 @@ vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&
 
 
   </div>
+
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/">Dynamic Programing</a></li>
       <li><a href="https://yurukute.github.io/Blog/en/tags/backtracking/">Backtracking</a></li>
     </ul>
-    <nav class="paginav">
-      <a class="prev" href="https://yurukute.github.io/Blog/en/post/lis/">
-        <span class="title">« Next Post</span>
-        <br>
-        <span>Longest increasing subsequence</span>
-      </a>
-      <a class="next" href="https://yurukute.github.io/Blog/en/post/explosivesum/">
-        <span class="title">Prev Post »</span>
-        <br>
-        <span>Explosive Sum</span>
-      </a>
-    </nav>
+<nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/en/post/lis/">
+    <span class="title">« Prev Page</span>
+    <br>
+    <span>Longest increasing subsequence</span>
+  </a>
+  <a class="next" href="https://yurukute.github.io/Blog/en/post/explosivesum/">
+    <span class="title">Next Page »</span>
+    <br>
+    <span>Explosive Sum</span>
+  </a>
+</nav>
+
   </footer>
 </article>
     </main>
-    <footer class="footer">
+    
+<footer class="footer">
     <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
     <span>
         Powered by
@@ -384,19 +390,19 @@ vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&
         <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-            <path d="M12 6H0l6-6z" />
-        </svg>
-    </button>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
 <script>
     let menu = document.getElementById('menu')
-    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-    menu.onscroll = function () {
-        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

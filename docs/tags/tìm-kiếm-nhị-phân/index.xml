@@ -13,7 +13,7 @@
       
       <guid>https://yurukute.github.io/Blog/post/lis/</guid>
       <description>Bài toán Nguồn:
- Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\</description>
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\ &amp;amp;nums[i_1] &amp;lt; nums[i_2] &amp;lt; \dots &amp;lt; nums[i_k] \end{align} $$ Ví dụ:</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
       
       <guid>https://yurukute.github.io/Blog/post/lis/</guid>
       <description>Bài toán Nguồn:
- Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\</description>
+ Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\ &amp;amp;nums[i_1] &amp;lt; nums[i_2] &amp;lt; \dots &amp;lt; nums[i_k] \end{align} $$ Ví dụ:</description>
     </item>
     
     <item>
@@ -45,9 +45,7 @@ Theo wikipedia: https://vi.wikipedia.org/wiki/Phân_hoạch_(lý_thuyết_số) 
       
       <guid>https://yurukute.github.io/Blog/post/fibonacci/</guid>
       <description>Bài toán Nguồn: Codeforces Đọc hiểu Tìm phần dư của số Fibonacci thứ $n$ ($n &amp;lt;= 10^{18}$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa: $$
-\begin{aligned} F_0 &amp;amp; = 0\\
-F_1 &amp;amp; = 1\\
-F_i &amp;amp; = F_{i-1} + F_{i-2} (i &amp;gt;= 2) \end{aligned} $$ Ví dụ:
+\begin{aligned} F_0 &amp;amp; = 0\\ F_1 &amp;amp; = 1\\ F_i &amp;amp; = F_{i-1} + F_{i-2} (i &amp;gt;= 2) \end{aligned} $$ Ví dụ:
 Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phương trình sai phân của dãy fibonacci là công thức truy hồi, mình có thể viết thành đoạn code sau:</description>
     </item>
     
