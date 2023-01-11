@@ -84,14 +84,7 @@ Thang máy chỉ quay lại tầng trệt chỉ khi `thang máy trống` và `kh
 
 Tại mỗi tầng $i$ đi qua:
 - Trả những người trong thang máy nếu $i$ là tầng họ muốn xuống.
-- Đưa người vào thang máy nếu số tầng họ muốn đến thuận với chiều đi chuyển của thang máy cho đến khi hết người hoặc thang máy đầy.
-- Nếu một trong hai hành động trên được thực hiện, lưu $i$ vào mảng kết quả.
 ```cpp
-#include <vector>
-
-#define UP 1
-#define DOWN 0
-
 bool remove_people(std::vector<int> *lift, int floor){
     bool stop = false;
     for (auto person = lift->begin(); person != lift->end(); person++){
@@ -102,7 +95,9 @@ bool remove_people(std::vector<int> *lift, int floor){
     }
     return stop;
 }
-
+```
+- Đưa người vào thang máy nếu số tầng họ muốn đến thuận với chiều đi chuyển của thang máy cho đến khi hết người hoặc thang máy đầy.
+```cpp
 bool add_people(std::vector<int> *lift, std::vector<int> *people, int floor, int capacity, int direction){
     bool stop = false;
     for(auto person = people->begin(); person != people->end(); person++){
@@ -116,6 +111,17 @@ bool add_people(std::vector<int> *lift, std::vector<int> *people, int floor, int
     }
     return stop;
 }
+```
+- Nếu một trong hai hành động trên được thực hiện, lưu $i$ vào mảng kết quả.
+```cpp
+#include <vector>
+
+#define UP 1
+#define DOWN 0
+
+bool remove_people(std::vector<int> *lift, int floor){...}
+
+bool add_people(std::vector<int> *lift, std::vector<int> *people, int floor, int capacity, int direction){...}
 
 std::vector<int> the_lift(std::vector<std::vector<int>> queues, int capacity) {
     std::vector<int> res = {0}, lift;

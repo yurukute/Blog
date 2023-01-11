@@ -114,14 +114,7 @@ The lift is only stop when `the lift is empty, and no people are waiting`.Thus, 
 
 For each $i$ floor:
 - Remove the people inside the lift if their wanted floor is $i$th
-- Add all the people whose wanted floor is in the same direction to the lift until the lift is full.
-- If one of those action performed, store $i$ into result vector.
 ```cpp
-#include <vector>
-
-#define UP 1
-#define DOWN 0
-
 bool remove_people(std::vector<int> *lift, int floor){
     bool stop = false;
     for (auto person = lift->begin(); person != lift->end(); person++){
@@ -132,7 +125,9 @@ bool remove_people(std::vector<int> *lift, int floor){
     }
     return stop;
 }
-
+```
+- Add all the people whose wanted floor is in the same direction to the lift until the lift is full.
+```cpp
 bool add_people(std::vector<int> *lift, std::vector<int> *people, int floor, int capacity, int direction){
     bool stop = false;
     for(auto person = people->begin(); person != people->end(); person++){
@@ -146,6 +141,17 @@ bool add_people(std::vector<int> *lift, std::vector<int> *people, int floor, int
     }
     return stop;
 }
+```
+- If one of those action performed, store $i$ into result vector.
+```cpp
+#include <vector>
+
+#define UP 1
+#define DOWN 0
+
+bool remove_people(std::vector<int> *lift, int floor){...}
+
+bool add_people(std::vector<int> *lift, std::vector<int> *people, int floor, int capacity, int direction){...}
 
 std::vector<int> the_lift(std::vector<std::vector<int>> queues, int capacity) {
     std::vector<int> res = {0}, lift;
