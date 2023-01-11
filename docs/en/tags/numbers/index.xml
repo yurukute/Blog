@@ -24,7 +24,7 @@
       <description>Problem Codewars Given a positive number n &amp;gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
 ($p_1$**$n_1$)($p_2$**$n_2$)&amp;hellip;($p_k$**$n_k$)
 where
- a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1.  Example:
+a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1. Example:
 Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor.</description>
     </item>
     

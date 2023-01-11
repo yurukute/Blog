@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>T-Primes | Blog của Noob</title>
-<meta name="keywords" content="Eratosthene" />
+<meta name="keywords" content="Eratosthene">
 <meta name="description" content="Bài toán Nguồn: Codeforces Đọc hiểu Một số được gọi là t-prime nếu nó có đúng 3 ước số dương. Một số nguyên dương sẽ có 2 ước số là 1 và chính nó. Ngoài ra, nếu số đó, tạm gọi là $x$, có thêm 1 ước số nhỏ hơn $\sqrt{x}$ thì chắc chắn nó sẽ có ước khác. Để $x$ có đúng 3 ước số thì ước số nhỏ hơn $\sqrt{x}$ của nó phải là 1 số nguyên tố.">
 <meta name="author" content="">
-<link rel="canonical" href="https://yurukute.github.io/Blog/post/t-primes/" />
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.0825cf4721c95bfa21d267503086a657366c0a27f67ac876c81a8ce070328c3c.css" integrity="sha256-CCXPRyHJW/oh0mdQMIamVzZsCif2esh2yBqM4HAyjDw=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/t-primes/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
@@ -20,9 +20,8 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.89.4" />
-<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/t-primes/" />
-<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/t-primes/" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/t-primes/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/t-primes/">
 <noscript>
     <style>
         #theme-toggle,
@@ -88,8 +87,8 @@
 <meta property="og:description" content="Bài toán Nguồn: Codeforces Đọc hiểu Một số được gọi là t-prime nếu nó có đúng 3 ước số dương. Một số nguyên dương sẽ có 2 ước số là 1 và chính nó. Ngoài ra, nếu số đó, tạm gọi là $x$, có thêm 1 ước số nhỏ hơn $\sqrt{x}$ thì chắc chắn nó sẽ có ước khác. Để $x$ có đúng 3 ước số thì ước số nhỏ hơn $\sqrt{x}$ của nó phải là 1 số nguyên tố." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/post/t-primes/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-01-22T15:08:53&#43;07:00" />
-<meta property="article:modified_time" content="2021-01-22T15:08:53&#43;07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta property="article:published_time" content="2021-01-22T15:08:53+07:00" />
+<meta property="article:modified_time" content="2021-01-22T15:08:53+07:00" /><meta property="og:site_name" content="Blog của Noob" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="T-Primes"/>
@@ -126,7 +125,7 @@
   "keywords": [
     "Eratosthene"
   ],
-  "articleBody": "Bài toán Nguồn: Codeforces Đọc hiểu Một số được gọi là t-prime nếu nó có đúng 3 ước số dương. Một số nguyên dương sẽ có 2 ước số là 1 và chính nó. Ngoài ra, nếu số đó, tạm gọi là $x$, có thêm 1 ước số nhỏ hơn $\\sqrt{x}$ thì chắc chắn nó sẽ có ước khác. Để $x$ có đúng 3 ước số thì ước số nhỏ hơn $\\sqrt{x}$ của nó phải là 1 số nguyên tố.\nNói cách khác, $x$ là t-prime nếu nó là bình phương của 1 số nguyên tố.\nTrong bài toán này, mình sẽ kiểm tra 1 dãy $n$ các số $x$ rằng $x_i$ có phải là t-prime hay không.\nVí dụ\nInput: 3 4 5 6 Output: YES NO NO Lời giải Đầu tiên, mình cần tìm tất cả các số nguyên tố từ 2 đến $\\sqrt{x}$ bằng sàng Eratosthene . X giới hạn đến $10^{12}$ nên $\\sqrt{x}$ lớn nhất sẽ là $10^6$.\nint limit = 1000001 std::vectorbool isprime(limit, true); isprime[0] = isprime[1] = false; for(int i = 2; i  limit; i++) isprime[i] = true; for(int i = 2; i*i  limit; i++){ if(isprime[i]) for(long long j = i * i; j  limit; j += i) isprime[j] = false; } Sau cùng, chỉ cần kiểm tra $\\sqrt{x}$ có phải là số nguyên (không phải số thập phân :v) và là số nguyên tố hay không. Đơn giản phải không nào? OwO)/\nwhile (n--){ long long x; cin  x; long long q = sqrt(x); cout  (isprime[q] \u0026\u0026 q*q == x ? \"YES\" : \"NO\")  \"\\n\"; } Cảm ơn bạn vì đã đọc.\n",
+  "articleBody": "Bài toán Nguồn: Codeforces Đọc hiểu Một số được gọi là t-prime nếu nó có đúng 3 ước số dương. Một số nguyên dương sẽ có 2 ước số là 1 và chính nó. Ngoài ra, nếu số đó, tạm gọi là $x$, có thêm 1 ước số nhỏ hơn $\\sqrt{x}$ thì chắc chắn nó sẽ có ước khác. Để $x$ có đúng 3 ước số thì ước số nhỏ hơn $\\sqrt{x}$ của nó phải là 1 số nguyên tố.\nNói cách khác, $x$ là t-prime nếu nó là bình phương của 1 số nguyên tố.\nTrong bài toán này, mình sẽ kiểm tra 1 dãy $n$ các số $x$ rằng $x_i$ có phải là t-prime hay không.\nVí dụ\nInput: 3 4 5 6 Output: YES NO NO Lời giải Đầu tiên, mình cần tìm tất cả các số nguyên tố từ 2 đến $\\sqrt{x}$ bằng sàng Eratosthene . X giới hạn đến $10^{12}$ nên $\\sqrt{x}$ lớn nhất sẽ là $10^6$.\nint limit = 1000001 std::vector\u003cbool\u003e isprime(limit, true); isprime[0] = isprime[1] = false; for(int i = 2; i \u003c limit; i++) isprime[i] = true; for(int i = 2; i*i \u003c limit; i++){ if(isprime[i]) for(long long j = i * i; j \u003c limit; j += i) isprime[j] = false; } Sau cùng, chỉ cần kiểm tra $\\sqrt{x}$ có phải là số nguyên (không phải số thập phân :v) và là số nguyên tố hay không. Đơn giản phải không nào? OwO)/\nwhile (n--){ long long x; cin \u003e\u003e x; long long q = sqrt(x); cout \u003c\u003c (isprime[q] \u0026\u0026 q*q == x ? \"YES\" : \"NO\") \u003c\u003c \"\\n\"; } Cảm ơn bạn vì đã đọc.\n",
   "wordCount" : "275",
   "inLanguage": "vi",
   "datePublished": "2021-01-22T15:08:53+07:00",
@@ -163,14 +162,14 @@
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -190,7 +189,7 @@
                             aria-label="English">En</a>
                     </li>
                 </ul>
-            </span>
+            </div>
         </div>
         <ul id="menu">
             <li>
@@ -219,8 +218,8 @@
     <h1 class="post-title">
       T-Primes
     </h1>
-    <div class="post-meta"><span title='2021-01-22 15:08:53 +0700 +07'>22 Tháng 1, 2021</span>&nbsp;|&nbsp;
-<ul class="i18n_list">Bản dịch:
+    <div class="post-meta"><span title='2021-01-22 15:08:53 +0700 +07'>22 Tháng 1, 2021</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
     <li>
         <a href="https://yurukute.github.io/Blog/en/post/t-primes/">En</a>
     </li>
@@ -244,24 +243,24 @@ Output: YES
 </code></pre><h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
 <p>Đầu tiên, mình cần tìm tất cả các số nguyên tố từ 2 đến $\sqrt{x}$ bằng sàng <a href="https://vi.wikipedia.org/wiki/S%C3%A0ng_Eratosthenes" target="_blank">Eratosthene</a>
 . X giới hạn đến $10^{12}$ nên $\sqrt{x}$ lớn nhất sẽ là $10^6$.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> limit <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000001</span>
-std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> isprime(limit, true);
-isprime[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> isprime[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> false;
-<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;</span> limit; i<span style="color:#f92672">++</span>)
-    isprime[i] <span style="color:#f92672">=</span> true;
-<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">*</span>i <span style="color:#f92672">&lt;</span> limit; i<span style="color:#f92672">++</span>){
-    <span style="color:#66d9ef">if</span>(isprime[i])
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">*</span> i; j <span style="color:#f92672">&lt;</span> limit; j <span style="color:#f92672">+=</span> i)
-            isprime[j] <span style="color:#f92672">=</span> false;
-}
-</code></pre></div><p>Sau cùng, chỉ cần kiểm tra $\sqrt{x}$ có phải là số nguyên (không phải số thập phân :v) và là số nguyên tố hay không. Đơn giản phải không nào? OwO)/</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>){
-    <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> x;
-    cin <span style="color:#f92672">&gt;&gt;</span> x;
-    <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> q <span style="color:#f92672">=</span> sqrt(x);
-    cout <span style="color:#f92672">&lt;&lt;</span> (isprime[q] <span style="color:#f92672">&amp;&amp;</span> q<span style="color:#f92672">*</span>q <span style="color:#f92672">==</span> x <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;YES&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;NO&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>; 
-}
-</code></pre></div><p>Cảm ơn bạn vì đã đọc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> limit <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000001</span>
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> isprime(limit, true);
+</span></span><span style="display:flex;"><span>isprime[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> isprime[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;</span> limit; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    isprime[i] <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">*</span>i <span style="color:#f92672">&lt;</span> limit; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(isprime[i])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">*</span> i; j <span style="color:#f92672">&lt;</span> limit; j <span style="color:#f92672">+=</span> i)
+</span></span><span style="display:flex;"><span>            isprime[j] <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Sau cùng, chỉ cần kiểm tra $\sqrt{x}$ có phải là số nguyên (không phải số thập phân :v) và là số nguyên tố hay không. Đơn giản phải không nào? OwO)/</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (n<span style="color:#f92672">--</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> x;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> x;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> q <span style="color:#f92672">=</span> sqrt(x);
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> (isprime[q] <span style="color:#f92672">&amp;&amp;</span> q<span style="color:#f92672">*</span>q <span style="color:#f92672">==</span> x <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;YES&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;NO&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cảm ơn bạn vì đã đọc.</p>
 
 
   </div>
@@ -288,11 +287,11 @@ isprime[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</spa
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

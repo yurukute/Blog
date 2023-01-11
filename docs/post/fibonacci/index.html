@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Fibonacci | Blog của Noob</title>
-<meta name="keywords" content="Ma trận, Quy hoạch động" />
+<meta name="keywords" content="Ma trận, Quy hoạch động">
 <meta name="description" content="Bài toán Nguồn: Codeforces Đọc hiểu Tìm phần dư của số Fibonacci thứ $n$ ($n &lt;= 10^{18}$) cho $10^9 &#43; 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa: $$
 \begin{aligned} F_0 &amp; = 0\\ F_1 &amp; = 1\\ F_i &amp; = F_{i-1} &#43; F_{i-2} (i &gt;= 2) \end{aligned} $$ Ví dụ:
 Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phương trình sai phân của dãy fibonacci là công thức truy hồi, mình có thể viết thành đoạn code sau:">
 <meta name="author" content="">
-<link rel="canonical" href="https://yurukute.github.io/Blog/post/fibonacci/" />
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.0825cf4721c95bfa21d267503086a657366c0a27f67ac876c81a8ce070328c3c.css" integrity="sha256-CCXPRyHJW/oh0mdQMIamVzZsCif2esh2yBqM4HAyjDw=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/fibonacci/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
@@ -22,9 +22,8 @@ Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phươ
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.89.4" />
-<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/fibonacci/" />
-<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/fibonacci/" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/fibonacci/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/fibonacci/">
 <noscript>
     <style>
         #theme-toggle,
@@ -92,8 +91,8 @@ Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phươ
 Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phương trình sai phân của dãy fibonacci là công thức truy hồi, mình có thể viết thành đoạn code sau:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/post/fibonacci/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-02-12T04:39:42&#43;07:00" />
-<meta property="article:modified_time" content="2021-02-12T04:39:42&#43;07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta property="article:published_time" content="2021-02-12T04:39:42+07:00" />
+<meta property="article:modified_time" content="2021-02-12T04:39:42+07:00" /><meta property="og:site_name" content="Blog của Noob" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fibonacci"/>
@@ -132,7 +131,7 @@ Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phươ
   "keywords": [
     "Ma trận", "Quy hoạch động"
   ],
-  "articleBody": "Bài toán Nguồn: Codeforces Đọc hiểu Tìm phần dư của số Fibonacci thứ $n$ ($n = 2) \\end{aligned} $$ Ví dụ:\nInput: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phương trình sai phân của dãy fibonacci là công thức truy hồi, mình có thể viết thành đoạn code sau:\nint f0 = 0, f1 = 1, fn; for(int i = 2; i  n; i++){ fn = f0 + f1; f0 = f1; f1 = fn; } return fn; Với độ phức tạp là $O(n)$, đoạn code này chạy ổn với $n Cách 2: Nhân ma trận Từ phương trình sai phân của dãy fibonacci, mình có thể viết lại như sau: $$ \\begin{aligned} F_{n+1} \u0026 = 1\\ F_n + 1\\ F_{n-1}\\\\ F_{n} \u0026 = 1\\ F_n + 0\\ F_{n-1}\\\\ \\\\ = \\begin{bmatrix} F_{n+1} \\\\ F_n \\end{bmatrix} \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix} \\begin{bmatrix} F_n \\\\ F_{n-1} \\end{bmatrix} \\\\\\\\ \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}^n \\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix} \\end{aligned} $$ Có thể thấy $F_n$ sẽ bằng dòng thứ 2 của $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$ nhân với $\\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix}$. Mình lại có $F_1 = 1, F_0 = 0$ nên $F_n$ lúc này sẽ là phần tử ở dòng 2 cột 1 của $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$.\nTính lũy thừa với n lớn Đối với $n$ lớn, thay vì cứ nhân cơ số $n$ lần theo định nghĩa, mình sẽ bình phương cơ số, đồng thời giảm số mũ đi một nửa. Ví dụ: Thay vì tính $2^6 = 2\\times2\\times2\\times2\\times2\\times2,$ mình sẽ tính $2^6 = 4^4 = 8^2$\nNói cách khác, mình sẽ cố gắng thay thế việc nhân nhiều lần một số nhỏ thành nhân vài lần các số lớn với nhau. Với cách này mình sẽ đưa độ phức tạp về $O(logn)$.\nint res = 1; while (b  0){ if(b % 2) res = res * a; a = a * a; b = 1 } Hiện tại, cơ số của mình là một ma trận $2\\times2$ nên mình cần khai báo struct và thêm hàm để thuận lợi cho việc tính toán cũng như lưu trữ:\nconst unsigned long long mod = 1e9 + 7; struct matrix{ unsigned long long a, b, c, d; }; matrix multiply(matrix A, matrix B){ matrix C; C.a = (A.a*B.a + A.b*B.c) % mod; C.b = (A.a*B.b + A.b*B.d) % mod; C.c = (A.c*B.a + A.d*B.c) % mod; C.d = (A.c*B.b + A.d*B.d) % mod; return C; } matrix power(matrix a, long long b){ matrix res; //cho res là ma trận đơn vị  res.a = res.d = 1; res.b = res.c = 0; while (b  0){ if(b % 2) res = multiply(res, a); a = multiply(a, a); b = 1; } return res; } Cuối cùng, ta cho $F = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}$, kết quả cuối cùng sẽ là power(F,n).c.\nCảm ơn bạn vì đã đọc. Chúc bạn có một năm mới tràn đầy niềm vui và hạnh phúc =w=.\n",
+  "articleBody": "Bài toán Nguồn: Codeforces Đọc hiểu Tìm phần dư của số Fibonacci thứ $n$ ($n \u003c= 10^{18}$) cho $10^9 + 7$. Như vậy, mình cần tìm $F_n$ trong dãy số được định nghĩa: $$\n\\begin{aligned} F_0 \u0026 = 0\\\\ F_1 \u0026 = 1\\\\ F_i \u0026 = F_{i-1} + F_{i-2} (i \u003e= 2) \\end{aligned} $$ Ví dụ:\nInput: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phương trình sai phân của dãy fibonacci là công thức truy hồi, mình có thể viết thành đoạn code sau:\nint f0 = 0, f1 = 1, fn; for(int i = 2; i \u003c= n; i++){ fn = f0 + f1; f0 = f1; f1 = fn; } return fn; Với độ phức tạp là $O(n)$, đoạn code này chạy ổn với $n \u003c= 5. 10^6$. Tuy nhiên, $n$ có thể lên đến $10^{18}$ ở bài toán này nên mình cần một giải thuật tốt hơn, ít nhất phải là $O(log^2 n)$\nCách 2: Nhân ma trận Từ phương trình sai phân của dãy fibonacci, mình có thể viết lại như sau: $$ \\begin{aligned} F_{n+1} \u0026 = 1\\ F_n + 1\\ F_{n-1}\\\\ F_{n} \u0026 = 1\\ F_n + 0\\ F_{n-1}\\\\ \\\\ =\u003e \\begin{bmatrix} F_{n+1} \\\\ F_n \\end{bmatrix} \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix} \\begin{bmatrix} F_n \\\\ F_{n-1} \\end{bmatrix} \\\\\\\\ \u0026 = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}^n \\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix} \\end{aligned} $$ Có thể thấy $F_n$ sẽ bằng dòng thứ 2 của $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$ nhân với $\\begin{bmatrix} F_1 \\\\ F_0 \\end{bmatrix}$. Mình lại có $F_1 = 1, F_0 = 0$ nên $F_n$ lúc này sẽ là phần tử ở dòng 2 cột 1 của $\\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0\\end{bmatrix}^n$.\nTính lũy thừa với n lớn Đối với $n$ lớn, thay vì cứ nhân cơ số $n$ lần theo định nghĩa, mình sẽ bình phương cơ số, đồng thời giảm số mũ đi một nửa. Ví dụ: Thay vì tính $2^6 = 2\\times2\\times2\\times2\\times2\\times2,$ mình sẽ tính $2^6 = 4^4 = 8^2$\nNói cách khác, mình sẽ cố gắng thay thế việc nhân nhiều lần một số nhỏ thành nhân vài lần các số lớn với nhau. Với cách này mình sẽ đưa độ phức tạp về $O(logn)$.\nint res = 1; while (b \u003e 0){ if(b % 2) res = res * a; a = a * a; b \u003e\u003e= 1 } Hiện tại, cơ số của mình là một ma trận $2\\times2$ nên mình cần khai báo struct và thêm hàm để thuận lợi cho việc tính toán cũng như lưu trữ:\nconst unsigned long long mod = 1e9 + 7; struct matrix{ unsigned long long a, b, c, d; }; matrix multiply(matrix A, matrix B){ matrix C; C.a = (A.a*B.a + A.b*B.c) % mod; C.b = (A.a*B.b + A.b*B.d) % mod; C.c = (A.c*B.a + A.d*B.c) % mod; C.d = (A.c*B.b + A.d*B.d) % mod; return C; } matrix power(matrix a, long long b){ matrix res; //cho res là ma trận đơn vị res.a = res.d = 1; res.b = res.c = 0; while (b \u003e 0){ if(b % 2) res = multiply(res, a); a = multiply(a, a); b \u003e\u003e= 1; } return res; } Cuối cùng, ta cho $F = \\begin{bmatrix} 1 \u0026 1 \\\\ 1 \u0026 0 \\end{bmatrix}$, kết quả cuối cùng sẽ là power(F,n).c.\nCảm ơn bạn vì đã đọc. Chúc bạn có một năm mới tràn đầy niềm vui và hạnh phúc =w=.\n",
   "wordCount" : "585",
   "inLanguage": "vi",
   "datePublished": "2021-02-12T04:39:42+07:00",
@@ -169,14 +168,14 @@ Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phươ
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -196,7 +195,7 @@ Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phươ
                             aria-label="English">En</a>
                     </li>
                 </ul>
-            </span>
+            </div>
         </div>
         <ul id="menu">
             <li>
@@ -225,8 +224,8 @@ Input: 50 Output: 586268941 Lời giải Cách 1: Quy hoạch động Xem phươ
     <h1 class="post-title">
       Fibonacci
     </h1>
-    <div class="post-meta"><span title='2021-02-12 04:39:42 +0700 +07'>12 Tháng 2, 2021</span>&nbsp;|&nbsp;
-<ul class="i18n_list">Bản dịch:
+    <div class="post-meta"><span title='2021-02-12 04:39:42 +0700 +07'>12 Tháng 2, 2021</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
     <li>
         <a href="https://yurukute.github.io/Blog/en/post/fibonacci/">En</a>
     </li>
@@ -248,19 +247,19 @@ F_i &amp; = F_{i-1} + F_{i-2} (i &gt;= 2)
 \end{aligned}
 $$
 Ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  <span style="color:#ae81ff">50</span>
-Output: <span style="color:#ae81ff">586268941</span>
-</code></pre></div><h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Input:  <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span>Output: <span style="color:#ae81ff">586268941</span>
+</span></span></code></pre></div><h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
 <h3 id="cách-1-quy-hoạch-động">Cách 1: Quy hoạch động<a hidden class="anchor" aria-hidden="true" href="#cách-1-quy-hoạch-động">#</a></h3>
 <p>Xem phương trình sai phân của dãy fibonacci là công thức truy hồi, mình có thể viết thành đoạn code sau:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> f0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, f1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, fn;
-<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
-    fn <span style="color:#f92672">=</span> f0 <span style="color:#f92672">+</span> f1;
-    f0 <span style="color:#f92672">=</span> f1;
-    f1 <span style="color:#f92672">=</span> fn;
-}
-<span style="color:#66d9ef">return</span> fn;
-</code></pre></div><p>Với độ phức tạp là $O(n)$, đoạn code này chạy ổn với $n &lt;= 5. 10^6$. Tuy nhiên, $n$ có thể lên đến $10^{18}$ ở bài toán này nên mình cần một giải thuật tốt hơn, ít nhất phải là $O(log^2 n)$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> f0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, f1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, fn;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>    fn <span style="color:#f92672">=</span> f0 <span style="color:#f92672">+</span> f1;
+</span></span><span style="display:flex;"><span>    f0 <span style="color:#f92672">=</span> f1;
+</span></span><span style="display:flex;"><span>    f1 <span style="color:#f92672">=</span> fn;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> fn;
+</span></span></code></pre></div><p>Với độ phức tạp là $O(n)$, đoạn code này chạy ổn với $n &lt;= 5. 10^6$. Tuy nhiên, $n$ có thể lên đến $10^{18}$ ở bài toán này nên mình cần một giải thuật tốt hơn, ít nhất phải là $O(log^2 n)$</p>
 <h3 id="cách-2-nhân-ma-trận">Cách 2: Nhân ma trận<a hidden class="anchor" aria-hidden="true" href="#cách-2-nhân-ma-trận">#</a></h3>
 <p>Từ phương trình sai phân của dãy fibonacci, mình có thể viết lại như sau:
 $$
@@ -279,43 +278,43 @@ $\begin{bmatrix} F_1 \\ F_0 \end{bmatrix}$. Mình lại có $F_1 = 1, F_0 = 0$ n
 <h4 id="tính-lũy-thừa-với-n-lớn">Tính lũy thừa với n lớn<a hidden class="anchor" aria-hidden="true" href="#tính-lũy-thừa-với-n-lớn">#</a></h4>
 <p>Đối với $n$ lớn, thay vì cứ nhân cơ số $n$ lần theo định nghĩa, mình sẽ bình phương cơ số, đồng thời giảm số mũ đi một nửa. Ví dụ: Thay vì tính $2^6 = 2\times2\times2\times2\times2\times2,$ mình sẽ tính $2^6 = 4^4 = 8^2$</p>
 <p>Nói cách khác, mình sẽ cố gắng thay thế việc nhân <em>nhiều lần</em> một số nhỏ thành nhân <em>vài lần</em> các số lớn với nhau. Với cách này mình sẽ đưa độ phức tạp về $O(logn)$.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">while</span> (b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
-    <span style="color:#66d9ef">if</span>(b <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>)
-        res <span style="color:#f92672">=</span> res <span style="color:#f92672">*</span> a;
-    a <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> a;
-    b <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>
-}
-</code></pre></div><p>Hiện tại, cơ số của mình là một ma trận $2\times2$ nên mình cần khai báo <code>struct</code> và thêm hàm để thuận lợi cho việc tính toán cũng như lưu trữ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> mod <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span>;
-
-<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">matrix</span>{
-    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> a, b, c, d;
-};
-
-matrix <span style="color:#a6e22e">multiply</span>(matrix A, matrix B){
-    matrix C;
-    C.a <span style="color:#f92672">=</span> (A.a<span style="color:#f92672">*</span>B.a <span style="color:#f92672">+</span> A.b<span style="color:#f92672">*</span>B.c) <span style="color:#f92672">%</span> mod;
-    C.b <span style="color:#f92672">=</span> (A.a<span style="color:#f92672">*</span>B.b <span style="color:#f92672">+</span> A.b<span style="color:#f92672">*</span>B.d) <span style="color:#f92672">%</span> mod;
-    C.c <span style="color:#f92672">=</span> (A.c<span style="color:#f92672">*</span>B.a <span style="color:#f92672">+</span> A.d<span style="color:#f92672">*</span>B.c) <span style="color:#f92672">%</span> mod;
-    C.d <span style="color:#f92672">=</span> (A.c<span style="color:#f92672">*</span>B.b <span style="color:#f92672">+</span> A.d<span style="color:#f92672">*</span>B.d) <span style="color:#f92672">%</span> mod;
-    <span style="color:#66d9ef">return</span> C;
-}
-
-matrix <span style="color:#a6e22e">power</span>(matrix a, <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> b){
-    matrix res;
-    <span style="color:#75715e">//cho res là ma trận đơn vị
-</span><span style="color:#75715e"></span>    res.a <span style="color:#f92672">=</span> res.d <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-    res.b <span style="color:#f92672">=</span> res.c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">while</span> (b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
-        <span style="color:#66d9ef">if</span>(b <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>)
-            res <span style="color:#f92672">=</span> multiply(res, a);
-        a <span style="color:#f92672">=</span> multiply(a, a);
-        b <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>;
-    }
-    <span style="color:#66d9ef">return</span> res;
-}
-</code></pre></div><p>Cuối cùng, ta cho $F = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}$, kết quả cuối cùng sẽ là <code>power(F,n).c</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(b <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> res <span style="color:#f92672">*</span> a;
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> a;
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Hiện tại, cơ số của mình là một ma trận $2\times2$ nên mình cần khai báo <code>struct</code> và thêm hàm để thuận lợi cho việc tính toán cũng như lưu trữ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> mod <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">matrix</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> a, b, c, d;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>matrix <span style="color:#a6e22e">multiply</span>(matrix A, matrix B){
+</span></span><span style="display:flex;"><span>    matrix C;
+</span></span><span style="display:flex;"><span>    C.a <span style="color:#f92672">=</span> (A.a<span style="color:#f92672">*</span>B.a <span style="color:#f92672">+</span> A.b<span style="color:#f92672">*</span>B.c) <span style="color:#f92672">%</span> mod;
+</span></span><span style="display:flex;"><span>    C.b <span style="color:#f92672">=</span> (A.a<span style="color:#f92672">*</span>B.b <span style="color:#f92672">+</span> A.b<span style="color:#f92672">*</span>B.d) <span style="color:#f92672">%</span> mod;
+</span></span><span style="display:flex;"><span>    C.c <span style="color:#f92672">=</span> (A.c<span style="color:#f92672">*</span>B.a <span style="color:#f92672">+</span> A.d<span style="color:#f92672">*</span>B.c) <span style="color:#f92672">%</span> mod;
+</span></span><span style="display:flex;"><span>    C.d <span style="color:#f92672">=</span> (A.c<span style="color:#f92672">*</span>B.b <span style="color:#f92672">+</span> A.d<span style="color:#f92672">*</span>B.d) <span style="color:#f92672">%</span> mod;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> C;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>matrix <span style="color:#a6e22e">power</span>(matrix a, <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> b){
+</span></span><span style="display:flex;"><span>    matrix res;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//cho res là ma trận đơn vị
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    res.a <span style="color:#f92672">=</span> res.d <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    res.b <span style="color:#f92672">=</span> res.c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (b <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(b <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>            res <span style="color:#f92672">=</span> multiply(res, a);
+</span></span><span style="display:flex;"><span>        a <span style="color:#f92672">=</span> multiply(a, a);
+</span></span><span style="display:flex;"><span>        b <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cuối cùng, ta cho $F = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}$, kết quả cuối cùng sẽ là <code>power(F,n).c</code>.</p>
 <p>Cảm ơn bạn vì đã đọc. Chúc bạn có một năm mới tràn đầy niềm vui và hạnh phúc =w=.</p>
 
 
@@ -344,11 +343,11 @@ matrix <span style="color:#a6e22e">power</span>(matrix a, <span style="color:#66
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

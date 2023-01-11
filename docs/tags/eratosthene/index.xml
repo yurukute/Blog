@@ -34,8 +34,8 @@ Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá
       <description>Bài toán: Nguồn: Codewars.com Đọc hiểu: Input: Một mảng các số nguyên: $I = [i_1, i_2 ,&amp;hellip;, i_n]$
 Output: một chuỗi theo dạng ($p_1$ $sum_1$) ($p_2$ $sum_2$) &amp;hellip; ($p_x$ $sum_m$)
 Trong đó:
- $p$ : số nguyên tố $sum$ : tổng các số trong mảng I chia hết cho p  Ví dụ:
-I = {12, 15}; //kết quả: &amp;quot;(2 12)(3 27)(5 15)&amp;quot; Như vậy, để giải được bài này ta cần tìm các số nguyên tố từ nhỏ đến lớn, ứng với mỗi số nguyên tố, ta có:</description>
+$p$ : số nguyên tố $sum$ : tổng các số trong mảng I chia hết cho p Ví dụ:
+I = {12, 15}; //kết quả: &amp;#34;(2 12)(3 27)(5 15)&amp;#34; Như vậy, để giải được bài này ta cần tìm các số nguyên tố từ nhỏ đến lớn, ứng với mỗi số nguyên tố, ta có:</description>
     </item>
     
   </channel>

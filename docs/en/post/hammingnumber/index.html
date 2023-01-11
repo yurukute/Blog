@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Hamming Number | Noob&#39;s Blog</title>
+<meta name="keywords" content="Math, Dynamic programing">
+<meta name="description" content="Problem Source: Codewars A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.
+Write a function that computes the nth smallest Hamming number.
+Specifically:
+The first smallest Hamming number is 1 = 203050 The second smallest Hamming number is 2 = 213050 The third smallest Hamming number is 3 = 203150 The fourth smallest Hamming number is 4 = 223050 The fifth smallest Hamming number is 5 = 203051 The 20 smallest Hamming numbers are given in example test fixture.">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/hammingnumber/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/hammingnumber/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/hammingnumber/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<meta property="og:title" content="Hamming Number" />
+<meta property="og:description" content="Problem Source: Codewars A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.
+Write a function that computes the nth smallest Hamming number.
+Specifically:
+The first smallest Hamming number is 1 = 203050 The second smallest Hamming number is 2 = 213050 The third smallest Hamming number is 3 = 203150 The fourth smallest Hamming number is 4 = 223050 The fifth smallest Hamming number is 5 = 203051 The 20 smallest Hamming numbers are given in example test fixture." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/hammingnumber/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-23T17:37:36+07:00" />
+<meta property="article:modified_time" content="2022-05-23T17:37:36+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hamming Number"/>
+<meta name="twitter:description" content="Problem Source: Codewars A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.
+Write a function that computes the nth smallest Hamming number.
+Specifically:
+The first smallest Hamming number is 1 = 203050 The second smallest Hamming number is 2 = 213050 The third smallest Hamming number is 3 = 203150 The fourth smallest Hamming number is 4 = 223050 The fifth smallest Hamming number is 5 = 203051 The 20 smallest Hamming numbers are given in example test fixture."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/en/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Hamming Number",
+      "item": "https://yurukute.github.io/Blog/en/post/hammingnumber/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hamming Number",
+  "name": "Hamming Number",
+  "description": "Problem Source: Codewars A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.\nWrite a function that computes the nth smallest Hamming number.\nSpecifically:\nThe first smallest Hamming number is 1 = 203050 The second smallest Hamming number is 2 = 213050 The third smallest Hamming number is 3 = 203150 The fourth smallest Hamming number is 4 = 223050 The fifth smallest Hamming number is 5 = 203051 The 20 smallest Hamming numbers are given in example test fixture.",
+  "keywords": [
+    "Math", "Dynamic programing"
+  ],
+  "articleBody": "Problem Source: Codewars A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.\nWrite a function that computes the nth smallest Hamming number.\nSpecifically:\nThe first smallest Hamming number is 1 = 203050 The second smallest Hamming number is 2 = 213050 The third smallest Hamming number is 3 = 203150 The fourth smallest Hamming number is 4 = 223050 The fifth smallest Hamming number is 5 = 203051 The 20 smallest Hamming numbers are given in example test fixture.\nYour code should be able to compute all of the smallest 5,000 (Clojure: 2000, NASM: 13282) Hamming numbers without timing out.\nSolution Brute force The simplest method is to check wether a number from $2$ on is Hamming number or not, then increase counter until the nth Hamming number is found. To check if a number is a Hamming number relies on its traits:\nHamming number is the product of the exponents of 2, 3 and 5. 2, 3 and 5 are prime numbers. In other words, checking the number can be achieved by factoring it and the factoring process stopping only at 5, if the leftover is equal to 1, which means there’s no other factors, that’s a Hamming number.\n#include int isHamber(uint64_t n){ for(int i = 2; i \u003c= 5; i++) while (n % i == 0) n /= i; return n == 1; } uint64_t hamber(int n){ uint64_t res = 0; int count = 0; while(count \u003c n){ res++; if(isHamber(res)) count++; } return res; } However, this method is time consuming, especially when there’s specific requirement\nYour code should be able to compute all of the smallest 5,000 (Clojure: 2000, NASM: 13282) Hamming numbers without timing out.\nDynamic programing Because of being the product of the exponents of 2, 3 and 5, Hamming number can be decomposed into a smaller Hamming number and 2, 3 or 5. $$ 2^ỉ3^j5^k = \\Bigg[ \\begin{array}{1} 2^{i-1}3^j5^k \\times 2 \\\\ 2^i3^{j-1}5^k \\times 3 \\\\ 2^i3^j5^{k-1} \\times 5 \\\\ \\end{array} $$ Thus, Hamming seqsequence can be formed by this: $$ \\begin{cases} H_1 = 1 \\\\ H_x = min(H_i \\times 2, H_j \\times 3, H_k \\times 5) \\end{cases} $$ where $i, j, k$ are Hamming seqsequence’s indexes ($i, j, k \u003c x$). They are counted from $1$ and increased only when the multiple of the Hamming number in the corresponding positions is added to the seqsequence. For example:\n$H_2 = min(H_1 \\times 2, H_1 \\times 3, H_1 \\times 5) = min(1 \\times 2, 1 \\times 3, 1 \\times 5) = 2$\n$\\Rightarrow$ $i$ is increased by one for $H_i \\times 2$ is chosen: $i = 2$.\n$H_3 = min(H_2 \\times 2, H_1 \\times 3, H_1 \\times 5) = min(2 \\times 2, 1 \\times 3, 1 \\times 5) = 3$\n$\\Rightarrow$ $j$ is increased by one.\n…\n$H_6 = min(H_3 \\times 2, H_2 \\times 3, H_2 \\times 5) = min(3 \\times 2, 2 \\times 3, 2 \\times 5) = 6$\n$\\Rightarrow$ $i$ and $j$ are increased by one.\n#include #include uint64_t hamber(int n){ uint64_t hambers[13282], next2 = 2, next3 = 3, next5 = 5; int i = 0, j = 0, k = 0; hambers[0] = 1; for(int x = 1; x \u003c n; x++){ hambers[x] = std::min(std::min(next2, next3), next5); if(hambers[x] == next2) next2 = hambers[++i]*2; if(hambers[x] == next3) next3 = hambers[++j]*3; if(hambers[x] == next5) next5 = hambers[++k]*5; } return hambers[n-1]; } Thank you for reading.\n",
+  "wordCount" : "574",
+  "inLanguage": "en",
+  "datePublished": "2022-05-23T17:37:36+07:00",
+  "dateModified": "2022-05-23T17:37:36+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/en/post/hammingnumber/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                            aria-label="Tiếng Việt">Vi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Hamming Number
+    </h1>
+    <div class="post-meta"><span title='2022-05-23 17:37:36 +0700 +07'>May 23, 2022</span>&nbsp;|&nbsp;Translations:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yurukute.github.io/Blog/post/hammingnumber/">Vi</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h1>
+<p>Source: <a href="https://www.codewars.com/kata/526d84b98f428f14a60008da/" target="_blank">Codewars</a>
+</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Regular_number" target="_blank">Hamming number</a>
+ is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.</p>
+<p>Write a function that computes the nth smallest Hamming number.</p>
+<p>Specifically:</p>
+<p>The first smallest Hamming number is 1 = 203050
+The second smallest Hamming number is 2 = 213050
+The third smallest Hamming number is 3 = 203150
+The fourth smallest Hamming number is 4 = 223050
+The fifth smallest Hamming number is 5 = 203051
+The 20 smallest Hamming numbers are given in example test fixture.</p>
+<p>Your code should be able to compute all of the smallest 5,000 (Clojure: 2000, NASM: 13282) Hamming numbers without timing out.</p>
+<h1 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h1>
+<h2 id="brute-force">Brute force<a hidden class="anchor" aria-hidden="true" href="#brute-force">#</a></h2>
+<p>The simplest method is to check wether a number from $2$ on is Hamming number or not, then increase counter until the nth Hamming number is found. To check if a number is a Hamming number relies on its traits:</p>
+<ul>
+<li>Hamming number is the product of the exponents of 2, 3 and 5.</li>
+<li>2, 3 and 5 are prime numbers.</li>
+</ul>
+<p>In other words, checking the number can be achieved by <a href="https://yurukute.github.io/Blog/en/post/primesinnumbers/">factoring it</a>
+ and the factoring process stopping only at 5, if the leftover is equal to 1, which means there&rsquo;s no other factors, that&rsquo;s a Hamming number.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdint&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">isHamber</span>(<span style="color:#66d9ef">uint64_t</span> n){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            n <span style="color:#f92672">/=</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">uint64_t</span> <span style="color:#a6e22e">hamber</span>(<span style="color:#66d9ef">int</span> n){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint64_t</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(count <span style="color:#f92672">&lt;</span> n){
+</span></span><span style="display:flex;"><span>        res<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(isHamber(res))
+</span></span><span style="display:flex;"><span>            count<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>However, this method is time consuming, especially when there&rsquo;s specific requirement</p>
+<blockquote>
+<p>Your code should be able to compute all of the smallest 5,000 (Clojure: 2000, NASM: 13282) Hamming numbers without timing out.</p>
+</blockquote>
+<h2 id="dynamic-programing">Dynamic programing<a hidden class="anchor" aria-hidden="true" href="#dynamic-programing">#</a></h2>
+<p>Because of being the product of the exponents of 2, 3 and 5, Hamming number can be decomposed into a smaller Hamming number and 2, 3 or 5.
+$$
+2^ỉ3^j5^k = \Bigg[
+\begin{array}{1}
+2^{i-1}3^j5^k \times 2 \\
+2^i3^{j-1}5^k \times 3 \\
+2^i3^j5^{k-1} \times 5 \\
+\end{array}
+$$
+Thus, Hamming seqsequence can be formed by this:
+$$
+\begin{cases}
+H_1 = 1 \\
+H_x = min(H_i \times 2, H_j \times 3, H_k \times 5)
+\end{cases}
+$$
+where $i, j, k$ are Hamming seqsequence&rsquo;s indexes ($i, j, k &lt; x$). They are counted from $1$ and increased only when the multiple of the Hamming number in the corresponding positions is added to the seqsequence. For example:</p>
+<ul>
+<li>
+<p>$H_2 = min(H_1 \times 2, H_1 \times 3, H_1 \times 5) = min(1 \times 2, 1 \times 3, 1 \times 5) = 2$</p>
+<p>$\Rightarrow$ $i$ is increased by one for $H_i \times 2$ is chosen: $i = 2$.</p>
+</li>
+<li>
+<p>$H_3 = min(H_2 \times 2, H_1 \times 3, H_1 \times 5) = min(2 \times 2, 1 \times 3, 1 \times 5) = 3$</p>
+<p>$\Rightarrow$ $j$ is increased by one.</p>
+</li>
+<li>
+<p>&hellip;</p>
+</li>
+<li>
+<p>$H_6 = min(H_3 \times 2, H_2 \times 3, H_2 \times 5) = min(3 \times 2, 2 \times 3, 2 \times 5) = 6$</p>
+<p>$\Rightarrow$ $i$ and $j$ are increased by one.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdint&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">uint64_t</span> <span style="color:#a6e22e">hamber</span>(<span style="color:#66d9ef">int</span> n){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint64_t</span> hambers[<span style="color:#ae81ff">13282</span>], next2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, next3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, next5 <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, k <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    hambers[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; x <span style="color:#f92672">&lt;</span> n; x<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        hambers[x] <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>min(std<span style="color:#f92672">::</span>min(next2, next3), next5);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(hambers[x] <span style="color:#f92672">==</span> next2)
+</span></span><span style="display:flex;"><span>            next2 <span style="color:#f92672">=</span> hambers[<span style="color:#f92672">++</span>i]<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(hambers[x] <span style="color:#f92672">==</span> next3)
+</span></span><span style="display:flex;"><span>            next3 <span style="color:#f92672">=</span> hambers[<span style="color:#f92672">++</span>j]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(hambers[x] <span style="color:#f92672">==</span> next5)
+</span></span><span style="display:flex;"><span>            next5 <span style="color:#f92672">=</span> hambers[<span style="color:#f92672">++</span>k]<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> hambers[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Thank you for reading.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/math/">Math</a></li>
+      <li><a href="https://yurukute.github.io/Blog/en/tags/dynamic-programing/">Dynamic Programing</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/en/post/thelift/">
+    <span class="title">« Newer post</span>
+    <br>
+    <span>TheLift</span>
+  </a>
+  <a class="next" href="https://yurukute.github.io/Blog/en/post/reducedfractions/">
+    <span class="title">Older post »</span>
+    <br>
+    <span>Number of reduced fractions with denominator d</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

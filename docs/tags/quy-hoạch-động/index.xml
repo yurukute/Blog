@@ -5,7 +5,19 @@
     <link>https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/</link>
     <description>Recent content in Quy hoạch động on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Mar 2021 19:44:16 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 17:37:36 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hamming Number</title>
+      <link>https://yurukute.github.io/Blog/post/hammingnumber/</link>
+      <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/hammingnumber/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.
+Viết chương trình tính số Hamming nhỏ nhất thứ n.
+Đặc biệt:
+Số Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu.</description>
+    </item>
+    
     <item>
       <title>Dãy con tăng đơn điệu dài nhất</title>
       <link>https://yurukute.github.io/Blog/post/lis/</link>
@@ -13,7 +25,7 @@
       
       <guid>https://yurukute.github.io/Blog/post/lis/</guid>
       <description>Bài toán Nguồn:
- Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\ &amp;amp;nums[i_1] &amp;lt; nums[i_2] &amp;lt; \dots &amp;lt; nums[i_k] \end{align} $$ Ví dụ:</description>
+Tiếng Việt: Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$ Tiếng Anh: Leetcode Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\ &amp;amp;nums[i_1] &amp;lt; nums[i_2] &amp;lt; \dots &amp;lt; nums[i_k] \end{align} $$ Ví dụ:</description>
     </item>
     
     <item>
@@ -23,8 +35,8 @@
       
       <guid>https://yurukute.github.io/Blog/post/lcs/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Theo Wikipedia :
- Bài toán xâu con chung dài nhất là bài toán tìm một xâu có độ dài lớn nhất và là xâu con của mọi xâu trong một tập hợp các xâu. Khác với chuỗi con, các phần tử của xâu con không nhất thiết phải liên tiếp nhau.
- Với 2 chuỗi được nhập vào, nhiệm vụ của bạn chính là tìm ra xâu con dài nhất của chúng.</description>
+Bài toán xâu con chung dài nhất là bài toán tìm một xâu có độ dài lớn nhất và là xâu con của mọi xâu trong một tập hợp các xâu. Khác với chuỗi con, các phần tử của xâu con không nhất thiết phải liên tiếp nhau.
+Với 2 chuỗi được nhập vào, nhiệm vụ của bạn chính là tìm ra xâu con dài nhất của chúng.</description>
     </item>
     
     <item>
@@ -34,8 +46,8 @@
       
       <guid>https://yurukute.github.io/Blog/post/explosivesum/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Có bao nhiêu cách phân tích số n thành tổng các số?
-Theo wikipedia: https://vi.wikipedia.org/wiki/Phân_hoạch_(lý_thuyết_số)  Trong số học, sự phân tích một số nguyên dương n là cách viết số đó dưới dạng tổng của các số nguyên dương. Hai cách phân tích có các số hạng giống nhau được coi là một cách phân tích. Ví dụ:
- Input: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Lời giải Bài toàn này có thể dùng phương pháp liệt kê để đếm nhưng mà như vậy rất là chậm khi $n$ là số lớn nên mình sẽ dùng quy hoạch động (Oω&amp;lt;)☆.</description>
+Theo wikipedia: https://vi.wikipedia.org/wiki/Phân_hoạch_(lý_thuyết_số) Trong số học, sự phân tích một số nguyên dương n là cách viết số đó dưới dạng tổng của các số nguyên dương. Hai cách phân tích có các số hạng giống nhau được coi là một cách phân tích. Ví dụ:
+Input: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Lời giải Bài toàn này có thể dùng phương pháp liệt kê để đếm nhưng mà như vậy rất là chậm khi $n$ là số lớn nên mình sẽ dùng quy hoạch động (Oω&amp;lt;)☆.</description>
     </item>
     
     <item>

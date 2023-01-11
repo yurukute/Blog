@@ -6,13 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Hai con mã | Blog của Noob</title>
-<meta name="keywords" content="Toán học" />
+<meta name="keywords" content="Toán học">
 <meta name="description" content="Bài toán Nguồn: CSES In ra tổng số cách đặt hai con mã lên bàn cờ $k \times k, k = 1,2,&hellip;,n$ ($n$ nhập từ bàn phím) sao cho chúng không ăn nhau. Ví dụ:
 Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương pháp đơn giản là ứng với mỗi vị trí của con mã thứ nhất, mình tìm các vị trí thích hợp cho con mã thứ hai rồi trả về tổng số vị trí tìm được.">
 <meta name="author" content="">
-<link rel="canonical" href="https://yurukute.github.io/Blog/post/2knights/" />
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.0825cf4721c95bfa21d267503086a657366c0a27f67ac876c81a8ce070328c3c.css" integrity="sha256-CCXPRyHJW/oh0mdQMIamVzZsCif2esh2yBqM4HAyjDw=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/2knights/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
@@ -21,9 +21,8 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.89.4" />
-<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/2knights/" />
-<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/2knights/" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/2knights/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/2knights/">
 <noscript>
     <style>
         #theme-toggle,
@@ -90,8 +89,8 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
 Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương pháp đơn giản là ứng với mỗi vị trí của con mã thứ nhất, mình tìm các vị trí thích hợp cho con mã thứ hai rồi trả về tổng số vị trí tìm được." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/post/2knights/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-05-27T18:13:29&#43;07:00" />
-<meta property="article:modified_time" content="2021-05-27T18:13:29&#43;07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta property="article:published_time" content="2021-05-27T18:13:29+07:00" />
+<meta property="article:modified_time" content="2021-05-27T18:13:29+07:00" /><meta property="og:site_name" content="Blog của Noob" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hai con mã"/>
@@ -129,7 +128,7 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
   "keywords": [
     "Toán học"
   ],
-  "articleBody": "Bài toán Nguồn: CSES In ra tổng số cách đặt hai con mã lên bàn cờ $k \\times k, k = 1,2,…,n$ ($n$ nhập từ bàn phím) sao cho chúng không ăn nhau. Ví dụ:\nInput: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương pháp đơn giản là ứng với mỗi vị trí của con mã thứ nhất, mình tìm các vị trí thích hợp cho con mã thứ hai rồi trả về tổng số vị trí tìm được. Thực hiện việc tìm kiếm $n$ lần cho các bàn cờ từ $1 \\times 1$ đến $n \\times n$ khá là liều lĩnh khi có nhiều vòng lặp lồng nhau nên mình cần cách khôn ngoan hơn 👀\nThay vì tìm trực tiếp như trên, mình có thể tiến hành tìm gián tiếp bằng cách lấy tổng số cách đặt hai con mã vào bàn cờ trừ đi số cách đặt hai con mã để chúng ăn nhau.\nTổng số cách đặt hai con mã vào bàn cờ $k \\times k$ là: $$C^2_{k^2} = \\frac{k^2!}{2!(k^2-2)!} = \\frac{k^2(k^2-1)(k^2-2)!}{2(k^2-2)!} = \\frac{k^2(k^2-1)}{2}$$ Để ý rằng, khi hai con mã ở vị trí có thể ăn nhau, chúng tạo thành đường chéo của hình chữ nhật $2 \\times 3$ (nằm ngang) hoặc $3 \\times 2$ (nằm dọc). Bàn cờ là hình vuông nên số lượng hình chữ nhật $2 \\times 3$ sẽ bằng với $3 \\times 2$, vì thế ta chỉ việc đếm một loại rồi nhân đôi.\nCác bước đếm được tiến hành như sau:\n Bắt đầu từ ô trái trên cùng, mình vẽ ra một hình chữ nhật $2 \\times 3$. Dịch hình chữ nhật sang phải 1 ô đến khi không thể dịch nữa. Vì 2 cột phải cùng của hình chữ nhật ko thể lọt ra ngoài bàn cờ nên mình dịch được $k-2$ lần. Tương tự, số lần mình dịch hình chữ nhật xuống dưới sẽ là $k-1$ (bởi hàng dưới cùng không thể lọt ra ngoài). Cuối cùng, nhân số lần dịch sang phải với số lần dịch xuống, rồi nhân đôi lên $$2(k-1)(k-2)$$  Ngoài ra, một hình chữ nhật có hai đường chéo, đồng nghĩa là có 2 cách cho hai con mã ăn nhau trong mỗi trường hợp. Vậy số cách đặt hai con mã để chúng ăn nhau là: $$4(k-1)(k-2)$$\nSau cùng, mình có được đáp án của bài toán này là: $$\\frac{k^2(k^2-1)}{2} - 4(k-1)(k-2)$$\nChương trình #include int main(){ int n; std::cin  n; for(long long i = 1; i  n; i++){ std::cout  i*i*(i*i - 1)/2 - 4*(i-1)*(i-2)  \"\\n\"; } } Cảm ơn bạn vì đã đọc 👀\n",
+  "articleBody": "Bài toán Nguồn: CSES In ra tổng số cách đặt hai con mã lên bàn cờ $k \\times k, k = 1,2,…,n$ ($n$ nhập từ bàn phím) sao cho chúng không ăn nhau. Ví dụ:\nInput: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương pháp đơn giản là ứng với mỗi vị trí của con mã thứ nhất, mình tìm các vị trí thích hợp cho con mã thứ hai rồi trả về tổng số vị trí tìm được. Thực hiện việc tìm kiếm $n$ lần cho các bàn cờ từ $1 \\times 1$ đến $n \\times n$ khá là liều lĩnh khi có nhiều vòng lặp lồng nhau nên mình cần cách khôn ngoan hơn 👀\nThay vì tìm trực tiếp như trên, mình có thể tiến hành tìm gián tiếp bằng cách lấy tổng số cách đặt hai con mã vào bàn cờ trừ đi số cách đặt hai con mã để chúng ăn nhau.\nTổng số cách đặt hai con mã vào bàn cờ $k \\times k$ là: $$C^2_{k^2} = \\frac{k^2!}{2!(k^2-2)!} = \\frac{k^2(k^2-1)(k^2-2)!}{2(k^2-2)!} = \\frac{k^2(k^2-1)}{2}$$ Để ý rằng, khi hai con mã ở vị trí có thể ăn nhau, chúng tạo thành đường chéo của hình chữ nhật $2 \\times 3$ (nằm ngang) hoặc $3 \\times 2$ (nằm dọc). Bàn cờ là hình vuông nên số lượng hình chữ nhật $2 \\times 3$ sẽ bằng với $3 \\times 2$, vì thế ta chỉ việc đếm một loại rồi nhân đôi.\nCác bước đếm được tiến hành như sau:\nBắt đầu từ ô trái trên cùng, mình vẽ ra một hình chữ nhật $2 \\times 3$. Dịch hình chữ nhật sang phải 1 ô đến khi không thể dịch nữa. Vì 2 cột phải cùng của hình chữ nhật ko thể lọt ra ngoài bàn cờ nên mình dịch được $k-2$ lần. Tương tự, số lần mình dịch hình chữ nhật xuống dưới sẽ là $k-1$ (bởi hàng dưới cùng không thể lọt ra ngoài). Cuối cùng, nhân số lần dịch sang phải với số lần dịch xuống, rồi nhân đôi lên $$2(k-1)(k-2)$$ Ngoài ra, một hình chữ nhật có hai đường chéo, đồng nghĩa là có 2 cách cho hai con mã ăn nhau trong mỗi trường hợp. Vậy số cách đặt hai con mã để chúng ăn nhau là: $$4(k-1)(k-2)$$\nSau cùng, mình có được đáp án của bài toán này là: $$\\frac{k^2(k^2-1)}{2} - 4(k-1)(k-2)$$\nChương trình #include int main(){ int n; std::cin \u003e\u003e n; for(long long i = 1; i \u003c= n; i++){ std::cout \u003c\u003c i*i*(i*i - 1)/2 - 4*(i-1)*(i-2) \u003c\u003c \"\\n\"; } } Cảm ơn bạn vì đã đọc 👀\n",
   "wordCount" : "443",
   "inLanguage": "vi",
   "datePublished": "2021-05-27T18:13:29+07:00",
@@ -166,14 +165,14 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -193,7 +192,7 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
                             aria-label="English">En</a>
                     </li>
                 </ul>
-            </span>
+            </div>
         </div>
         <ul id="menu">
             <li>
@@ -222,8 +221,8 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
     <h1 class="post-title">
       Hai con mã
     </h1>
-    <div class="post-meta"><span title='2021-05-27 18:13:29 +0700 +07'>27 Tháng 5, 2021</span>&nbsp;|&nbsp;
-<ul class="i18n_list">Bản dịch:
+    <div class="post-meta"><span title='2021-05-27 18:13:29 +0700 +07'>27 Tháng 5, 2021</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
     <li>
         <a href="https://yurukute.github.io/Blog/en/post/2knights/">En</a>
     </li>
@@ -265,16 +264,16 @@ $$4(k-1)(k-2)$$</p>
 <p>Sau cùng, mình có được đáp án của bài toán này là:
 $$\frac{k^2(k^2-1)}{2} - 4(k-1)(k-2)$$</p>
 <h3 id="chương-trình">Chương trình<a hidden class="anchor" aria-hidden="true" href="#chương-trình">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
-	<span style="color:#66d9ef">int</span> n;
-	std<span style="color:#f92672">::</span>cin <span style="color:#f92672">&gt;&gt;</span> n;
-	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
-		std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> i<span style="color:#f92672">*</span>i<span style="color:#f92672">*</span>(i<span style="color:#f92672">*</span>i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>(i<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-	}
-}
-</code></pre></div><p>Cảm ơn bạn vì đã đọc 👀</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> n;
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>cin <span style="color:#f92672">&gt;&gt;</span> n;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>		std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> i<span style="color:#f92672">*</span>i<span style="color:#f92672">*</span>(i<span style="color:#f92672">*</span>i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">*</span>(i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>(i<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cảm ơn bạn vì đã đọc 👀</p>
 
 
   </div>
@@ -301,11 +300,11 @@ $$\frac{k^2(k^2-1)}{2} - 4(k-1)(k-2)$$</p>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

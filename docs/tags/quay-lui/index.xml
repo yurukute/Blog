@@ -13,8 +13,8 @@
       
       <guid>https://yurukute.github.io/Blog/post/lcs/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Theo Wikipedia :
- Bài toán xâu con chung dài nhất là bài toán tìm một xâu có độ dài lớn nhất và là xâu con của mọi xâu trong một tập hợp các xâu. Khác với chuỗi con, các phần tử của xâu con không nhất thiết phải liên tiếp nhau.
- Với 2 chuỗi được nhập vào, nhiệm vụ của bạn chính là tìm ra xâu con dài nhất của chúng.</description>
+Bài toán xâu con chung dài nhất là bài toán tìm một xâu có độ dài lớn nhất và là xâu con của mọi xâu trong một tập hợp các xâu. Khác với chuỗi con, các phần tử của xâu con không nhất thiết phải liên tiếp nhau.
+Với 2 chuỗi được nhập vào, nhiệm vụ của bạn chính là tìm ra xâu con dài nhất của chúng.</description>
     </item>
     
   </channel>

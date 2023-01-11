@@ -5,7 +5,19 @@
     <link>https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/</link>
     <description>Recent content in Số học on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Dec 2021 17:49:22 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 17:37:36 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hamming Number</title>
+      <link>https://yurukute.github.io/Blog/post/hammingnumber/</link>
+      <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/hammingnumber/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.
+Viết chương trình tính số Hamming nhỏ nhất thứ n.
+Đặc biệt:
+Số Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu.</description>
+    </item>
+    
     <item>
       <title>Số phân số tối giản với mẫu số d</title>
       <link>https://yurukute.github.io/Blog/post/reducedfractions/</link>
@@ -35,7 +47,7 @@ Ví dụ $n = 8$. Các số nguyên tố cùng nhau với $8$ không vượt qu�
       <guid>https://yurukute.github.io/Blog/post/primesinnumbers/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Cho một số dương $n$ &amp;gt; 1. Phân tích $n$ ra tích các số nguyên tố theo dạng:
 ($p_1$**$n_1$)($p_2$**$n_2$)&amp;hellip;($p_k$**$n_k$)
- Trong đó:  a**b nghĩa là $a^b$ $p_i$ liệt kê theo thứ tự tăng dần Nếu $n_i$ = 1 thì không ghi ra    Ví dụ:
+Trong đó: a**b nghĩa là $a^b$ $p_i$ liệt kê theo thứ tự tăng dần Nếu $n_i$ = 1 thì không ghi ra Ví dụ:
 Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Để phân tích ra thừa số nguyên tố, mỉnh đem chia số đó cho ước nguyên tố nhỏ nhất của nó.</description>
     </item>
     

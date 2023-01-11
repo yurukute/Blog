@@ -5,7 +5,25 @@
     <link>https://yurukute.github.io/Blog/en/tags/</link>
     <description>Recent content in Tags on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Dec 2021 17:49:22 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 May 2022 17:37:36 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dynamic Programing</title>
+      <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
+      <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>https://yurukute.github.io/Blog/en/tags/math/</link>
+      <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/tags/math/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Fundamentals</title>
       <link>https://yurukute.github.io/Blog/en/tags/fundamentals/</link>
@@ -39,15 +57,6 @@
       <pubDate>Tue, 09 Mar 2021 19:44:24 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/en/tags/binary-search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dynamic Programing</title>
-      <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
-      <pubDate>Tue, 09 Mar 2021 19:44:24 +0700</pubDate>
-      
-      <guid>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</guid>
       <description></description>
     </item>
     

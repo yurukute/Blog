@@ -2,14 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yurukute.github.io/Blog/en/tags/fundamentals/</loc>
-    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/tags/maths/</loc>
-    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
+    <loc>https://yurukute.github.io/Blog/en/post/addingbignumbers/</loc>
+    <lastmod>2022-06-07T20:43:38+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/addingbignumbers/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/addingbignumbers/"
+                />
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/</loc>
-    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
+    <lastmod>2022-06-07T20:43:38+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -20,6 +27,70 @@
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/"
                 />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/post/</loc>
+    <lastmod>2022-06-07T20:43:38+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/post/thelift/</loc>
+    <lastmod>2022-06-06T00:45:12+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/thelift/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/thelift/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
+    <lastmod>2022-05-23T17:37:36+07:00</lastmod>
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/post/hammingnumber/</loc>
+    <lastmod>2022-05-23T17:37:36+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/hammingnumber/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/hammingnumber/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/tags/math/</loc>
+    <lastmod>2022-05-23T17:37:36+07:00</lastmod>
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
+    <lastmod>2022-05-23T17:37:36+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/tags/fundamentals/</loc>
+    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/en/tags/maths/</loc>
+    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/post/reducedfractions/</loc>
     <lastmod>2021-12-08T17:49:22+07:00</lastmod>
@@ -32,32 +103,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yurukute.github.io/Blog/en/post/reducedfractions/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/post/</loc>
-    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/tags/</loc>
-    <lastmod>2021-12-08T17:49:22+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/post/carmichael/</loc>
@@ -116,9 +161,6 @@
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/tags/binary-search/</loc>
-    <lastmod>2021-03-09T19:44:24+07:00</lastmod>
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</loc>
     <lastmod>2021-03-09T19:44:24+07:00</lastmod>
   </url><url>
     <loc>https://yurukute.github.io/Blog/en/post/lis/</loc>

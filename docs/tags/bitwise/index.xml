@@ -12,7 +12,7 @@
       <pubDate>Fri, 29 Jan 2021 20:52:26 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/post/bitwise/</guid>
-      <description>Sơ lược    Phép thao tác trên bit Kí hiệu Mô tả      AND &amp;amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0.   OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0.   XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0.   NOT ~ Đảo bit, 0 thành 1, 1 thành 0.</description>
+      <description>Sơ lược Phép thao tác trên bit Kí hiệu Mô tả AND &amp;amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0. OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0. XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0. NOT ~ Đảo bit, 0 thành 1, 1 thành 0. Dịch trái - Shift left &amp;lt;&amp;lt; Dịch tất cả các bit sang trái.</description>
     </item>
     
   </channel>

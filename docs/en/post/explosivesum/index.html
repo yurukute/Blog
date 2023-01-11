@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Explosive Sum | Noob&#39;s Blog</title>
-<meta name="keywords" content="Dynamic Programing" />
+<meta name="keywords" content="Dynamic Programing">
 <meta name="description" content="Problem Source: Codewars How many ways can you make the sum of a number?
-From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
- Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i&rsquo;ll use dynamic programing instead (Oω&lt;)☆.">
+From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)# In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
+Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i&rsquo;ll use dynamic programing instead (Oω&lt;)☆.">
 <meta name="author" content="">
-<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/explosivesum/" />
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.0825cf4721c95bfa21d267503086a657366c0a27f67ac876c81a8ce070328c3c.css" integrity="sha256-CCXPRyHJW/oh0mdQMIamVzZsCif2esh2yBqM4HAyjDw=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/explosivesum/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
@@ -22,9 +22,8 @@ From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In num
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.89.4" />
-<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/explosivesum/" />
-<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/explosivesum/" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/explosivesum/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/explosivesum/">
 <noscript>
     <style>
         #theme-toggle,
@@ -88,18 +87,18 @@ From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In num
 
 <meta property="og:title" content="Explosive Sum" />
 <meta property="og:description" content="Problem Source: Codewars How many ways can you make the sum of a number?
-From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
- Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i&rsquo;ll use dynamic programing instead (Oω&lt;)☆." />
+From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)# In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
+Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i&rsquo;ll use dynamic programing instead (Oω&lt;)☆." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/en/post/explosivesum/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-02-15T18:49:58&#43;07:00" />
-<meta property="article:modified_time" content="2021-02-15T18:49:58&#43;07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta property="article:published_time" content="2021-02-15T18:49:58+07:00" />
+<meta property="article:modified_time" content="2021-02-15T18:49:58+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Explosive Sum"/>
 <meta name="twitter:description" content="Problem Source: Codewars How many ways can you make the sum of a number?
-From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
- Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i&rsquo;ll use dynamic programing instead (Oω&lt;)☆."/>
+From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)# In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
+Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i&rsquo;ll use dynamic programing instead (Oω&lt;)☆."/>
 
 
 <script type="application/ld+json">
@@ -128,11 +127,11 @@ From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In num
   "@type": "BlogPosting",
   "headline": "Explosive Sum",
   "name": "Explosive Sum",
-  "description": "Problem Source: Codewars How many ways can you make the sum of a number?\nFrom wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:\n Input: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i\u0026rsquo;ll use dynamic programing instead (Oω\u0026lt;)☆.",
+  "description": "Problem Source: Codewars How many ways can you make the sum of a number?\nFrom wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)# In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:\nInput: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i\u0026rsquo;ll use dynamic programing instead (Oω\u0026lt;)☆.",
   "keywords": [
     "Dynamic Programing"
   ],
-  "articleBody": "Problem Source: Codewars How many ways can you make the sum of a number?\nFrom wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:\n Input: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i’ll use dynamic programing instead (OωI have a dynamic table here (ways):\n    0 1 2 3 4     0        1        2        3        4         So, ways[i][j] is Total ways to write j as a sum of positive numbers which $\\leq i$.\nPartition of number $j$ can be divided into 2 types\n  Not include $i$\nThe problem now become Total ways to write j as a sum of positive numbers which $, in other words, $\\leq i - 1$\n  Include $i$\nThen, if i remove $i$, i’ll have ways to partition number $j - i$\n  Obviously, the partition can only be type #1 if $i  j$. In contrast, total ways is the sum of 2 types above. Therefore, $$ways[i][j]= \\begin{cases} ways[i-1][j], \u0026 i  j \\\\ ways[i-1][j] + ways[i][j-i], \u0026 i \\leq j \\end{cases} $$\nTo calculate ways[i][j] i need to find ways[i-1][j] and ways[i][j-i], so at first, i’ll fill the zero row. Because there is only one way to partition 0 so ways[0][0] = 1, others would be 0. After using recurrence relation to find all the cells, ways[n][n] would be the result that we need.\n#include using ull = unsigned long long; ull exp_sum(unsigned int n) { std::vectorstd::vectorull ways(n+1, std::vectorull (n+1, 0)); ways[0][0] = 1; for(unsigned int i = 1; i  n; i++){ for(unsigned int j = i; j  n; j++){ ways[i][j] = ways[i-1][j]; if(i  j) ways[i][j] += ways[i][j-i]; } } return ways[n][n]; }     0 1 2 3 4     0 1 0 0 0 0   1 1 1 1 1 1   2 1 1 2 2 3   3 1 1 2 3 4   4 1 1 2 3 5    Improvement As you can see, there is no need to store from row $1^{st}$ to $n^th-1$ because we only need row $n^{th}$ to calculate row $n^{th}+1$. That’s why i’ll use 1 dimmension array to store the values and calculate itself.\n#include using ull = unsigned long long; ull exp_sum(unsigned int n) { std::vectorull ways(n+1, 0); ways[0] = 1; for(unsigned int i = 1; i  n; i++){ for(unsigned int j = i; j  n; j++){ ways[j] += ways[j - i]; } } return ways[n]; }    0 1 2 3 4     1 1 2 3 5    Thank you for reading.\nRelated post Total ways to make change ",
+  "articleBody": "Problem Source: Codewars How many ways can you make the sum of a number?\nFrom wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)# In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:\nInput: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i’ll use dynamic programing instead (Oω\u003c)☆.\nI have a dynamic table here (ways):\n0 1 2 3 4 0 1 2 3 4 So, ways[i][j] is Total ways to write j as a sum of positive numbers which $\\leq i$.\nPartition of number $j$ can be divided into 2 types\nNot include $i$\nThe problem now become Total ways to write j as a sum of positive numbers which $\u003c i$, in other words, $\\leq i - 1$\nInclude $i$\nThen, if i remove $i$, i’ll have ways to partition number $j - i$\nObviously, the partition can only be type #1 if $i \u003e j$. In contrast, total ways is the sum of 2 types above. Therefore, $$ways[i][j]= \\begin{cases} ways[i-1][j], \u0026 i \u003e j \\\\ ways[i-1][j] + ways[i][j-i], \u0026 i \\leq j \\end{cases} $$\nTo calculate ways[i][j] i need to find ways[i-1][j] and ways[i][j-i], so at first, i’ll fill the zero row. Because there is only one way to partition 0 so ways[0][0] = 1, others would be 0. After using recurrence relation to find all the cells, ways[n][n] would be the result that we need.\n#include using ull = unsigned long long; ull exp_sum(unsigned int n) { std::vector\u003cstd::vector\u003cull\u003e\u003e ways(n+1, std::vector\u003cull\u003e (n+1, 0)); ways[0][0] = 1; for(unsigned int i = 1; i \u003c= n; i++){ for(unsigned int j = i; j \u003c= n; j++){ ways[i][j] = ways[i-1][j]; if(i \u003c= j) ways[i][j] += ways[i][j-i]; } } return ways[n][n]; } 0 1 2 3 4 0 1 0 0 0 0 1 1 1 1 1 1 2 1 1 2 2 3 3 1 1 2 3 4 4 1 1 2 3 5 Improvement As you can see, there is no need to store from row $1^{st}$ to $n^th-1$ because we only need row $n^{th}$ to calculate row $n^{th}+1$. That’s why i’ll use 1 dimmension array to store the values and calculate itself.\n#include using ull = unsigned long long; ull exp_sum(unsigned int n) { std::vector\u003cull\u003e ways(n+1, 0); ways[0] = 1; for(unsigned int i = 1; i \u003c= n; i++){ for(unsigned int j = i; j \u003c= n; j++){ ways[j] += ways[j - i]; } } return ways[n]; } 0 1 2 3 4 1 1 2 3 5 Thank you for reading.\nRelated post Total ways to make change ",
   "wordCount" : "470",
   "inLanguage": "en",
   "datePublished": "2021-02-15T18:49:58+07:00",
@@ -169,14 +168,14 @@ From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In num
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -196,7 +195,7 @@ From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In num
                             aria-label="Tiếng Việt">Vi</a>
                     </li>
                 </ul>
-            </span>
+            </div>
         </div>
         <ul id="menu">
             <li>
@@ -225,8 +224,8 @@ From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In num
     <h1 class="post-title">
       Explosive Sum
     </h1>
-    <div class="post-meta"><span title='2021-02-15 18:49:58 +0700 +07'>February 15, 2021</span>&nbsp;|&nbsp;
-<ul class="i18n_list">Translations:
+    <div class="post-meta"><span title='2021-02-15 18:49:58 +0700 +07'>February 15, 2021</span>&nbsp;|&nbsp;Translations:
+<ul class="i18n_list">
     <li>
         <a href="https://yurukute.github.io/Blog/post/explosivesum/">Vi</a>
     </li>
@@ -244,9 +243,9 @@ From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#  In num
 <p>In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition.
 Example:</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Input:  <span style="color:#ae81ff">4</span>
-Output: <span style="color:#ae81ff">5</span> <span style="color:#75715e">//4, 3+1, 2+2, 2+1+1, 1+1+1+1
-</span></code></pre></div><h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Input:  <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>Output: <span style="color:#ae81ff">5</span> <span style="color:#75715e">//4, 3+1, 2+2, 2+1+1, 1+1+1+1
+</span></span></span></code></pre></div><h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
 <p>It would be very slow if you enumerate all the partitions when $n$ is large so i&rsquo;ll use dynamic programing instead (Oω&lt;)☆.</p>
 <p>I have a dynamic table here (<code>ways</code>):</p>
 <table>
@@ -323,23 +322,23 @@ ways[i-1][j] + ways[i][j-i],    &amp; i \leq j
 \end{cases}
 $$</p>
 <p>To calculate <code>ways[i][j]</code> i need to find  <code>ways[i-1][j]</code> and <code>ways[i][j-i]</code>, so at first, i&rsquo;ll fill the zero row. Because there is only one way to partition 0 so <code>ways[0][0] = 1</code>, others would be 0. After using recurrence relation to find all the cells, <code>ways[n][n]</code> would be the result that we need.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">using</span> ull <span style="color:#f92672">=</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>;
-
-ull <span style="color:#a6e22e">exp_sum</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> n) {
-    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>ull<span style="color:#f92672">&gt;&gt;</span> ways(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>ull<span style="color:#f92672">&gt;</span> (n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>));
-    ways[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>){
-            ways[i][j] <span style="color:#f92672">=</span> ways[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j];
-            <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">&lt;=</span> j)
-                ways[i][j] <span style="color:#f92672">+=</span> ways[i][j<span style="color:#f92672">-</span>i];
-        }
-    }
-    <span style="color:#66d9ef">return</span> ways[n][n];
-}
-</code></pre></div><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> ull <span style="color:#f92672">=</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ull <span style="color:#a6e22e">exp_sum</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>ull<span style="color:#f92672">&gt;&gt;</span> ways(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>ull<span style="color:#f92672">&gt;</span> (n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span>    ways[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            ways[i][j] <span style="color:#f92672">=</span> ways[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">&lt;=</span> j)
+</span></span><span style="display:flex;"><span>                ways[i][j] <span style="color:#f92672">+=</span> ways[i][j<span style="color:#f92672">-</span>i];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ways[n][n];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><table>
 <thead>
 <tr>
 <th></th>
@@ -395,21 +394,21 @@ ull <span style="color:#a6e22e">exp_sum</span>(<span style="color:#66d9ef">unsig
 </table>
 <h3 id="improvement">Improvement<a hidden class="anchor" aria-hidden="true" href="#improvement">#</a></h3>
 <p>As you can see, there is no need to store from row $1^{st}$ to $n^th-1$ because we only need row $n^{th}$ to calculate row $n^{th}+1$. That&rsquo;s why i&rsquo;ll use 1 dimmension array to store the values and calculate itself.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">using</span> ull <span style="color:#f92672">=</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>;
-
-ull <span style="color:#a6e22e">exp_sum</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> n) {
-    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>ull<span style="color:#f92672">&gt;</span> ways(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>);
-    ways[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
-        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>){
-            ways[j] <span style="color:#f92672">+=</span> ways[j <span style="color:#f92672">-</span> i];
-        }
-    }
-    <span style="color:#66d9ef">return</span> ways[n];
-}
-</code></pre></div><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> ull <span style="color:#f92672">=</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ull <span style="color:#a6e22e">exp_sum</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>ull<span style="color:#f92672">&gt;</span> ways(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    ways[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            ways[j] <span style="color:#f92672">+=</span> ways[j <span style="color:#f92672">-</span> i];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ways[n];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><table>
 <thead>
 <tr>
 <th>0</th>
@@ -459,11 +458,11 @@ ull <span style="color:#a6e22e">exp_sum</span>(<span style="color:#66d9ef">unsig
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

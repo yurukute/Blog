@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="vi" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Hamming Number | Blog của Noob</title>
+<meta name="keywords" content="Số học, Quy hoạch động">
+<meta name="description" content="Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.
+Viết chương trình tính số Hamming nhỏ nhất thứ n.
+Đặc biệt:
+Số Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu.">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/hammingnumber/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/hammingnumber/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/hammingnumber/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<meta property="og:title" content="Hamming Number" />
+<meta property="og:description" content="Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.
+Viết chương trình tính số Hamming nhỏ nhất thứ n.
+Đặc biệt:
+Số Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/post/hammingnumber/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-23T17:37:36+07:00" />
+<meta property="article:modified_time" content="2022-05-23T17:37:36+07:00" /><meta property="og:site_name" content="Blog của Noob" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hamming Number"/>
+<meta name="twitter:description" content="Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.
+Viết chương trình tính số Hamming nhỏ nhất thứ n.
+Đặc biệt:
+Số Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Hamming Number",
+      "item": "https://yurukute.github.io/Blog/post/hammingnumber/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hamming Number",
+  "name": "Hamming Number",
+  "description": "Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.\nViết chương trình tính số Hamming nhỏ nhất thứ n.\nĐặc biệt:\nSố Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu.",
+  "keywords": [
+    "Số học", "Quy hoạch động"
+  ],
+  "articleBody": "Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.\nViết chương trình tính số Hamming nhỏ nhất thứ n.\nĐặc biệt:\nSố Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu.\nChương trình cần phải tính toán được 5000 (Clojure: 2000, NASM: 13282) số Hamming nhỏ nhất mà không bị timeout.\nLời giải Vét cạn Phương pháp đơn giản nhất chính là lần lượt kiểm tra các số từ $2$ trở đi xem nó có phải số Hamming hay không và tăng biến đếm cho đến khi tìm được số Hamming thứ n. Để kiểm tra một số liệu có phải là số Hamming hay không thì dựa vào các điểm sau:\nSố Hamming là một tích các lũy thừa cơ số 2, 3 và 5. 2, 3 vả 5 là số nguyên tố. Nói cách khác, số Hamming là một số có ước nguyên tố không lớn hơn 5. Mình sẽ thông qua việc phân tích thừa số nguyên tố để kiểm tra và việc phân tích sẽ chỉ dừng ở số 5, nếu phần còn lại của số cần kiểm tra bằng 1 - tức là không còn thừa số nào khác - thì số đó là số Hamming.\n#include int isHamber(uint64_t n){ for(int i = 2; i \u003c= 5; i++) while (n % i == 0) n /= i; return n == 1; } uint64_t hamber(int n){ uint64_t res = 0; int count = 0; while(count \u003c n){ res++; if(isHamber(res)) count++; } return res; } Tuy nhiên, phương pháp này sẽ dẫn đến mất thời gian để chạy chương trình, nhất là khi có một yêu cầu cụ thể rằng:\nChương trình cần phải tính toán được 5000 (Clojure: 2000, NASM: 13282) số Hamming nhỏ nhất mà không bị timeout.\nQuy hoạch động Do đặc điểm là một tích các lũy thừa cơ số 2, 3, và 5, số Hamming có thể được phân tách thành tích của một số Hamming nhỏ hơn với 2, 3, hoặc là 5: $$ 2^ỉ3^j5^k = \\Bigg[ \\begin{array}{1} 2^{i-1}3^j5^k \\times 2 \\\\ 2^i3^{j-1}5^k \\times 3 \\\\ 2^i3^j5^{k-1} \\times 5 \\\\ \\end{array} $$ Như vậy, dãy số Hamming có thể được xây dựng như sau: $$ \\begin{cases} H_1 = 1 \\\\ H_x = min(H_i \\times 2, H_j \\times 3, H_k \\times 5) \\end{cases} $$ với $i, j, k$ là chỉ số của dãy Hamming ($i, j, k \u003c x$). Các chỉ số này được tính từ $1$ và chỉ tăng khi bội của số Hamming ở vị trí tương ứng đã được thêm vào dãy. Ví dụ:\n$H_2 = min(H_1 \\times 2, H_1 \\times 3, H_1 \\times 5) = min(1 \\times 2, 1 \\times 3, 1 \\times 5) = 2$\n$\\Rightarrow$ $i$ tăng lên 1 do tích $H_i \\times 2$ được chọn: $i = 2$.\n$H_3 = min(H_2 \\times 2, H_1 \\times 3, H_1 \\times 5) = min(2 \\times 2, 1 \\times 3, 1 \\times 5) = 3$\n$\\Rightarrow$ $j$ tăng lên 1.\n…\n$H_6 = min(H_3 \\times 2, H_2 \\times 3, H_2 \\times 5) = min(3 \\times 2, 2 \\times 3, 2 \\times 5) = 6$\n$\\Rightarrow$ $i$ và $j$ tăng lên 1.\n#include #include uint64_t hamber(int n){ uint64_t hambers[13282], next2 = 2, next3 = 3, next5 = 5; int i = 0, j = 0, k = 0; hambers[0] = 1; for(int x = 1; x \u003c n; x++){ hambers[x] = std::min(std::min(next2, next3), next5); if(hambers[x] == next2) next2 = hambers[++i]*2; if(hambers[x] == next3) next3 = hambers[++j]*3; if(hambers[x] == next5) next5 = hambers[++k]*5; } return hambers[n-1]; } Cảm ơn bạn vì đã đọc.\n",
+  "wordCount" : "653",
+  "inLanguage": "vi",
+  "datePublished": "2022-05-23T17:37:36+07:00",
+  "dateModified": "2022-05-23T17:37:36+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/post/hammingnumber/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Noob",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yurukute.github.io/Blog/archive" title="Lưu trữ">
+                    <span>Lưu trữ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/search" title="Tìm kiếm">
+                    <span>Tìm kiếm</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Hamming Number
+    </h1>
+    <div class="post-meta"><span title='2022-05-23 17:37:36 +0700 +07'>23 Tháng 5, 2022</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yurukute.github.io/Blog/en/post/hammingnumber/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h1>
+<p>Nguồn: <a href="https://www.codewars.com/kata/526d84b98f428f14a60008da/" target="_blank">Codewars</a>
+</p>
+<h2 id="đọc-hiểu">Đọc hiểu<a hidden class="anchor" aria-hidden="true" href="#đọc-hiểu">#</a></h2>
+<p>Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.</p>
+<p>Viết chương trình tính số Hamming nhỏ nhất thứ n.</p>
+<p>Đặc biệt:</p>
+<ul>
+<li>Số Hamming đầu tiên là $1 = 2^03^05^0$</li>
+<li>Số Hamming thứ hai là $2 = 2^13^05^0$</li>
+<li>Số Hamming thứ ba là $3 = 2^03^15^0$</li>
+<li>Số Hamming thứ tư là $4 = 2^23^05^0$</li>
+<li>Số Hamming thứ năm là $5 = 2^03^05^1$</li>
+</ul>
+<p>20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu.</p>
+<p>Chương trình cần phải tính toán được 5000 (Clojure: 2000, NASM: 13282) số Hamming nhỏ nhất mà không bị timeout.</p>
+<h1 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h1>
+<h2 id="vét-cạn">Vét cạn<a hidden class="anchor" aria-hidden="true" href="#vét-cạn">#</a></h2>
+<p>Phương pháp đơn giản nhất chính là lần lượt kiểm tra các số từ $2$ trở đi xem nó có phải số Hamming hay không và tăng biến đếm cho đến khi tìm được số Hamming thứ n. Để kiểm tra một số liệu có phải là số Hamming hay không thì dựa vào các điểm sau:</p>
+<ul>
+<li>Số Hamming là một tích các lũy thừa cơ số 2, 3 và 5.</li>
+<li>2, 3 vả 5 là số nguyên tố.</li>
+</ul>
+<p>Nói cách khác, số Hamming là một số có ước nguyên tố không lớn hơn 5. Mình sẽ thông qua việc <a href="https://yurukute.github.io/Blog/post/primesinnumbers/">phân tích thừa số nguyên tố</a>
+ để kiểm tra và việc phân tích sẽ chỉ dừng ở số 5, nếu phần còn lại của số cần kiểm tra bằng 1 - tức là không còn thừa số nào khác - thì số đó là số Hamming.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdint&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">isHamber</span>(<span style="color:#66d9ef">uint64_t</span> n){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            n <span style="color:#f92672">/=</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">uint64_t</span> <span style="color:#a6e22e">hamber</span>(<span style="color:#66d9ef">int</span> n){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint64_t</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(count <span style="color:#f92672">&lt;</span> n){
+</span></span><span style="display:flex;"><span>        res<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(isHamber(res))
+</span></span><span style="display:flex;"><span>            count<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Tuy nhiên, phương pháp này sẽ dẫn đến mất thời gian để chạy chương trình, nhất là khi có một yêu cầu cụ thể rằng:</p>
+<blockquote>
+<p>Chương trình cần phải tính toán được 5000 (Clojure: 2000, NASM: 13282) số Hamming nhỏ nhất mà không bị timeout.</p>
+</blockquote>
+<h2 id="quy-hoạch-động">Quy hoạch động<a hidden class="anchor" aria-hidden="true" href="#quy-hoạch-động">#</a></h2>
+<p>Do đặc điểm là một tích các lũy thừa cơ số 2, 3, và 5, số Hamming có thể được phân tách thành tích của một số Hamming nhỏ hơn với 2, 3, hoặc là 5:
+$$
+2^ỉ3^j5^k = \Bigg[
+\begin{array}{1}
+2^{i-1}3^j5^k \times 2 \\
+2^i3^{j-1}5^k \times 3 \\
+2^i3^j5^{k-1} \times 5 \\
+\end{array}
+$$
+Như vậy, dãy số Hamming có thể được xây dựng như sau:
+$$
+\begin{cases}
+H_1 = 1 \\
+H_x = min(H_i \times 2, H_j \times 3, H_k \times 5)
+\end{cases}
+$$
+với $i, j, k$ là chỉ số của dãy Hamming ($i, j, k &lt; x$). Các chỉ số này được tính từ $1$ và chỉ tăng khi bội của số Hamming ở vị trí tương ứng đã được thêm vào dãy. Ví dụ:</p>
+<ul>
+<li>
+<p>$H_2 = min(H_1 \times 2, H_1 \times 3, H_1 \times 5) = min(1 \times 2, 1 \times 3, 1 \times 5) = 2$</p>
+<p>$\Rightarrow$ $i$ tăng lên 1 do tích $H_i \times 2$ được chọn: $i = 2$.</p>
+</li>
+<li>
+<p>$H_3 = min(H_2 \times 2, H_1 \times 3, H_1 \times 5) = min(2 \times 2, 1 \times 3, 1 \times 5) = 3$</p>
+<p>$\Rightarrow$ $j$ tăng lên 1.</p>
+</li>
+<li>
+<p>&hellip;</p>
+</li>
+<li>
+<p>$H_6 = min(H_3 \times 2, H_2 \times 3, H_2 \times 5) = min(3 \times 2, 2 \times 3, 2 \times 5) = 6$</p>
+<p>$\Rightarrow$ $i$ và $j$ tăng lên 1.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdint&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;algorithm&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">uint64_t</span> <span style="color:#a6e22e">hamber</span>(<span style="color:#66d9ef">int</span> n){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint64_t</span> hambers[<span style="color:#ae81ff">13282</span>], next2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, next3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, next5 <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, k <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    hambers[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; x <span style="color:#f92672">&lt;</span> n; x<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        hambers[x] <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>min(std<span style="color:#f92672">::</span>min(next2, next3), next5);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(hambers[x] <span style="color:#f92672">==</span> next2)
+</span></span><span style="display:flex;"><span>            next2 <span style="color:#f92672">=</span> hambers[<span style="color:#f92672">++</span>i]<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(hambers[x] <span style="color:#f92672">==</span> next3)
+</span></span><span style="display:flex;"><span>            next3 <span style="color:#f92672">=</span> hambers[<span style="color:#f92672">++</span>j]<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(hambers[x] <span style="color:#f92672">==</span> next5)
+</span></span><span style="display:flex;"><span>            next5 <span style="color:#f92672">=</span> hambers[<span style="color:#f92672">++</span>k]<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> hambers[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cảm ơn bạn vì đã đọc.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/">Số học</a></li>
+      <li><a href="https://yurukute.github.io/Blog/tags/quy-ho%E1%BA%A1ch-%C4%91%E1%BB%99ng/">Quy hoạch động</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/post/thelift/">
+    <span class="title">« Bài mới hơn</span>
+    <br>
+    <span>Thang máy</span>
+  </a>
+  <a class="next" href="https://yurukute.github.io/Blog/post/reducedfractions/">
+    <span class="title">Bài cũ hơn »</span>
+    <br>
+    <span>Số phân số tối giản với mẫu số d</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

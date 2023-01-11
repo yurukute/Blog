@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="vi" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Thang máy | Blog của Noob</title>
+<meta name="keywords" content="">
+<meta name="description" content="Bài toán Nguồn: Codewars Đọc hiểu Một tòa nhà nhiều tầng có thang máy trong đó. Ở mỗi tầng có một hàng người chờ được di chuyển đến tầng họ muốn, được thể hiện bằng một số.
+Nhiệm vụ: Đưa tất cả mọi người đến các tầng mà họ muốn đến trong khi tuân thủ các quy luật bên dưới.
+TRƯỚC (Mọi người trong hàng đợi) SAU (Mọi người tại đích đến của họ) &#43;--&#43; &#43;--&#43; /----------------| |----------------\ /----------------| |----------------\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Trả về danh sách tất cả các tầng mà thang máy đã dừng lại (theo thứ tự dừng).">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/thelift/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/thelift/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/thelift/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<meta property="og:title" content="Thang máy" />
+<meta property="og:description" content="Bài toán Nguồn: Codewars Đọc hiểu Một tòa nhà nhiều tầng có thang máy trong đó. Ở mỗi tầng có một hàng người chờ được di chuyển đến tầng họ muốn, được thể hiện bằng một số.
+Nhiệm vụ: Đưa tất cả mọi người đến các tầng mà họ muốn đến trong khi tuân thủ các quy luật bên dưới.
+TRƯỚC (Mọi người trong hàng đợi) SAU (Mọi người tại đích đến của họ) &#43;--&#43; &#43;--&#43; /----------------| |----------------\ /----------------| |----------------\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Trả về danh sách tất cả các tầng mà thang máy đã dừng lại (theo thứ tự dừng)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/post/thelift/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-06T00:45:02+07:00" />
+<meta property="article:modified_time" content="2022-06-06T00:45:02+07:00" /><meta property="og:site_name" content="Blog của Noob" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Thang máy"/>
+<meta name="twitter:description" content="Bài toán Nguồn: Codewars Đọc hiểu Một tòa nhà nhiều tầng có thang máy trong đó. Ở mỗi tầng có một hàng người chờ được di chuyển đến tầng họ muốn, được thể hiện bằng một số.
+Nhiệm vụ: Đưa tất cả mọi người đến các tầng mà họ muốn đến trong khi tuân thủ các quy luật bên dưới.
+TRƯỚC (Mọi người trong hàng đợi) SAU (Mọi người tại đích đến của họ) &#43;--&#43; &#43;--&#43; /----------------| |----------------\ /----------------| |----------------\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Trả về danh sách tất cả các tầng mà thang máy đã dừng lại (theo thứ tự dừng)."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Thang máy",
+      "item": "https://yurukute.github.io/Blog/post/thelift/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Thang máy",
+  "name": "Thang máy",
+  "description": "Bài toán Nguồn: Codewars Đọc hiểu Một tòa nhà nhiều tầng có thang máy trong đó. Ở mỗi tầng có một hàng người chờ được di chuyển đến tầng họ muốn, được thể hiện bằng một số.\nNhiệm vụ: Đưa tất cả mọi người đến các tầng mà họ muốn đến trong khi tuân thủ các quy luật bên dưới.\nTRƯỚC (Mọi người trong hàng đợi) SAU (Mọi người tại đích đến của họ) +--+ +--+ /----------------| |----------------\\ /----------------| |----------------\\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Trả về danh sách tất cả các tầng mà thang máy đã dừng lại (theo thứ tự dừng).",
+  "keywords": [
+    
+  ],
+  "articleBody": "Bài toán Nguồn: Codewars Đọc hiểu Một tòa nhà nhiều tầng có thang máy trong đó. Ở mỗi tầng có một hàng người chờ được di chuyển đến tầng họ muốn, được thể hiện bằng một số.\nNhiệm vụ: Đưa tất cả mọi người đến các tầng mà họ muốn đến trong khi tuân thủ các quy luật bên dưới.\nTRƯỚC (Mọi người trong hàng đợi) SAU (Mọi người tại đích đến của họ) +--+ +--+ /----------------| |----------------\\ /----------------| |----------------\\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Trả về danh sách tất cả các tầng mà thang máy đã dừng lại (theo thứ tự dừng).\nLƯU Ý: Thang máy luôn bắt đầu ở tầng trệt (và mọi người đang chờ ở tầng trệt có thể vào ngay lập tức).\nqueues = { {}, {}, {5,5,5}, {}, {}, {}, {} }; capacity = 5; result = {0, 2, 5, 0}; Quy luật Quy luật của thang máy Thang máy chỉ đi lên hoặc đi xuống!\nMỗi tầng có cả nút UP và DOWN (ngoại trừ tầng trên cùng và tầng trệt chỉ có nút DOWN hoặc UP tương ứng).\nThang máy không bao giờ thay đổi hướng cho đến khi không còn người nào muốn đi lên/xuống theo hướng nó đang di chuyển.\nKhi trống, thang máy sẽ cố gắng trở nên thông minh. Ví dụ,\nNếu nó đang đi lên thì nó có thể tiếp tục đi lên để gom những người ở tầng cao nhất muốn đi xuống. Nếu nó đang đi xuống thì nó có thể tiếp tục đi xuống để gom những người ở tầng thấp nhất muốn đi lên. Thang máy có một sức chứa tối đa.\nKhi được gọi, thang máy vẫn sẽ dừng ngay cả khi nó đã đầy, không ai khác có thể vào thang máy trừ khi có người muốn xuống!\nNếu thang máy trống và không có người chờ, thì thang máy sẽ quay trở lại tầng trệt.\nQuy luật của hàng người Mọi người ở trong “hàng đợi” đại diện cho thứ tự đến của họ để chờ thang máy.\nTất cả mọi người đều có thể nhấn nút UP/DOWN.\nChỉ những người đi cùng hướng mới có thể vào thang máy.\nVào theo thứ tự “hàng đợi”, những người không vào cũng không chặn những người đứng sau họ muốn vào.\nNếu một người không thể vào một thang máy đã đầy, họ sẽ nhấn lại nút UP/DOWN sau khi đã khởi hành mà không có họ.\nLời giải Thang máy chỉ quay lại tầng trệt chỉ khi thang máy trống và không có người chờ. Vì thế, cho đến thời điểm đó, thang máy sẽ lặp đi lặp lại chu kỳ như sau:\nĐi lên: Vì thang máy luôn bắt đầu ở tầng trệt nên điều đầu tiên nó làm là đi lên các tầng trên. Đi xuống: Xảy ra sau khi thang đã lên đến tầng trên cùng Tại mỗi tầng $i$ đi qua:\nTrả những người trong thang máy nếu $i$ là tầng họ muốn xuống. bool remove_people(std::vector\u003cint\u003e *lift, int floor){ bool stop = false; for (auto person = lift-\u003ebegin(); person != lift-\u003eend(); person++){ if (*person == floor){ lift-\u003eerase(person--); stop = true; } } return stop; } Đưa người vào thang máy nếu số tầng họ muốn đến thuận với chiều đi chuyển của thang máy cho đến khi hết người hoặc thang máy đầy. bool add_people(std::vector\u003cint\u003e *lift, std::vector\u003cint\u003e *people, int floor, int capacity, int direction){ bool stop = false; for(auto person = people-\u003ebegin(); person != people-\u003eend(); person++){ if((*person \u003e floor \u0026\u0026 direction == UP) || (*person \u003c floor \u0026\u0026 direction == DOWN)){ stop = true; if(int(lift-\u003esize()) \u003c capacity){ lift-\u003epush_back(*person); people-\u003eerase(person--); } } } return stop; } Nếu một trong hai hành động trên được thực hiện, lưu $i$ vào mảng kết quả. #include #define UP 1 #define DOWN 0 bool remove_people(std::vector\u003cint\u003e *lift, int floor){...} bool add_people(std::vector\u003cint\u003e *lift, std::vector\u003cint\u003e *people, int floor, int capacity, int direction){...} std::vector\u003cint\u003e the_lift(std::vector\u003cstd::vector\u003cint\u003e\u003e queues, int capacity) { std::vector\u003cint\u003e res = {0}, lift; int top = queues.size(); bool unfinish = true; while(unfinish){ unfinish = false; for(int floor = 0; floor \u003c top; floor++){ bool stop = remove_people(\u0026lift, floor); stop = add_people(\u0026lift, \u0026queues[floor], floor, capacity, UP) || stop; if(!queues[floor].empty()) unfinish = true; if(stop \u0026\u0026 res.back() != floor) res.push_back(floor); } for(int floor = top-1; floor \u003e= 0; floor--){ bool stop = remove_people(\u0026lift, floor); stop = add_people(\u0026lift, \u0026queues[floor], floor, capacity, DOWN) || stop; if(!queues[floor].empty()) unfinish = true; if(stop \u0026\u0026 res.back() != floor) res.push_back(floor); } } if(res.back()) res.push_back(0); return res; } ",
+  "wordCount" : "893",
+  "inLanguage": "vi",
+  "datePublished": "2022-06-06T00:45:02+07:00",
+  "dateModified": "2022-06-06T00:45:02+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/post/thelift/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Noob",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yurukute.github.io/Blog/archive" title="Lưu trữ">
+                    <span>Lưu trữ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/search" title="Tìm kiếm">
+                    <span>Tìm kiếm</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Thang máy
+    </h1>
+    <div class="post-meta"><span title='2022-06-06 00:45:02 +0700 +07'>06 Tháng 6, 2022</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yurukute.github.io/Blog/en/post/thelift/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h1>
+<p>Nguồn: <a href="https://www.codewars.com/kata/58905bfa1decb981da00009e" target="_blank">Codewars</a>
+</p>
+<h2 id="đọc-hiểu">Đọc hiểu<a hidden class="anchor" aria-hidden="true" href="#đọc-hiểu">#</a></h2>
+<p>Một tòa nhà nhiều tầng có thang máy trong đó. Ở mỗi tầng có một hàng người chờ được di chuyển đến tầng họ muốn,  được thể hiện bằng một số.</p>
+<p>Nhiệm vụ: Đưa tất cả mọi người đến các tầng mà họ muốn đến trong khi tuân thủ các quy luật bên dưới.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>    TRƯỚC (Mọi người trong hàng đợi)             SAU (Mọi người tại đích đến của họ)
+</span></span><span style="display:flex;"><span>                   +--+                                          +--+ 
+</span></span><span style="display:flex;"><span>  /----------------|  |----------------\        /----------------|  |----------------\
+</span></span><span style="display:flex;"><span>10|                |  | 1,4,3,2        |      10|             10 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 9|                |  | 1,10,2         |       9|                |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 8|                |  |                |       8|                |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 7|                |  | 3,6,4,5,6      |       7|                |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 6|                |  |                |       6|          6,6,6 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 5|                |  |                |       5|            5,5 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 4|                |  | 0,0,0          |       4|          4,4,4 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 3|                |  |                |       3|            3,3 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 2|                |  | 4              |       2|          2,2,2 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 1|                |  | 6,5,2          |       1|            1,1 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> G|                |  |                |       G|          0,0,0 |  |                |
+</span></span><span style="display:flex;"><span>  |====================================|        |====================================|
+</span></span></code></pre></div><p>Trả về danh sách tất cả các tầng mà thang máy đã dừng lại (theo thứ tự dừng).</p>
+<p>LƯU Ý: Thang máy luôn bắt đầu ở tầng trệt (và mọi người đang chờ ở tầng trệt có thể vào ngay lập tức).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>queues <span style="color:#f92672">=</span> { {}, {}, {<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>}, {}, {}, {}, {} };
+</span></span><span style="display:flex;"><span>capacity <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>};
+</span></span></code></pre></div><h3 id="quy-luật">Quy luật<a hidden class="anchor" aria-hidden="true" href="#quy-luật">#</a></h3>
+<h4 id="quy-luật-của-thang-máy">Quy luật của thang máy<a hidden class="anchor" aria-hidden="true" href="#quy-luật-của-thang-máy">#</a></h4>
+<p>Thang máy chỉ đi lên hoặc đi xuống!</p>
+<p>Mỗi tầng có cả nút UP và DOWN (ngoại trừ tầng trên cùng và tầng trệt chỉ có nút DOWN hoặc UP tương ứng).</p>
+<p>Thang máy không bao giờ thay đổi hướng cho đến khi không còn người nào muốn đi lên/xuống theo hướng nó đang di chuyển.</p>
+<p>Khi trống, thang máy sẽ cố gắng trở nên thông minh. Ví dụ,</p>
+<ul>
+<li>Nếu nó đang đi lên thì nó có thể tiếp tục đi lên để gom những người ở tầng cao nhất muốn đi xuống.</li>
+<li>Nếu nó đang đi xuống thì nó có thể tiếp tục đi xuống để gom những người ở tầng thấp nhất muốn đi lên.</li>
+</ul>
+<p>Thang máy có một sức chứa tối đa.</p>
+<p>Khi được gọi, thang máy vẫn sẽ dừng ngay cả khi nó đã đầy, không ai khác có thể vào thang máy trừ khi có người muốn xuống!</p>
+<p>Nếu thang máy trống và không có người chờ, thì thang máy sẽ quay trở lại tầng trệt.</p>
+<h4 id="quy-luật-của-hàng-người">Quy luật của hàng người<a hidden class="anchor" aria-hidden="true" href="#quy-luật-của-hàng-người">#</a></h4>
+<p>Mọi người ở trong &ldquo;hàng đợi&rdquo; đại diện cho thứ tự đến của họ để chờ thang máy.</p>
+<p>Tất cả mọi người đều có thể nhấn nút UP/DOWN.</p>
+<p>Chỉ những người đi cùng hướng mới có thể vào thang máy.</p>
+<p>Vào theo thứ tự &ldquo;hàng đợi&rdquo;, những người không vào cũng không chặn những người đứng sau họ muốn vào.</p>
+<p>Nếu một người không thể vào một thang máy đã đầy, họ sẽ nhấn lại nút UP/DOWN sau khi đã khởi hành mà không có họ.</p>
+<h1 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h1>
+<p>Thang máy chỉ quay lại tầng trệt chỉ khi <code>thang máy trống</code> và <code>không có người chờ</code>. Vì thế, cho đến thời điểm đó, thang máy sẽ lặp đi lặp lại chu kỳ như sau:</p>
+<ol>
+<li>Đi lên: Vì <code>thang máy luôn bắt đầu ở tầng trệt</code> nên điều đầu tiên nó làm là đi lên các tầng trên.</li>
+<li>Đi xuống: Xảy ra sau khi thang đã lên đến tầng trên cùng</li>
+</ol>
+<p>Tại mỗi tầng $i$ đi qua:</p>
+<ul>
+<li>Trả những người trong thang máy nếu $i$ là tầng họ muốn xuống.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">remove_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, <span style="color:#66d9ef">int</span> floor){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> person <span style="color:#f92672">=</span> lift<span style="color:#f92672">-&gt;</span>begin(); person <span style="color:#f92672">!=</span> lift<span style="color:#f92672">-&gt;</span>end(); person<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">*</span>person <span style="color:#f92672">==</span> floor){
+</span></span><span style="display:flex;"><span>            lift<span style="color:#f92672">-&gt;</span>erase(person<span style="color:#f92672">--</span>);
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>        }     
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> stop;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Đưa người vào thang máy nếu số tầng họ muốn đến thuận với chiều đi chuyển của thang máy cho đến khi hết người hoặc thang máy đầy.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">add_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>people, <span style="color:#66d9ef">int</span> floor, <span style="color:#66d9ef">int</span> capacity, <span style="color:#66d9ef">int</span> direction){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> person <span style="color:#f92672">=</span> people<span style="color:#f92672">-&gt;</span>begin(); person <span style="color:#f92672">!=</span> people<span style="color:#f92672">-&gt;</span>end(); person<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>((<span style="color:#f92672">*</span>person <span style="color:#f92672">&gt;</span> floor <span style="color:#f92672">&amp;&amp;</span> direction <span style="color:#f92672">==</span> UP) <span style="color:#f92672">||</span> (<span style="color:#f92672">*</span>person <span style="color:#f92672">&lt;</span> floor <span style="color:#f92672">&amp;&amp;</span> direction <span style="color:#f92672">==</span> DOWN)){
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">int</span>(lift<span style="color:#f92672">-&gt;</span>size()) <span style="color:#f92672">&lt;</span> capacity){
+</span></span><span style="display:flex;"><span>                lift<span style="color:#f92672">-&gt;</span>push_back(<span style="color:#f92672">*</span>person);
+</span></span><span style="display:flex;"><span>                people<span style="color:#f92672">-&gt;</span>erase(person<span style="color:#f92672">--</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> stop;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Nếu một trong hai hành động trên được thực hiện, lưu $i$ vào mảng kết quả.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define UP 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define DOWN 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">remove_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, <span style="color:#66d9ef">int</span> floor){...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">add_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>people, <span style="color:#66d9ef">int</span> floor, <span style="color:#66d9ef">int</span> capacity, <span style="color:#66d9ef">int</span> direction){...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> the_lift(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> queues, <span style="color:#66d9ef">int</span> capacity) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> res <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>}, lift;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> top <span style="color:#f92672">=</span> queues.size();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> unfinish <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(unfinish){
+</span></span><span style="display:flex;"><span>        unfinish <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> floor <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; floor <span style="color:#f92672">&lt;</span> top; floor<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> remove_people(<span style="color:#f92672">&amp;</span>lift, floor);
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> add_people(<span style="color:#f92672">&amp;</span>lift, <span style="color:#f92672">&amp;</span>queues[floor], floor, capacity, UP) <span style="color:#f92672">||</span> stop;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>queues[floor].empty())
+</span></span><span style="display:flex;"><span>                unfinish <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(stop <span style="color:#f92672">&amp;&amp;</span> res.back() <span style="color:#f92672">!=</span> floor) res.push_back(floor);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> floor <span style="color:#f92672">=</span> top<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; floor <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; floor<span style="color:#f92672">--</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> remove_people(<span style="color:#f92672">&amp;</span>lift, floor);
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> add_people(<span style="color:#f92672">&amp;</span>lift, <span style="color:#f92672">&amp;</span>queues[floor], floor, capacity, DOWN) <span style="color:#f92672">||</span> stop;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>queues[floor].empty())
+</span></span><span style="display:flex;"><span>                unfinish <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(stop <span style="color:#f92672">&amp;&amp;</span> res.back() <span style="color:#f92672">!=</span> floor) res.push_back(floor);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(res.back()) res.push_back(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/post/addingbignumbers/">
+    <span class="title">« Bài mới hơn</span>
+    <br>
+    <span>Cộng 2 số lớn</span>
+  </a>
+  <a class="next" href="https://yurukute.github.io/Blog/post/hammingnumber/">
+    <span class="title">Bài cũ hơn »</span>
+    <br>
+    <span>Hamming Number</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Ứng dụng của các phép thao tác bit | Blog của Noob</title>
-<meta name="keywords" content="Bitwise" />
-<meta name="description" content="Sơ lược    Phép thao tác trên bit Kí hiệu Mô tả      AND &amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0.   OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0.   XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0.   NOT ~ Đảo bit, 0 thành 1, 1 thành 0.">
+<meta name="keywords" content="Bitwise">
+<meta name="description" content="Sơ lược Phép thao tác trên bit Kí hiệu Mô tả AND &amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0. OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0. XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0. NOT ~ Đảo bit, 0 thành 1, 1 thành 0. Dịch trái - Shift left &lt;&lt; Dịch tất cả các bit sang trái.">
 <meta name="author" content="">
-<link rel="canonical" href="https://yurukute.github.io/Blog/post/bitwise/" />
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.min.0825cf4721c95bfa21d267503086a657366c0a27f67ac876c81a8ce070328c3c.css" integrity="sha256-CCXPRyHJW/oh0mdQMIamVzZsCif2esh2yBqM4HAyjDw=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/bitwise/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
@@ -20,9 +20,8 @@
 <link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.89.4" />
-<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/bitwise/" />
-<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/bitwise/" />
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/bitwise/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/bitwise/">
 <noscript>
     <style>
         #theme-toggle,
@@ -85,15 +84,15 @@
 
 
 <meta property="og:title" content="Ứng dụng của các phép thao tác bit" />
-<meta property="og:description" content="Sơ lược    Phép thao tác trên bit Kí hiệu Mô tả      AND &amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0.   OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0.   XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0.   NOT ~ Đảo bit, 0 thành 1, 1 thành 0." />
+<meta property="og:description" content="Sơ lược Phép thao tác trên bit Kí hiệu Mô tả AND &amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0. OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0. XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0. NOT ~ Đảo bit, 0 thành 1, 1 thành 0. Dịch trái - Shift left &lt;&lt; Dịch tất cả các bit sang trái." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/post/bitwise/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-01-29T20:52:26&#43;07:00" />
-<meta property="article:modified_time" content="2021-01-29T20:52:26&#43;07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta property="article:published_time" content="2021-01-29T20:52:26+07:00" />
+<meta property="article:modified_time" content="2021-01-29T20:52:26+07:00" /><meta property="og:site_name" content="Blog của Noob" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ứng dụng của các phép thao tác bit"/>
-<meta name="twitter:description" content="Sơ lược    Phép thao tác trên bit Kí hiệu Mô tả      AND &amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0.   OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0.   XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0.   NOT ~ Đảo bit, 0 thành 1, 1 thành 0."/>
+<meta name="twitter:description" content="Sơ lược Phép thao tác trên bit Kí hiệu Mô tả AND &amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0. OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0. XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0. NOT ~ Đảo bit, 0 thành 1, 1 thành 0. Dịch trái - Shift left &lt;&lt; Dịch tất cả các bit sang trái."/>
 
 
 <script type="application/ld+json">
@@ -122,12 +121,12 @@
   "@type": "BlogPosting",
   "headline": "Ứng dụng của các phép thao tác bit",
   "name": "Ứng dụng của các phép thao tác bit",
-  "description": "Sơ lược    Phép thao tác trên bit Kí hiệu Mô tả      AND \u0026amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0.   OR \\ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0.   XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0.   NOT ~ Đảo bit, 0 thành 1, 1 thành 0.",
+  "description": "Sơ lược Phép thao tác trên bit Kí hiệu Mô tả AND \u0026amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0. OR \\ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0. XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0. NOT ~ Đảo bit, 0 thành 1, 1 thành 0. Dịch trái - Shift left \u0026lt;\u0026lt; Dịch tất cả các bit sang trái.",
   "keywords": [
     "Bitwise"
   ],
-  "articleBody": "Sơ lược    Phép thao tác trên bit Kí hiệu Mô tả      AND \u0026 Cả hai bit là 1, trả về 1. Ngược lại trả về 0.   OR \\ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0.   XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0.   NOT ~ Đảo bit, 0 thành 1, 1 thành 0.    Dịch trái - Shift left  Dịch tất cả các bit sang trái.    Dịch phải - Right left  Dịch tất cả các bit sang phải.     Ứng dụng Số nguyên Thay đổi bit // Đưa bit thứ n thành 1 x |= (1  n); //Đưa bit 0 ngoài cùng thành 1 x |= (x+1); //Đưa bit thứ n về 0 x \u0026= ~(1  n); //Đưa bit 1 ngoài cùng về 0 x \u0026= (x-1); //Đảo bit thứ n x ^= (1  n); //Lấy ra bit thứ n (x  n) \u0026 1; //Hoán đổi 2 bit cạnh nhau ((x \u0026 10101010)  1) | ((x \u0026 01010101)  1); Nhân / Chia x với $2^n$ x  n //nhân x  n //chia Làm tròn lên lũy thừa cơ số 2 x--; x |= x  1; x |= x  2; x |= x  4; x |= x  8; x |= x  16; x++; Làm tròn xuống lũy thừa cơ số 2 x--; x |= x  1; x |= x  2; x |= x  4; x |= x  8; x |= x  16; x++; x = x  1; //vẫn là đoạn code trên nhưng thêm dòng này Lấy phần nguyên của x x  0; 6.723  0; //6 Đảo dấu x x = ~x + 1; // hoặc x = (x ^ -1) + 1; // x = -x Giá trị tuyệt đối của x int abs = (x ^ (x  31)) - (x  31); Ước lũy thừa cơ số 2 lớn nhất của x x \u0026 (-x); Giá trị nguyên nhỏ nhất / lớn nhất int minInt = 1  31; int minInt = 1  -1; int maxInt = ~(1  31); int maxInt = (1  31) - 1; int maxInt = (1  -1) - 1; int maxInt = -1u  1; int maxLong = ((long)1  127) -1; Số nhỏ nhất / lớn nhất giữa 2 số //Cách 1 int min = a \u0026 ((a-b)  31) | b \u0026 (~(a-b)  31); int max = b \u0026 ((a-b)  31) | a \u0026 (~(a-b)  31); //Cách 2 int min = (b ^ (a ^ b) \u0026 -(a  b)); int max = (a ^ (a ^ b) \u0026 -(a  b)); Trung bình cộng 2 số int avg = (x + y)  1; int avg = ((x ^ y)  1) + (x \u0026 y); Hoán đổi giá trị 2 biến //Cách 1 a ^= b; b ^= a; a ^= b; //Cách 2 a = a ^ b ^ (b = a) Gõ nhanh điều kiện if Trong một số trường hợp, ta sẽ có đoạn code tựa tựa vầy:\nif(x == a) x = b; //hoặc if(x == b) x = a; Tương tự, ta đưa đoạn code về dòng sau với phép XOR:\nx ^= a ^ b; Kiểm tra   giá trị của bit thứ n   x \u0026 (1  n)   x là số lẻ   (x \u0026 1) == 1;   x là lũy thừa cơ số 2   x  0 \u0026\u0026 (x \u0026 (x - 1)) == 0;   a = b   (Nhanh hơn 35% trong Javascript)\n(a ^ b) == 0;   2 số a, b cùng dấu   (a ^ b) = 0; Chuỗi Chuyển kí tự thường thành hoa c \u0026 '_' Nếu kí tự được chuyển đã là kí tự hoa thì không thay đổi. Ví dụ:\nchar c; c = 'a' \u0026 '_'; //c = 'A' c = 'A' \u0026 '_'; //c = 'A' Chuyển kí tự hoa thành thường c | ' ' Nếu kí tự được chuyển đã là kí tự thường thì không thay đổi. Ví dụ:\nchar c; c = 'A' | ' '; //c = 'a' c = 'a' | ' '; //c = 'a' Đảo ngược kiểu kí tự c ^ ' ' Ví dụ:\nchar c; c = 'A' ^ ' '; //c = 'a' c = 'a' ^ ' '; //c = 'A' Vị trí của kí tự trong bảng chữ cái //Đối với chữ thường c ^ '`' //Đối với chữ hoa c ^ '@' //Không phân biệt c \u0026 \"\\x1F\" Nhảm nhí khác Dùng XOR để mã hóa một chuỗi #include#define key 5  int main(){ std::string s; std::cin  s; //Mã hóa  for(char \u0026i : s){ i ^= key; } std::cout  s + \"\\n\"; //Giải mã  for(char \u0026i : s){ i ^= key; } std::cout  s + \"\\n\"; } Input: Hello Output: M`iij Hello Đổi hệ màu từ R5G5B5 sang R8G8B8 R8 = (R5  2) G8 = (R5  2) B8 = (R5  2) Viết xong cái này thì mình cũng sắp lú rồi, cảm ơn vì đã đọc.\n",
-  "wordCount" : "880",
+  "articleBody": "Sơ lược Phép thao tác trên bit Kí hiệu Mô tả AND \u0026 Cả hai bit là 1, trả về 1. Ngược lại trả về 0. OR \\ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0. XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0. NOT ~ Đảo bit, 0 thành 1, 1 thành 0. Dịch trái - Shift left \u003c\u003c Dịch tất cả các bit sang trái. Dịch phải - Right left \u003e\u003e Dịch tất cả các bit sang phải. Ứng dụng Số nguyên Thay đổi bit // Đưa bit thứ n thành 1 x |= (1 \u003c\u003c n); //Đưa bit 0 ngoài cùng thành 1 x |= (x+1); //Đưa bit thứ n về 0 x \u0026= ~(1 \u003c\u003c n); //Đưa bit 1 ngoài cùng về 0 x \u0026= (x-1); //Đảo bit thứ n x ^= (1 \u003c\u003c n); //Lấy ra bit thứ n (x \u003e\u003e n) \u0026 1; //Hoán đổi 2 bit cạnh nhau ((x \u0026 10101010) \u003e\u003e 1) | ((x \u0026 01010101) \u003c\u003c 1); Nhân / Chia x với $2^n$ x \u003c\u003c n //nhân x \u003e\u003e n //chia Làm tròn lên lũy thừa cơ số 2 x--; x |= x \u003e\u003e 1; x |= x \u003e\u003e 2; x |= x \u003e\u003e 4; x |= x \u003e\u003e 8; x |= x \u003e\u003e 16; x++; Làm tròn xuống lũy thừa cơ số 2 x--; x |= x \u003e\u003e 1; x |= x \u003e\u003e 2; x |= x \u003e\u003e 4; x |= x \u003e\u003e 8; x |= x \u003e\u003e 16; x++; x = x \u003e\u003e 1; //vẫn là đoạn code trên nhưng thêm dòng này Lấy phần nguyên của x x \u003e\u003e 0; 6.723 \u003e\u003e 0; //6 Đảo dấu x x = ~x + 1; // hoặc x = (x ^ -1) + 1; // x = -x Giá trị tuyệt đối của x int abs = (x ^ (x \u003e\u003e 31)) - (x \u003e\u003e 31); Ước lũy thừa cơ số 2 lớn nhất của x x \u0026 (-x); Giá trị nguyên nhỏ nhất / lớn nhất int minInt = 1 \u003c\u003c 31; int minInt = 1 \u003c\u003c -1; int maxInt = ~(1 \u003c\u003c 31); int maxInt = (1 \u003c\u003c 31) - 1; int maxInt = (1 \u003c\u003c -1) - 1; int maxInt = -1u \u003e\u003e 1; int maxLong = ((long)1 \u003c\u003c 127) -1; Số nhỏ nhất / lớn nhất giữa 2 số //Cách 1 int min = a \u0026 ((a-b) \u003e\u003e 31) | b \u0026 (~(a-b) \u003e\u003e 31); int max = b \u0026 ((a-b) \u003e\u003e 31) | a \u0026 (~(a-b) \u003e\u003e 31); //Cách 2 int min = (b ^ (a ^ b) \u0026 -(a \u003c b)); int max = (a ^ (a ^ b) \u0026 -(a \u003c b)); Trung bình cộng 2 số int avg = (x + y) \u003e\u003e 1; int avg = ((x ^ y) \u003e\u003e 1) + (x \u0026 y); Hoán đổi giá trị 2 biến //Cách 1 a ^= b; b ^= a; a ^= b; //Cách 2 a = a ^ b ^ (b = a) Gõ nhanh điều kiện if Trong một số trường hợp, ta sẽ có đoạn code tựa tựa vầy:\nif(x == a) x = b; //hoặc if(x == b) x = a; Tương tự, ta đưa đoạn code về dòng sau với phép XOR:\nx ^= a ^ b; Kiểm tra giá trị của bit thứ n x \u0026 (1 \u003c\u003c n) x là số lẻ (x \u0026 1) == 1; x là lũy thừa cơ số 2 x \u003e 0 \u0026\u0026 (x \u0026 (x - 1)) == 0; a = b (Nhanh hơn 35% trong Javascript)\n(a ^ b) == 0; 2 số a, b cùng dấu (a ^ b) \u003e= 0; Chuỗi Chuyển kí tự thường thành hoa c \u0026 '_' Nếu kí tự được chuyển đã là kí tự hoa thì không thay đổi. Ví dụ:\nchar c; c = 'a' \u0026 '_'; //c = 'A' c = 'A' \u0026 '_'; //c = 'A' Chuyển kí tự hoa thành thường c | ' ' Nếu kí tự được chuyển đã là kí tự thường thì không thay đổi. Ví dụ:\nchar c; c = 'A' | ' '; //c = 'a' c = 'a' | ' '; //c = 'a' Đảo ngược kiểu kí tự c ^ ' ' Ví dụ:\nchar c; c = 'A' ^ ' '; //c = 'a' c = 'a' ^ ' '; //c = 'A' Vị trí của kí tự trong bảng chữ cái //Đối với chữ thường c ^ '`' //Đối với chữ hoa c ^ '@' //Không phân biệt c \u0026 \"\\x1F\" Nhảm nhí khác Dùng XOR để mã hóa một chuỗi #include #define key 5 int main(){ std::string s; std::cin \u003e\u003e s; //Mã hóa for(char \u0026i : s){ i ^= key; } std::cout \u003c\u003c s + \"\\n\"; //Giải mã for(char \u0026i : s){ i ^= key; } std::cout \u003c\u003c s + \"\\n\"; } Input: Hello Output: M`iij Hello Đổi hệ màu từ R5G5B5 sang R8G8B8 R8 = (R5 \u003c\u003c 3) | (R5 \u003e\u003e 2) G8 = (R5 \u003c\u003c 3) | (R5 \u003e\u003e 2) B8 = (R5 \u003c\u003c 3) | (R5 \u003e\u003e 2) Viết xong cái này thì mình cũng sắp lú rồi, cảm ơn vì đã đọc.\n",
+  "wordCount" : "881",
   "inLanguage": "vi",
   "datePublished": "2021-01-29T20:52:26+07:00",
   "dateModified": "2021-01-29T20:52:26+07:00",
@@ -163,14 +162,14 @@
     <nav class="nav">
         <div class="logo">
             <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -190,7 +189,7 @@
                             aria-label="English">En</a>
                     </li>
                 </ul>
-            </span>
+            </div>
         </div>
         <ul id="menu">
             <li>
@@ -219,8 +218,8 @@
     <h1 class="post-title">
       Ứng dụng của các phép thao tác bit
     </h1>
-    <div class="post-meta"><span title='2021-01-29 20:52:26 +0700 +07'>29 Tháng 1, 2021</span>&nbsp;|&nbsp;
-<ul class="i18n_list">Bản dịch:
+    <div class="post-meta"><span title='2021-01-29 20:52:26 +0700 +07'>29 Tháng 1, 2021</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
     <li>
         <a href="https://yurukute.github.io/Blog/en/post/bitwise/">En</a>
     </li>
@@ -364,176 +363,176 @@
 <h1 id="ứng-dụng">Ứng dụng<a hidden class="anchor" aria-hidden="true" href="#ứng-dụng">#</a></h1>
 <h2 id="số-nguyên">Số nguyên<a hidden class="anchor" aria-hidden="true" href="#số-nguyên">#</a></h2>
 <h3 id="thay-đổi-bit">Thay đổi bit<a hidden class="anchor" aria-hidden="true" href="#thay-đổi-bit">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// Đưa bit thứ n thành 1
-</span><span style="color:#75715e"></span>x <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
-
-<span style="color:#75715e">//Đưa bit 0 ngoài cùng thành 1
-</span><span style="color:#75715e"></span>x <span style="color:#f92672">|=</span> (x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
-
-<span style="color:#75715e">//Đưa bit thứ n về 0
-</span><span style="color:#75715e"></span>x <span style="color:#f92672">&amp;=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
-
-<span style="color:#75715e">//Đưa bit 1 ngoài cùng về 0
-</span><span style="color:#75715e"></span>x <span style="color:#f92672">&amp;=</span> (x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
-
-<span style="color:#75715e">//Đảo bit thứ n
-</span><span style="color:#75715e"></span>x <span style="color:#f92672">^=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
-
-<span style="color:#75715e">//Lấy ra bit thứ n
-</span><span style="color:#75715e"></span>(x <span style="color:#f92672">&gt;&gt;</span> n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>;
-
-<span style="color:#75715e">//Hoán đổi 2 bit cạnh nhau
-</span><span style="color:#75715e"></span>((x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">10101010</span>) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">|</span> ((x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">01010101</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>);
-</code></pre></div><h3 id="nhân--chia-x-với-2n">Nhân / Chia x với $2^n$<a hidden class="anchor" aria-hidden="true" href="#nhân--chia-x-với-2n">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#75715e">//nhân
-</span><span style="color:#75715e"></span>x <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#75715e">//chia
-</span></code></pre></div><h3 id="làm-tròn-lên-lũy-thừa-cơ-số-2">Làm tròn lên lũy thừa cơ số 2<a hidden class="anchor" aria-hidden="true" href="#làm-tròn-lên-lũy-thừa-cơ-số-2">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x<span style="color:#f92672">--</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span>;
-x<span style="color:#f92672">++</span>;
-</code></pre></div><h3 id="làm-tròn-xuống-lũy-thừa-cơ-số-2">Làm tròn <em>xuống</em> lũy thừa cơ số 2<a hidden class="anchor" aria-hidden="true" href="#làm-tròn-xuống-lũy-thừa-cơ-số-2">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x<span style="color:#f92672">--</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span>;
-x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span>;
-x<span style="color:#f92672">++</span>;
-x <span style="color:#f92672">=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">//vẫn là đoạn code trên nhưng thêm dòng này
-</span></code></pre></div><h3 id="lấy-phần-nguyên-của-x">Lấy phần nguyên của x<a hidden class="anchor" aria-hidden="true" href="#lấy-phần-nguyên-của-x">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#ae81ff">6.723</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//6   
-</span></code></pre></div><h3 id="đảo-dấu-x">Đảo dấu x<a hidden class="anchor" aria-hidden="true" href="#đảo-dấu-x">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// hoặc
-</span><span style="color:#75715e"></span>x <span style="color:#f92672">=</span> (x <span style="color:#f92672">^</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// x = -x
-</span></code></pre></div><h3 id="giá-trị-tuyệt-đối-của-x">Giá trị tuyệt đối của x<a hidden class="anchor" aria-hidden="true" href="#giá-trị-tuyệt-đối-của-x">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> abs <span style="color:#f92672">=</span> (x <span style="color:#f92672">^</span> (x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>)) <span style="color:#f92672">-</span> (x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
-</code></pre></div><h3 id="ước-lũy-thừa-cơ-số-2-lớn-nhất-của-x">Ước lũy thừa cơ số 2 lớn nhất của x<a hidden class="anchor" aria-hidden="true" href="#ước-lũy-thừa-cơ-số-2-lớn-nhất-của-x">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">-</span>x);
-</code></pre></div><h3 id="giá-trị-nguyên-nhỏ-nhất--lớn-nhất">Giá trị nguyên nhỏ nhất / lớn nhất<a hidden class="anchor" aria-hidden="true" href="#giá-trị-nguyên-nhỏ-nhất--lớn-nhất">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> minInt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>;
-<span style="color:#66d9ef">int</span> minInt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-
-<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>);
-<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1u</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
-
-<span style="color:#66d9ef">int</span> maxLong <span style="color:#f92672">=</span> ((<span style="color:#66d9ef">long</span>)<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">127</span>) <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-</code></pre></div><h3 id="số-nhỏ-nhất--lớn-nhất-giữa-2-số">Số nhỏ nhất / lớn nhất giữa 2 số<a hidden class="anchor" aria-hidden="true" href="#số-nhỏ-nhất--lớn-nhất-giữa-2-số">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//Cách 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> a <span style="color:#f92672">&amp;</span> ((a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">|</span> b <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">~</span>(a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
-<span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> b <span style="color:#f92672">&amp;</span> ((a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">|</span> a <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">~</span>(a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
-
-<span style="color:#75715e">//Cách 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> (b <span style="color:#f92672">^</span> (a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>(a <span style="color:#f92672">&lt;</span> b));
-<span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> (a <span style="color:#f92672">^</span> (a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>(a <span style="color:#f92672">&lt;</span> b));
-</code></pre></div><h3 id="trung-bình-cộng-2-số">Trung bình cộng 2 số<a hidden class="anchor" aria-hidden="true" href="#trung-bình-cộng-2-số">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> avg <span style="color:#f92672">=</span> (x <span style="color:#f92672">+</span> y) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">int</span> avg <span style="color:#f92672">=</span> ((x <span style="color:#f92672">^</span> y) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> (x <span style="color:#f92672">&amp;</span> y);
-</code></pre></div><h3 id="hoán-đổi-giá-trị-2-biến">Hoán đổi giá trị 2 biến<a hidden class="anchor" aria-hidden="true" href="#hoán-đổi-giá-trị-2-biến">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//Cách 1
-</span><span style="color:#75715e"></span>a <span style="color:#f92672">^=</span> b;
-b <span style="color:#f92672">^=</span> a;
-a <span style="color:#f92672">^=</span> b;
-
-<span style="color:#75715e">//Cách 2
-</span><span style="color:#75715e"></span>a <span style="color:#f92672">=</span> a <span style="color:#f92672">^</span> b <span style="color:#f92672">^</span> (b <span style="color:#f92672">=</span> a)
-</code></pre></div><h3 id="gõ-nhanh-điều-kiện-if">Gõ nhanh điều kiện if<a hidden class="anchor" aria-hidden="true" href="#gõ-nhanh-điều-kiện-if">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Đưa bit thứ n thành 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>x <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Đưa bit 0 ngoài cùng thành 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>x <span style="color:#f92672">|=</span> (x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Đưa bit thứ n về 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>x <span style="color:#f92672">&amp;=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Đưa bit 1 ngoài cùng về 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>x <span style="color:#f92672">&amp;=</span> (x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Đảo bit thứ n
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>x <span style="color:#f92672">^=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Lấy ra bit thứ n
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>(x <span style="color:#f92672">&gt;&gt;</span> n) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Hoán đổi 2 bit cạnh nhau
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>((x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">10101010</span>) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">|</span> ((x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">01010101</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>);
+</span></span></code></pre></div><h3 id="nhân--chia-x-với-2n">Nhân / Chia x với $2^n$<a hidden class="anchor" aria-hidden="true" href="#nhân--chia-x-với-2n">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#75715e">//nhân
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>x <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#75715e">//chia
+</span></span></span></code></pre></div><h3 id="làm-tròn-lên-lũy-thừa-cơ-số-2">Làm tròn lên lũy thừa cơ số 2<a hidden class="anchor" aria-hidden="true" href="#làm-tròn-lên-lũy-thừa-cơ-số-2">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span>;
+</span></span><span style="display:flex;"><span>x<span style="color:#f92672">++</span>;
+</span></span></code></pre></div><h3 id="làm-tròn-xuống-lũy-thừa-cơ-số-2">Làm tròn <em>xuống</em> lũy thừa cơ số 2<a hidden class="anchor" aria-hidden="true" href="#làm-tròn-xuống-lũy-thừa-cơ-số-2">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">|=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span>;
+</span></span><span style="display:flex;"><span>x<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">//vẫn là đoạn code trên nhưng thêm dòng này
+</span></span></span></code></pre></div><h3 id="lấy-phần-nguyên-của-x">Lấy phần nguyên của x<a hidden class="anchor" aria-hidden="true" href="#lấy-phần-nguyên-của-x">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6.723</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//6   
+</span></span></span></code></pre></div><h3 id="đảo-dấu-x">Đảo dấu x<a hidden class="anchor" aria-hidden="true" href="#đảo-dấu-x">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// hoặc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>x <span style="color:#f92672">=</span> (x <span style="color:#f92672">^</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// x = -x
+</span></span></span></code></pre></div><h3 id="giá-trị-tuyệt-đối-của-x">Giá trị tuyệt đối của x<a hidden class="anchor" aria-hidden="true" href="#giá-trị-tuyệt-đối-của-x">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> abs <span style="color:#f92672">=</span> (x <span style="color:#f92672">^</span> (x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>)) <span style="color:#f92672">-</span> (x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
+</span></span></code></pre></div><h3 id="ước-lũy-thừa-cơ-số-2-lớn-nhất-của-x">Ước lũy thừa cơ số 2 lớn nhất của x<a hidden class="anchor" aria-hidden="true" href="#ước-lũy-thừa-cơ-số-2-lớn-nhất-của-x">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">-</span>x);
+</span></span></code></pre></div><h3 id="giá-trị-nguyên-nhỏ-nhất--lớn-nhất">Giá trị nguyên nhỏ nhất / lớn nhất<a hidden class="anchor" aria-hidden="true" href="#giá-trị-nguyên-nhỏ-nhất--lớn-nhất">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> minInt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> minInt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> maxInt <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1u</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> maxLong <span style="color:#f92672">=</span> ((<span style="color:#66d9ef">long</span>)<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">127</span>) <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div><h3 id="số-nhỏ-nhất--lớn-nhất-giữa-2-số">Số nhỏ nhất / lớn nhất giữa 2 số<a hidden class="anchor" aria-hidden="true" href="#số-nhỏ-nhất--lớn-nhất-giữa-2-số">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//Cách 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> a <span style="color:#f92672">&amp;</span> ((a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">|</span> b <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">~</span>(a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> b <span style="color:#f92672">&amp;</span> ((a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">|</span> a <span style="color:#f92672">&amp;</span> (<span style="color:#f92672">~</span>(a<span style="color:#f92672">-</span>b) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">31</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Cách 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> (b <span style="color:#f92672">^</span> (a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>(a <span style="color:#f92672">&lt;</span> b));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> (a <span style="color:#f92672">^</span> (a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&amp;</span> <span style="color:#f92672">-</span>(a <span style="color:#f92672">&lt;</span> b));
+</span></span></code></pre></div><h3 id="trung-bình-cộng-2-số">Trung bình cộng 2 số<a hidden class="anchor" aria-hidden="true" href="#trung-bình-cộng-2-số">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> avg <span style="color:#f92672">=</span> (x <span style="color:#f92672">+</span> y) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> avg <span style="color:#f92672">=</span> ((x <span style="color:#f92672">^</span> y) <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> (x <span style="color:#f92672">&amp;</span> y);
+</span></span></code></pre></div><h3 id="hoán-đổi-giá-trị-2-biến">Hoán đổi giá trị 2 biến<a hidden class="anchor" aria-hidden="true" href="#hoán-đổi-giá-trị-2-biến">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//Cách 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>a <span style="color:#f92672">^=</span> b;
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">^=</span> a;
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">^=</span> b;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Cách 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>a <span style="color:#f92672">=</span> a <span style="color:#f92672">^</span> b <span style="color:#f92672">^</span> (b <span style="color:#f92672">=</span> a)
+</span></span></code></pre></div><h3 id="gõ-nhanh-điều-kiện-if">Gõ nhanh điều kiện if<a hidden class="anchor" aria-hidden="true" href="#gõ-nhanh-điều-kiện-if">#</a></h3>
 <p>Trong một số trường hợp, ta sẽ có đoạn code tựa tựa vầy:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">if</span>(x <span style="color:#f92672">==</span> a)
-    x <span style="color:#f92672">=</span> b;
-<span style="color:#75715e">//hoặc
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(x <span style="color:#f92672">==</span> b)
-    x <span style="color:#f92672">=</span> a;
-</code></pre></div><p>Tương tự, ta đưa đoạn code về dòng sau với phép XOR:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">^=</span> a <span style="color:#f92672">^</span> b;
-</code></pre></div><h3 id="kiểm-tra">Kiểm tra<a hidden class="anchor" aria-hidden="true" href="#kiểm-tra">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(x <span style="color:#f92672">==</span> a)
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> b;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//hoặc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span>(x <span style="color:#f92672">==</span> b)
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> a;
+</span></span></code></pre></div><p>Tương tự, ta đưa đoạn code về dòng sau với phép XOR:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">^=</span> a <span style="color:#f92672">^</span> b;
+</span></span></code></pre></div><h3 id="kiểm-tra">Kiểm tra<a hidden class="anchor" aria-hidden="true" href="#kiểm-tra">#</a></h3>
 <ul>
 <li>
 <h4 id="giá-trị-của-bit-thứ-n">giá trị của bit thứ n<a hidden class="anchor" aria-hidden="true" href="#giá-trị-của-bit-thứ-n">#</a></h4>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n)
+</span></span></code></pre></div><ul>
 <li>
 <h4 id="x-là-số-lẻ">x là số lẻ<a hidden class="anchor" aria-hidden="true" href="#x-là-số-lẻ">#</a></h4>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">(x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>(x <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div><ul>
 <li>
 <h4 id="x-là-lũy-thừa-cơ-số-2">x là lũy thừa cơ số 2<a hidden class="anchor" aria-hidden="true" href="#x-là-lũy-thừa-cơ-số-2">#</a></h4>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> (x <span style="color:#f92672">&amp;</span> (x <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> (x <span style="color:#f92672">&amp;</span> (x <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
+</span></span></code></pre></div><ul>
 <li>
 <h4 id="a--b">a = b<a hidden class="anchor" aria-hidden="true" href="#a--b">#</a></h4>
 </li>
 </ul>
 <p><em>(Nhanh hơn 35% trong Javascript)</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">(a <span style="color:#f92672">^</span> b) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>(a <span style="color:#f92672">^</span> b) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
+</span></span></code></pre></div><ul>
 <li>
 <h4 id="2-số-a-b-cùng-dấu">2 số a, b cùng dấu<a hidden class="anchor" aria-hidden="true" href="#2-số-a-b-cùng-dấu">#</a></h4>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">(a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>;
-</code></pre></div><h2 id="chuỗi">Chuỗi<a hidden class="anchor" aria-hidden="true" href="#chuỗi">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>(a <span style="color:#f92672">^</span> b) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>;
+</span></span></code></pre></div><h2 id="chuỗi">Chuỗi<a hidden class="anchor" aria-hidden="true" href="#chuỗi">#</a></h2>
 <h3 id="chuyển-kí-tự-thường-thành-hoa">Chuyển kí tự thường thành hoa<a hidden class="anchor" aria-hidden="true" href="#chuyển-kí-tự-thường-thành-hoa">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">c <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>
-</code></pre></div><p>Nếu kí tự được chuyển đã là kí tự hoa thì không thay đổi. Ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">char</span> c;
-c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>;  <span style="color:#75715e">//c = &#39;A&#39;
-</span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>;  <span style="color:#75715e">//c = &#39;A&#39;
-</span></code></pre></div><h3 id="chuyển-kí-tự-hoa-thành-thường">Chuyển kí tự hoa thành thường<a hidden class="anchor" aria-hidden="true" href="#chuyển-kí-tự-hoa-thành-thường">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">c <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>
-</code></pre></div><p>Nếu kí tự được chuyển đã là kí tự thường thì không thay đổi. Ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">char</span> c;
-c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>;  <span style="color:#75715e">//c = &#39;a&#39;
-</span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>;  <span style="color:#75715e">//c = &#39;a&#39;
-</span></code></pre></div><h3 id="đảo-ngược-kiểu-kí-tự">Đảo ngược kiểu kí tự<a hidden class="anchor" aria-hidden="true" href="#đảo-ngược-kiểu-kí-tự">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>
-</code></pre></div><p>Ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">char</span> c;
-c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>; <span style="color:#75715e">//c = &#39;a&#39;
-</span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>; <span style="color:#75715e">//c = &#39;A&#39;
-</span></code></pre></div><h3 id="vị-trí-của-kí-tự-trong-bảng-chữ-cái">Vị trí của kí tự trong bảng chữ cái<a hidden class="anchor" aria-hidden="true" href="#vị-trí-của-kí-tự-trong-bảng-chữ-cái">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">//Đối với chữ thường
-</span><span style="color:#75715e"></span>c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39;`&#39;</span>
-
-<span style="color:#75715e">//Đối với chữ hoa
-</span><span style="color:#75715e"></span>c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39;@&#39;</span>
-
-<span style="color:#75715e">//Không phân biệt
-</span><span style="color:#75715e"></span>c <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x1F</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><h2 id="nhảm-nhí-khác">Nhảm nhí khác<a hidden class="anchor" aria-hidden="true" href="#nhảm-nhí-khác">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>c <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>
+</span></span></code></pre></div><p>Nếu kí tự được chuyển đã là kí tự hoa thì không thay đổi. Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> c;
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>;  <span style="color:#75715e">//c = &#39;A&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#39;_&#39;</span>;  <span style="color:#75715e">//c = &#39;A&#39;
+</span></span></span></code></pre></div><h3 id="chuyển-kí-tự-hoa-thành-thường">Chuyển kí tự hoa thành thường<a hidden class="anchor" aria-hidden="true" href="#chuyển-kí-tự-hoa-thành-thường">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>c <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>
+</span></span></code></pre></div><p>Nếu kí tự được chuyển đã là kí tự thường thì không thay đổi. Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> c;
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>;  <span style="color:#75715e">//c = &#39;a&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39; &#39;</span>;  <span style="color:#75715e">//c = &#39;a&#39;
+</span></span></span></code></pre></div><h3 id="đảo-ngược-kiểu-kí-tự">Đảo ngược kiểu kí tự<a hidden class="anchor" aria-hidden="true" href="#đảo-ngược-kiểu-kí-tự">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>
+</span></span></code></pre></div><p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> c;
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span> <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>; <span style="color:#75715e">//c = &#39;a&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39; &#39;</span>; <span style="color:#75715e">//c = &#39;A&#39;
+</span></span></span></code></pre></div><h3 id="vị-trí-của-kí-tự-trong-bảng-chữ-cái">Vị trí của kí tự trong bảng chữ cái<a hidden class="anchor" aria-hidden="true" href="#vị-trí-của-kí-tự-trong-bảng-chữ-cái">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//Đối với chữ thường
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39;`&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Đối với chữ hoa
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>c <span style="color:#f92672">^</span> <span style="color:#e6db74">&#39;@&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Không phân biệt
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>c <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x1F</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h2 id="nhảm-nhí-khác">Nhảm nhí khác<a hidden class="anchor" aria-hidden="true" href="#nhảm-nhí-khác">#</a></h2>
 <h3 id="dùng-xor-để-mã-hóa-một-chuỗi">Dùng XOR để mã hóa một chuỗi<a hidden class="anchor" aria-hidden="true" href="#dùng-xor-để-mã-hóa-một-chuỗi">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#define key 5
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
-    std<span style="color:#f92672">::</span>string s;
-    std<span style="color:#f92672">::</span>cin <span style="color:#f92672">&gt;&gt;</span> s;
-    
-    <span style="color:#75715e">//Mã hóa
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">&amp;</span>i : s){
-        i <span style="color:#f92672">^=</span> key;
-    }
-    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-    
-    <span style="color:#75715e">//Giải mã
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">&amp;</span>i : s){
-        i <span style="color:#f92672">^=</span> key;
-    }
-    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-}
-</code></pre></div><pre tabindex="0"><code>Input:  Hello
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define key 5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>string s;
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cin <span style="color:#f92672">&gt;&gt;</span> s;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Mã hóa
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">&amp;</span>i : s){
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">^=</span> key;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Giải mã
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">&amp;</span>i : s){
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">^=</span> key;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><pre tabindex="0"><code>Input:  Hello
 Output: M`iij
         Hello
 </code></pre><h3 id="đổi-hệ-màu-từ-r5g5b5-sang-r8g8b8">Đổi hệ màu từ R5G5B5 sang R8G8B8<a hidden class="anchor" aria-hidden="true" href="#đổi-hệ-màu-từ-r5g5b5-sang-r8g8b8">#</a></h3>
@@ -567,11 +566,11 @@ B8 = (R5 &lt;&lt; 3) | (R5 &gt;&gt; 2)
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

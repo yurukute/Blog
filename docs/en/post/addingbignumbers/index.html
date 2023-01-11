@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Adding Big Numbers | Noob&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Problem Source: Codewars We need to sum big numbers and we require your help.
+Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
+Example
+add(&#34;123&#34;, &#34;321&#34;); -&gt; &#34;444&#34; add(&#34;11&#34;, &#34;99&#34;); -&gt; &#34;110&#34; Notes
+The input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right).">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/addingbignumbers/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/addingbignumbers/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/addingbignumbers/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<meta property="og:title" content="Adding Big Numbers" />
+<meta property="og:description" content="Problem Source: Codewars We need to sum big numbers and we require your help.
+Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
+Example
+add(&#34;123&#34;, &#34;321&#34;); -&gt; &#34;444&#34; add(&#34;11&#34;, &#34;99&#34;); -&gt; &#34;110&#34; Notes
+The input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/addingbignumbers/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-07T20:43:38+07:00" />
+<meta property="article:modified_time" content="2022-06-07T20:43:38+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Adding Big Numbers"/>
+<meta name="twitter:description" content="Problem Source: Codewars We need to sum big numbers and we require your help.
+Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
+Example
+add(&#34;123&#34;, &#34;321&#34;); -&gt; &#34;444&#34; add(&#34;11&#34;, &#34;99&#34;); -&gt; &#34;110&#34; Notes
+The input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right)."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/en/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Adding Big Numbers",
+      "item": "https://yurukute.github.io/Blog/en/post/addingbignumbers/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Adding Big Numbers",
+  "name": "Adding Big Numbers",
+  "description": "Problem Source: Codewars We need to sum big numbers and we require your help.\nWrite a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.\nExample\nadd(\u0026#34;123\u0026#34;, \u0026#34;321\u0026#34;); -\u0026gt; \u0026#34;444\u0026#34; add(\u0026#34;11\u0026#34;, \u0026#34;99\u0026#34;); -\u0026gt; \u0026#34;110\u0026#34; Notes\nThe input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right).",
+  "keywords": [
+    
+  ],
+  "articleBody": "Problem Source: Codewars We need to sum big numbers and we require your help.\nWrite a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.\nExample\nadd(\"123\", \"321\"); -\u003e \"444\" add(\"11\", \"99\"); -\u003e \"110\" Notes\nThe input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right). $$ \\begin{aligned} 105 \\\\ +\\quad6\\\\ \\hline 111\\\\ \\end{aligned} $$ To simulate the steps, traverse two adden-strings from the last position, add their digits then append the sum to the result string. Because of the length difference and right alignment, the position is length - i for i in range 1 to length\nInitialize carry = 0 to store the extra digit if a column exceeds 9, this is then transferred to the next column or appended into the result string after calculated all the colums.\n#include std::string add(const std::string\u0026 a, const std::string\u0026 b) { std::string res = \"\"; int len_a = a.length(), len_b = b.length(), n = std::max(len_a, len_b); int carry = 0; for(int i = 1; i \u003c= n; i++){ if(i \u003c= lenA) carry += a[lenA - i] - '0'; if(i \u003c= lenB) carry += b[lenB - i] - '0'; res.insert(res.begin(), carry % 10 + '0'); carry /= 10; } res.insert(res.begin(), carry + '0'); while(res.length() \u003e 1 \u0026\u0026 res.front() == '0') res.erase(res.begin()); return res; } Thank you for reading.\n",
+  "wordCount" : "258",
+  "inLanguage": "en",
+  "datePublished": "2022-06-07T20:43:38+07:00",
+  "dateModified": "2022-06-07T20:43:38+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/en/post/addingbignumbers/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                            aria-label="Tiếng Việt">Vi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Adding Big Numbers
+    </h1>
+    <div class="post-meta"><span title='2022-06-07 20:43:38 +0700 +07'>June 7, 2022</span>&nbsp;|&nbsp;Translations:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yurukute.github.io/Blog/post/addingbignumbers/">Vi</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h1>
+<p>Source: <a href="https://www.codewars.com/kata/525f4206b73515bffb000b21" target="_blank">Codewars</a>
+</p>
+<p>We need to sum big numbers and we require your help.</p>
+<p>Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.</p>
+<p>Example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>add(<span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#e6db74">&#34;321&#34;</span>); <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;444&#34;</span>
+</span></span><span style="display:flex;"><span>add(<span style="color:#e6db74">&#34;11&#34;</span>, <span style="color:#e6db74">&#34;99&#34;</span>);   <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;110&#34;</span>
+</span></span></code></pre></div><p>Notes</p>
+<ul>
+<li>The input numbers are big.</li>
+<li>The input is a string of only digits</li>
+<li>The numbers are positives</li>
+</ul>
+<h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
+<p>In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right).
+$$
+\begin{aligned}
+105 \\
++\quad6\\
+\hline
+111\\
+\end{aligned}
+$$
+To simulate the steps, traverse two adden-strings from the last position, add their digits then append the sum to the result string. Because of the length difference and right alignment, the position is <code>length - i</code> for <code>i</code> in range <code>1</code> to <code>length</code></p>
+<p>Initialize <code>carry = 0</code> to store the extra digit if a column exceeds <code>9</code>, this is then transferred to the next column or appended into the result string after calculated all the colums.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>string add(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> a, <span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> b) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>string res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> len_a <span style="color:#f92672">=</span> a.length(), len_b <span style="color:#f92672">=</span> b.length(), n <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>max(len_a, len_b);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> carry <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">&lt;=</span> lenA)
+</span></span><span style="display:flex;"><span>            carry <span style="color:#f92672">+=</span> a[lenA <span style="color:#f92672">-</span> i] <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">&lt;=</span> lenB)
+</span></span><span style="display:flex;"><span>            carry <span style="color:#f92672">+=</span> b[lenB <span style="color:#f92672">-</span> i] <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+</span></span><span style="display:flex;"><span>        res.insert(res.begin(), carry <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;0&#39;</span>);
+</span></span><span style="display:flex;"><span>        carry <span style="color:#f92672">/=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    res.insert(res.begin(), carry <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;0&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(res.length() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> res.front() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span><span style="display:flex;"><span>        res.erase(res.begin());
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Thank you for reading.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://yurukute.github.io/Blog/en/post/thelift/">
+    <span class="title">Older post »</span>
+    <br>
+    <span>TheLift</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

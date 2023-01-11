@@ -5,7 +5,41 @@
     <link>https://yurukute.github.io/Blog/post/</link>
     <description>Recent content in Posts on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Dec 2021 17:49:22 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jun 2022 20:43:34 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cộng 2 số lớn</title>
+      <link>https://yurukute.github.io/Blog/post/addingbignumbers/</link>
+      <pubDate>Tue, 07 Jun 2022 20:43:34 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/addingbignumbers/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Viết chương trình trả về tổng của 2 số nguyên. Đầu vào là 2 số được biểu diễn dưới dạng chuỗi và kết quả trả về cũng lả chuỗi.
+Ví dụ
+add(&amp;#34;123&amp;#34;, &amp;#34;321&amp;#34;); -&amp;gt; &amp;#34;444&amp;#34; add(&amp;#34;11&amp;#34;, &amp;#34;99&amp;#34;); -&amp;gt; &amp;#34;110&amp;#34; Lời giải Trong số học, phép cộng có thể được thực hiện bằng cách sắp các số hạng theo chiều dọc và cộng lần lượt từng cột bắt đầu từ cột đơn vị (ngoài cùng bên phải).</description>
+    </item>
+    
+    <item>
+      <title>Thang máy</title>
+      <link>https://yurukute.github.io/Blog/post/thelift/</link>
+      <pubDate>Mon, 06 Jun 2022 00:45:02 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/thelift/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Một tòa nhà nhiều tầng có thang máy trong đó. Ở mỗi tầng có một hàng người chờ được di chuyển đến tầng họ muốn, được thể hiện bằng một số.
+Nhiệm vụ: Đưa tất cả mọi người đến các tầng mà họ muốn đến trong khi tuân thủ các quy luật bên dưới.
+TRƯỚC (Mọi người trong hàng đợi) SAU (Mọi người tại đích đến của họ) +--+ +--+ /----------------| |----------------\ /----------------| |----------------\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Trả về danh sách tất cả các tầng mà thang máy đã dừng lại (theo thứ tự dừng).</description>
+    </item>
+    
+    <item>
+      <title>Hamming Number</title>
+      <link>https://yurukute.github.io/Blog/post/hammingnumber/</link>
+      <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/hammingnumber/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Số Hamming là một số dương có dạng $2^ỉ3^j5^k$ với $i, j, k$ là các số không âm.
+Viết chương trình tính số Hamming nhỏ nhất thứ n.
+Đặc biệt:
+Số Hamming đầu tiên là $1 = 2^03^05^0$ Số Hamming thứ hai là $2 = 2^13^05^0$ Số Hamming thứ ba là $3 = 2^03^15^0$ Số Hamming thứ tư là $4 = 2^23^05^0$ Số Hamming thứ năm là $5 = 2^03^05^1$ 20 số Hamming nhỏ nhất đầu tiên được đưa vào trong test mẫu.</description>
+    </item>
+    
     <item>
       <title>Số phân số tối giản với mẫu số d</title>
       <link>https://yurukute.github.io/Blog/post/reducedfractions/</link>
@@ -35,7 +69,7 @@ Ví dụ $n = 8$. Các số nguyên tố cùng nhau với $8$ không vượt qu�
       <guid>https://yurukute.github.io/Blog/post/sumofintervals/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Viết hàm tên sumIntervals/sum_intervals() nhận vào 1 mảng các cặp số nguyên biểu thị thời điểm đầu và cuối của một khoảng thời gian. Nhiệm vụ của mình là tính tổng độ dài của các khoảng ấy. Các khoảng lồng nhau như [1, 4] với [3, 5] thì tính là [1, 5] luôn o.o)/
 Ví dụ
-sum_intervals( { {1,2}, {6, 10}, {11, 15} } ); // =&amp;gt; 9  sum_intervals( { {1,4}, {7, 10}, {3, 5} } ); // =&amp;gt; 7  sum_intervals( { {1,5}, {10, 20}, {1, 6}, {16, 19}, {5, 11} } ); // =&amp;gt; 19 Lời giải Để ý rằng, nếu một khoảng thời gian có thời điểm đầu nhỏ hơn thời điểm cuối của khoảng thời gian liền trước thì chúng đang lồng nhau.</description>
+sum_intervals( { {1,2}, {6, 10}, {11, 15} } ); // =&amp;gt; 9 sum_intervals( { {1,4}, {7, 10}, {3, 5} } ); // =&amp;gt; 7 sum_intervals( { {1,5}, {10, 20}, {1, 6}, {16, 19}, {5, 11} } ); // =&amp;gt; 19 Lời giải Để ý rằng, nếu một khoảng thời gian có thời điểm đầu nhỏ hơn thời điểm cuối của khoảng thời gian liền trước thì chúng đang lồng nhau.</description>
     </item>
     
     <item>
@@ -45,8 +79,8 @@ sum_intervals( { {1,2}, {6, 10}, {11, 15} } ); // =&amp;gt; 9  sum_intervals( { 
       
       <guid>https://yurukute.github.io/Blog/post/romannumeral/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Cho lớp RomanNumerals để chuyển đổi các chữ số la mã về số nguyên và ngược lại.
-#include &amp;lt;string&amp;gt;#include &amp;lt;vector&amp;gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:
-  Chữ số La Mã hiện đại được viết bằng cách thể hiện từng chữ số riêng biệt bắt đầu bằng chữ số tận cùng bên trái và bỏ qua bất kỳ chữ số nào có giá trị bằng 0.</description>
+#include &amp;lt;string&amp;gt; #include &amp;lt;vector&amp;gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:
+Chữ số La Mã hiện đại được viết bằng cách thể hiện từng chữ số riêng biệt bắt đầu bằng chữ số tận cùng bên trái và bỏ qua bất kỳ chữ số nào có giá trị bằng 0.</description>
     </item>
     
     <item>
@@ -66,7 +100,7 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
       
       <guid>https://yurukute.github.io/Blog/post/lis/</guid>
       <description>Bài toán Nguồn:
- Tiếng Việt:  Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$   Tiếng Anh:  Leetcode     Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\ &amp;amp;nums[i_1] &amp;lt; nums[i_2] &amp;lt; \dots &amp;lt; nums[i_k] \end{align} $$ Ví dụ:</description>
+Tiếng Việt: Codeforces - Bản dễ Có thể giải với $O(n^2)$ Codeforces - Bản khó Cần giải bằng $O(n\log n)$ Tiếng Anh: Leetcode Cho một dãy số nguyên nums. Tìm độ dài của dãy con tăng đơn điệu dài nhất. Biết rằng dãy con tăng đơn điệu là 1 dãy $a_1,..,a_k$ thỏa mãn $$ \begin{align} &amp;amp;i_1 &amp;lt; i_2 &amp;lt; \dots &amp;lt; i_k,\\\ &amp;amp;nums[i_1] &amp;lt; nums[i_2] &amp;lt; \dots &amp;lt; nums[i_k] \end{align} $$ Ví dụ:</description>
     </item>
     
     <item>
@@ -76,8 +110,8 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
       
       <guid>https://yurukute.github.io/Blog/post/lcs/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Theo Wikipedia :
- Bài toán xâu con chung dài nhất là bài toán tìm một xâu có độ dài lớn nhất và là xâu con của mọi xâu trong một tập hợp các xâu. Khác với chuỗi con, các phần tử của xâu con không nhất thiết phải liên tiếp nhau.
- Với 2 chuỗi được nhập vào, nhiệm vụ của bạn chính là tìm ra xâu con dài nhất của chúng.</description>
+Bài toán xâu con chung dài nhất là bài toán tìm một xâu có độ dài lớn nhất và là xâu con của mọi xâu trong một tập hợp các xâu. Khác với chuỗi con, các phần tử của xâu con không nhất thiết phải liên tiếp nhau.
+Với 2 chuỗi được nhập vào, nhiệm vụ của bạn chính là tìm ra xâu con dài nhất của chúng.</description>
     </item>
     
     <item>
@@ -87,8 +121,8 @@ Input: 8 Output: 0 6 28 96 252 550 1056 1848 Lời giải Ý tưởng Phương p
       
       <guid>https://yurukute.github.io/Blog/post/explosivesum/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Có bao nhiêu cách phân tích số n thành tổng các số?
-Theo wikipedia: https://vi.wikipedia.org/wiki/Phân_hoạch_(lý_thuyết_số)  Trong số học, sự phân tích một số nguyên dương n là cách viết số đó dưới dạng tổng của các số nguyên dương. Hai cách phân tích có các số hạng giống nhau được coi là một cách phân tích. Ví dụ:
- Input: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Lời giải Bài toàn này có thể dùng phương pháp liệt kê để đếm nhưng mà như vậy rất là chậm khi $n$ là số lớn nên mình sẽ dùng quy hoạch động (Oω&amp;lt;)☆.</description>
+Theo wikipedia: https://vi.wikipedia.org/wiki/Phân_hoạch_(lý_thuyết_số) Trong số học, sự phân tích một số nguyên dương n là cách viết số đó dưới dạng tổng của các số nguyên dương. Hai cách phân tích có các số hạng giống nhau được coi là một cách phân tích. Ví dụ:
+Input: 4 Output: 5 //4, 3+1, 2+2, 2+1+1, 1+1+1+1 Lời giải Bài toàn này có thể dùng phương pháp liệt kê để đếm nhưng mà như vậy rất là chậm khi $n$ là số lớn nên mình sẽ dùng quy hoạch động (Oω&amp;lt;)☆.</description>
     </item>
     
     <item>
@@ -130,7 +164,7 @@ Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Inpu
       <pubDate>Fri, 29 Jan 2021 20:52:26 +0700</pubDate>
       
       <guid>https://yurukute.github.io/Blog/post/bitwise/</guid>
-      <description>Sơ lược    Phép thao tác trên bit Kí hiệu Mô tả      AND &amp;amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0.   OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0.   XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0.   NOT ~ Đảo bit, 0 thành 1, 1 thành 0.</description>
+      <description>Sơ lược Phép thao tác trên bit Kí hiệu Mô tả AND &amp;amp; Cả hai bit là 1, trả về 1. Ngược lại trả về 0. OR \ Một trong hai bit là 1, trả về 1. Ngược lại trả về 0. XOR ^ Hai bit khác nhau trả về 1. Ngược lại trả về 0. NOT ~ Đảo bit, 0 thành 1, 1 thành 0. Dịch trái - Shift left &amp;lt;&amp;lt; Dịch tất cả các bit sang trái.</description>
     </item>
     
     <item>
@@ -151,7 +185,7 @@ Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá
       <guid>https://yurukute.github.io/Blog/post/primesinnumbers/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Cho một số dương $n$ &amp;gt; 1. Phân tích $n$ ra tích các số nguyên tố theo dạng:
 ($p_1$**$n_1$)($p_2$**$n_2$)&amp;hellip;($p_k$**$n_k$)
- Trong đó:  a**b nghĩa là $a^b$ $p_i$ liệt kê theo thứ tự tăng dần Nếu $n_i$ = 1 thì không ghi ra    Ví dụ:
+Trong đó: a**b nghĩa là $a^b$ $p_i$ liệt kê theo thứ tự tăng dần Nếu $n_i$ = 1 thì không ghi ra Ví dụ:
 Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Để phân tích ra thừa số nguyên tố, mỉnh đem chia số đó cho ước nguyên tố nhỏ nhất của nó.</description>
     </item>
     
@@ -173,8 +207,8 @@ Input: n = 86240 Output: (2**5)(5)(7**2) Lời giải Để phân tích ra thừ
       <description>Bài toán: Nguồn: Codewars.com Đọc hiểu: Input: Một mảng các số nguyên: $I = [i_1, i_2 ,&amp;hellip;, i_n]$
 Output: một chuỗi theo dạng ($p_1$ $sum_1$) ($p_2$ $sum_2$) &amp;hellip; ($p_x$ $sum_m$)
 Trong đó:
- $p$ : số nguyên tố $sum$ : tổng các số trong mảng I chia hết cho p  Ví dụ:
-I = {12, 15}; //kết quả: &amp;quot;(2 12)(3 27)(5 15)&amp;quot; Như vậy, để giải được bài này ta cần tìm các số nguyên tố từ nhỏ đến lớn, ứng với mỗi số nguyên tố, ta có:</description>
+$p$ : số nguyên tố $sum$ : tổng các số trong mảng I chia hết cho p Ví dụ:
+I = {12, 15}; //kết quả: &amp;#34;(2 12)(3 27)(5 15)&amp;#34; Như vậy, để giải được bài này ta cần tìm các số nguyên tố từ nhỏ đến lớn, ứng với mỗi số nguyên tố, ta có:</description>
     </item>
     
     <item>

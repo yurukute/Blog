@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>TheLift | Noob&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Problem Source: Codewars Synopsis A multi-floor building has a Lift in it.
+People are queued on different floors waiting for the Lift.
+Some people want to go up. Some people want to go down.
+The floor they want to go to is represented by a number (i.e. when they enter the Lift this is the button they will press)
+BEFORE (people waiting in queues) AFTER (people at their destinations) &#43;--&#43; &#43;--&#43; /----------------| |----------------\ /----------------| |----------------\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Rules Lift Rules The Lift only goes up or down!">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/en/post/thelift/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/thelift/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/thelift/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<meta property="og:title" content="TheLift" />
+<meta property="og:description" content="Problem Source: Codewars Synopsis A multi-floor building has a Lift in it.
+People are queued on different floors waiting for the Lift.
+Some people want to go up. Some people want to go down.
+The floor they want to go to is represented by a number (i.e. when they enter the Lift this is the button they will press)
+BEFORE (people waiting in queues) AFTER (people at their destinations) &#43;--&#43; &#43;--&#43; /----------------| |----------------\ /----------------| |----------------\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Rules Lift Rules The Lift only goes up or down!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/post/thelift/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-06T00:45:12+07:00" />
+<meta property="article:modified_time" content="2022-06-06T00:45:12+07:00" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TheLift"/>
+<meta name="twitter:description" content="Problem Source: Codewars Synopsis A multi-floor building has a Lift in it.
+People are queued on different floors waiting for the Lift.
+Some people want to go up. Some people want to go down.
+The floor they want to go to is represented by a number (i.e. when they enter the Lift this is the button they will press)
+BEFORE (people waiting in queues) AFTER (people at their destinations) &#43;--&#43; &#43;--&#43; /----------------| |----------------\ /----------------| |----------------\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Rules Lift Rules The Lift only goes up or down!"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/en/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "TheLift",
+      "item": "https://yurukute.github.io/Blog/en/post/thelift/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "TheLift",
+  "name": "TheLift",
+  "description": "Problem Source: Codewars Synopsis A multi-floor building has a Lift in it.\nPeople are queued on different floors waiting for the Lift.\nSome people want to go up. Some people want to go down.\nThe floor they want to go to is represented by a number (i.e. when they enter the Lift this is the button they will press)\nBEFORE (people waiting in queues) AFTER (people at their destinations) +--+ +--+ /----------------| |----------------\\ /----------------| |----------------\\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Rules Lift Rules The Lift only goes up or down!",
+  "keywords": [
+    
+  ],
+  "articleBody": "Problem Source: Codewars Synopsis A multi-floor building has a Lift in it.\nPeople are queued on different floors waiting for the Lift.\nSome people want to go up. Some people want to go down.\nThe floor they want to go to is represented by a number (i.e. when they enter the Lift this is the button they will press)\nBEFORE (people waiting in queues) AFTER (people at their destinations) +--+ +--+ /----------------| |----------------\\ /----------------| |----------------\\ 10| | | 1,4,3,2 | 10| 10 | | | |----------------| |----------------| |----------------| |----------------| 9| | | 1,10,2 | 9| | | | |----------------| |----------------| |----------------| |----------------| 8| | | | 8| | | | |----------------| |----------------| |----------------| |----------------| 7| | | 3,6,4,5,6 | 7| | | | |----------------| |----------------| |----------------| |----------------| 6| | | | 6| 6,6,6 | | | |----------------| |----------------| |----------------| |----------------| 5| | | | 5| 5,5 | | | |----------------| |----------------| |----------------| |----------------| 4| | | 0,0,0 | 4| 4,4,4 | | | |----------------| |----------------| |----------------| |----------------| 3| | | | 3| 3,3 | | | |----------------| |----------------| |----------------| |----------------| 2| | | 4 | 2| 2,2,2 | | | |----------------| |----------------| |----------------| |----------------| 1| | | 6,5,2 | 1| 1,1 | | | |----------------| |----------------| |----------------| |----------------| G| | | | G| 0,0,0 | | | |====================================| |====================================| Rules Lift Rules The Lift only goes up or down!\nEach floor has both UP and DOWN Lift-call buttons (except top and ground floors which have only DOWN and UP respectively)\nThe Lift never changes direction until there are no more people wanting to get on/off in the direction it is already travelling\nWhen empty the Lift tries to be smart. For example,\nIf it was going up then it may continue up to collect the highest floor person wanting to go down If it was going down then it may continue down to collect the lowest floor person wanting to go up The Lift has a maximum capacity of people\nWhen called, the Lift will stop at a floor even if it is full, although unless somebody gets off nobody else can get on!\nIf the lift is empty, and no people are waiting, then it will return to the ground floor\nPeople Rules People are in “queues” that represent their order of arrival to wait for the Lift\nAll people can press the UP/DOWN Lift-call buttons\nOnly people going the same direction as the Lift may enter it\nEntry is according to the “queue” order, but those unable to enter do not block those behind them that can\nIf a person is unable to enter a full Lift, they will press the UP/DOWN Lift-call button again after it has departed without them\nKata Task Get all the people to the floors they want to go to while obeying the Lift rules and the People rules\nReturn a list of all floors that the Lift stopped at (in the order visited!)\nNOTE: The Lift always starts on the ground floor (and people waiting on the ground floor may enter immediately)\nI/O Input queues a list of queues of people for all floors of the building.\nThe height of the building varies\n0 = the ground floor\nNot all floors have queues\nQueue index [0] is the “head” of the queue\nNumbers indicate which floor the person wants go to\ncapacity: maximum number of people allowed in the lift\nParameter validation - All input parameters can be assumed OK. No need to check for things like:\nPeople wanting to go to floors that do not exist People wanting to take the Lift to the floor they are already on Buildings with \u003c 2 floors Basements Output A list of all floors that the Lift stopped at (in the order visited!)\nExample Refer to the example test cases.\nqueues = { {}, {0}, {}, {}, {2}, {3}, {} }; result = {0, 5, 4, 3, 2, 1, 0}; Solution The lift is only stop when the lift is empty, and no people are waiting.Thus, until that moment, the lift will repeat these actions:\nGo up: Because The Lift always starts on the ground floor, the first thing it does is going up. Go down: Happens after the lift have reached the top floor. For each $i$ floor:\nRemove the people inside the lift if their wanted floor is $i$th bool remove_people(std::vector\u003cint\u003e *lift, int floor){ bool stop = false; for (auto person = lift-\u003ebegin(); person != lift-\u003eend(); person++){ if (*person == floor){ lift-\u003eerase(person--); stop = true; } } return stop; } Add all the people whose wanted floor is in the same direction to the lift until the lift is full. bool add_people(std::vector\u003cint\u003e *lift, std::vector\u003cint\u003e *people, int floor, int capacity, int direction){ bool stop = false; for(auto person = people-\u003ebegin(); person != people-\u003eend(); person++){ if((*person \u003e floor \u0026\u0026 direction == UP) || (*person \u003c floor \u0026\u0026 direction == DOWN)){ stop = true; if(int(lift-\u003esize()) \u003c capacity){ lift-\u003epush_back(*person); people-\u003eerase(person--); } } } return stop; } If one of those action performed, store $i$ into result vector. #include #define UP 1 #define DOWN 0 bool remove_people(std::vector\u003cint\u003e *lift, int floor){...} bool add_people(std::vector\u003cint\u003e *lift, std::vector\u003cint\u003e *people, int floor, int capacity, int direction){...} std::vector\u003cint\u003e the_lift(std::vector\u003cstd::vector\u003cint\u003e\u003e queues, int capacity) { std::vector\u003cint\u003e res = {0}, lift; int top = queues.size(); bool unfinish = true; while(unfinish){ unfinish = false; for(int floor = 0; floor \u003c top; floor++){ bool stop = remove_people(\u0026lift, floor); stop = add_people(\u0026lift, \u0026queues[floor], floor, capacity, UP) || stop; if(!queues[floor].empty()) unfinish = true; if(stop \u0026\u0026 res.back() != floor) res.push_back(floor); } for(int floor = top-1; floor \u003e= 0; floor--){ bool stop = remove_people(\u0026lift, floor); stop = add_people(\u0026lift, \u0026queues[floor], floor, capacity, DOWN) || stop; if(!queues[floor].empty()) unfinish = true; if(stop \u0026\u0026 res.back() != floor) res.push_back(floor); } } if(res.back()) res.push_back(0); return res; } ",
+  "wordCount" : "960",
+  "inLanguage": "en",
+  "datePublished": "2022-06-06T00:45:12+07:00",
+  "dateModified": "2022-06-06T00:45:12+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/en/post/thelift/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noob's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/en/" accesskey="h" title="Noob&#39;s Blog (Alt + H)">Noob&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/" title="Tiếng Việt"
+                            aria-label="Tiếng Việt">Vi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      TheLift
+    </h1>
+    <div class="post-meta"><span title='2022-06-06 00:45:12 +0700 +07'>June 6, 2022</span>&nbsp;|&nbsp;Translations:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yurukute.github.io/Blog/post/thelift/">Vi</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="problem">Problem<a hidden class="anchor" aria-hidden="true" href="#problem">#</a></h1>
+<p>Source: <a href="https://www.codewars.com/kata/58905bfa1decb981da00009e" target="_blank">Codewars</a>
+</p>
+<h3 id="synopsis">Synopsis<a hidden class="anchor" aria-hidden="true" href="#synopsis">#</a></h3>
+<p>A multi-floor building has a Lift in it.</p>
+<p>People are queued on different floors waiting for the Lift.</p>
+<p>Some people want to go up. Some people want to go down.</p>
+<p>The floor they want to go to is represented by a number (i.e. when they enter the Lift this is the button they will press)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>    BEFORE (people waiting in queues)            AFTER (people at their destinations)
+</span></span><span style="display:flex;"><span>                   +--+                                          +--+ 
+</span></span><span style="display:flex;"><span>  /----------------|  |----------------\        /----------------|  |----------------\
+</span></span><span style="display:flex;"><span>10|                |  | 1,4,3,2        |      10|             10 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 9|                |  | 1,10,2         |       9|                |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 8|                |  |                |       8|                |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 7|                |  | 3,6,4,5,6      |       7|                |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 6|                |  |                |       6|          6,6,6 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 5|                |  |                |       5|            5,5 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 4|                |  | 0,0,0          |       4|          4,4,4 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 3|                |  |                |       3|            3,3 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 2|                |  | 4              |       2|          2,2,2 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> 1|                |  | 6,5,2          |       1|            1,1 |  |                |
+</span></span><span style="display:flex;"><span>  |----------------|  |----------------|        |----------------|  |----------------|
+</span></span><span style="display:flex;"><span> G|                |  |                |       G|          0,0,0 |  |                |
+</span></span><span style="display:flex;"><span>  |====================================|        |====================================|
+</span></span></code></pre></div><h3 id="rules">Rules<a hidden class="anchor" aria-hidden="true" href="#rules">#</a></h3>
+<h4 id="lift-rules">Lift Rules<a hidden class="anchor" aria-hidden="true" href="#lift-rules">#</a></h4>
+<p>The Lift only goes up or down!</p>
+<p>Each floor has both UP and DOWN Lift-call buttons (except top and ground floors which have only DOWN and UP respectively)</p>
+<p>The Lift never changes direction until there are no more people wanting to get on/off in the direction it is already travelling</p>
+<p>When empty the Lift tries to be smart. For example,</p>
+<ul>
+<li>If it was going up then it may continue up to collect the highest floor person wanting to go down</li>
+<li>If it was going down then it may continue down to collect the lowest floor person wanting to go up</li>
+</ul>
+<p>The Lift has a maximum capacity of people</p>
+<p>When called, the Lift will stop at a floor even if it is full, although unless somebody gets off nobody else can get on!</p>
+<p>If the lift is empty, and no people are waiting, then it will return to the ground floor</p>
+<h4 id="people-rules">People Rules<a hidden class="anchor" aria-hidden="true" href="#people-rules">#</a></h4>
+<p>People are in &ldquo;queues&rdquo; that represent their order of arrival to wait for the Lift</p>
+<p>All people can press the UP/DOWN Lift-call buttons</p>
+<p>Only people going the same direction as the Lift may enter it</p>
+<p>Entry is according to the &ldquo;queue&rdquo; order, but those unable to enter do not block those behind them that can</p>
+<p>If a person is unable to enter a full Lift, they will press the UP/DOWN Lift-call button again after it has departed without them</p>
+<h3 id="kata-task">Kata Task<a hidden class="anchor" aria-hidden="true" href="#kata-task">#</a></h3>
+<p>Get all the people to the floors they want to go to while obeying the Lift rules and the People rules</p>
+<p>Return a list of all floors that the Lift stopped at (in the order visited!)</p>
+<p>NOTE: The Lift always starts on the ground floor (and people waiting on the ground floor may enter immediately)</p>
+<h3 id="io">I/O<a hidden class="anchor" aria-hidden="true" href="#io">#</a></h3>
+<h4 id="input">Input<a hidden class="anchor" aria-hidden="true" href="#input">#</a></h4>
+<p><code>queues</code> a list of queues of people for all floors of the building.</p>
+<p>The height of the building varies</p>
+<p>0 = the ground floor</p>
+<p>Not all floors have queues</p>
+<p>Queue index [0] is the &ldquo;head&rdquo; of the queue</p>
+<p>Numbers indicate which floor the person wants go to</p>
+<p><code>capacity</code>: maximum number of people allowed in the lift</p>
+<p>Parameter validation - All input parameters can be assumed OK. No need to check for things like:</p>
+<ul>
+<li>People wanting to go to floors that do not exist</li>
+<li>People wanting to take the Lift to the floor they are already on</li>
+<li>Buildings with &lt; 2 floors</li>
+<li>Basements</li>
+</ul>
+<h4 id="output">Output<a hidden class="anchor" aria-hidden="true" href="#output">#</a></h4>
+<p>A list of all floors that the Lift stopped at (in the order visited!)</p>
+<h3 id="example">Example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h3>
+<p>Refer to the example test cases.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>queues <span style="color:#f92672">=</span> { {}, {<span style="color:#ae81ff">0</span>}, {}, {}, {<span style="color:#ae81ff">2</span>}, {<span style="color:#ae81ff">3</span>}, {} };
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>};
+</span></span></code></pre></div><h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
+<p>The lift is only stop when <code>the lift is empty, and no people are waiting</code>.Thus, until that moment, the lift will repeat these actions:</p>
+<ol>
+<li>Go up: Because <code>The Lift always starts on the ground floor</code>, the first thing it does is going up.</li>
+<li>Go down: Happens after the lift have reached the top floor.</li>
+</ol>
+<p>For each $i$ floor:</p>
+<ul>
+<li>Remove the people inside the lift if their wanted floor is $i$th</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">remove_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, <span style="color:#66d9ef">int</span> floor){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> person <span style="color:#f92672">=</span> lift<span style="color:#f92672">-&gt;</span>begin(); person <span style="color:#f92672">!=</span> lift<span style="color:#f92672">-&gt;</span>end(); person<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">*</span>person <span style="color:#f92672">==</span> floor){
+</span></span><span style="display:flex;"><span>            lift<span style="color:#f92672">-&gt;</span>erase(person<span style="color:#f92672">--</span>);
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>        }     
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> stop;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Add all the people whose wanted floor is in the same direction to the lift until the lift is full.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">add_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>people, <span style="color:#66d9ef">int</span> floor, <span style="color:#66d9ef">int</span> capacity, <span style="color:#66d9ef">int</span> direction){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> person <span style="color:#f92672">=</span> people<span style="color:#f92672">-&gt;</span>begin(); person <span style="color:#f92672">!=</span> people<span style="color:#f92672">-&gt;</span>end(); person<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>((<span style="color:#f92672">*</span>person <span style="color:#f92672">&gt;</span> floor <span style="color:#f92672">&amp;&amp;</span> direction <span style="color:#f92672">==</span> UP) <span style="color:#f92672">||</span> (<span style="color:#f92672">*</span>person <span style="color:#f92672">&lt;</span> floor <span style="color:#f92672">&amp;&amp;</span> direction <span style="color:#f92672">==</span> DOWN)){
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">int</span>(lift<span style="color:#f92672">-&gt;</span>size()) <span style="color:#f92672">&lt;</span> capacity){
+</span></span><span style="display:flex;"><span>                lift<span style="color:#f92672">-&gt;</span>push_back(<span style="color:#f92672">*</span>person);
+</span></span><span style="display:flex;"><span>                people<span style="color:#f92672">-&gt;</span>erase(person<span style="color:#f92672">--</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> stop;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>If one of those action performed, store $i$ into result vector.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define UP 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define DOWN 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">remove_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, <span style="color:#66d9ef">int</span> floor){...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">add_people</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>lift, std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>people, <span style="color:#66d9ef">int</span> floor, <span style="color:#66d9ef">int</span> capacity, <span style="color:#66d9ef">int</span> direction){...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> the_lift(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> queues, <span style="color:#66d9ef">int</span> capacity) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> res <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>}, lift;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> top <span style="color:#f92672">=</span> queues.size();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> unfinish <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(unfinish){
+</span></span><span style="display:flex;"><span>        unfinish <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> floor <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; floor <span style="color:#f92672">&lt;</span> top; floor<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> remove_people(<span style="color:#f92672">&amp;</span>lift, floor);
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> add_people(<span style="color:#f92672">&amp;</span>lift, <span style="color:#f92672">&amp;</span>queues[floor], floor, capacity, UP) <span style="color:#f92672">||</span> stop;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>queues[floor].empty())
+</span></span><span style="display:flex;"><span>                unfinish <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(stop <span style="color:#f92672">&amp;&amp;</span> res.back() <span style="color:#f92672">!=</span> floor) res.push_back(floor);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> floor <span style="color:#f92672">=</span> top<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; floor <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; floor<span style="color:#f92672">--</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">bool</span> stop <span style="color:#f92672">=</span> remove_people(<span style="color:#f92672">&amp;</span>lift, floor);
+</span></span><span style="display:flex;"><span>            stop <span style="color:#f92672">=</span> add_people(<span style="color:#f92672">&amp;</span>lift, <span style="color:#f92672">&amp;</span>queues[floor], floor, capacity, DOWN) <span style="color:#f92672">||</span> stop;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>queues[floor].empty())
+</span></span><span style="display:flex;"><span>                unfinish <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(stop <span style="color:#f92672">&amp;&amp;</span> res.back() <span style="color:#f92672">!=</span> floor) res.push_back(floor);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(res.back()) res.push_back(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/en/post/addingbignumbers/">
+    <span class="title">« Newer post</span>
+    <br>
+    <span>Adding Big Numbers</span>
+  </a>
+  <a class="next" href="https://yurukute.github.io/Blog/en/post/hammingnumber/">
+    <span class="title">Older post »</span>
+    <br>
+    <span>Hamming Number</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
