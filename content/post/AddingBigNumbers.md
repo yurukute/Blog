@@ -1,7 +1,7 @@
 ---
 title: "Cộng 2 số lớn"
 date: 2022-06-07T20:43:34+07:00
-tags: []
+tags: ["Số lớn"]
 #ShowToc: true
 TocOpen: true
 ---
