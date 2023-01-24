@@ -1,7 +1,7 @@
 ---
 title: "Sum of intervals"
 date: 2021-07-27T09:40:22+07:00
-tags: []
+tags: ["Numbers"]
 #ShowToc: true
 TocOpen: true
 ---
