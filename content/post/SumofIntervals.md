@@ -1,5 +1,5 @@
 ---
-title: "Tổng các khoảng thời gian"
+title: "Tổng các khoảng"
 date: 2021-07-27T09:40:22+07:00
 tags: []
 #ShowToc: true
@@ -9,7 +9,7 @@ TocOpen: true
 ## Bài toán
 Nguồn: [Codewars](https://www.codewars.com/kata/52b7ed099cdc285c300001cd)
 ### Đọc hiểu
-Viết hàm tên `sumIntervals`/`sum_intervals()` nhận vào 1 mảng các cặp số nguyên biểu thị thời điểm đầu và cuối của một khoảng thời gian. Nhiệm vụ của mình là tính tổng độ dài của các khoảng ấy. Các khoảng lồng nhau như [1, 4] với [3, 5] thì tính là [1, 5] luôn o.o)/ 
+Viết hàm tên `sumIntervals`/`sum_intervals()` nhận vào 1 mảng các cặp số nguyên biểu thị thời điểm đầu và cuối của một khoảng. Nhiệm vụ của mình là tính tổng độ dài của các khoảng ấy. Các khoảng lồng nhau như [1, 4] với [3, 5] thì tính là [1, 5] luôn o.o)/ 
 
 Ví dụ
 ```cpp
@@ -34,7 +34,7 @@ sum_intervals( {
 } ); // => 19
 ```
 ## Lời giải
-Để ý rằng, nếu một khoảng thời gian có thời điểm đầu **nhỏ hơn** thời điểm cuối của khoảng thời gian liền trước thì chúng đang **lồng nhau**. Có hai trường hợp như sau:
+Để ý rằng, nếu một khoảng có thời điểm đầu **nhỏ hơn** thời điểm cuối của khoảng liền trước thì chúng đang **lồng nhau**. Có hai trường hợp như sau:
 - Đầu khoảng này là đuôi khoảng kia. Ví dụ: [1, 4] và [3, 5]
     - Thời điểm cuối của khoảng thứ hai **lớn hơn** thời điểm cuối của khoảng thứ nhất
     - Khoảng sau khi gộp là: [1, 5]
@@ -42,7 +42,7 @@ sum_intervals( {
     - Thời điểm cuối của khoảng thứ hai **nhỏ hơn** thời điểm cuối của khoảng thứ nhất
     - Khoảng sau khi gộp là khoảng thứ nhất: [1, 5]
 
-Vậy, trước tiên mình cần sort `intervals` từ bé đến lớn theo các thời điểm đầu để không bỏ sót các khoảng lồng nhau nào, dẫn đến kết quả trả về cao hơn kỳ vọng. Dùng một mảng `merged` để lưu các khoảng thời gian sau khi gộp, với `merged.back()` đóng vai trò là khoảng thời gian liền trước khoảng đang xét. Lúc này, nếu khoảng đang xét có lồng với khoảng trước thì cập nhật thời điểm cuối của khoảng trước đó - `merged.back()` -  cho phù hợp, nếu không thì thêm khoảng đang xét vào `merged`. Sau cùng chỉ cần cộng các khoảng đã gộp là xong.
+Vậy, trước tiên mình cần sort `intervals` từ bé đến lớn theo các thời điểm đầu để không bỏ sót các khoảng lồng nhau nào, dẫn đến kết quả trả về cao hơn kỳ vọng. Dùng một mảng `merged` để lưu các khoảng sau khi gộp, với `merged.back()` đóng vai trò là khoảng liền trước khoảng đang xét. Lúc này, nếu khoảng đang xét có lồng với khoảng trước thì cập nhật thời điểm cuối của khoảng trước đó - `merged.back()` -  cho phù hợp, nếu không thì thêm khoảng đang xét vào `merged`. Sau cùng chỉ cần cộng các khoảng đã gộp là xong.
 ```cpp
 #include <vector>
 #include <utility>
@@ -67,10 +67,10 @@ int sum_intervals(std::vector<std::pair<int, int>> intervals) {
 
 ```
 ### Cải tiến 
-Gọi `x` là thời điểm cuối của khoảng thời gian trước khoảng đang xét (tức là nó chứa giá trị của `merged.back().second` ở trên). Vẫn với hai trường hợp lồng nhau nhưng mình sẽ thay đổi thứ tự của các trường hợp khi xét: 
+Gọi `x` là thời điểm cuối của khoảng trước khoảng đang xét (tức là nó chứa giá trị của `merged.back().second` ở trên). Vẫn với hai trường hợp lồng nhau nhưng mình sẽ thay đổi thứ tự của các trường hợp khi xét: 
 - Nếu thời điểm cuối của khoảng đang xét **lớn hơn** hoặc bằng x sẽ có 2 khả năng:
     - Nếu thời điểm đầu của nó mà **nhỏ hơn** x thì nó đang bị lồng theo **trường hợp (1)**
-    - Nếu thời điểm đầu của nó mà **lớn hơn** x thì nó **không có lồng nhau** với khoảng thời gian trước nó. 
+    - Nếu thời điểm đầu của nó mà **lớn hơn** x thì nó **không có lồng nhau** với khoảng trước nó. 
     - Dù là khả năng thứ nhất hay thứ hai thì giá trị của x sẽ cần được cập nhật thành thời điểm cuối của khoảng đang xét.
 - Ngược lại, nếu nó **nhỏ hơn** x thì nó đang bị lồng theo **trường hợp (2)**. Tức là có thể bỏ qua nó.
 
@@ -92,4 +92,4 @@ int sum_intervals(std::vector<std::pair<int, int>> intervals) {
     return res;
 }
 ```
-Cảm ơn bạn vì đã đọc
+Cảm ơn bạn vì đã đọc.
