@@ -12,7 +12,7 @@ Source: [Codewars](https://www.codewars.com/kata/58f4cc4e43251b1be6000082)
 ## Giới thiệu
 Bất cứ [nhóc Joey](https://bulbapedia.bulbagarden.net/wiki/Joey) nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):
 
-![IcePath-1F-GS](https://archives.bulbagarden.net/media/upload/6/66/Ice_Path_1F_GS.png)
+![IcePath-1F-GS](http://3.bp.blogspot.com/-TFD6rulw4js/VHPrlEvgiRI/AAAAAAAADh4/DVe4YHZUJBo/s1600/Ice_Path_1F_GS.png)
 
 Trong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là 'ice puzzle':
 - Bạn cần phải đi từ điểm A sang điểm B

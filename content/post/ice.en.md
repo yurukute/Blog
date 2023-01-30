@@ -11,7 +11,7 @@ Source: [Codewars](https://www.codewars.com/kata/58f4cc4e43251b1be6000082)
 
 Any youngster Joeys should probably know what this image means, and why it is *traumatic*:
 
-![IcePath-1F-GS](https://archives.bulbagarden.net/media/upload/6/66/Ice_Path_1F_GS.png)
+![IcePath-1F-GS](http://3.bp.blogspot.com/-TFD6rulw4js/VHPrlEvgiRI/AAAAAAAADh4/DVe4YHZUJBo/s1600/Ice_Path_1F_GS.png)
 
 In many grid-based 2D puzzle games, there is a typical form of puzzle which are usually referred to as 'ice puzzle':
 - You have to traverse from point A to point B
