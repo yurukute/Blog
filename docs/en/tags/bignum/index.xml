@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bignum on Noob&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/bignum/</link>
+    <description>Recent content in Bignum on Noob&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 07 Jun 2022 20:43:38 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/bignum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Big Numbers</title>
+      <link>https://yurukute.github.io/Blog/en/post/addingbignumbers/</link>
+      <pubDate>Tue, 07 Jun 2022 20:43:38 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/addingbignumbers/</guid>
+      <description>Problem Source: Codewars We need to sum big numbers and we require your help.
+Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
+Example
+add(&amp;#34;123&amp;#34;, &amp;#34;321&amp;#34;); -&amp;gt; &amp;#34;444&amp;#34; add(&amp;#34;11&amp;#34;, &amp;#34;99&amp;#34;); -&amp;gt; &amp;#34;110&amp;#34; Notes
+The input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right).</description>
+    </item>
+    
+  </channel>
+</rss>

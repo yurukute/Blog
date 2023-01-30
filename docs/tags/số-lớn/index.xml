@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Số lớn on Blog của Noob</title>
+    <link>https://yurukute.github.io/Blog/tags/s%E1%BB%91-l%E1%BB%9Bn/</link>
+    <description>Recent content in Số lớn on Blog của Noob</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 07 Jun 2022 20:43:34 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/s%E1%BB%91-l%E1%BB%9Bn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cộng 2 số lớn</title>
+      <link>https://yurukute.github.io/Blog/post/addingbignumbers/</link>
+      <pubDate>Tue, 07 Jun 2022 20:43:34 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/addingbignumbers/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Viết chương trình trả về tổng của 2 số nguyên. Đầu vào là 2 số được biểu diễn dưới dạng chuỗi và kết quả trả về cũng lả chuỗi.
+Ví dụ
+add(&amp;#34;123&amp;#34;, &amp;#34;321&amp;#34;); -&amp;gt; &amp;#34;444&amp;#34; add(&amp;#34;11&amp;#34;, &amp;#34;99&amp;#34;); -&amp;gt; &amp;#34;110&amp;#34; Lời giải Trong số học, phép cộng có thể được thực hiện bằng cách sắp các số hạng theo chiều dọc và cộng lần lượt từng cột bắt đầu từ cột đơn vị (ngoài cùng bên phải).</description>
+    </item>
+    
+  </channel>
+</rss>

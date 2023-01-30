@@ -2,8 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yurukute.github.io/Blog/tags/ascii-games/</loc>
+    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/ascii-games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/ascii-games/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/ice/</loc>
+    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/ice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/ice/"
+                />
+  </url><url>
     <loc>https://yurukute.github.io/Blog/</loc>
-    <lastmod>2022-06-07T20:43:34+07:00</lastmod>
+    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,6 +40,35 @@
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/"
                 />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/</loc>
+    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/tags/</loc>
+    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/tags/t%C3%ACm-ki%E1%BA%BFm-r%E1%BB%99ng/</loc>
+    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/addingbignumbers/</loc>
     <lastmod>2022-06-07T20:43:34+07:00</lastmod>
@@ -28,18 +83,8 @@
                 href="https://yurukute.github.io/Blog/post/addingbignumbers/"
                 />
   </url><url>
-    <loc>https://yurukute.github.io/Blog/post/</loc>
+    <loc>https://yurukute.github.io/Blog/tags/s%E1%BB%91-l%E1%BB%9Bn/</loc>
     <lastmod>2022-06-07T20:43:34+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
-                />
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/thelift/</loc>
     <lastmod>2022-06-06T00:45:02+07:00</lastmod>
@@ -72,19 +117,6 @@
   </url><url>
     <loc>https://yurukute.github.io/Blog/tags/s%E1%BB%91-h%E1%BB%8Dc/</loc>
     <lastmod>2022-05-23T17:37:36+07:00</lastmod>
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/tags/</loc>
-    <lastmod>2022-05-23T17:37:36+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
-                />
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/reducedfractions/</loc>
     <lastmod>2021-12-08T17:49:22+07:00</lastmod>

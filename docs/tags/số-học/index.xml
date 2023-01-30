@@ -40,6 +40,17 @@ Ví dụ $n = 8$. Các số nguyên tố cùng nhau với $8$ không vượt qu�
     </item>
     
     <item>
+      <title>Tổng các khoảng</title>
+      <link>https://yurukute.github.io/Blog/post/sumofintervals/</link>
+      <pubDate>Tue, 27 Jul 2021 09:40:22 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/post/sumofintervals/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Viết hàm tên sumIntervals/sum_intervals() nhận vào 1 mảng các cặp số nguyên biểu thị thời điểm đầu và cuối của một khoảng. Nhiệm vụ của mình là tính tổng độ dài của các khoảng ấy. Các khoảng lồng nhau như [1, 4] với [3, 5] thì tính là [1, 5] luôn o.o)/
+Ví dụ
+sum_intervals( { {1,2}, {6, 10}, {11, 15} } ); // =&amp;gt; 9 sum_intervals( { {1,4}, {7, 10}, {3, 5} } ); // =&amp;gt; 7 sum_intervals( { {1,5}, {10, 20}, {1, 6}, {16, 19}, {5, 11} } ); // =&amp;gt; 19 Lời giải Để ý rằng, nếu một khoảng có thời điểm đầu nhỏ hơn thời điểm cuối của khoảng liền trước thì chúng đang lồng nhau.</description>
+    </item>
+    
+    <item>
       <title>Phân tích thừa số nguyên tố</title>
       <link>https://yurukute.github.io/Blog/post/primesinnumbers/</link>
       <pubDate>Sat, 23 Jan 2021 20:46:06 +0700</pubDate>

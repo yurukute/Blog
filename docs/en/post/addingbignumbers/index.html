@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Adding Big Numbers | Noob&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Bignum">
 <meta name="description" content="Problem Source: Codewars We need to sum big numbers and we require your help.
 Write a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.
 Example
@@ -135,7 +135,7 @@ The input numbers are big. The input is a string of only digits The numbers are 
   "name": "Adding Big Numbers",
   "description": "Problem Source: Codewars We need to sum big numbers and we require your help.\nWrite a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.\nExample\nadd(\u0026#34;123\u0026#34;, \u0026#34;321\u0026#34;); -\u0026gt; \u0026#34;444\u0026#34; add(\u0026#34;11\u0026#34;, \u0026#34;99\u0026#34;); -\u0026gt; \u0026#34;110\u0026#34; Notes\nThe input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right).",
   "keywords": [
-    
+    "Bignum"
   ],
   "articleBody": "Problem Source: Codewars We need to sum big numbers and we require your help.\nWrite a function that returns the sum of two numbers. The input numbers are strings and the function must return a string.\nExample\nadd(\"123\", \"321\"); -\u003e \"444\" add(\"11\", \"99\"); -\u003e \"110\" Notes\nThe input numbers are big. The input is a string of only digits The numbers are positives Solution In arithmetic, addition can be performed by aligning the addends vertically and add the colums, starting from the unit colum (on the right). $$ \\begin{aligned} 105 \\\\ +\\quad6\\\\ \\hline 111\\\\ \\end{aligned} $$ To simulate the steps, traverse two adden-strings from the last position, add their digits then append the sum to the result string. Because of the length difference and right alignment, the position is length - i for i in range 1 to length\nInitialize carry = 0 to store the extra digit if a column exceeds 9, this is then transferred to the next column or appended into the result string after calculated all the colums.\n#include std::string add(const std::string\u0026 a, const std::string\u0026 b) { std::string res = \"\"; int len_a = a.length(), len_b = b.length(), n = std::max(len_a, len_b); int carry = 0; for(int i = 1; i \u003c= n; i++){ if(i \u003c= lenA) carry += a[lenA - i] - '0'; if(i \u003c= lenB) carry += b[lenB - i] - '0'; res.insert(res.begin(), carry % 10 + '0'); carry /= 10; } res.insert(res.begin(), carry + '0'); while(res.length() \u003e 1 \u0026\u0026 res.front() == '0') res.erase(res.begin()); return res; } Thank you for reading.\n",
   "wordCount" : "258",
@@ -293,8 +293,14 @@ To simulate the steps, traverse two adden-strings from the last position, add th
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/en/tags/bignum/">Bignum</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/en/post/ice/">
+    <span class="title">« Newer post</span>
+    <br>
+    <span>ASCII Games: Warning: Ice!</span>
+  </a>
   <a class="next" href="https://yurukute.github.io/Blog/en/post/thelift/">
     <span class="title">Older post »</span>
     <br>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Breadth first search on Noob&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/breadth-first-search/</link>
+    <description>Recent content in Breadth first search on Noob&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 18 Jan 2023 01:34:32 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/breadth-first-search/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ASCII Games: Warning: Ice!</title>
+      <link>https://yurukute.github.io/Blog/en/post/ice/</link>
+      <pubDate>Wed, 18 Jan 2023 01:34:32 +0700</pubDate>
+      
+      <guid>https://yurukute.github.io/Blog/en/post/ice/</guid>
+      <description>Problem Source: Codewars Any youngster Joeys should probably know what this image means, and why it is traumatic:
+In many grid-based 2D puzzle games, there is a typical form of puzzle which are usually referred to as &amp;lsquo;ice puzzle&amp;rsquo;:
+You have to traverse from point A to point B You can move towards one of the 4 orthogonal directions, 1 tile at a time Some of the floors are slippery; if you walk onto a slippery tile, you&amp;rsquo;ll keep sliding in the direction you&amp;rsquo;re going until you land on a non-slippery tile, or you collide with an obstacle/wall For example, the top-left part of the above puzzle has such a solution:</description>
+    </item>
+    
+  </channel>
+</rss>

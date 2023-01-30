@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Cộng 2 số lớn | Blog của Noob</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Số lớn">
 <meta name="description" content="Bài toán Nguồn: Codewars Đọc hiểu Viết chương trình trả về tổng của 2 số nguyên. Đầu vào là 2 số được biểu diễn dưới dạng chuỗi và kết quả trả về cũng lả chuỗi.
 Ví dụ
 add(&#34;123&#34;, &#34;321&#34;); -&gt; &#34;444&#34; add(&#34;11&#34;, &#34;99&#34;); -&gt; &#34;110&#34; Lời giải Trong số học, phép cộng có thể được thực hiện bằng cách sắp các số hạng theo chiều dọc và cộng lần lượt từng cột bắt đầu từ cột đơn vị (ngoài cùng bên phải).">
@@ -129,7 +129,7 @@ add(&#34;123&#34;, &#34;321&#34;); -&gt; &#34;444&#34; add(&#34;11&#34;, &#34;99
   "name": "Cộng 2 số lớn",
   "description": "Bài toán Nguồn: Codewars Đọc hiểu Viết chương trình trả về tổng của 2 số nguyên. Đầu vào là 2 số được biểu diễn dưới dạng chuỗi và kết quả trả về cũng lả chuỗi.\nVí dụ\nadd(\u0026#34;123\u0026#34;, \u0026#34;321\u0026#34;); -\u0026gt; \u0026#34;444\u0026#34; add(\u0026#34;11\u0026#34;, \u0026#34;99\u0026#34;); -\u0026gt; \u0026#34;110\u0026#34; Lời giải Trong số học, phép cộng có thể được thực hiện bằng cách sắp các số hạng theo chiều dọc và cộng lần lượt từng cột bắt đầu từ cột đơn vị (ngoài cùng bên phải).",
   "keywords": [
-    
+    "Số lớn"
   ],
   "articleBody": "Bài toán Nguồn: Codewars Đọc hiểu Viết chương trình trả về tổng của 2 số nguyên. Đầu vào là 2 số được biểu diễn dưới dạng chuỗi và kết quả trả về cũng lả chuỗi.\nVí dụ\nadd(\"123\", \"321\"); -\u003e \"444\" add(\"11\", \"99\"); -\u003e \"110\" Lời giải Trong số học, phép cộng có thể được thực hiện bằng cách sắp các số hạng theo chiều dọc và cộng lần lượt từng cột bắt đầu từ cột đơn vị (ngoài cùng bên phải). $$ \\begin{aligned} 105 \\\\ +\\quad6\\\\ \\hline 111\\\\ \\end{aligned} $$ Để mô phỏng các bước thực hiện, hai chuỗi số hạng được duyệt song song từ vị trí cuối, lần lượt cộng giá trị nguyên của chữ số tại vị trí đó và thêm vào chuỗi kết quả. Do hai chuỗi có độ dài khác nhau và được căn phải nên vị trí của chữ số được tính bằng length - i với i từ 1 đến length.\nKhởi tạo biến carry = 0 để lưu số “nhớ” của phép toán, là số hàng chục khi tổng hai số ở cột đang tính vượt quá 9. Phần số nhớ sẽ được cộng vào tổng của hai chữ số ở cột tiếp theo hoặc chuỗi kết quả sau khi tính toán xong các cột.\n#include std::string add(const std::string\u0026 a, const std::string\u0026 b) { std::string res = \"\"; int len_a = a.length(), len_b = b.length(), n = std::max(len_a, len_b); int carry = 0; for(int i = 1; i \u003c= n; i++){ if(i \u003c= lenA) carry += a[lenA - i] - '0'; if(i \u003c= lenB) carry += b[lenB - i] - '0'; res.insert(res.begin(), carry % 10 + '0'); carry /= 10; } res.insert(res.begin(), carry + '0'); while(res.length() \u003e 1 \u0026\u0026 res.front() == '0') res.erase(res.begin()); return res; } Cảm ơn bạn vì đã đọc.\n",
   "wordCount" : "302",
@@ -281,8 +281,14 @@ $$
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/tags/s%E1%BB%91-l%E1%BB%9Bn/">Số lớn</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/post/ice/">
+    <span class="title">« Bài mới hơn</span>
+    <br>
+    <span>ASCII Games: Cảnh báo: Băng trơn!</span>
+  </a>
   <a class="next" href="https://yurukute.github.io/Blog/post/thelift/">
     <span class="title">Bài cũ hơn »</span>
     <br>
