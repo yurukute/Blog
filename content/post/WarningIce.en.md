@@ -184,4 +184,5 @@ void update_path(std::vector<int> &parent, const int col, int curr, int next) {
 }
 ```
 Thank you for reading this amateur solution, I did this kata just because it is related to pokemon series, nothing else.
-![iyada](https://i.kym-cdn.com/entries/icons/original/000/031/926/Screenshot_25.jpg)
+
+![rowlet](https://i.redd.it/dzfmctqska151.jpg)

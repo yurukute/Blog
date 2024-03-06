@@ -1,5 +1,5 @@
 ---
-title: "Hai con mã"
+title: "Hai quân mã"
 date: 2021-05-27T18:13:29+07:00
 tags: ["Toán học" ]
 #ShowToc: true
