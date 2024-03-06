@@ -5,16 +5,17 @@
     <link>https://yurukute.github.io/Blog/tags/to%C3%A1n/</link>
     <description>Recent content in Toán on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 26 Jan 2021 00:08:16 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/to%C3%A1n/index.xml" rel="self" type="application/rss+xml" />
+    <language>vi</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Tue, 26 Jan 2021 00:08:16 +0700</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/tags/to%C3%A1n/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Phân tích thừa số nguyên tố của n!</title>
       <link>https://yurukute.github.io/Blog/post/factorialdecomp/</link>
       <pubDate>Tue, 26 Jan 2021 00:08:16 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/post/factorialdecomp/</guid>
       <description>Bài toán Nguồn: Codewars Cho một số $n$ được nhập vào, việc của tụi mình là phân tích giai thừa của nó ra thừa số nguyên tố. Ví dụ:
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Có 1 lưu ý nho nhỏ là giá trị của $n$ có thể lên tới 4000, tất nhiên, 4000! sẽ trở thành 1 con số không hề nhỏ, nó có hơn 12000 chữ số lận á!</description>
     </item>
-    
   </channel>
 </rss>

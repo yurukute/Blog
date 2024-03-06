@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mảng on Blog của Noob</title>
+    <link>https://yurukute.github.io/Blog/tags/m%E1%BA%A3ng/</link>
+    <description>Recent content in Mảng on Blog của Noob</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Tue, 05 Mar 2024 20:25:59 +0000</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/tags/m%E1%BA%A3ng/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xoắn ốc</title>
+      <link>https://yurukute.github.io/Blog/post/snail/</link>
+      <pubDate>Tue, 05 Mar 2024 20:25:59 +0000</pubDate>
+      <guid>https://yurukute.github.io/Blog/post/snail/</guid>
+      <description>Bài toán Nguồn: Codewars Đọc hiểu Cho một mảng kích thước nxn, trả về các phần tử của mảng từ ngoài vào trong theo chiều kim đồng hồ.
+array = [[1,2,3], [4,5,6], [7,8,9]] snail(array) #=&amp;gt; [1,2,3,6,9,8,7,4,5] Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:
+array = [[1,2,3], [8,9,4], [7,6,5]] snail(array) #=&amp;gt; [1,2,3,4,5,6,7,8,9] Bức hình sau sẽ thể hiện mọi thức rõ ràng hơn:</description>
+    </item>
+  </channel>
+</rss>

@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yurukute.github.io/Blog/</loc>
+    <lastmod>2024-03-05T20:25:59+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/tags/m%E1%BA%A3ng/</loc>
+    <lastmod>2024-03-05T20:25:59+00:00</lastmod>
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/</loc>
+    <lastmod>2024-03-05T20:25:59+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/tags/</loc>
+    <lastmod>2024-03-05T20:25:59+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/tags/"
+                />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/post/snail/</loc>
+    <lastmod>2024-03-05T20:25:59+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yurukute.github.io/Blog/en/post/snail/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://yurukute.github.io/Blog/post/snail/"
+                />
+  </url><url>
     <loc>https://yurukute.github.io/Blog/tags/ascii-games/</loc>
     <lastmod>2023-01-18T01:34:25+07:00</lastmod>
     <xhtml:link
@@ -15,56 +70,17 @@
                 href="https://yurukute.github.io/Blog/tags/ascii-games/"
                 />
   </url><url>
-    <loc>https://yurukute.github.io/Blog/post/ice/</loc>
+    <loc>https://yurukute.github.io/Blog/post/warningice/</loc>
     <lastmod>2023-01-18T01:34:25+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/ice/"
+                href="https://yurukute.github.io/Blog/en/post/warningice/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/ice/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/</loc>
-    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/post/</loc>
-    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/post/"
-                />
-  </url><url>
-    <loc>https://yurukute.github.io/Blog/tags/</loc>
-    <lastmod>2023-01-18T01:34:25+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yurukute.github.io/Blog/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://yurukute.github.io/Blog/tags/"
+                href="https://yurukute.github.io/Blog/post/warningice/"
                 />
   </url><url>
     <loc>https://yurukute.github.io/Blog/tags/t%C3%ACm-ki%E1%BA%BFm-r%E1%BB%99ng/</loc>
@@ -156,6 +172,9 @@
                 hreflang="vi"
                 href="https://yurukute.github.io/Blog/post/sumofintervals/"
                 />
+  </url><url>
+    <loc>https://yurukute.github.io/Blog/tags/chu%E1%BB%97i/</loc>
+    <lastmod>2021-07-25T18:51:05+07:00</lastmod>
   </url><url>
     <loc>https://yurukute.github.io/Blog/post/romannumeral/</loc>
     <lastmod>2021-07-25T18:51:05+07:00</lastmod>

@@ -5,18 +5,19 @@
     <link>https://yurukute.github.io/Blog/en/tags/math/</link>
     <description>Recent content in Math on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 May 2022 17:37:36 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Mon, 23 May 2022 17:37:36 +0700</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/en/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hamming Number</title>
       <link>https://yurukute.github.io/Blog/en/post/hammingnumber/</link>
       <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/post/hammingnumber/</guid>
       <description>Problem Source: Codewars A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.
 Write a function that computes the nth smallest Hamming number.
 Specifically:
 The first smallest Hamming number is 1 = 203050 The second smallest Hamming number is 2 = 213050 The third smallest Hamming number is 3 = 203150 The fourth smallest Hamming number is 4 = 223050 The fifth smallest Hamming number is 5 = 203051 The 20 smallest Hamming numbers are given in example test fixture.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="vi" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Xoắn ốc | Blog của Noob</title>
+<meta name="keywords" content="Mảng">
+<meta name="description" content="Bài toán Nguồn: Codewars Đọc hiểu Cho một mảng kích thước nxn, trả về các phần tử của mảng từ ngoài vào trong theo chiều kim đồng hồ.
+array = [[1,2,3], [4,5,6], [7,8,9]] snail(array) #=&gt; [1,2,3,6,9,8,7,4,5] Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:
+array = [[1,2,3], [8,9,4], [7,6,5]] snail(array) #=&gt; [1,2,3,4,5,6,7,8,9] Bức hình sau sẽ thể hiện mọi thức rõ ràng hơn:">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/snail/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.57c292ec064ba4167235f240fee0ce43ec98bb63c5fb0460293cca4fb4aaa7a1.css" integrity="sha256-V8KS7AZLpBZyNfJA/uDOQ&#43;yYu2PF&#43;wRgKTzKT7Sqp6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/snail/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/snail/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<meta property="og:title" content="Xoắn ốc" />
+<meta property="og:description" content="Bài toán Nguồn: Codewars Đọc hiểu Cho một mảng kích thước nxn, trả về các phần tử của mảng từ ngoài vào trong theo chiều kim đồng hồ.
+array = [[1,2,3], [4,5,6], [7,8,9]] snail(array) #=&gt; [1,2,3,6,9,8,7,4,5] Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:
+array = [[1,2,3], [8,9,4], [7,6,5]] snail(array) #=&gt; [1,2,3,4,5,6,7,8,9] Bức hình sau sẽ thể hiện mọi thức rõ ràng hơn:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/post/snail/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-03-05T20:25:59+00:00" />
+<meta property="article:modified_time" content="2024-03-05T20:25:59+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Xoắn ốc"/>
+<meta name="twitter:description" content="Bài toán Nguồn: Codewars Đọc hiểu Cho một mảng kích thước nxn, trả về các phần tử của mảng từ ngoài vào trong theo chiều kim đồng hồ.
+array = [[1,2,3], [4,5,6], [7,8,9]] snail(array) #=&gt; [1,2,3,6,9,8,7,4,5] Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:
+array = [[1,2,3], [8,9,4], [7,6,5]] snail(array) #=&gt; [1,2,3,4,5,6,7,8,9] Bức hình sau sẽ thể hiện mọi thức rõ ràng hơn:"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Xoắn ốc",
+      "item": "https://yurukute.github.io/Blog/post/snail/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Xoắn ốc",
+  "name": "Xoắn ốc",
+  "description": "Bài toán Nguồn: Codewars Đọc hiểu Cho một mảng kích thước nxn, trả về các phần tử của mảng từ ngoài vào trong theo chiều kim đồng hồ.\narray = [[1,2,3], [4,5,6], [7,8,9]] snail(array) #=\u0026gt; [1,2,3,6,9,8,7,4,5] Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:\narray = [[1,2,3], [8,9,4], [7,6,5]] snail(array) #=\u0026gt; [1,2,3,4,5,6,7,8,9] Bức hình sau sẽ thể hiện mọi thức rõ ràng hơn:",
+  "keywords": [
+    "Mảng"
+  ],
+  "articleBody": "Bài toán Nguồn: Codewars Đọc hiểu Cho một mảng kích thước nxn, trả về các phần tử của mảng từ ngoài vào trong theo chiều kim đồng hồ.\narray = [[1,2,3], [4,5,6], [7,8,9]] snail(array) #=\u003e [1,2,3,6,9,8,7,4,5] Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:\narray = [[1,2,3], [8,9,4], [7,6,5]] snail(array) #=\u003e [1,2,3,4,5,6,7,8,9] Bức hình sau sẽ thể hiện mọi thức rõ ràng hơn:\nCHÚ Ý: Ý tưởng không phải là sắp xếp các phần tử từ bé đến lớn mà là duyệt mảng 2 chiều theo hình xoắn ốc thuận chiều kim đồng hồ.\nCHÚ Ý 2: Mảng rỗng 0x0 được biểu diễn là một mảng chỉ chứa một mảng rỗng [[]].\nLời giải Mác 4 kyu nhưng bài này lại đơn giản hơn mấy bài khác. Để duyệt được hình xoắn ốc thì mình duyệt lần lượt hàng 0, cột n-1, hàng n-1, cột 1,… từ ngoài vào trong.\nĐầu tiên là mình cần khai báo các biến sau nè:\nstd::vector\u003cint\u003e res; int row_start = 0; // Hàng trên ngoài cùng int col_start = 0; // Cột trái ngoài cùng int row_end = snail_map.size(); // Hàng dưới ngoài cùng int col_end = row_end; // Cột phải ngoài cùng Bắt đầu từ hàng trên ngoài cùng, để duyệt hàng thì ta tăng chỉ số cột của hàng đó lên:\nfor (int i = col_start; i \u003c col_end; i++) res.push_back(snail_map[row_start][i]); Tương tự với cột phải thì ta tăng chỉ số hàng. Lưu ý là phải bỏ qua phần tử ở góc phải trên cùng (snail_map[row_start][col_end-1]) vì nó đã được duyệt.\nfor (int i = ++row_start; i \u003c row_end; i++) res.push_back(snail_map[i][col_end-1]); Vì là hình xoắn ốc nên khi duyệt hàng dưới phải duyệt theo chiều ngược lại: giảm chỉ số cột thay vì tăng. Và vì phần tử góc phải dưới cùng (snail_map[row_end-1][col_end-1]) đã được duyệt, cột ngoài cùng sẽ được bỏ qua.\nfor (i = (--col_end)-1; i \u003e= col_start; --i) res.push_back(snail_map[row_end-1][i]); Tương tự với cột trái ngoài cùng, giảm chỉ số của hàng để duyệt ngược lên, bỏ qua hàng dưới.\nfor (int i = (--row_end)-1; i \u003e= row_start; --i) res.push_back(snail_map[i][col_start]); Các hành động này được lặp đi lặp lại cho đến khi hết mảng, hay nói cách khác là row_start và row_end, hoặc col_start và col_end, chạy qua nhau (_start $\\geq$ _end). Ngoài ra, cần phải xét đến trường hợp mảng rỗng.\nif(snail_map.empty() || snail_map[0].empty()) return {}; Như vậy, lời giải của bài toán đã hoàn thiện.\n#include std::vector\u003cint\u003e snail(const std::vector\u003cstd::vector\u003cint\u003e\u003e \u0026snail_map){ if(snail_map.empty() || snail_map[0].empty()) return {}; std::vector\u003cint\u003e res; int row_start = 0; // Hàng trên ngoài cùng int col_start = 0; // Cột trái ngoài cùng int row_end = snail_map.size()-1; // Hàng dưới ngoài cùng int col_end = row_end; // Cột phải ngoài cùng while (row_start \u003c= row_end \u0026\u0026 col_start \u003c= col_end){ for (int i = col_start; i \u003c= col_end; i++) res.push_back(snail_map[row_start][i]); for (int i = ++row_start; i \u003c= row_end; i++) res.push_back(snail_map[i][col_end]); for (int i = --col_end; i \u003e= col_start; i--) res.push_back(snail_map[row_end][i]); for (int i = row_end; i \u003e= row_start; i--) res.push_back(snail_map[i][col_start]); col_start++; } return res; }; Vẫn là lời giải Nếu bạn là người quen nhìn while thì lời giải có thể viết lại thế này:\nint row = 0, col = 0; while (row_start \u003c= row_end \u0026\u0026 col_start \u003c= col_end) { while (col \u003c col_end) res.push_back(snail_map[row][col++]); row_start++; while (row \u003c row_end) res.push_back(snail_map[row++][col]); col_end--; while (col \u003e col_start) res.push_back(snail_map[row][col--]); row_end--; while (row \u003e row_start) res.push_back(snail_map[row--][col]); col_start++; } res.push_back(snail_map[row][col]); // Bổ sung phần tử cuối Hai biến row và col được dùng để đánh dấu hàng và cột đang duyệt, hai biến này chỉ chạy từ 0 đến n-2 và ngược lại. Sở dĩ chỉ chạy đến n-2 là để ở dòng while tiếp theo vẫn có thể tận dụng lại giá trị của row, col mà không duyệt trùng phần tử, nói cách khác, thay vì bỏ qua phần tử đã duyệt trùng thì giờ mình luôn chừa lại một phần tử cuối hàng/cột mỗi lần duyệt. Vì thế, sau khi kết thúc dòng while mình cần bổ sung phần tử cuối cùng vào để ra đáp án hoàn chỉnh.\nCảm ơn bạn vì đã đọc.\nTái bút Hồi bé ngơ ngác thi tin học trẻ cũng gặp một bài xoắn ốc như này, mà nó tên là Thành Cổ Loa cơ. Lạy Chúa chứ lúc đó đọc để chả hiểu gì đâu, nay lướt trúng kata này nhìn lại thì thấy nó đơn giản (hoặc do mình quên cái đề hồi đó rồi (:3 ). Thôi thì đấm kata này coi như mở bát 2024 và ôn kỷ niệm luôn.\n",
+  "wordCount" : "771",
+  "inLanguage": "vi",
+  "datePublished": "2024-03-05T20:25:59Z",
+  "dateModified": "2024-03-05T20:25:59Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/post/snail/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Noob",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Xoắn ốc
+    </h1>
+    <div class="post-meta"><span title='2024-03-05 20:25:59 +0000 UTC'>05 Tháng 3, 2024</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yurukute.github.io/Blog/en/post/snail/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h2>
+<p>Nguồn: <a href="https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1" target="_blank">Codewars</a>
+</p>
+<h3 id="đọc-hiểu">Đọc hiểu<a hidden class="anchor" aria-hidden="true" href="#đọc-hiểu">#</a></h3>
+<p>Cho một mảng kích thước nxn, trả về các phần tử của mảng từ ngoài vào trong theo chiều kim đồng hồ.</p>
+<pre tabindex="0"><code>array = [[1,2,3],
+         [4,5,6],
+         [7,8,9]]
+snail(array) #=&gt; [1,2,3,6,9,8,7,4,5]
+</code></pre><p>Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:</p>
+<pre tabindex="0"><code>array = [[1,2,3],
+         [8,9,4],
+         [7,6,5]]
+snail(array) #=&gt; [1,2,3,4,5,6,7,8,9]
+</code></pre><p>Bức hình sau sẽ thể hiện mọi thức rõ ràng hơn:</p>
+
+<svg style="background-color:lightgray" preserveAspectRatio="xMidYMid meet" viewBox="0 0 715.000000 354.000000" height="265.5pt" width="536.25pt" xmlns="http://www.w3.org/2000/svg" version="1.0">
+    <g stroke="none" fill="#000000" transform="translate(0.000000,354.000000) scale(0.100000,-0.100000)">
+        <path d="M0 1770 l0 -1770 3575 0 3575 0 0 1770 0 1770 -3575 0 -3575 0 0 -1770z m7080 10 l0 -1700 -3510 0 -3510 0 0 1700 0 1700 3510 0 3510 0 0 -1700z"></path>
+        <path d="M160 2180 l0 -1200 1200 0 1200 0 0 1200 0 1200 -1200 0 -1200 0 0 -1200z m800 970 l0 -210 -175 0 -175 0 0 58 c0 32 -3 62 -6 65 -4 4 -20 -5 -36 -18 -16 -14 -34 -25 -39 -25 -5 0 -9 -7 -9 -15 0 -11 8 -13 30 -8 l30 6 0 -93 c0 -69 3 -91 13 -88 6 3 13 25 15 51 l3 47 175 0 174 0 0 -170 0 -170 -390 0 -390 0 0 390 0 390 390 0 390 0 0 -210z m800 0 l0 -210 -161 0 -161 0 6 34 c9 47 -7 81 -44 96 -44 18 -100 -7 -100 -45 0 -30 11 -32 28 -5 14 22 61 27 80 8 16 -16 15 -49 -2 -70 -12 -16 -35 -18 -220 -18 l-206 0 0 210 0 210 390 0 390 0 0 -210z m780 -180 l0 -390 -170 0 -170 0 0 123 c0 111 2 126 20 142 24 22 27 80 4 102 -9 9 -12 22 -8 32 24 52 -5 100 -60 101 -28 0 -76 -33 -76 -52 0 -13 30 -9 46 7 20 19 48 19 64 0 17 -20 6 -43 -25 -55 -14 -5 -24 -15 -23 -22 2 -10 -38 -14 -179 -16 l-183 -2 0 210 0 210 380 0 380 0 0 -390z m-1213 -88 c-54 -56 -50 -62 43 -62 47 0 80 4 80 10 0 6 -22 10 -48 10 -27 0 -52 3 -56 7 -3 4 8 22 26 40 l32 33 178 0 178 0 0 -170 0 -170 -390 0 -390 0 0 170 0 170 192 0 192 0 -37 -38z m853 -2 c0 -32 -4 -40 -18 -40 -11 0 -27 9 -37 20 -18 20 -45 27 -45 12 0 -20 29 -44 60 -51 l35 -7 3 -117 3 -117 -201 0 -200 0 0 170 0 170 200 0 200 0 0 -40z m32 8 c-9 -9 -12 -7 -12 12 0 19 3 21 12 12 9 -9 9 -15 0 -24z m-1252 -538 l0 -210 -170 0 -170 0 0 65 c0 50 -3 65 -15 65 -17 0 -137 -158 -132 -174 2 -6 27 -12 55 -14 l52 -3 0 -150 0 -149 -200 0 -200 0 0 390 0 390 390 0 390 0 0 -210z m800 -180 l0 -390 -390 0 -390 0 0 170 0 170 205 0 c130 0 205 4 205 10 0 6 -11 10 -25 10 -14 0 -25 5 -25 10 0 6 16 10 35 10 41 0 60 -26 50 -70 -9 -43 -84 -54 -99 -15 -8 22 -26 18 -26 -4 0 -26 37 -51 76 -51 45 0 86 49 82 99 -4 44 -55 85 -95 75 -22 -6 -24 -4 -21 22 3 26 7 29 47 34 69 8 65 30 -6 30 l-59 0 -12 -45 c-7 -25 -12 -56 -12 -70 l0 -25 -160 0 -160 0 0 210 0 210 390 0 390 0 0 -390z m420 250 l0 -139 -28 -15 c-39 -20 -52 -55 -52 -136 0 -64 2 -70 31 -94 17 -14 35 -26 40 -26 5 0 9 -51 9 -115 l0 -115 -200 0 -200 0 0 390 0 390 200 0 200 0 0 -140z m360 -250 l0 -390 -170 0 -170 0 0 116 c0 104 2 116 18 121 23 6 52 53 52 86 0 28 -35 77 -56 77 -9 0 -14 11 -14 30 0 34 5 37 26 15 19 -19 34 -19 34 -1 0 8 -13 24 -30 36 l-30 21 0 140 0 139 170 0 170 0 0 -390z m-360 41 c0 -26 -17 -40 -52 -41 -10 0 2 31 20 53 22 25 32 21 32 -12z m-1590 -38 c0 -45 -12 -63 -41 -63 -35 0 -36 12 -6 50 25 33 47 38 47 13z m1590 -78 c0 -30 -3 -55 -7 -55 -14 0 -30 15 -42 38 -10 19 -10 28 4 48 28 43 45 31 45 -31z m48 43 c19 -19 14 -63 -8 -83 -20 -18 -20 -17 -20 38 0 57 6 67 28 45z m-1268 -188 l0 -170 -180 0 -180 0 0 120 c0 73 4 120 10 120 6 0 10 13 10 29 0 17 6 31 16 35 13 5 14 9 4 21 -11 13 8 15 154 15 l166 0 0 -170z m-380 -334 l0 -145 -37 -3 c-52 -4 -56 -28 -4 -28 41 0 41 0 41 -38 0 -21 -9 -57 -20 -80 -21 -42 -27 -102 -11 -102 10 0 31 54 31 81 0 18 12 19 190 19 l190 0 0 -160 0 -160 -390 0 -390 0 0 380 0 380 200 0 200 0 0 -144z m380 -66 l0 -210 -180 0 c-121 0 -180 3 -180 11 0 6 14 30 31 55 33 48 31 64 -7 64 l-24 0 0 145 0 145 180 0 180 0 0 -210z m800 0 l0 -210 -165 0 c-141 0 -167 2 -172 16 -3 8 -1 20 6 27 32 32 -11 97 -63 97 -59 -1 -75 -28 -64 -110 l3 -25 -162 -3 -163 -2 0 210 0 210 390 0 390 0 0 -210z m420 71 l0 -140 -27 -3 c-39 -4 -76 -62 -68 -105 l6 -33 -156 0 -155 0 0 210 0 210 200 0 200 0 0 -139z m360 -241 l0 -380 -380 0 -380 0 0 160 0 160 171 0 c95 0 179 -4 189 -10 13 -7 27 -6 44 2 15 6 29 8 32 5 13 -12 -6 -54 -31 -67 -22 -12 -27 -11 -48 8 -13 12 -26 22 -30 22 -12 0 -8 -35 5 -48 19 -19 85 -15 107 7 20 20 41 80 41 118 0 33 -29 101 -46 107 -11 4 -14 34 -14 151 l0 145 170 0 170 0 0 -380z m-1146 54 c18 -18 19 -24 7 -42 -12 -20 -75 -11 -79 11 -8 40 42 62 72 31z m786 -39 c0 -46 -3 -55 -18 -55 -27 0 -42 20 -42 57 0 20 7 36 18 42 35 21 42 13 42 -44z m-1560 35 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z m1600 -35 c0 -19 -4 -35 -10 -35 -5 0 -10 16 -10 35 0 19 5 35 10 35 6 0 10 -16 10 -35z m-940 -102 c0 -69 106 -102 149 -47 12 15 21 37 21 50 l0 24 155 0 155 0 0 -160 0 -160 -390 0 -390 0 0 160 0 160 150 0 150 0 0 -27z m140 2 c0 -52 -76 -70 -101 -24 -18 35 -4 49 51 49 47 0 50 -2 50 -25z"></path>
+        <path d="M3760 1790 l0 -1590 1600 0 1600 0 0 1590 0 1590 -1600 0 -1600 0 0 -1590z m800 1360 l0 -210 -175 0 -175 0 0 58 c0 32 -3 62 -6 65 -4 4 -20 -5 -36 -18 -16 -14 -34 -25 -39 -25 -5 0 -9 -7 -9 -15 0 -11 8 -13 30 -8 l30 6 0 -93 c0 -69 3 -91 13 -88 6 3 13 25 15 51 l3 47 175 0 174 0 0 -170 0 -170 -390 0 -390 0 0 390 0 390 390 0 390 0 0 -210z m800 0 l0 -210 -161 0 -161 0 6 34 c9 47 -7 81 -44 96 -44 18 -100 -7 -100 -45 0 -30 11 -32 28 -5 14 22 61 27 80 8 16 -16 15 -49 -2 -70 -12 -16 -35 -18 -220 -18 l-206 0 0 210 0 210 390 0 390 0 0 -210z m780 0 l0 -210 -159 0 c-135 0 -160 2 -165 16 -3 8 -1 24 5 35 21 41 -13 88 -65 89 -28 0 -76 -33 -76 -52 0 -13 30 -9 46 7 20 19 48 19 64 0 17 -20 6 -43 -25 -55 -14 -5 -24 -15 -23 -22 2 -10 -38 -14 -179 -16 l-183 -2 0 210 0 210 380 0 380 0 0 -210z m800 -180 l0 -390 -169 0 -168 0 -5 234 c-3 129 -9 239 -13 245 -4 8 -17 3 -37 -14 -16 -14 -34 -25 -39 -25 -5 0 -9 -7 -9 -15 0 -11 8 -13 30 -8 28 5 30 4 30 -26 l0 -31 -200 0 -200 0 0 210 0 210 390 0 390 0 0 -390z m-2013 -88 c-54 -56 -50 -62 43 -62 47 0 80 4 80 10 0 6 -22 10 -48 10 -27 0 -52 3 -56 7 -3 4 8 22 26 40 l32 33 178 0 178 0 0 -170 0 -170 -390 0 -390 0 0 170 0 170 192 0 192 0 -37 -38z m888 28 c9 -15 -20 -57 -46 -65 -14 -5 -28 0 -43 14 -40 38 -65 20 -26 -19 46 -46 140 -11 140 52 l0 28 150 0 150 0 0 -170 0 -170 -380 0 -380 0 0 170 0 170 214 0 c139 0 217 -4 221 -10z m745 -40 c0 -27 5 -50 10 -50 6 0 10 -47 10 -120 l0 -120 -210 0 -210 0 0 170 0 170 200 0 200 0 0 -50z m-2000 -520 l0 -210 -170 0 -170 0 0 65 c0 50 -3 65 -15 65 -17 0 -137 -158 -132 -174 2 -6 27 -12 55 -14 l52 -3 0 -150 0 -149 -200 0 -200 0 0 390 0 390 390 0 390 0 0 -210z m800 0 l0 -210 -149 0 c-123 0 -151 3 -162 16 -21 25 -64 43 -88 37 -20 -5 -22 -2 -19 23 3 26 7 29 47 34 69 8 65 30 -6 30 l-59 0 -12 -45 c-7 -25 -12 -56 -12 -70 l0 -25 -160 0 -160 0 0 210 0 210 390 0 390 0 0 -210z m780 -180 l0 -390 -170 0 -170 0 0 116 c0 104 2 116 18 121 23 6 52 53 52 86 0 13 -10 37 -22 52 -20 25 -25 27 -74 22 -46 -5 -52 -3 -47 11 17 49 69 68 99 37 20 -20 36 -19 32 2 -2 9 -18 26 -36 36 -28 17 -37 17 -63 7 -35 -15 -59 -56 -59 -100 l0 -30 -160 0 -160 0 0 210 0 210 380 0 380 0 0 -390z m440 250 l0 -139 -65 -87 c-36 -48 -64 -92 -62 -98 2 -6 28 -13 57 -16 67 -6 68 -9 69 -177 l1 -123 -210 0 -210 0 0 390 0 390 210 0 210 0 0 -140z m360 -250 l0 -390 -170 0 -170 0 0 146 c0 128 2 148 18 160 16 12 16 13 0 19 -16 7 -18 27 -18 231 l0 224 170 0 170 0 0 -390z m-2750 3 c0 -45 -12 -63 -41 -63 -35 0 -36 12 -6 50 25 33 47 38 47 13z m2378 -20 c-3 -35 -6 -38 -35 -41 -39 -4 -42 9 -10 48 32 41 49 38 45 -7z m-1553 -3 c4 -6 -10 -10 -34 -10 -23 0 -41 5 -41 10 0 6 15 10 34 10 19 0 38 -4 41 -10z m803 -6 c28 -19 29 -65 2 -89 -20 -18 -20 -17 -20 33 0 46 -2 52 -21 52 -11 0 -17 5 -14 10 9 14 27 12 53 -6z m-1258 -194 l0 -170 -180 0 -180 0 0 120 c0 73 4 120 10 120 6 0 10 13 10 29 0 17 6 31 16 35 13 5 14 9 4 21 -11 13 8 15 154 15 l166 0 0 -170z m465 143 c-8 -34 -5 -32 -42 -39 -24 -5 -35 -1 -49 15 -23 26 -34 27 -34 2 0 -26 37 -51 76 -51 36 0 84 46 84 81 0 18 9 19 150 19 l150 0 0 -170 0 -170 -390 0 -390 0 0 170 0 170 226 0 226 0 -7 -27z m675 -2 c0 -20 9 -37 31 -55 17 -14 35 -26 40 -26 5 0 9 -51 9 -115 l0 -115 -200 0 -200 0 0 170 0 170 160 0 160 0 0 -29z m80 -11 c0 -22 -3 -40 -7 -40 -23 1 -59 53 -48 70 3 6 17 10 31 10 21 0 24 -4 24 -40z m-1600 -464 l0 -145 -37 -3 c-52 -4 -56 -28 -4 -28 41 0 41 0 41 -38 0 -21 -9 -57 -20 -80 -19 -39 -27 -102 -14 -102 4 0 13 8 20 18 11 14 13 -2 14 -110 l0 -128 -200 0 -200 0 0 380 0 380 200 0 200 0 0 -144z m380 -236 l0 -380 -180 0 -180 0 0 181 0 180 31 45 c33 48 31 64 -7 64 l-24 0 0 145 0 145 180 0 180 0 0 -380z m800 170 l0 -210 -165 0 c-141 0 -167 2 -172 16 -3 8 -1 20 6 27 32 32 -11 97 -63 97 -56 -1 -87 -45 -65 -94 10 -21 9 -29 -4 -44 -23 -26 -21 -71 5 -99 32 -34 99 -32 127 3 12 15 21 37 21 50 l0 24 155 0 155 0 0 -160 0 -160 -390 0 -390 0 0 380 0 380 390 0 390 0 0 -210z m420 71 l0 -140 -27 -3 c-39 -4 -76 -62 -68 -105 l6 -33 -156 0 -155 0 0 210 0 210 200 0 200 0 0 -139z m360 -241 l0 -380 -380 0 -380 0 0 160 0 160 171 0 c95 0 179 -4 189 -10 13 -7 27 -6 44 2 15 6 29 8 32 5 13 -12 -6 -54 -31 -67 -22 -12 -27 -11 -48 8 -13 12 -26 22 -30 22 -12 0 -8 -35 5 -48 19 -19 85 -15 107 7 20 20 41 80 41 118 0 33 -29 101 -46 107 -11 4 -14 34 -14 151 l0 145 170 0 170 0 0 -380z m440 236 l0 -145 -47 -3 c-66 -4 -70 -28 -4 -28 62 0 64 -8 21 -95 -28 -58 -40 -125 -21 -125 10 0 31 54 31 81 0 11 5 19 10 19 6 0 10 -60 10 -160 l0 -160 -210 0 -210 0 0 380 0 380 210 0 210 0 0 -144z m360 -236 l0 -380 -170 0 -170 0 0 196 c0 182 1 198 21 225 21 30 19 49 -7 49 -11 0 -14 25 -14 145 l0 145 170 0 170 0 0 -380z m-1946 54 c18 -18 19 -24 7 -42 -12 -20 -75 -11 -79 11 -8 40 42 62 72 31z m786 -39 c0 -46 -3 -55 -18 -55 -27 0 -42 20 -42 57 0 20 7 36 18 42 35 21 42 13 42 -44z m-1560 35 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z m1600 -35 c0 -19 -4 -35 -10 -35 -5 0 -10 16 -10 35 0 19 5 35 10 35 6 0 10 -16 10 -35z m-827 -67 c35 -17 36 -52 2 -74 -47 -31 -101 17 -75 66 12 23 34 25 73 8z m-813 -492 l0 -145 -37 -3 c-52 -4 -56 -28 -4 -28 41 0 41 0 41 -38 0 -21 -9 -57 -20 -80 -21 -43 -27 -102 -10 -102 5 0 15 18 21 40 l12 40 189 0 188 0 0 -150 0 -150 -390 0 -390 0 0 380 0 380 200 0 200 0 0 -144z m380 -76 l0 -220 -180 0 c-175 0 -180 1 -180 21 0 11 14 40 31 65 33 48 31 64 -7 64 l-24 0 0 145 0 145 180 0 180 0 0 -220z m800 0 l0 -220 -158 0 -159 0 -13 25 c-10 20 -11 28 -2 37 33 33 -9 98 -62 98 -56 -1 -87 -45 -65 -94 10 -22 9 -29 -6 -46 -17 -18 -31 -20 -167 -20 l-148 0 0 220 0 220 390 0 390 0 0 -220z m780 0 l0 -220 -140 0 -140 0 0 30 c0 44 -28 105 -54 119 -38 21 -78 10 -104 -29 -22 -33 -23 -44 -7 -97 l7 -23 -161 0 -161 0 0 220 0 220 380 0 380 0 0 -220z m440 76 l0 -145 -47 -3 c-66 -4 -70 -28 -4 -28 60 0 64 -11 29 -77 l-23 -43 -187 0 -188 0 0 220 0 220 210 0 210 0 0 -144z m360 -236 l0 -380 -390 0 -390 0 0 150 0 150 180 0 180 0 0 -40 c0 -51 16 -51 31 -1 7 24 19 41 30 44 15 4 19 15 19 47 0 26 8 53 21 71 21 30 19 49 -7 49 -11 0 -14 25 -14 145 l0 145 170 0 170 0 0 -380z m-1946 54 c18 -18 19 -24 7 -42 -12 -20 -75 -11 -79 11 -8 40 42 62 72 31z m807 6 c13 -7 19 -21 19 -43 0 -40 -15 -57 -50 -57 -35 0 -50 17 -50 57 0 45 38 66 81 43z m-1581 -10 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z m780 -100 c0 -5 -18 -10 -41 -10 -24 0 -38 4 -34 10 3 6 22 10 41 10 19 0 34 -4 34 -10z m-120 -47 c0 -60 109 -87 149 -37 12 15 21 33 21 40 0 11 31 14 155 14 l155 0 0 -150 0 -150 -390 0 -390 0 0 150 0 150 150 0 c134 0 150 -2 150 -17z m140 3 c0 -16 -37 -46 -57 -46 -15 0 -53 36 -53 50 0 6 25 10 55 10 41 0 55 -4 55 -14z m800 4 c0 -13 -41 -50 -55 -50 -7 0 -20 9 -30 20 -22 25 -35 26 -35 2 0 -27 20 -42 58 -42 45 0 67 13 82 50 l12 30 144 0 144 0 0 -150 0 -150 -380 0 -380 0 0 150 0 150 220 0 c134 0 220 -4 220 -10z"></path>
+    </g>
+</svg>
+<p>CHÚ Ý: Ý tưởng không phải là sắp xếp các phần tử từ bé đến lớn mà là duyệt mảng 2 chiều theo hình xoắn ốc thuận chiều kim đồng hồ.</p>
+<p>CHÚ Ý 2: Mảng rỗng 0x0 được biểu diễn là một mảng chỉ chứa một mảng rỗng [[]].</p>
+<h2 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h2>
+<p>Mác 4 kyu nhưng bài này lại đơn giản hơn mấy bài khác. Để duyệt được hình xoắn ốc thì mình duyệt lần lượt hàng <code>0</code>, cột <code>n-1</code>, hàng <code>n-1</code>, cột <code>1</code>,&hellip; từ ngoài vào trong.</p>
+<p>Đầu tiên là mình cần khai báo các biến sau nè:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> res;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> row_start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;                  <span style="color:#75715e">// Hàng trên ngoài cùng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> col_start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;                  <span style="color:#75715e">// Cột trái ngoài cùng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> row_end <span style="color:#f92672">=</span> snail_map.size();     <span style="color:#75715e">// Hàng dưới ngoài cùng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> col_end <span style="color:#f92672">=</span> row_end;              <span style="color:#75715e">// Cột phải ngoài cùng
+</span></span></span></code></pre></div><p>Bắt đầu từ hàng trên ngoài cùng, để duyệt hàng thì ta tăng chỉ số cột của hàng đó lên:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> col_start; i <span style="color:#f92672">&lt;</span> col_end; i<span style="color:#f92672">++</span>)  
+</span></span><span style="display:flex;"><span>    res.push_back(snail_map[row_start][i]);
+</span></span></code></pre></div><p>Tương tự với cột phải thì ta tăng chỉ số hàng. Lưu ý là phải bỏ qua phần tử ở góc phải trên cùng (<code>snail_map[row_start][col_end-1]</code>) vì nó đã được duyệt.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>row_start; i <span style="color:#f92672">&lt;</span> row_end; i<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>    res.push_back(snail_map[i][col_end<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]);
+</span></span></code></pre></div><p>Vì là hình xoắn ốc nên khi duyệt hàng dưới phải duyệt theo chiều ngược lại: giảm chỉ số cột thay vì tăng. Và vì phần tử góc phải dưới cùng (<code>snail_map[row_end-1][col_end-1]</code>) đã được duyệt, cột ngoài cùng sẽ được bỏ qua.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> (<span style="color:#f92672">--</span>col_end)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> col_start; <span style="color:#f92672">--</span>i) 
+</span></span><span style="display:flex;"><span>    res.push_back(snail_map[row_end<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][i]); 
+</span></span></code></pre></div><p>Tương tự với cột trái ngoài cùng, giảm chỉ số của hàng để duyệt ngược lên, bỏ qua hàng dưới.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> (<span style="color:#f92672">--</span>row_end)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> row_start; <span style="color:#f92672">--</span>i)
+</span></span><span style="display:flex;"><span>    res.push_back(snail_map[i][col_start]);
+</span></span></code></pre></div><p>Các hành động này được lặp đi lặp lại cho đến khi hết mảng, hay nói cách khác là <code>row_start</code> và <code>row_end</code>, hoặc <code>col_start</code> và <code>col_end</code>, chạy qua nhau (<code>_start</code> $\geq$ <code>_end</code>). Ngoài ra, cần phải xét đến trường hợp mảng rỗng.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(snail_map.empty() <span style="color:#f92672">||</span> snail_map[<span style="color:#ae81ff">0</span>].empty())
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {};
+</span></span></code></pre></div><p>Như vậy, lời giải của bài toán đã hoàn thiện.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include&lt;vector&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> snail(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">&amp;</span>snail_map){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(snail_map.empty() <span style="color:#f92672">||</span> snail_map[<span style="color:#ae81ff">0</span>].empty())
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> res;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> row_start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;                  <span style="color:#75715e">// Hàng trên ngoài cùng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> col_start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;                  <span style="color:#75715e">// Cột trái ngoài cùng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> row_end <span style="color:#f92672">=</span> snail_map.size()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;   <span style="color:#75715e">// Hàng dưới ngoài cùng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> col_end <span style="color:#f92672">=</span> row_end;              <span style="color:#75715e">// Cột phải ngoài cùng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (row_start <span style="color:#f92672">&lt;=</span> row_end <span style="color:#f92672">&amp;&amp;</span> col_start <span style="color:#f92672">&lt;=</span> col_end){  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> col_start; i <span style="color:#f92672">&lt;=</span> col_end; i<span style="color:#f92672">++</span>)  
+</span></span><span style="display:flex;"><span>            res.push_back(snail_map[row_start][i]); 
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>row_start; i <span style="color:#f92672">&lt;=</span> row_end; i<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>            res.push_back(snail_map[i][col_end]); 
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#f92672">--</span>col_end; i <span style="color:#f92672">&gt;=</span> col_start; i<span style="color:#f92672">--</span>)
+</span></span><span style="display:flex;"><span>            res.push_back(snail_map[row_end][i]); 
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> row_end; i <span style="color:#f92672">&gt;=</span> row_start; i<span style="color:#f92672">--</span>)
+</span></span><span style="display:flex;"><span>            res.push_back(snail_map[i][col_start]);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        col_start<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="vẫn-là-lời-giải">Vẫn là lời giải<a hidden class="anchor" aria-hidden="true" href="#vẫn-là-lời-giải">#</a></h2>
+<p>Nếu bạn là người quen nhìn <code>while</code> thì lời giải có thể viết lại thế này:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (row_start <span style="color:#f92672">&lt;=</span> row_end <span style="color:#f92672">&amp;&amp;</span> col_start <span style="color:#f92672">&lt;=</span> col_end) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (col <span style="color:#f92672">&lt;</span> col_end)   res.push_back(snail_map[row][col<span style="color:#f92672">++</span>]);  row_start<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (row <span style="color:#f92672">&lt;</span> row_end)   res.push_back(snail_map[row<span style="color:#f92672">++</span>][col]);  col_end<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (col <span style="color:#f92672">&gt;</span> col_start) res.push_back(snail_map[row][col<span style="color:#f92672">--</span>]);  row_end<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (row <span style="color:#f92672">&gt;</span> row_start) res.push_back(snail_map[row<span style="color:#f92672">--</span>][col]);  col_start<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    res.push_back(snail_map[row][col]); <span style="color:#75715e">// Bổ sung phần tử cuối
+</span></span></span></code></pre></div><p>Hai biến <code>row</code> và <code>col</code> được dùng để đánh dấu hàng và cột đang duyệt, hai biến này chỉ chạy từ <code>0</code> đến <code>n-2</code> và ngược lại. Sở dĩ chỉ chạy đến <code>n-2</code> là để ở dòng <code>while</code> tiếp theo vẫn có thể tận dụng lại giá trị của <code>row</code>, <code>col</code> mà không duyệt trùng phần tử, nói cách khác, thay vì bỏ qua phần tử đã duyệt trùng thì giờ mình luôn chừa lại một phần tử cuối hàng/cột mỗi lần duyệt. Vì thế, sau khi kết thúc dòng <code>while</code> mình cần bổ sung phần tử cuối cùng vào để ra đáp án hoàn chỉnh.</p>
+<p>Cảm ơn bạn vì đã đọc.</p>
+<hr>
+<h3 id="tái-bút"><em>Tái bút</em><a hidden class="anchor" aria-hidden="true" href="#tái-bút">#</a></h3>
+<p>Hồi bé ngơ ngác thi tin học trẻ cũng gặp một bài xoắn ốc như này, mà nó tên là Thành Cổ Loa cơ. Lạy Chúa chứ lúc đó đọc để chả hiểu gì đâu, nay lướt trúng kata này nhìn lại thì thấy nó đơn giản (hoặc do mình quên cái đề hồi đó rồi (:3 ). Thôi thì đấm kata này coi như mở bát 2024 và ôn kỷ niệm luôn.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/tags/m%E1%BA%A3ng/">Mảng</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://yurukute.github.io/Blog/post/warningice/">
+    <span class="title">Bài cũ hơn »</span>
+    <br>
+    <span>ASCII Games: Cảnh báo: Băng trơn!</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>© 2021 Noob</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

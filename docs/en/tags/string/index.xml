@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>String on Noob&#39;s Blog</title>
+    <link>https://yurukute.github.io/Blog/en/tags/string/</link>
+    <description>Recent content in String on Noob&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Sun, 25 Jul 2021 18:51:10 +0700</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/en/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roman Numerals Helper</title>
+      <link>https://yurukute.github.io/Blog/en/post/romannumeral/</link>
+      <pubDate>Sun, 25 Jul 2021 18:51:10 +0700</pubDate>
+      <guid>https://yurukute.github.io/Blog/en/post/romannumeral/</guid>
+      <description>The problem Source: Codewars Create a RomanNumerals class that can convert a roman numeral to and from an integer value.
+#include &amp;lt;string&amp;gt; #include &amp;lt;vector&amp;gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; It should follow the API demonstrated in the examples below. Multiple roman numeral values will be tested for each helper method.
+Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero.</description>
+    </item>
+  </channel>
+</rss>

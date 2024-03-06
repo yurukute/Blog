@@ -5,17 +5,18 @@
     <link>https://yurukute.github.io/Blog/tags/ascii-games/</link>
     <description>Recent content in ASCII Games on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 Jan 2023 01:34:25 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/ascii-games/index.xml" rel="self" type="application/rss+xml" />
+    <language>vi</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Wed, 18 Jan 2023 01:34:25 +0700</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/tags/ascii-games/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ASCII Games: Cảnh báo: Băng trơn!</title>
-      <link>https://yurukute.github.io/Blog/post/ice/</link>
+      <link>https://yurukute.github.io/Blog/post/warningice/</link>
       <pubDate>Wed, 18 Jan 2023 01:34:25 +0700</pubDate>
-      
-      <guid>https://yurukute.github.io/Blog/post/ice/</guid>
+      <guid>https://yurukute.github.io/Blog/post/warningice/</guid>
       <description>Bài toán Source: Codewars Giới thiệu Bất cứ nhóc Joey nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):
 Trong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là &amp;lsquo;ice puzzle&amp;rsquo;:
 Bạn cần phải đi từ điểm A sang điểm B Bạn có thể di chuyển theo 1 trong 4 hướng trực giao Một vài ô sẽ có tính trơn: Nếu bạn bước vào ô trơn, bạn sẽ bị trượt trên hướng đang đi cho đến khi gặp một ô không trơn hoặc va chạm vào vật cản/tường.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,15 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Chuyển đổi số la mã | Blog của Noob</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Chuỗi">
 <meta name="description" content="Bài toán Nguồn: Codewars Đọc hiểu Cho lớp RomanNumerals để chuyển đổi các chữ số la mã về số nguyên và ngược lại.
 #include &lt;string&gt; #include &lt;vector&gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:
 Chữ số La Mã hiện đại được viết bằng cách thể hiện từng chữ số riêng biệt bắt đầu bằng chữ số tận cùng bên trái và bỏ qua bất kỳ chữ số nào có giá trị bằng 0.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/post/romannumeral/">
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/Blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.57c292ec064ba4167235f240fee0ce43ec98bb63c5fb0460293cca4fb4aaa7a1.css" integrity="sha256-V8KS7AZLpBZyNfJA/uDOQ&#43;yYu2PF&#43;wRgKTzKT7Sqp6E=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
@@ -41,7 +39,7 @@ Chữ số La Mã hiện đại được viết bằng cách thể hiện từng
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -92,7 +90,7 @@ Chữ số La Mã hiện đại được viết bằng cách thể hiện từng
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yurukute.github.io/Blog/post/romannumeral/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-07-25T18:51:05+07:00" />
-<meta property="article:modified_time" content="2021-07-25T18:51:05+07:00" /><meta property="og:site_name" content="Blog của Noob" />
+<meta property="article:modified_time" content="2021-07-25T18:51:05+07:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Chuyển đổi số la mã"/>
@@ -129,7 +127,7 @@ Chữ số La Mã hiện đại được viết bằng cách thể hiện từng
   "name": "Chuyển đổi số la mã",
   "description": "Bài toán Nguồn: Codewars Đọc hiểu Cho lớp RomanNumerals để chuyển đổi các chữ số la mã về số nguyên và ngược lại.\n#include \u0026lt;string\u0026gt; #include \u0026lt;vector\u0026gt; class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:\nChữ số La Mã hiện đại được viết bằng cách thể hiện từng chữ số riêng biệt bắt đầu bằng chữ số tận cùng bên trái và bỏ qua bất kỳ chữ số nào có giá trị bằng 0.",
   "keywords": [
-    
+    "Chuỗi"
   ],
   "articleBody": "Bài toán Nguồn: Codewars Đọc hiểu Cho lớp RomanNumerals để chuyển đổi các chữ số la mã về số nguyên và ngược lại.\n#include #include class RomanHelper{ public: std::string to_roman(unsigned int n){ } int from_roman(std::string rn){ } } RomanNumerals; Việc chuyển đổi phải tuân theo nguyên tắc sau:\nChữ số La Mã hiện đại được viết bằng cách thể hiện từng chữ số riêng biệt bắt đầu bằng chữ số tận cùng bên trái và bỏ qua bất kỳ chữ số nào có giá trị bằng 0.\n1990 được viết là 1000 = M, 900 = CM, 90 = XC; =\u003e MCMXC. 2008 được viết là 2000 = MM, 8 = VIII; =\u003e MMVIII. 1666 cũng tương tự: MDCLXVI. Ví dụ:\nRomanNumerals.toRoman(1000); // Trả về: 'M' RomanNumerals.fromRoman('M'); // Trả về: 1000 Bảng kí tự:\nKí tự I V X L C D M Chữ số 1 5 10 50 100 500 1000 Lời giải Chuyển số nguyên sang số la mã Ý tưởng là mình sẽ chuyển từng chữ số theo từng hàng: nghìn, trăm, chục, đơn vị. Giả sử, nếu số cần chuyển lớn hơn 1000 thì ta trừ đi 1000 và thêm kí tự M vào chuỗi kết quả. Cứ trừ đến khi nó không được nữa thì chuyển đến hàng trăm. Tính cả các số được biểu diễn đặc biệt như 4 (IV) hay 9 (IX) thì có tất cả 13 trường hợp:\nstd::string to_roman(unsigned int n){ std::string res = \"\"; std::string rnums[] = {\"M\", \"CM\", \"D\", \"CD\", \"C\", \"XC\", \"L\", \"XL\", \"X\", \"IX\", \"V\", \"IV\", \"I\"}; int nums[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}; for(int i = 0; i \u003c 13; i ++){ while (n \u003e= nums[i]){ res.append(rnums[i]); n -= nums[i]; } } return res; } Chuyển số la mã sang số nguyên Như đã biết, mỗi kí tự số la mã đại diện cho một số nguyên, nên trước hết mình sẽ đưa từng kí tự về số nguyên mà nó đại diện.\nint from_roman(std::string rn){ int from_roman(std::string rn){ std::vector\u003cint\u003e a; for(char i : rn){ switch(i){ case 'I': a.push_back(1); break; case 'V': a.push_back(5); break; case 'X': a.push_back(10); break; case 'L': a.push_back(50); break; case 'C': a.push_back(100); break; case 'D': a.push_back(500); break; case 'M': a.push_back(1000); break; } } ... } Mục đích của việc này là để tiện cho việc so sánh. Để ý rằng, nếu chữ số phía trước lớn hơn hoặc bằng chữ số phía sau thì cộng thêm vào, chẳng hạn: VI = V + I = 6. Ngược lại, nếu chữ số phía trước nhỏ hơn thì trừ đi. Từ đây, mình sẽ so sánh từng cặp số liên tiếp trong mảng a rồi cộng trừ các kiểu như trên để cho ra kết quả cuối cùng. Vì phần tử cuối cùng không có phần tử phía sau để so sánh nên sẽ được cộng vào trước.\nint from_roman(std::string rn){ ... int res = a.back(), size = a.size(); for(int i = 0; i \u003c size-1; i++) if(a[i] \u003e= a[i+1]) res += a[i]; else res -= a[i]; return res; } Cảm ơn bạn vì đã đọc.\n",
   "wordCount" : "522",
@@ -198,21 +196,6 @@ Chữ số La Mã hiện đại được viết bằng cách thể hiện từng
             </div>
         </div>
         <ul id="menu">
-            <li>
-                <a href="https://yurukute.github.io/Blog/archive" title="Lưu trữ">
-                    <span>Lưu trữ</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://yurukute.github.io/Blog/search" title="Tìm kiếm">
-                    <span>Tìm kiếm</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://yurukute.github.io/Blog/tags" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -221,10 +204,10 @@ Chữ số La Mã hiện đại được viết bằng cách thể hiện từng
 <article class="post-single">
   <header class="post-header">
     
-    <h1 class="post-title">
+    <h1 class="post-title entry-hint-parent">
       Chuyển đổi số la mã
     </h1>
-    <div class="post-meta"><span title='2021-07-25 18:51:05 +0700 +07'>25 Tháng 7, 2021</span>&nbsp;|&nbsp;Bản dịch:
+    <div class="post-meta"><span title='2021-07-25 18:51:05 +0700 +0700'>25 Tháng 7, 2021</span>&nbsp;|&nbsp;Bản dịch:
 <ul class="i18n_list">
     <li>
         <a href="https://yurukute.github.io/Blog/en/post/romannumeral/">En</a>
@@ -344,6 +327,7 @@ RomanNumerals.fromRoman(&#39;M&#39;); // Trả về: 1000
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/tags/chu%E1%BB%97i/">Chuỗi</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://yurukute.github.io/Blog/post/sumofintervals/">
@@ -354,7 +338,7 @@ RomanNumerals.fromRoman(&#39;M&#39;); // Trả về: 1000
   <a class="next" href="https://yurukute.github.io/Blog/post/2knights/">
     <span class="title">Bài cũ hơn »</span>
     <br>
-    <span>Hai con mã</span>
+    <span>Hai quân mã</span>
   </a>
 </nav>
 
@@ -363,7 +347,7 @@ RomanNumerals.fromRoman(&#39;M&#39;); // Trả về: 1000
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/">Blog của Noob</a></span>
+    <span>© 2021 Noob</span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

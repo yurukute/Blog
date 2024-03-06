@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.109.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.122.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://yurukute.github.io/Blog/en/">
-<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.3a36963197fc897d45495276fdaa217c7ea47f1a28726c0dcf09e09aa944037a.css" integrity="sha256-OjaWMZf8iX1FSVJ2/aohfH6kfxoocmwNzwngmqlEA3o=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.57c292ec064ba4167235f240fee0ce43ec98bb63c5fb0460293cca4fb4aaa7a1.css" integrity="sha256-V8KS7AZLpBZyNfJA/uDOQ&#43;yYu2PF&#43;wRgKTzKT7Sqp6E=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
@@ -40,7 +40,7 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -87,7 +87,7 @@
 <meta property="og:title" content="Noob&#39;s Blog" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yurukute.github.io/Blog/en/" /><meta property="og:site_name" content="Noob&#39;s Blog" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/en/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Noob&#39;s Blog"/>
@@ -98,7 +98,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Noob's Blog",
-  "url": "https://yurukute.github.io/Blog/",
+  "url": "https://yurukute.github.io/Blog/en/",
   "description": "",
   "thumbnailUrl": "https://yurukute.github.io/Blog/favicon.ico",
   "sameAs": [
@@ -154,21 +154,6 @@
             </div>
         </div>
         <ul id="menu">
-            <li>
-                <a href="https://yurukute.github.io/Blog/en/archive/" title="Archives">
-                    <span>Archives</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://yurukute.github.io/Blog/en/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://yurukute.github.io/Blog/en/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -176,7 +161,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Longest common subsequence
+    <h2 class="entry-hint-parent">Longest increasing subsequence
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Problem Source:
+Vietnamese: Codeforces - Easy Can be solve with $O(n^2)$ solution Codeforces - Hard Need to be solved in $O(n\log n)$ solution English: Leetcode Give an integer array nums. Return the length of the longest increasing subsequence.
+An increasing subsequence is a subsequence $a_1,..,a_k$ that $$ \begin{align} &amp;i_1 &lt; i_2 &lt; \dots &lt; i_k,\\\ &amp;nums[i_1] &lt; nums[i_2] &lt; \dots &lt; nums[i_k] \end{align} $$ For example:
+Input: {0,1,0,3,2,3} Output: 4 //{0,1,2,3} Solution Brute Force This method is the simplest solution can approach: We can enumerate all subsets of the original array and then test them for the increasing property then find the longest....</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-03-09 19:44:24 +0700 +0700'>March 9, 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Longest increasing subsequence" href="https://yurukute.github.io/Blog/en/post/lis/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Longest common subsequence
     </h2>
   </header>
   <div class="entry-content">
@@ -184,13 +184,13 @@
 Write a function lcs that accepts two strings and returns their longest common subsequence as a string. Performance matters.
 For example...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-02-17 20:36:47 +0700 +07'>February 17, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-02-17 20:36:47 +0700 +0700'>February 17, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Longest common subsequence" href="https://yurukute.github.io/Blog/en/post/lcs/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Explosive Sum
+    <h2 class="entry-hint-parent">Explosive Sum
     </h2>
   </header>
   <div class="entry-content">
@@ -198,13 +198,13 @@ For example...</p>
 From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)# In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. Example:
 Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Solution It would be very slow if you enumerate all the partitions when $n$ is large so i’ll use dynamic programing instead (Oω&lt;)☆....</p>
   </div>
-  <footer class="entry-footer"><span title='2021-02-15 18:49:58 +0700 +07'>February 15, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-02-15 18:49:58 +0700 +0700'>February 15, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Explosive Sum" href="https://yurukute.github.io/Blog/en/post/explosivesum/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Fibonacci
+    <h2 class="entry-hint-parent">Fibonacci
     </h2>
   </header>
   <div class="entry-content">
@@ -213,13 +213,13 @@ Input: 4 Output: 5 //4, 3&#43;1, 2&#43;2, 2&#43;1&#43;1, 1&#43;1&#43;1&#43;1 Sol
 Input: 50 Output: 586268941 Solution Approach 1: Dynamic Programing Using fibonacci’s difference equation as a recurrence relation, i can write to a program like this:
 int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1; f0 = f1; f1 = fn; } return fn; This code’s complexity is $O(n)$ which is fine with $n &lt;= 5....</p>
   </div>
-  <footer class="entry-footer"><span title='2021-02-12 04:39:49 +0700 +07'>February 12, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-02-12 04:39:49 +0700 +0700'>February 12, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Fibonacci" href="https://yurukute.github.io/Blog/en/post/fibonacci/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Total ways make change
+    <h2 class="entry-hint-parent">Total ways make change
     </h2>
   </header>
   <div class="entry-content">
@@ -227,13 +227,13 @@ int f0 = 0, f1 = 1, fn; for(int i = 2; i &lt;= n; i&#43;&#43;){ fn = f0 &#43; f1
 For example:
 Input: amount = 5, coins = {1,2,5} Output: 4 //{5, 2&#43;2&#43;1, 2&#43;1&#43;1&#43;1, 1&#43;1&#43;1&#43;1&#43;1} Solution We’ll go through at each stage to considera certain coin and see how it changes the total amount of ways that can make change....</p>
   </div>
-  <footer class="entry-footer"><span title='2021-02-09 13:12:29 +0700 +07'>February 9, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-02-09 13:12:29 +0700 +0700'>February 9, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Total ways make change" href="https://yurukute.github.io/Blog/en/post/countchange/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Fewest coins make change
+    <h2 class="entry-hint-parent">Fewest coins make change
     </h2>
   </header>
   <div class="entry-content">
@@ -242,25 +242,25 @@ You may assume that you have an infinite number of each kind of coin.
 Examples:
 Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Input: coins = {2}, amount = 3 Output: -1 Solution Approach 1: Brute force By above example, amount = 11....</p>
   </div>
-  <footer class="entry-footer"><span title='2021-02-08 15:29:18 +0700 +07'>February 8, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-02-08 15:29:18 +0700 +0700'>February 8, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Fewest coins make change" href="https://yurukute.github.io/Blog/en/post/coinchange/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Bitwise operators&#39; application
+    <h2 class="entry-hint-parent">Bitwise operators&#39; application
     </h2>
   </header>
   <div class="entry-content">
     <p>Summary Name Operator Description AND &amp; Both bits are 1, return 1. Otherwise, return 0. OR \ One of both bit is 1, return 1. Otherwise, return 0. XOR ^ Two bits are different return 1. Otherwise, return 0. NOT ~ Flip bit, 0 becomes 1, 1 becomes 0 Shift left &lt;&lt; Shifts all the bits to the left Right left &gt;&gt; Shifts all the bits to the right Application Integer Change bit //Set nth bit x |= (1 &lt;&lt; n); //Set the right-most 0 bit to 1 x |= (x&#43;1); //Unset nth bit x &amp;= ~(1 &lt;&lt; n); //Set the right-most 1 bit to 0 x &amp;= (x-1); //Toggle nth bit x ^= (1 &lt;&lt; n); //Get the mth bit of n (x &gt;&gt; n) &amp; 1; //Swap Adjacent bits ((x &amp; 10101010) &gt;&gt; 1) | ((x &amp; 01010101) &lt;&lt; 1); Multiplication / Division x by $2^n$ x &lt;&lt; n //multiplication x &gt;&gt; n //division Round up to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; Round down to the next power of two x--; x |= x &gt;&gt; 1; x |= x &gt;&gt; 2; x |= x &gt;&gt; 4; x |= x &gt;&gt; 8; x |= x &gt;&gt; 16; x&#43;&#43;; x = x &gt;&gt; 1; //the same with the code above but added this line Floor x x &gt;&gt; 0; 6....</p>
   </div>
-  <footer class="entry-footer"><span title='2021-01-29 20:52:33 +0700 +07'>January 29, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-01-29 20:52:33 +0700 +0700'>January 29, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Bitwise operators&#39; application" href="https://yurukute.github.io/Blog/en/post/bitwise/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Factorial decomposition
+    <h2 class="entry-hint-parent">Factorial decomposition
     </h2>
   </header>
   <div class="entry-content">
@@ -268,13 +268,13 @@ Input: coins = {1,2,5}, amount = 11 Output: 3 //2 đồng 5 và 1 đồng 1 Inpu
 Input: n = 12 Output: 2^10 * 3^5 * 5^2 * 7 * 11 Note that $n$ can reach 4000 and, of course, 4000! would be very big with more than 12000 digits ∑(O_O;)
 Solution Idea By definition, the factorial of a positive integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$: $$12!...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-01-26 00:08:20 +0700 +07'>January 26, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-01-26 00:08:20 +0700 +0700'>January 26, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Factorial decomposition" href="https://yurukute.github.io/Blog/en/post/factorialdecomp/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Primes in numbers
+    <h2 class="entry-hint-parent">Primes in numbers
     </h2>
   </header>
   <div class="entry-content">
@@ -284,13 +284,13 @@ where
 a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1. Example:
 Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor....</p>
   </div>
-  <footer class="entry-footer"><span title='2021-01-23 20:46:09 +0700 +07'>January 23, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-01-23 20:46:09 +0700 +0700'>January 23, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Primes in numbers" href="https://yurukute.github.io/Blog/en/post/primesinnumbers/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>T-Primes
+    <h2 class="entry-hint-parent">T-Primes
     </h2>
   </header>
   <div class="entry-content">
@@ -299,21 +299,8 @@ You are given an array of $n$ positive integers. For each of them determine whet
 Examples
 Input: 3 4 5 6 Output: YES NO NO Solution First, we need to find all prime numbers from 2 to $\sqrt{x}$....</p>
   </div>
-  <footer class="entry-footer"><span title='2021-01-22 15:39:07 +0700 +07'>January 22, 2021</span></footer>
+  <footer class="entry-footer"><span title='2021-01-22 15:39:07 +0700 +0700'>January 22, 2021</span></footer>
   <a class="entry-link" aria-label="post link to T-Primes" href="https://yurukute.github.io/Blog/en/post/t-primes/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Sum by Factors
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The problem: Source: codewars Given an array of positive or negative integers $I = [i_1, .., i_n]$ , you have to produce a sorted array P of the form [ [$p$, sum of all $i_j$ of $I$ for which $p$ is a prime factor ($p$ positive) of $i_j$] …]
-P will be sorted by increasing order of the prime numbers. The final result has to be given as a string in Java, C#, C, C&#43;&#43; and as an array of arrays in other languages....</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-18 16:50:30 +0700 +07'>January 18, 2021</span></footer>
-  <a class="entry-link" aria-label="post link to Sum by Factors" href="https://yurukute.github.io/Blog/en/post/sumbyfactors/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -327,7 +314,7 @@ P will be sorted by increasing order of the prime numbers. The final result has 
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://yurukute.github.io/Blog/en/">Noob&#39;s Blog</a></span>
+    <span>© 2021 Noob</span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

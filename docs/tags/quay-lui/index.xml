@@ -5,17 +5,18 @@
     <link>https://yurukute.github.io/Blog/tags/quay-lui/</link>
     <description>Recent content in Quay lui on Blog của Noob</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Feb 2021 20:36:47 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/tags/quay-lui/index.xml" rel="self" type="application/rss+xml" />
+    <language>vi</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Wed, 17 Feb 2021 20:36:47 +0700</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/tags/quay-lui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xâu con chung dài nhất</title>
       <link>https://yurukute.github.io/Blog/post/lcs/</link>
       <pubDate>Wed, 17 Feb 2021 20:36:47 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/post/lcs/</guid>
       <description>Bài toán Nguồn: Codewars Đọc hiểu Theo Wikipedia :
 Bài toán xâu con chung dài nhất là bài toán tìm một xâu có độ dài lớn nhất và là xâu con của mọi xâu trong một tập hợp các xâu. Khác với chuỗi con, các phần tử của xâu con không nhất thiết phải liên tiếp nhau.
 Với 2 chuỗi được nhập vào, nhiệm vụ của bạn chính là tìm ra xâu con dài nhất của chúng.</description>
     </item>
-    
   </channel>
 </rss>

@@ -5,123 +5,114 @@
     <link>https://yurukute.github.io/Blog/en/tags/</link>
     <description>Recent content in Tags on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 Jan 2023 01:34:32 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Tue, 05 Mar 2024 20:26:11 +0000</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Array</title>
+      <link>https://yurukute.github.io/Blog/en/tags/array/</link>
+      <pubDate>Tue, 05 Mar 2024 20:26:11 +0000</pubDate>
+      <guid>https://yurukute.github.io/Blog/en/tags/array/</guid>
+      <description></description>
+    </item>
     <item>
       <title>ASCII Games</title>
       <link>https://yurukute.github.io/Blog/en/tags/ascii-games/</link>
       <pubDate>Wed, 18 Jan 2023 01:34:32 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/ascii-games/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Breadth first search</title>
       <link>https://yurukute.github.io/Blog/en/tags/breadth-first-search/</link>
       <pubDate>Wed, 18 Jan 2023 01:34:32 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/breadth-first-search/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Bignum</title>
       <link>https://yurukute.github.io/Blog/en/tags/bignum/</link>
       <pubDate>Tue, 07 Jun 2022 20:43:38 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/bignum/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Dynamic Programing</title>
       <link>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</link>
       <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/dynamic-programing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Math</title>
       <link>https://yurukute.github.io/Blog/en/tags/math/</link>
       <pubDate>Mon, 23 May 2022 17:37:36 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/math/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Fundamentals</title>
       <link>https://yurukute.github.io/Blog/en/tags/fundamentals/</link>
       <pubDate>Wed, 08 Dec 2021 17:49:22 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/fundamentals/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Maths</title>
       <link>https://yurukute.github.io/Blog/en/tags/maths/</link>
       <pubDate>Wed, 08 Dec 2021 17:49:22 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/maths/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Numbers</title>
       <link>https://yurukute.github.io/Blog/en/tags/numbers/</link>
       <pubDate>Sat, 04 Sep 2021 05:23:34 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/numbers/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>String</title>
+      <link>https://yurukute.github.io/Blog/en/tags/string/</link>
+      <pubDate>Sun, 25 Jul 2021 18:51:10 +0700</pubDate>
+      <guid>https://yurukute.github.io/Blog/en/tags/string/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Binary search</title>
       <link>https://yurukute.github.io/Blog/en/tags/binary-search/</link>
       <pubDate>Tue, 09 Mar 2021 19:44:24 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/binary-search/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Backtracking</title>
       <link>https://yurukute.github.io/Blog/en/tags/backtracking/</link>
       <pubDate>Wed, 17 Feb 2021 20:36:47 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/backtracking/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Matrix</title>
       <link>https://yurukute.github.io/Blog/en/tags/matrix/</link>
       <pubDate>Fri, 12 Feb 2021 04:39:49 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/matrix/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Bitwise</title>
       <link>https://yurukute.github.io/Blog/en/tags/bitwise/</link>
       <pubDate>Fri, 29 Jan 2021 20:52:33 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/bitwise/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Eratosthene</title>
       <link>https://yurukute.github.io/Blog/en/tags/eratosthene/</link>
       <pubDate>Tue, 26 Jan 2021 00:08:20 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/tags/eratosthene/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="vi" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ASCII Games: Cảnh báo: Băng trơn! | Blog của Noob</title>
+<meta name="keywords" content="Tìm kiếm rộng, ASCII Games">
+<meta name="description" content="Bài toán Source: Codewars Giới thiệu Bất cứ nhóc Joey nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):
+Trong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là &lsquo;ice puzzle&rsquo;:
+Bạn cần phải đi từ điểm A sang điểm B Bạn có thể di chuyển theo 1 trong 4 hướng trực giao Một vài ô sẽ có tính trơn: Nếu bạn bước vào ô trơn, bạn sẽ bị trượt trên hướng đang đi cho đến khi gặp một ô không trơn hoặc va chạm vào vật cản/tường.">
+<meta name="author" content="">
+<link rel="canonical" href="https://yurukute.github.io/Blog/post/warningice/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.57c292ec064ba4167235f240fee0ce43ec98bb63c5fb0460293cca4fb4aaa7a1.css" integrity="sha256-V8KS7AZLpBZyNfJA/uDOQ&#43;yYu2PF&#43;wRgKTzKT7Sqp6E=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yurukute.github.io/Blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yurukute.github.io/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yurukute.github.io/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yurukute.github.io/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yurukute.github.io/Blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="vi" href="https://yurukute.github.io/Blog/post/warningice/">
+<link rel="alternate" hreflang="en" href="https://yurukute.github.io/Blog/en/post/warningice/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<meta property="og:title" content="ASCII Games: Cảnh báo: Băng trơn!" />
+<meta property="og:description" content="Bài toán Source: Codewars Giới thiệu Bất cứ nhóc Joey nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):
+Trong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là &lsquo;ice puzzle&rsquo;:
+Bạn cần phải đi từ điểm A sang điểm B Bạn có thể di chuyển theo 1 trong 4 hướng trực giao Một vài ô sẽ có tính trơn: Nếu bạn bước vào ô trơn, bạn sẽ bị trượt trên hướng đang đi cho đến khi gặp một ô không trơn hoặc va chạm vào vật cản/tường." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yurukute.github.io/Blog/post/warningice/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-18T01:34:25+07:00" />
+<meta property="article:modified_time" content="2023-01-18T01:34:25+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ASCII Games: Cảnh báo: Băng trơn!"/>
+<meta name="twitter:description" content="Bài toán Source: Codewars Giới thiệu Bất cứ nhóc Joey nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):
+Trong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là &lsquo;ice puzzle&rsquo;:
+Bạn cần phải đi từ điểm A sang điểm B Bạn có thể di chuyển theo 1 trong 4 hướng trực giao Một vài ô sẽ có tính trơn: Nếu bạn bước vào ô trơn, bạn sẽ bị trượt trên hướng đang đi cho đến khi gặp một ô không trơn hoặc va chạm vào vật cản/tường."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://yurukute.github.io/Blog/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "ASCII Games: Cảnh báo: Băng trơn!",
+      "item": "https://yurukute.github.io/Blog/post/warningice/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ASCII Games: Cảnh báo: Băng trơn!",
+  "name": "ASCII Games: Cảnh báo: Băng trơn!",
+  "description": "Bài toán Source: Codewars Giới thiệu Bất cứ nhóc Joey nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):\nTrong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là \u0026lsquo;ice puzzle\u0026rsquo;:\nBạn cần phải đi từ điểm A sang điểm B Bạn có thể di chuyển theo 1 trong 4 hướng trực giao Một vài ô sẽ có tính trơn: Nếu bạn bước vào ô trơn, bạn sẽ bị trượt trên hướng đang đi cho đến khi gặp một ô không trơn hoặc va chạm vào vật cản/tường.",
+  "keywords": [
+    "Tìm kiếm rộng", "ASCII Games"
+  ],
+  "articleBody": "Bài toán Source: Codewars Giới thiệu Bất cứ nhóc Joey nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):\nTrong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là ‘ice puzzle’:\nBạn cần phải đi từ điểm A sang điểm B Bạn có thể di chuyển theo 1 trong 4 hướng trực giao Một vài ô sẽ có tính trơn: Nếu bạn bước vào ô trơn, bạn sẽ bị trượt trên hướng đang đi cho đến khi gặp một ô không trơn hoặc va chạm vào vật cản/tường. Ví dụ, lời giải cho mê cung trên cùng bên trái của câu đố trên:\nĐọc hiểu Cho một hình chữ nhật kích thước M x N được chuẩn hóa theo dạng sau:\nvar map = '\\ x \\n\\ # \\n\\ E \\n\\ # \\n\\ # \\n\\ S #'; /* Người chơi xuất phát tại điểm bắt đầu và kết thúc khi đi đến ô kết thúc S: ô bắt đầu (trơn, tồn tại duy nhất) E: ô kết thúc (không trơn, tồn tại duy nhất) : ô trơn x: ô không trơn #: vật cản (Bạn khổng thể đi ra khỏi rìa của ma trận, nó đóng vai trò như các bức tường của câu đố.) */ Lời giải nên là tối ưu (số bước di chuyển là tối thiểu) và trả về mảng các hướng:'u', 'd', 'l', 'r' lần lượt là up/down/left/right. Ví dụ với mê cung trên, cần trả về ['u', 'r', 'd', 'l', 'u', 'r']. Nếu có nhiều lời giải với cùng số bước di chuyển, trả về lời giải với quãng đường đi ít nhất. Nếu vẫn bằng nhau, trả về bất cứ lời giải nào.\nThêm vào đó, trả về null cho qua một số mê cung không có lời giải thích hợp.\nLời giải Mê cung đọc vào ở dạng chuỗi, sử dụng đồ thị thì rối với tính chất của mê cung, mình cũng lười đưa nó về ma trận nên để vậy tính luôn. Lấy mê cung sau làm ví dụ:\n\" x \\n\" \" # \\n\" \" E \\n\" \" # \\n\" \" # \\n\" \"S #\" Nếu xem chuỗi mê cung là một ma trận, vậy số cột col của nó là vị trí của '\\n' + 1 và là một ma trận đánh số bắt đầu từ 0.\nDễ thấy, nếu ô hiện tại ở vị trí i thì vị trí của 4 ô liền kề lần lượt là:\nÔ bên trên: i - col Ô bên dưới: i + col Ô bên trái: i - 1 Ô bên phải: i + 1 Như vậy, để tìm được đích đến của một bước di chuyển nào mình dùng vòng lặp như sau:\n#define UP 0 #define DOWN 1 #define LEFT 2 #define RIGHT 3 int next_tile(const std::string \u0026map, int col, int curr, char dir) { int row = (map.length() + 1) / col; while (map[curr] != 'E' \u0026\u0026 is_valid(curr, dir, col, row)) { int next; switch (dir) { case UP: next = curr - col; break; case DOWN: next = curr + col; break; case LEFT: next = curr - 1; break; default: next = curr + 1; break; } if (map[next] == '#') return curr; if (map[next] == 'x') return next; curr = next; } return curr; } Hàm is_valid dùng để đảm bảo việc di chuyển không vượt qua khỏi phạm vi mê cung\nbool is_valid(int pos, char dir, int col, int row) { switch (dir) { case UP: return pos \u003e= col; case DOWN: return pos \u003c= col * (row - 1) - 1; case LEFT: return pos % col != 0; } return (pos - col + 2) % col != 0; } Thuật toán chính cho bài này là tìm kiếm theo chiều rộng (tìm kiếm theo chiều sâu vẫn khả thi, nhưng nó không thực sự hiệu quả đối với các map lớn). Mỗi khi xét một ô, xác định đích đến (next) của 4 hướng xung quanh rồi cho vào hàng đợi. Có 2 trường hợp sẽ xảy ra: tồn tại một đường đi khác đến next và ngược lại.\nNếu tồn tại một đường đi khác, next sẽ không được thêm vào hàng đợi mà đường đi đến next sẽ được cập nhật lại sao cho lời giải sau cùng là tối ưu. Khởi tạo mảng precell lưu trữ ô trước đó, mặc định tất cả các ô là -1, hỗ trợ việc truy vết đường đi từ start đến một ô bất kỳ.\nNgoài ra, cần phải lưu ý tránh thêm ô xuất phát vào hàng đợi, gây vô hạn lặp.\nstd::vector\u003cchar\u003e ice_maze_solver(const std::string \u0026map) { int col = map.find(\"\\n\") + 1, start = map.find(\"S\"), end = map.find(\"E\"); bool solvable = false; std::vector\u003cchar\u003e solution; std::vector\u003cint\u003e precell(map.length(), -1); std::queue\u003cint\u003e queue; queue.push(start); while (!queue.empty()) { int curr = queue.front(); queue.pop(); if(curr == end){ solvable = true; continue; } for (int i = 0; i \u003c 4; i++) { int next = next_tile(map, col, curr, i); if (next != curr \u0026\u0026 next != precell[curr]) { if(precell[next] != -1){ update_path(precell, col, curr, next); } else if (next != start){ precell[next] = curr; queue.push(next); } } } } if (solvable){ while (end != start) { char move; if ((precell[end] - end) % col == 0) move = (precell[end] \u003e end) ? 'u' : 'd'; else move = (precell[end] \u003e end) ? 'l' : 'r'; solution.insert(solution.begin(), move); end = precell[end]; } } return solution; } Đường đi được cập nhật thông qua 2 yếu tố:\nSố bước di chuyển Tổng độ dài của đường đi, trong đó: Khoảng cách của 2 ô $i, j$ bất kỳ trên cùng một hàng ngang được tính bằng $|i-j|$ Nếu 2 ô trên cùng hàng dọc: $\\dfrac{|i-j|}{col}$ std::vector\u003cint\u003e get_length( std::vector\u003cint\u003e const \u0026parent, const int col, int curr) { int length = 0; int step = 0; while (parent[curr] != -1) { step++; length += abs(parent[curr] - curr) / ((parent[curr] - curr) % col == 0 ? col : 1); curr = parent[curr]; } return {step, length}; } void update_path(std::vector\u003cint\u003e \u0026parent, const int col, int curr, int next) { auto oldPath = get_length(parent, col, next); auto newPath = get_length(parent, col, curr); newPath[0] += 1; newPath[1] += abs(curr - next) / ((curr - next) % col == 0 ? col : 1); if (newPath \u003c oldPath) { parent[next] = curr; } } Cảm ơn bạn vì đã đọc vì cái lời giải này nó nghiệp dư vô cùng, và mình “đấm” cái kata này vì nó có liên quan tới pokemon thôi.\n",
+  "wordCount" : "1109",
+  "inLanguage": "vi",
+  "datePublished": "2023-01-18T01:34:25+07:00",
+  "dateModified": "2023-01-18T01:34:25+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yurukute.github.io/Blog/post/warningice/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog của Noob",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yurukute.github.io/Blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yurukute.github.io/Blog/" accesskey="h" title="Blog của Noob (Alt + H)">Blog của Noob</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yurukute.github.io/Blog/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ASCII Games: Cảnh báo: Băng trơn!
+    </h1>
+    <div class="post-meta"><span title='2023-01-18 01:34:25 +0700 +0700'>18 Tháng 1, 2023</span>&nbsp;|&nbsp;Bản dịch:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yurukute.github.io/Blog/en/post/warningice/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="bài-toán">Bài toán<a hidden class="anchor" aria-hidden="true" href="#bài-toán">#</a></h1>
+<p>Source: <a href="https://www.codewars.com/kata/58f4cc4e43251b1be6000082" target="_blank">Codewars</a>
+</p>
+<h2 id="giới-thiệu">Giới thiệu<a hidden class="anchor" aria-hidden="true" href="#giới-thiệu">#</a></h2>
+<p>Bất cứ <a href="https://bulbapedia.bulbagarden.net/wiki/Joey" target="_blank">nhóc Joey</a>
+ nào cũng biết bức ảnh này nghĩa là gì và tại sao nó là một nỗi đau (về mặt tâm lý TvT):</p>
+<p><img loading="lazy" src="http://3.bp.blogspot.com/-TFD6rulw4js/VHPrlEvgiRI/AAAAAAAADh4/DVe4YHZUJBo/s1600/Ice_Path_1F_GS.png" alt="IcePath-1F-GS"  />
+</p>
+<p>Trong nhiều trò chơi giải đố ma trận 2D, có một loại điển hình được gọi là &lsquo;ice puzzle&rsquo;:</p>
+<ul>
+<li>Bạn cần phải đi từ điểm A sang điểm B</li>
+<li>Bạn có thể di chuyển theo 1 trong 4 hướng trực giao</li>
+<li>Một vài ô sẽ có tính <em>trơn</em>: Nếu bạn bước vào ô trơn, bạn sẽ bị trượt trên hướng đang đi cho đến khi gặp một ô không trơn hoặc va chạm vào vật cản/tường.</li>
+</ul>
+<p>Ví dụ, lời giải cho mê cung trên cùng bên trái của câu đố trên:</p>
+<p><img loading="lazy" src="http://pkmn.net/games/goldsilver/icepath.jpg" alt="IcePathSolution"  />
+</p>
+<h2 id="đọc-hiểu">Đọc hiểu<a hidden class="anchor" aria-hidden="true" href="#đọc-hiểu">#</a></h2>
+<p>Cho một hình chữ nhật kích thước <code>M x N</code> được chuẩn hóa theo dạng sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    x \n\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  #   \n\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   E  \n\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> #    \n\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    # \n\
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">S    #&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Người chơi xuất phát tại điểm bắt đầu và kết thúc khi đi đến ô kết thúc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">S: ô bắt đầu (trơn, tồn tại duy nhất)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">E: ô kết thúc (không trơn, tồn tại duy nhất)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> : ô trơn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">x: ô không trơn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#: vật cản
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">(Bạn khổng thể đi ra khỏi rìa của ma trận, nó đóng vai trò như các bức tường của câu đố.)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span></code></pre></div><p>Lời giải nên là tối ưu (số bước di chuyển là tối thiểu) và trả về mảng các hướng:<code>'u', 'd', 'l', 'r'</code> lần lượt là up/down/left/right. Ví dụ với mê cung trên, cần trả về <code>['u', 'r', 'd', 'l', 'u', 'r']</code>. Nếu có nhiều lời giải với cùng số bước di chuyển, trả về lời giải với quãng đường đi ít nhất. Nếu vẫn bằng nhau, trả về bất cứ lời giải nào.</p>
+<p>Thêm vào đó, trả về <code>null</code> cho qua một số mê cung không có lời giải thích hợp.</p>
+<h1 id="lời-giải">Lời giải<a hidden class="anchor" aria-hidden="true" href="#lời-giải">#</a></h1>
+<p>Mê cung đọc vào ở dạng chuỗi, sử dụng đồ thị thì rối với tính chất của mê cung, mình cũng lười đưa nó về ma trận nên để vậy tính luôn. <img loading="lazy" src="https://emoji.discadia.com/emojis/2d2851a4-4178-42ce-a0e7-facec874849a.png" alt="anya"  />
+</p>
+<p>Lấy mê cung sau làm ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#e6db74">&#34;    x </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;  #   </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;   E  </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34; #    </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;    # </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;S    #&#34;</span>
+</span></span></code></pre></div><p>Nếu xem chuỗi mê cung là một ma trận, vậy số cột <code>col</code> của nó là <code>vị trí của '\n' + 1</code> và là một ma trận đánh số bắt đầu từ <code>0</code>.</p>
+<p>Dễ thấy, nếu ô hiện tại ở vị trí <code>i</code> thì vị trí của 4 ô liền kề lần lượt là:</p>
+<ul>
+<li>Ô bên trên: <code>i - col</code></li>
+<li>Ô bên dưới: <code>i + col</code></li>
+<li>Ô bên trái: <code>i - 1</code></li>
+<li>Ô bên phải: <code>i + 1</code></li>
+</ul>
+<p>Như vậy, để tìm được đích đến của một bước di chuyển nào mình dùng vòng lặp như sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#define UP    0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define DOWN  1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define LEFT  2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define RIGHT 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">next_tile</span>(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string <span style="color:#f92672">&amp;</span>map, <span style="color:#66d9ef">int</span> col, <span style="color:#66d9ef">int</span> curr, <span style="color:#66d9ef">char</span> dir) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> (map.length() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> col;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (map[curr] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;E&#39;</span> <span style="color:#f92672">&amp;&amp;</span> is_valid(curr, dir, col, row)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> next;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">switch</span> (dir) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> UP:   next <span style="color:#f92672">=</span> curr <span style="color:#f92672">-</span> col; <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> DOWN: next <span style="color:#f92672">=</span> curr <span style="color:#f92672">+</span> col; <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> LEFT: next <span style="color:#f92672">=</span> curr <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;   <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>   next <span style="color:#f92672">=</span> curr <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;   <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (map[next] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;#&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> curr;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (map[next] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> next;
+</span></span><span style="display:flex;"><span>        curr <span style="color:#f92672">=</span> next;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> curr;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Hàm <code>is_valid</code> dùng để đảm bảo việc di chuyển không vượt qua khỏi phạm vi mê cung</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">is_valid</span>(<span style="color:#66d9ef">int</span> pos, <span style="color:#66d9ef">char</span> dir, <span style="color:#66d9ef">int</span> col, <span style="color:#66d9ef">int</span> row) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> (dir) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> UP:   <span style="color:#66d9ef">return</span> pos <span style="color:#f92672">&gt;=</span> col;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> DOWN: <span style="color:#66d9ef">return</span> pos <span style="color:#f92672">&lt;=</span> col <span style="color:#f92672">*</span> (row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> LEFT: <span style="color:#66d9ef">return</span> pos <span style="color:#f92672">%</span> col <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (pos <span style="color:#f92672">-</span> col <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">%</span> col <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Thuật toán chính cho bài này là tìm kiếm theo chiều rộng (tìm kiếm theo chiều sâu vẫn khả thi, nhưng nó không thực sự hiệu quả đối với các map lớn). Mỗi khi xét một ô, xác định đích đến (<code>next</code>) của 4 hướng xung quanh rồi cho vào hàng đợi. Có 2 trường hợp sẽ xảy ra: tồn tại một đường đi khác đến <code>next</code> và ngược lại.</p>
+<p>Nếu tồn tại một đường đi khác, <code>next</code> sẽ không được thêm vào hàng đợi mà đường đi đến <code>next</code> sẽ được cập nhật lại sao cho lời giải sau cùng là tối ưu. Khởi tạo mảng <code>precell</code> lưu trữ ô trước đó, mặc định tất cả các ô là <code>-1</code>, hỗ trợ việc truy vết đường đi từ <code>start</code> đến một ô bất kỳ.</p>
+<p>Ngoài ra, cần phải lưu ý tránh thêm ô xuất phát vào hàng đợi, gây vô hạn lặp.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span><span style="color:#f92672">&gt;</span> ice_maze_solver(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string <span style="color:#f92672">&amp;</span>map) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> map.find(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, start <span style="color:#f92672">=</span> map.find(<span style="color:#e6db74">&#34;S&#34;</span>), end <span style="color:#f92672">=</span> map.find(<span style="color:#e6db74">&#34;E&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> solvable <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span><span style="color:#f92672">&gt;</span> solution;
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> precell(map.length(), <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> queue;
+</span></span><span style="display:flex;"><span>    queue.push(start);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>queue.empty()) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> curr <span style="color:#f92672">=</span> queue.front();
+</span></span><span style="display:flex;"><span>        queue.pop();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(curr <span style="color:#f92672">==</span> end){
+</span></span><span style="display:flex;"><span>            solvable <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> next <span style="color:#f92672">=</span> next_tile(map, col, curr, i);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (next <span style="color:#f92672">!=</span> curr <span style="color:#f92672">&amp;&amp;</span> next <span style="color:#f92672">!=</span> precell[curr]) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(precell[next] <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>                    update_path(precell, col, curr, next);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span> (next <span style="color:#f92672">!=</span> start){
+</span></span><span style="display:flex;"><span>                    precell[next] <span style="color:#f92672">=</span> curr;
+</span></span><span style="display:flex;"><span>                    queue.push(next);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (solvable){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (end <span style="color:#f92672">!=</span> start) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> move;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> ((precell[end] <span style="color:#f92672">-</span> end) <span style="color:#f92672">%</span> col <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                move <span style="color:#f92672">=</span> (precell[end] <span style="color:#f92672">&gt;</span> end) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;u&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;d&#39;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                move <span style="color:#f92672">=</span> (precell[end] <span style="color:#f92672">&gt;</span> end) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;l&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;r&#39;</span>;
+</span></span><span style="display:flex;"><span>            solution.insert(solution.begin(), move);
+</span></span><span style="display:flex;"><span>            end <span style="color:#f92672">=</span> precell[end];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> solution;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Đường đi được cập nhật thông qua 2 yếu tố:</p>
+<ol>
+<li>Số bước di chuyển</li>
+<li>Tổng độ dài của đường đi, trong đó:
+<ul>
+<li>Khoảng cách của 2 ô $i, j$ bất kỳ trên cùng một hàng ngang được tính bằng $|i-j|$</li>
+<li>Nếu 2 ô trên cùng hàng dọc: $\dfrac{|i-j|}{col}$</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> get_length(
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">const</span> <span style="color:#f92672">&amp;</span>parent, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> col, <span style="color:#66d9ef">int</span> curr) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> step   <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (parent[curr] <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>        step<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        length <span style="color:#f92672">+=</span> abs(parent[curr] <span style="color:#f92672">-</span> curr) <span style="color:#f92672">/</span> ((parent[curr] <span style="color:#f92672">-</span> curr) <span style="color:#f92672">%</span> col <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> col : <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        curr <span style="color:#f92672">=</span> parent[curr];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {step, length};
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">update_path</span>(std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>parent, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> col, <span style="color:#66d9ef">int</span> curr, <span style="color:#66d9ef">int</span> next) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">auto</span> oldPath <span style="color:#f92672">=</span> get_length(parent, col, next);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">auto</span> newPath <span style="color:#f92672">=</span> get_length(parent, col, curr);
+</span></span><span style="display:flex;"><span>    newPath[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    newPath[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+=</span> abs(curr <span style="color:#f92672">-</span> next) <span style="color:#f92672">/</span> ((curr <span style="color:#f92672">-</span> next) <span style="color:#f92672">%</span> col <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> col : <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (newPath <span style="color:#f92672">&lt;</span> oldPath) {
+</span></span><span style="display:flex;"><span>        parent[next] <span style="color:#f92672">=</span> curr;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cảm ơn bạn vì đã đọc vì cái lời giải này nó nghiệp dư vô cùng, và mình <em>&ldquo;đấm&rdquo;</em>  cái kata này vì nó có liên quan tới pokemon thôi.</p>
+<p><img loading="lazy" src="https://i.imgur.com/nHG0Ocx.jpg" alt="rowlet"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yurukute.github.io/Blog/tags/t%C3%ACm-ki%E1%BA%BFm-r%E1%BB%99ng/">Tìm kiếm rộng</a></li>
+      <li><a href="https://yurukute.github.io/Blog/tags/ascii-games/">ASCII Games</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yurukute.github.io/Blog/post/snail/">
+    <span class="title">« Bài mới hơn</span>
+    <br>
+    <span>Xoắn ốc</span>
+  </a>
+  <a class="next" href="https://yurukute.github.io/Blog/post/addingbignumbers/">
+    <span class="title">Bài cũ hơn »</span>
+    <br>
+    <span>Cộng 2 số lớn</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>© 2021 Noob</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

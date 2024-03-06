@@ -5,31 +5,29 @@
     <link>https://yurukute.github.io/Blog/en/tags/numbers/</link>
     <description>Recent content in Numbers on Noob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Sep 2021 05:23:34 +0700</lastBuildDate><atom:link href="https://yurukute.github.io/Blog/en/tags/numbers/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>© 2021 Noob</copyright>
+    <lastBuildDate>Sat, 04 Sep 2021 05:23:34 +0700</lastBuildDate>
+    <atom:link href="https://yurukute.github.io/Blog/en/tags/numbers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Carmichael function</title>
       <link>https://yurukute.github.io/Blog/en/post/carmichael/</link>
       <pubDate>Sat, 04 Sep 2021 05:23:34 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/post/carmichael/</guid>
       <description>Problem Source: Codewars In number theory, the Carmichael function of a positive integer $n$, denoted $\lambda(n)$, is defined as the smallest positive integer m such that $$a^m \equiv 1 \mod n$$ for every integer $a \leq n$ that is coprime to $n$. The Carmichael function is also known as the reduced totient function (as it is linked to Euler Totient function) or the least universal exponent function. The Carmichael function is important in number theory.</description>
     </item>
-    
     <item>
       <title>Sum of intervals</title>
       <link>https://yurukute.github.io/Blog/en/post/sumofintervals/</link>
       <pubDate>Tue, 27 Jul 2021 09:40:22 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/post/sumofintervals/</guid>
       <description>Problem Source: Codewars Write a function called sumIntervals/sum_intervals() that accepts an array of intervals, and returns the sum of all the interval lengths. Overlapping intervals should only be counted once.
 Intervals Intervals are represented by a pair of integers in the form of an array. The first value of the interval will always be less than the second value. Interval example: [1, 5] is an interval from 1 to 5. The length of this interval is 4.</description>
     </item>
-    
     <item>
       <title>Primes in numbers</title>
       <link>https://yurukute.github.io/Blog/en/post/primesinnumbers/</link>
       <pubDate>Sat, 23 Jan 2021 20:46:09 +0700</pubDate>
-      
       <guid>https://yurukute.github.io/Blog/en/post/primesinnumbers/</guid>
       <description>Problem Codewars Given a positive number n &amp;gt; 1 find the prime factor decomposition of n. The result will be a string with the following form:
 ($p_1$**$n_1$)($p_2$**$n_2$)&amp;hellip;($p_k$**$n_k$)
@@ -37,6 +35,5 @@ where
 a**b means $a^b$ $p_i$ in increasing order $n_i$ empty if n(i) is 1. Example:
 Input: n = 86240 Output: (2**5)(5)(7**2)(11) Solution Generally, in order to calculate all of the prime factors of a number, you have to go about dividing the original number by its smallest prime factor.</description>
     </item>
-    
   </channel>
 </rss>
