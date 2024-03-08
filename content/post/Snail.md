@@ -16,7 +16,7 @@ array = [[1,2,3],
          [7,8,9]]
 snail(array) #=> [1,2,3,6,9,8,7,4,5]
 ```
-Để hiểu rõ hơn For better understanding, please follow the numbers of the next array consecutively:
+Để hiểu rõ hơn, hãy lần lượt xem các số liên tiếp trong mảng tiếp theo:
 ```
 array = [[1,2,3],
          [8,9,4],
