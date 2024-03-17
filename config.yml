@@ -17,17 +17,17 @@ languages:
               - Noob viết cho vui.
 
               - Đừng bash Noob."
-      menu:
-        params:
-          - name: Lưu trữ
-            url: /archive
-            weight: 5
-          - name: Tìm kiếm
-            url: /search
-            weight: 7
-          - name: Tags
-            url: /tags
-            weight: 8
+    menu:
+      main:
+        - name: Lưu trữ
+          url: /archive
+          weight: 5
+        - name: Tìm kiếm
+          url: /search
+          weight: 7
+        - name: Tags
+          url: /tags
+          weight: 8
   en:
     languageName: "English"
     weight: 2
@@ -41,17 +41,17 @@ languages:
           - Noob writes for fun
 
           - Don't bash Noob"
-        menu:
-          params:
-            - name: Archives
-              url: archive/
-              weight: 5
-            - name: Search
-              url: search/
-              weight: 7
-            - name: Tags
-              url: tags/
-              weight: 8
+    menu:
+      main:
+        - name: Archives
+          url: archive/
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 7
+        - name: Tags
+          url: tags/
+          weight: 8
 params:
   socialIcons:
     - name: hackerrank
