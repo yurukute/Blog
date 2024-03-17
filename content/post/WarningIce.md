@@ -185,4 +185,4 @@ void update_path(std::vector<int> &parent, const int col, int curr, int next) {
 ```
 Cảm ơn bạn vì đã đọc vì cái lời giải này nó nghiệp dư vô cùng, và mình *"đấm"*  cái kata này vì nó có liên quan tới pokemon thôi.
 
-![rowlet](https://i.imgur.com/nHG0Ocx.jpg)
+![rowlet](https://i.imgur.com/rQaH6Q7.jpg)
